@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Energetic Calculator for Ancient Architecture - EnCAB</title>
+    <meta name="description" content="Energetic Calculator for Ancient Architecture - EnCAB">
+    <meta name="author" content="F. Buccellati">
+    <style>
+
+	body {
+    		background-color: #ADD8E6;
+	}
+<!--# LightBlue #ADD8E6 rgb(173, 216, 230)-->
+
+  </style>
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+  </head>
+  <body>
+    <script src="js/scripts.js"></script>
+    <h1 align="center">Energetic Calculator for Ancient Architecture</h1>
+    <p>Welcome to the EnCAB site, the Energetic Calculator for Ancient
+      Architecture. Please follow a link below to get started:</p>
+    <a href="" #project_def="">Project Definition</a> <a href="" #started="">Getting
+      Started</a> <a href="" #manual="">The Manual</a> <a href="" #opensource="">Open
+      Source</a> <a href="" #ack_spo="">Acknowledgements and Sponsors</a> <a name="project_def">
+      <h2>Project Definition and Goals</h2>
+    </a>
+    <p> The project </p>
+    <a name="started">
+      <h2>Getting Started</h2>
+    </a>
+    <p> Getting Started &amp; Video </p>
+    <a name="manual">
+      <h2>The Manual</h2>
+    </a>
+    <p> Manual </p>
+    <a name="opensource">
+      <h2>Open Source</h2>
+    </a>
+    <p> Open Source </p>
+    <a name="ack_spo">
+      <h2>Acknowledgements and Sponsors</h2>
+    </a>
+    <p> Acknowledgements and sponsors </p>
+    <p><br>
+    </p>
+    <div style="text-align: center;"><img src="images/neh_logo_horizlarge.jpg" alt="NEH"
+        title="NEH Logo" style="width: 261px; height: 64px;">&nbsp; <img src="images/AAI%20Logo%20bar.png"
+        alt="AAI" title="AAI" style="width: 217px; height: 64px;"> &nbsp;<img src="images/topoi-logo.jpg"
+        alt="TOPOI" title="TOPOI" style="width: 275px; height: 64px;"> </div>
+  </body>
+</html>

@@ -1,8 +1,8 @@
 <html lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <title>Algorithms by Bibliography - EnCAB</title>
-    <meta name="description" content="Algorithms by Material - EnCAB">
+    <title>Index of Source Chronology - EnCAB</title>
+    <meta name="description" content="Index of Source Chronology - EnCAB">
     <meta name="author" content="F. Buccellati">
     <style>
 
@@ -19,12 +19,12 @@
     <header>
       <h1 align="center">Energetic Calculator for Ancient
         Architecture</h1>
-      <h2 align="center"><span style="color: #6633ff;">Algorithms by
-          Material</span></h2>
+      <h2 align="center"><span style="color: #6633ff;">Index of Source Chronology</span></h2>
     </header>
-    <h4><a name="Position in Process">Algorithms by Bibliography</a></h4>
-    <p> Algorithms by Material</p>
-    <h4> Algorithms: </h4>
-    <section> Algorithms go here </section>
+    <h4> Index: </h4>
+    <section> Index goes here </section>
+    <h4><a href="../al/bi.html" name="source">Source</a></h4>
+    <p>Source</p>
+
   </body>
 </html>

@@ -1,1 +1,11 @@
+# Cache
+__pycache__/
+*.py[cod]
+
+# Other programs
 *.bak
+Thumbs.db
+Desktop.ini
+.idea/
+._*
+

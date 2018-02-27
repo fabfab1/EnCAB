@@ -1,12 +1,14 @@
 # EnCAB
 > Work in progress
 
-Python program to generate static HTML pages from algorithms codes.
+Python program to update static website with indexes and algorithms.
+
 
 
 ## Getting started
 
-This code will install the program in the EnCAB directory:
+Required Python 3.
+To install the program in the EnCAB directory:
 ```shell
 git clone https://github.com/fabfab1/EnCAB.git
 cd EnCAB/EnCAB
@@ -14,23 +16,27 @@ pythom -m pip -r requirements.txt
 
 ```
 
-Use this code to run the program:
+To run the program:
 ```shell
 ./EnCAB.py
 ```
 
-It will ask for the
+Press ENTER to confirm configuration and update HTML files.
 
 
 ### Built With
 
-Python 3 <!-- with Flask and Frozen-flask. -->
-
+Python 3, with Jinja2 (for templating) and BeautifulSoup (for editing HTML).
 
 
 ## Configuration
 
-[coming soon]
+Edit config file ("config.py") to change directories and preference.
+The program will access the HTML files and the algorithms data.
+The algorithms data are XML files for each algorithm.
+
+The website MUST contain the directories named as the different <algorithm_description>,
+each containing the different HTML files to be indexed.
 
 
 ## Tests
@@ -38,7 +44,7 @@ Python 3 <!-- with Flask and Frozen-flask. -->
 [coming soon]
 
 ```shell
-example..
+test/test.py
 ```
 
 

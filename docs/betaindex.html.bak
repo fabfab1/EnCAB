@@ -17,7 +17,7 @@
   </head>
   <body>
     <script src="js/scripts.js"></script>
-    <h1 align="center">Energetic Calculator for Ancient Architecture</h1>
+    <h1 align="center">Energetic Calculator for Ancient Buildings</h1>
     <p>Welcome to the EnCAB site, the Energetic Calculator for Ancient
       Architecture. Please follow a link below to get started:</p>
     <a href="" #project_def="">Project Definition and Goals</a> <a href="" #started="">Getting
@@ -33,12 +33,12 @@
     <p>&nbsp;&nbsp;&nbsp; The index of algorithm categories can be found <a href="../al/al_index.html">here</a>.</p>
     <p>&nbsp;&nbsp;&nbsp; The index of material categories can be found <a href="../ma/ma_index.html">here</a>.</p>
     <p>&nbsp;&nbsp;&nbsp; The index of steps in the process can be found <a href="../pr/pr_index.html">here</a>.</p>
-    <p>&nbsp;&nbsp;&nbsp; The index of source chronology categories can be found <a href="../sc/sc_index.html">here</a>.</p>
+    <p>&nbsp;&nbsp;&nbsp; The index of source chronology categories can be found
+      <a href="../sc/sc_index.html">here</a>.</p>
     <p>&nbsp;&nbsp;&nbsp; The index of source geography can be found <a href="../sg/sg_index.html">here</a>.</p>
     <p>&nbsp;&nbsp;&nbsp; The index of source type can be found <a href="../so/so_index.html">here</a>.</p>
     <p>&nbsp;&nbsp;&nbsp; The index of algorithm types can be found <a href="../ty/ty_index.html">here</a>.</p>
     <p>&nbsp;&nbsp;&nbsp; The index of units used can be found <a href="../un/un_index.html">here</a>.</p>
-
     <p>Add Video </p>
     <a name="manual">
       <h2>The Manual</h2>
@@ -58,12 +58,9 @@
     <p> Acknowledgements and sponsors </p>
     <p><br>
     </p>
-    <div style="text-align: center;"><img src="images/neh_logo_horizlarge.jpg" alt="NEH"
-
-        title="NEH Logo" style="width: 261px; height: 64px;">&nbsp; <img src="images/AAI%20Logo%20bar.png"
-
-        alt="AAI" title="AAI" style="width: 217px; height: 64px;"> &nbsp;<img src="images/topoi-logo.jpg"
-
+    <div style="text-align: center;"><img src="images/neh_logo_horizlarge.jpg" alt="NEH"
+        title="NEH Logo" style="width: 261px; height: 64px;">&nbsp; <img src="images/AAI%20Logo%20bar.png"
+        alt="AAI" title="AAI" style="width: 217px; height: 64px;"> &nbsp;<img src="images/topoi-logo.jpg"
         alt="TOPOI" title="TOPOI" style="width: 275px; height: 64px;"> </div>
   </body>
 </html>

@@ -1,0 +1,28 @@
+
+ EnCAB: Energetic Calculator for Ancient Architecture
+------------------------------------------------------
+
+ This program will update website <section> with indexes and algorithms.
+ Edit config file to change directories and preference.
+
+ Config file: "config.py".
+ Website directory: "../docs".
+ Algorithms directory: "../docs/algorithms_data".
+ Algorithm template: "templates/algorithm.html".
+ Index template: "templates/index.html".
+
+
+Press ENTER to Continue, Ctrl-C to Abort.
+
+[*] Generating indexes...
+[*] Importing algorithms data...
+[Err] "position_in_process/material" from "Abrams_1994_46_3.xml" not found in website files.
+[Err] "algorithm_type/tool" from "Abrams_1994_48_1.xml" not found in website files.
+[Err] "material/plaster" from "Abrams_1994_49_3.xml" not found in website files.
+[Err] "algorithm_type/Mudbrick" from "Robson_1999_67_1.xml" not found in website files.
+[Err] "material/mortar" from "Robson_1999_67_1.xml" not found in website files.
+[Err] "source_type/text" from "Robson_1999_67_1.xml" not found in website files.
+[Err] "source_geography/ANE" from "Robson_1999_67_1.xml" not found in website files.
+[*] Writing data...
+
+[+] Done!

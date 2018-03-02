@@ -170,7 +170,7 @@ def write_data(website_dir, algo_data, index):
 
                 # reconstruct html with updated <section>
                 html_file_updated = sections.group(1)+sections.group(3)+ html_data +\
-                                    sections.group(4)+sections.group(5)
+                                    '    '+sections.group(4)+sections.group(5)
 
                 # write HTML to file
                 try:

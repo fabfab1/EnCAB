@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<algorithm>
+
+<reference>Abrams_1994_49_3</reference>
+
+
+
+<biblioref>
+
+  <authorgroup>
+    <author><surname>Abrams</surname><firstname>E.</firstname></author>
+  </authorgroup>
+  <abbrev>Abrams_1994</abbrev>
+  <pagenums>49</pagenums>
+  <abbrev2></abbrev2>
+  <pagenums2></pagenums2>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>plaster production</algorithm_type>
+
+  <position_in_process>procurement</position_in_process>
+  <material>plaster</material>
+  <source_type>ethnographic</source_type>
+  <source_chronology></source_chronology>
+  <source_geography>Mesoamerica</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Plaster production</algorithm_statement>
+  <algorithm_math>Time needed to produce plaster (see note)</algorithm_math>
+  <variables>
+    <var1>
+      <unit>m3</unit><description></description>
+      <op>var2 / 219.5</op>
+    </var1>
+    <var2>
+      <unit>p-h</unit><description></description>
+      <op>var1 * 219.5</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>This algorithm is relatively problematic; it relates to the preparation of the plaster for use in a structure, and as such involves not only the collection of the raw material, but also the burning of that raw material as well as the collection of the material needed for the fire. Abrams states: "The manufacture of plaster involved several interrelated activities: cutting, transporting, and stacking trees as well as excavating, preparing, and transporting stone" (Abrams 1994 49). It assumes the open-air method of lime burning. Abrams states that the "figure is clearly incorrect for the Late Classic Copan since data indicate that the calcining of limestone for plaster was likely conducted within tenclosed kilns" (Abrams 1994 49-50).</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation_author_group>
+    <author><surname>Buccellati</surname><firstname>Federico</firstname></author>
+    <creation_date>30.04.2018</creation_date>
+  </creation_author_group>
+
+  <modification_author_group>
+    <author><firstname></firstname><surname></surname></author>
+    <creation_date></creation_date>
+  </modification_author_group>
+
+</algauthors>
+
+
+
+</algorithm>

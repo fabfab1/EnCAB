@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+    <reference>algorithm reference [authors_date_pagenumber_sequential number eg. Buccellati_2016_7_1]</reference>
+
+    <biblioref>
+        <authorgroup>
+            <author><firstname>name1</firstname><surname>name1S</surname></author>
+            <author><firstname>name2</firstname><surname>name2S</surname></author>
+            <author><firstname>name3</firstname><surname>name3S</surname></author>
+        </authorgroup>
+
+        <abbrev>bibliographical reference [link to bibliography in "Author_Date" format to specific #Author_Date marker in bibliography page (bibliography page: ../biblio/biblio.html).]</abbrev>
+
+        <pagenums>page numbers [single number, two numbers separated by dash or several numbers separated by comma (45 or 45-46 or 45-46, 48,55) No further link.]</pagenums>
+
+        <abbrev2>bibliographical reference to secondary publication [link to bibliography in "Author_Date Page(s)" format; links to specific #Author_Date marker in bibliography page (bibliography page: ../biblio/biblio.html).]</abbrev2>
+
+        <pagenums2>page numbers for secondary reference    [single number, two numbers separated by dash or several numbers separated by comma (45 or 45-46 or 45-46, 48,55) No further link.]</pagenums2>
+
+    </biblioref>
+
+
+
+    <algorithm_description>
+
+        <algorithm_type>from set of possibilities, each linked to a static HTML page. Link created should be ../ty/ENTRY.html where ENTRY is the algorithm type with spaces replaced by underscore (_) </algorithm_type>
+
+        <position_in_process>from set of possibilities, each linked to a static HTML page    Link created should be ../pr/ENTRY.html</position_in_process>
+
+        <material>from set of possibilities, each linked to a static HTML page. Link created should be ../ma/ENTRY.html </material>
+
+        <source_type>from set of possibilities, each linked to a static HTML page. Link created should be ../so/ENTRY.html </source_type>
+
+        <source_chronology>from set of possibilities, each linked to a static HTML page. Link created should be ../sc/ENTRY.html </source_chronology>
+
+        <source_geography>from set of possibilities, each linked to a static HTML page.    Link created should be ../sg/ENTRY.html </source_geography>
+
+    </algorithm_description>
+
+
+
+    <algdata>
+
+        <algorithm_statement> in statement format, to be used as title </algorithm_statement>
+
+        <algorithm_math> algorithm in mathematical format, to be used as display on algorithm page </algorithm_math>
+
+        <variables> <!-- INPUT variables, each MUST have a different name -->
+            <var1>
+                <unit>[unit type + link to ../un/ENTRY.html ]</unit><description></description>
+                <op>[operation in function of other variables (e.g. var2 * 5 )]</op>
+            </var1>
+            <var2>
+                <unit>m3</unit><description>mudbricks</description>
+                <op></op>
+            </var2>
+        </variables>
+        <results><!-- OUTPUT results (no user edit), each result MUST have a different name -->
+            <result1>
+                <value></value><unit>m3</unit><description>wall from mortar</description>
+                <op>var2*6</op><!-- <op>..</op> in result is MANDATORY -->
+            </result1>
+            <result2>
+                <value></value><unit>m3</unit><description>mortar in wall</description>
+                <op>var1*(1/6)</op>
+            </result2>
+        </results>
+
+    </algdata>
+
+
+
+
+    <algnotes>
+
+        <general_notes> a general note file </general_notes>
+
+        <biblio_notes> a general note file on the biliography </biblio_notes>
+
+    </algnotes>
+
+
+
+    <algauthors>
+
+        <creation_author_group>
+            <author><firstname>name1</firstname><surname>name1S</surname></author>
+            <!-- from set of possibilities, each linked to a static HTML page. Only one creation author allowed per algorithm. -->
+            <creation_date> only in dd.mm.yyyy format. Only one allowed per algorithm. </creation_date>
+        </creation_author_group>
+
+        <modification_author_group>
+            <author><firstname>name1</firstname><surname>name1S</surname></author>
+            <!-- from set of possibilities, each linked to a static HTML page. Multiple modification authors allowed per algorithm. -->
+            <creation_date> only in dd.mm.yyyy format. Only one allowed per algorithm. </creation_date>
+        </modification_author_group>
+        <modification_author_group>
+            <author><firstname>name1</firstname><surname>name1S</surname></author>
+            <creation_date> only in dd.mm.yyyy format. Only one allowed per algorithm. </creation_date>
+        </modification_author_group>
+
+    </algauthors>
+
+
+</algorithm>

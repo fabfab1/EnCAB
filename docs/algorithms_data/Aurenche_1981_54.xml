@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<algorithm>
+
+<reference>Aurenche_1981_54</reference>
+
+
+
+<biblioref>
+
+  <authorgroup>
+    <author><surname>Aurenche</surname><firstname>O.</firstname></author>
+  </authorgroup>
+  <abbrev>Aurenche 1981</abbrev>
+  <pagenums>54</pagenums>
+  <abbrev2></abbrev2>
+  <pagenums2></pagenums2>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>building wall</algorithm_type>
+  <position_in_process>construction</position_in_process>
+  <material>pise'</material>
+  <source_type>experimental archaeology</source_type>  
+  <source_chronology>modern</source_chronology>
+  <source_geographical_location></source_geographical_location>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>A pise' wall needs 3-5 days drying time for each section, which is 30-50cm in height.</algorithm_statement>
+  <algorithm_math></algorithm_math>
+  <variables>
+  <var1>
+    <value>40</value><description></description>
+    <unit>cm</unit>
+  </var1>
+  <var2>
+    <value>4</value><description></description>
+    <unit>days</unit>
+  </var2>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>A middle value was used for the algorithm, 4 days drying time for 40cm wall height.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation_author_group>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <creation_date>30.06.2018</creation_date>
+  </creation_author_group>
+
+  <modification_author_group>
+    <author><firstname></firstname><surname></surname></author>
+    <creation_date></creation_date>
+  </modification_author_group>
+
+</algauthors>
+
+
+
+</algorithm>

@@ -84,8 +84,8 @@ def parse(filename, index):
             pass  # print('[-] Unknown input: "{}"'.format(elem.tag))
 
 
-    # reference: authors_date_pagenumber_sequential
-    if not re.match(r"^\w+_\d{4}_\d+_\d+$", root.find('reference').text, flags=re.I):
+    # reference: authors_date_pagenumber(_sequential)
+    if not root.find('reference') or not re.match(r"^\w+_\d{4}_\d+(|_\d+)$", root.find('reference').text, flags=re.I):
         errors.append('reference')
     # ecc: ...
     if not True:

@@ -57,7 +57,7 @@
   </variables>
   <results>
     <result1>
-      <unit></unit><description></description>
+      <unit></unit><description>Output</description>
       <op>var1 * (var2 / var3 + var2 / var4) * var5</op>
     </result1>
 </results>

@@ -48,6 +48,7 @@
     <unit>units</unit>
     <op>var1 * 240</op>
   </var2>
+  </variables>
 
 <!-- comment  and so on for as many variables as needed, up to 9, always seperated by an _op_  -->
 

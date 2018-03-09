@@ -85,19 +85,19 @@
     <algauthors>
 
         <creation_author_group>
-            <author><firstname>name1</firstname><surname>name1S</surname></author>
-            <!-- from set of possibilities, each linked to a static HTML page. Only one creation author allowed per algorithm. -->
-            <creation_date> only in dd.mm.yyyy format. Only one allowed per algorithm. </creation_date>
+            <author>
+                <!-- from set of possibilities, each linked to a static HTML page. Only one creation author allowed per algorithm. -->
+                <firstname>name1</firstname><surname>name1S</surname>
+                <creation_date> only in dd.mm.yyyy format. Only one allowed per algorithm. </creation_date>
+            </author>
         </creation_author_group>
 
         <modification_author_group>
-            <author><firstname>name1</firstname><surname>name1S</surname></author>
-            <!-- from set of possibilities, each linked to a static HTML page. Multiple modification authors allowed per algorithm. -->
-            <creation_date> only in dd.mm.yyyy format. Only one allowed per algorithm. </creation_date>
-        </modification_author_group>
-        <modification_author_group>
-            <author><firstname>name1</firstname><surname>name1S</surname></author>
-            <creation_date> only in dd.mm.yyyy format. Only one allowed per algorithm. </creation_date>
+            <author>
+                <!-- from set of possibilities, each linked to a static HTML page. Multiple modification authors allowed per algorithm. -->
+                <firstname>name1</firstname><surname>name1S</surname>
+                <modification_date> only in dd.mm.yyyy format. Only one allowed per algorithm. </modification_date>
+            </author>
         </modification_author_group>
 
     </algauthors>

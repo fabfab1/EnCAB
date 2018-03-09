@@ -2,7 +2,7 @@
 
 <algorithm>
 
-<reference></reference>
+<reference>Buccellati_2016_108</reference>
 
 
 
@@ -53,6 +53,7 @@
 <!-- comment  and so on for as many variables as needed, up to 9, always seperated by an _op_  -->
 
   <results>
+  <result1>
     <value></value><description></description>
     <op></op>
     <unit></unit>
@@ -81,13 +82,19 @@
 <algauthors>
 
   <creation_author_group>
-    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
-    <creation_date>30.06.2018</creation_date>
+    <author>
+      <surname>Buccellati</surname>
+      <firstname>F.</firstname>
+      <creation_date>30.02.2018</creation_date>
+    </author>
   </creation_author_group>
 
   <modification_author_group>
-    <author><firstname></firstname><surname></surname></author>
-    <creation_date></creation_date>
+    <author>
+      <surname></surname>
+      <firstname></firstname>
+      <modification_date></modification_date>
+    </author>
   </modification_author_group>
 
 </algauthors>

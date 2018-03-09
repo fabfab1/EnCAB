@@ -2,7 +2,7 @@
 
 <algorithm>
 
-<reference>Robson_1999_67_1</reference>
+<reference>Robson_1999_67</reference>
 
 
 
@@ -22,12 +22,12 @@
 
 <algorithm_description>
 
-  <algorithm_type>Mudbrick</algorithm_type>
+  <algorithm_type>mudbrick</algorithm_type>
   <position_in_process>construction</position_in_process>
   <material>mortar</material>
   <source_type>text</source_type>  
   <source_chronology>bronze age</source_chronology>
-  <source_geography>ANE</source_geography>
+  <source_geographical_location>ANE</source_geographical_location>
 
 </algorithm_description>
 
@@ -70,8 +70,7 @@
 
 <algauthors>
 
-  <creation_author_group>
-    <author><surname>Buccellati</surname><firstname>Federico</firstname></author>
+  <creation_author_group>    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
     <creation_date>30.06.2018</creation_date>
   </creation_author_group>
 

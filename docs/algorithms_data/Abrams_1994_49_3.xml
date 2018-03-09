@@ -40,7 +40,7 @@
   <algorithm_math>Time needed to produce plaster (see note)</algorithm_math>
   <variables>
     <var1>
-      <unit>m3</unit><description></description>
+      <unit>m3</unit><description>plaster volume</description>
       <op>var2 / 219.5</op>
     </var1>
     <var2>
@@ -65,7 +65,7 @@
 <algauthors>
 
   <creation_author_group>
-    <author><surname>Buccellati</surname><firstname>Federico</firstname></author>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
     <creation_date>30.04.2018</creation_date>
   </creation_author_group>
 

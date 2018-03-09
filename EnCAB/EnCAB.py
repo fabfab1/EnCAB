@@ -54,7 +54,13 @@ def parse(filename, index):
 
     errors = []  # list of all errors encountered
 
-    tree = ET.parse(filename)
+    try:
+        tree = ET.parse(filename)
+    except ET.ParseError as err:
+        print(f'[Err] "{os.path.basename(filename)}" {err}.')
+        input()
+        sys.exit()
+
     """
     except IOError as err1:
         input('\n[-] {}\n'.format(str(err1)))
@@ -69,10 +75,14 @@ def parse(filename, index):
     # for atype in e.findall('type'):
     #     print(atype.get('foobar'))
 
-    # Check if all the tags are know
     for elem in root.iter():
+        # Remove blank lines from all text
+        if (elem.text):
+            elem.text = elem.text.strip()
+        # Check if all the tags are know
         if elem.tag not in KNOWN_TAGS:
             pass  # print('[-] Unknown input: "{}"'.format(elem.tag))
+
 
     # reference: authors_date_pagenumber_sequential
     if not re.match(r"^\w+_\d{4}_\d+_\d+$", root.find('reference').text, flags=re.I):

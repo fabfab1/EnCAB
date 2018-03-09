@@ -57,7 +57,7 @@
   </variables>
   <results>
     <result1>
-      <unit></unit><description></description>
+      <unit></unit><description>Output</description>
       <op>var1 * (var2 / var3 + var2 / var4) * var5</op>
     </result1>
 </results>
@@ -77,7 +77,7 @@
 <algauthors>
 
   <creation_author_group>
-    <author><surname>Buccellati</surname><firstname>Federico</firstname></author>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
     <creation_date>30.04.2018</creation_date>
   </creation_author_group>
 

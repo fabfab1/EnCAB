@@ -21,19 +21,21 @@ Press ENTER to Continue, Ctrl-C to Abort.
 [Err] "algorithm_type/tool" from "Abrams_1994_48_1.xml" not found in website files.
 [Err] "source_type/experimental_archaeology" from "Aurenche_1981_46.xml" not found in website files.
 [Err] "source_geographical_location/" from "Aurenche_1981_46.xml" not found in website folders.
-[Err] Errors found in "..\docs\algorithms_data\Aurenche_1981_46.xml", following values are wrong: ['reference']
 [Err] "algorithm_type/building_wall" from "Aurenche_1981_54.xml" not found in website files.
 [Err] "material/pise'" from "Aurenche_1981_54.xml" not found in website files.
 [Err] "source_type/experimental_archaeology" from "Aurenche_1981_54.xml" not found in website files.
 [Err] "source_geographical_location/" from "Aurenche_1981_54.xml" not found in website folders.
-[Err] Errors found in "..\docs\algorithms_data\Aurenche_1981_54.xml", following values are wrong: ['reference']
+[Err] "source_geographical_location/" from "Aurenche_1981_66.xml" not found in website folders.
+[Err] "source_geographical_location/" from "Buccellati_2016_108.xml" not found in website folders.
+[Err] "source_geographical_location/" from "Buccellati_2016_109.xml" not found in website folders.
+[Err] "source_geographical_location/" from "Cornerstones_2006_132.xml" not found in website folders.
+[Err] "source_geographical_location/" from "Cornerstones_2006_133.xml" not found in website folders.
 [Err] "algorithm_type/building_wall" from "Garner_1984_5.xml" not found in website files.
 [Err] "source_geographical_location/" from "Garner_1984_5.xml" not found in website folders.
-[Err] Errors found in "..\docs\algorithms_data\Garner_1984_5.xml", following values are wrong: ['reference']
+[Err] "source_geographical_location/" from "Heimpel_2009_223.xml" not found in website folders.
 [Err] "source_geographical_location/" from "Minke_1994_55.xml" not found in website folders.
-[Err] Errors found in "..\docs\algorithms_data\Minke_1994_55.xml", following values are wrong: ['reference']
 [Err] "source_geographical_location/" from "Robson_1999_67.xml" not found in website folders.
-[Err] Errors found in "..\docs\algorithms_data\Robson_1999_67.xml", following values are wrong: ['reference']
+[Err] "source_geographical_location/" from "Wulff_1966_126.xml" not found in website folders.
 [*] Writing data...
 
 [+] Done!

@@ -83,14 +83,12 @@ def parse(filename, index):
         if elem.tag not in KNOWN_TAGS:
             pass  # print('[-] Unknown input: "{}"'.format(elem.tag))
 
-
     # reference: authors_date_pagenumber(_sequential)
-    if not root.find('reference') or not re.match(r"^\w+_\d{4}_\d+(|_\d+)$", root.find('reference').text, flags=re.I):
+    if not root.find('reference').text or not re.match(r"^\w+_\d{4}_\d+(|_\d+)$", root.find('reference').text, flags=re.I):
         errors.append('reference')
     # ecc: ...
     if not True:
         errors.append('ecc...')
-
 
     # algorithm_description: check if file exist for each description type
     # ! CHANGE with config or sub-folder
@@ -104,7 +102,7 @@ def parse(filename, index):
     # TODO: all errors trap (check codes and info) [NOT everything must be present]
 
     if errors:
-        print('[Err] Errors found in "{}", following values are wrong: {}'.format(filename, errors))
+        print(f'[Err] In "{os.path.basename(filename)}", the data in following tags is wrong: {errors}')
 
     # ? beautify XML files
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 '''
-EnCAB: Energetic Calculator for Ancient Architecture
+EnCAB: Energetic Calculator for Ancient Buildings
 '''
 
 import sys
@@ -23,6 +23,7 @@ def files_index(website_dir):
     """ Generate dict of file names from first subdirectories """
 
     # TODO: move to single folder or get list from config
+    #       better: get folders from section name
 
     index = dict()
 
@@ -236,7 +237,7 @@ if __name__ == '__main__':
     check_config()
 
     print('''
- EnCAB: Energetic Calculator for Ancient Architecture
+ EnCAB: Energetic Calculator for Ancient Buildings
 ------------------------------------------------------
 
  This program will update website <section> with indexes and algorithms.

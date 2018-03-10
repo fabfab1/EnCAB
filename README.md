@@ -1,2 +1,2 @@
 # EnCAB
-Energetic Calculator for Ancient Architecture
+Energetic Calculator for Ancient Buildings

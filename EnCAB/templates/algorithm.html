@@ -1,17 +1,17 @@
 
 {% for b, filename in blocks_data -%}
-<a href="#{{ b.find('reference').text }}">{{ b.find('reference').text|replace('_',' ') }}</a> &nbsp;
+<a href="#{{ b.find('reference').text }}">{{ b.find('reference').text|replace('_','&nbsp;') }}</a>{% if not loop.last %}&nbsp;- {% endif %}
 {% endfor %}
 
 <br><br><br>
 
 {% for b, filename in blocks_data %}
 <a name="{{ b.find('reference').text }}"></a>
-<b>{{ b.find('reference').text|replace('_',' ') }}</b>
-<table border="1">
+<b>{{ b.find('reference').text|replace('_','&nbsp;') }}</b>
+<table class="data">
     <tr>
-        <td>Al Statement:</td><td>{{ b.find('algdata/algorithm_statement').text or '' }}</td>
-        <td>Al Math:</td><td>{{ b.find('algdata/algorithm_math').text or '' }}</td>
+        <td class="col-1">Al Statement:</td><td class="col-2">{{ b.find('algdata/algorithm_statement').text or '' }}</td>
+        <td class="col-3">Al Math:</td><td class="col-4">{{ b.find('algdata/algorithm_math').text or '' }}</td>
     </tr>
     <tr>
         <td colspan="4">{%- if b.find('algdata/variables') %}

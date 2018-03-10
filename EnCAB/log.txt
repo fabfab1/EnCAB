@@ -1,5 +1,5 @@
 
- EnCAB: Energetic Calculator for Ancient Architecture
+ EnCAB: Energetic Calculator for Ancient Buildings
 ------------------------------------------------------
 
  This program will update website <section> with indexes and algorithms.

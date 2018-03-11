@@ -41,7 +41,7 @@
   <variables>
     <var1>
       <unit>m3</unit><description>wall volume</description>
-      <op>var2 * 6/5</op>
+      <op>var2 * 6</op>
     </var1>
     <var2>
       <unit>m3</unit><description>mortar</description>

@@ -2,7 +2,7 @@
 
 <algorithm>
 
-<reference></reference>
+<reference>Buccellati_2016_109</reference>
 
 
 
@@ -53,6 +53,7 @@
 <!-- comment  and so on for as many variables as needed, up to 9, always seperated by an _op_  -->
 
   <results>
+  <result1>
     <value></value><description></description>
     <op></op>
     <unit></unit>

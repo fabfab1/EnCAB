@@ -8,13 +8,14 @@
             <author><firstname>name1</firstname><surname>name1S</surname></author>
             <author><firstname>name2</firstname><surname>name2S</surname></author>
             <author><firstname>name3</firstname><surname>name3S</surname></author>
+            <author2><firstname>name2.1</firstname><surname>name2.1S</surname></author2>
         </authorgroup>
 
-        <abbrev>bibliographical reference [link to bibliography in "Author_Date" format to specific #Author_Date marker in bibliography page (bibliography page: ../biblio/biblio.html).]</abbrev>
+        <abbrev>bibliographical reference "Author_Date" [link to bibliography #author/firstname+author/surname (bibliography page: ../biblio/biblio.html).]</abbrev>
 
         <pagenums>page numbers [single number, two numbers separated by dash or several numbers separated by comma (45 or 45-46 or 45-46, 48,55) No further link.]</pagenums>
 
-        <abbrev2>bibliographical reference to secondary publication [link to bibliography in "Author_Date Page(s)" format; links to specific #Author_Date marker in bibliography page (bibliography page: ../biblio/biblio.html).]</abbrev2>
+        <abbrev2>bibliographical reference to secondary publication "Author_Date" [link to bibliography #author2/firstname+author2/surname (bibliography page: ../biblio/biblio.html).]</abbrev2>
 
         <pagenums2>page numbers for secondary reference    [single number, two numbers separated by dash or several numbers separated by comma (45 or 45-46 or 45-46, 48,55) No further link.]</pagenums2>
 

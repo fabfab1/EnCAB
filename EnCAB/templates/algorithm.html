@@ -23,7 +23,7 @@
                 </tr>
                 <tr>
                     {%- for var in b.find('algdata/variables') %}
-                    <td><input type="text" name="{{var.tag}}" oninput="calc()" onkeyup="calc()"{% if var.find('op').text %} op="{{var.find('op').text}}"{% endif %}></td>
+                    <td><input type="text" name="{{var.tag}}" oninput="calc(this)" onkeyup="calc(this)"{% if var.find('op').text %} data-op="{{var.find('op').text}}"{% endif %}></td>
                     {%- endfor %}
                 </tr>
                 {%- if b.find('algdata/results') %}
@@ -34,7 +34,7 @@
                 </tr>
                 <tr>
                     {%- for var in b.find('algdata/results') %}
-                    <td><input type="text" name="{{var.tag}}" disabled=""{% if var.find('op').text %} oninput="calc()" op="{{var.find('op').text}}"{% endif %}></td>
+                    <td><input type="text" name="{{var.tag}}" disabled="" data-op="{{var.find('op').text}}"></td>
                     {%- endfor %}
                 </tr>
                 {%- endif %}

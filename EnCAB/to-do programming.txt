@@ -4,6 +4,8 @@ PRIORITY 1
 ----------
 Created by/on field is missing the 'on' portion, which should be taken from <creation_date>. I assume same needs to be done for Modified by/on. Only the author's name would be linked, as you have it now.
 
+source_geography seems to give an error for missing HTML file when it is there.
+
 
 PRIORITY 2
 ----------

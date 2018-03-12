@@ -18,15 +18,19 @@ Press ENTER to Continue, Ctrl-C to Abort.
 [*] Importing algorithms data...
 [Err] "algorithm_type/weight_calculations" from "Abrams_1994_46_3.xml" not found in website files.
 [Err] "position_in_process/material" from "Abrams_1994_46_3.xml" not found in website files.
+
 [Err] Missing <unit> in "Abrams_1994_47_3.xml"
 [Err] Missing <unit> in "Abrams_1994_47_3.xml"
 [Err] Missing <unit> in "Abrams_1994_47_3.xml"
 [Err] Missing <unit> in "Abrams_1994_47_3.xml"
 [Err] Missing <unit> in "Abrams_1994_47_3.xml"
 [Err] Missing <unit> in "Abrams_1994_47_3.xml"
+
 [Err] "algorithm_type/tool" from "Abrams_1994_48_1.xml" not found in website files.
+
 [Err] "units/cm2"  from "Abrams_1994_49_1.xml" not found in website files.
 [Err] "units/cm2"  from "Abrams_1994_49_2.xml" not found in website files.
+
 [Err] "source_type/experimental_archaeology" from "Aurenche_1981_46.xml" not found in website files.
 [Err] "source_geographical_location/" from "Aurenche_1981_46.xml" not found in website folders.
 [Err] "units/percentage"  from "Aurenche_1981_46.xml" not found in website files.

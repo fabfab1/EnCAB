@@ -42,7 +42,7 @@
       <op>var2 / 240</op>
     </var1>
     <var2>
-      <unit>units</unit><description></description>
+      <unit>brick</unit><description></description>
       <op>var1 * 240</op>
     </var2>
   </variables>

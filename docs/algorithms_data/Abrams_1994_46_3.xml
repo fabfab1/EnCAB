@@ -20,9 +20,9 @@
 
 <algorithm_description>
 
-  <algorithm_type>weight calculations</algorithm_type>
+  <algorithm_type>material qualities</algorithm_type>
 
-  <position_in_process>material</position_in_process>
+  <position_in_process>materials</position_in_process>
   <material>stone</material>
   <source_type>ethnographic</source_type>
   <source_chronology></source_chronology>

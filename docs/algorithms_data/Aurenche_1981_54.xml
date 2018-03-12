@@ -20,12 +20,12 @@
 
 <algorithm_description>
 
-  <algorithm_type>building wall</algorithm_type>
+  <algorithm_type>wall building</algorithm_type>
   <position_in_process>construction</position_in_process>
   <material>pise'</material>
   <source_type>experimental archaeology</source_type>  
   <source_chronology>modern</source_chronology>
-  <source_geographical_location></source_geographical_location>
+  <source_geographical_location>ANE</source_geographical_location>
 
 </algorithm_description>
 
@@ -40,7 +40,7 @@
       <op>var1 * 40 / 4</op>
     </var1>
     <var2>
-      <unit>days</unit><description></description>
+      <unit>day</unit><description></description>
       <op>var2 / 40 * 4</op>
     </var2>
   </variables>

@@ -5,7 +5,6 @@
 <reference>Buccellati_2016_109</reference>
 
 
-
 <biblioref>
 
   <authorgroup>
@@ -17,7 +16,6 @@
   <pagenums2></pagenums2>
 
 </biblioref>
-
 
 
 <algorithm_description>
@@ -32,43 +30,22 @@
 </algorithm_description>
 
 
-
 <algdata>
 
   <algorithm_statement>1 cubic meter of new mudbrick weighs 1392 kg.</algorithm_statement>
   <algorithm_math>1 m3 weighs 1392 kg.</algorithm_math>
   <variables>
     <var1>
-    <value>1</value><description></description>
-    <unit>m3</unit>
-    <op></op>
-  </var1>
-  <var2>
-    <value>1392</value><description></description>
-    <unit>kg</unit>
-    <op>var1 * 1392</op>
-  </var2>
+      <unit>m3</unit><description></description>
+      <op>var2 / 1392</op>
+    </var1>
+    <var2>
+      <unit>kg</unit><description></description>
+      <op>var1 * 1392</op>
+    </var2>
   </variables>
 
-<!-- comment  and so on for as many variables as needed, up to 9, always seperated by an _op_  -->
-
-  <results>
-  <result1>
-    <value></value><description></description>
-    <op></op>
-    <unit></unit>
-  </result1>
-  <result2>
-    <value></value><description></description>
-    <op></op>
-    <unit></unit>
-  </result2>
-  </results>
-  
-<!-- comment   and so on for as many results as needed, up to 9 -->
-
 </algdata>
-
 
 
 <algnotes>
@@ -79,27 +56,23 @@
 </algnotes>
 
 
-
 <algauthors>
 
   <creation_author_group>
     <author>
-      <surname>Buccellati</surname>
-      <firstname>F.</firstname>
+      <surname>Buccellati</surname><firstname>F.</firstname>
       <creation_date>30.02.2018</creation_date>
     </author>
   </creation_author_group>
 
   <modification_author_group>
     <author>
-      <surname></surname>
-      <firstname></firstname>
+      <surname></surname><firstname></firstname>
       <modification_date></modification_date>
     </author>
   </modification_author_group>
 
 </algauthors>
-
 
 
 </algorithm>

@@ -10,33 +10,31 @@ var digits = 7;
 
 function calc(obj) {
     var tab = closest(obj, 'table'),
-        inputs = tab.querySelectorAll('input'); // .getElementsByTagName
+        inputs = tab.querySelectorAll('input'), // .getElementsByTagName
+        i;
 
     // Convert inputs to local variables
-    for (const input of inputs) {
-        var name = input.getAttribute('name'),
-            value = input.value;
+    for (i = 0; i < inputs.length; i++) {
+        var name = inputs[i].getAttribute('name'),
+            value = inputs[i].value;
         if (value == '') { value = '0'; }
 
         this[name] = Number( value.replace(',','.') );
-        // Math.pow(10, 10);
     }
 
     // Run the operations
-    var total;
-    for (const input of inputs) {
-        if ( ! input.isSameNode(obj) ) {
-            if ( input.dataset.op ) {
-                total = Number( eval( input.getAttribute('data-op') ) );
-                if ( total && total !== NaN ) {
-                    input.value = round(total); //correctoutput()
+    for (i = 0; i < inputs.length; i++) {
+        if ( ! inputs[i].isSameNode(obj) ) {
+            if ( inputs[i].dataset.op ) {
+                var total = Number( eval( inputs[i].getAttribute('data-op') ) );
+                if ( total ) {
+                    inputs[i].value = round(total);
                 } else {
-                    input.value = '';
+                    inputs[i].value = '';
                 }
             }
         }
     }
-    //console.log(this);
 }
 
 
@@ -50,7 +48,7 @@ function closest(el, selector) {
             return true;
         }
         return false;
-    })
+    });
 
     var parent;
 

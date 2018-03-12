@@ -5,7 +5,6 @@
 <reference>Aurenche_1981_46</reference>
 
 
-
 <biblioref>
 
   <authorgroup>
@@ -17,7 +16,6 @@
   <pagenums2></pagenums2>
 
 </biblioref>
-
 
 
 <algorithm_description>
@@ -32,25 +30,22 @@
 </algorithm_description>
 
 
-
 <algdata>
 
   <algorithm_statement>a 40cm thick mudbrick wall holds a thermic difference for 12 hours (after which temperature on both sides are equal).</algorithm_statement>
   <algorithm_math>Thermic difference is reduced by 1/12 every hour for a 40cm thick mudbrick wall.</algorithm_math>
   <variables>
   <var1>
-    <value>1</value><description>hours</description>
-    <unit>hr</unit>
-    <op>var2 * (8.33*0.01)</op>
+    <unit>hr</unit><description>hours</description>
+    <op>Math.log(var2 / 100) / Math.log(1/12)</op>
   </var1>
   <var2>
-    <value>8.33333</value><description></description>
-    <unit>percentage</unit>
+    <unit>percentage</unit><description>Thermic difference</description>
+    <op>Math.pow(1/12, var1) * 100</op>
   </var2>
   </variables>
 
 </algdata>
-
 
 
 <algnotes>
@@ -61,27 +56,23 @@
 </algnotes>
 
 
-
 <algauthors>
 
   <creation_author_group>
     <author>
-      <surname>Buccellati</surname>
-      <firstname>F.</firstname>
+      <surname>Buccellati</surname><firstname>F.</firstname>
       <creation_date>30.02.2018</creation_date>
     </author>
   </creation_author_group>
 
   <modification_author_group>
     <author>
-      <surname></surname>
-      <firstname></firstname>
+      <surname></surname><firstname></firstname>
       <modification_date></modification_date>
     </author>
   </modification_author_group>
 
 </algauthors>
-
 
 
 </algorithm>

@@ -5,7 +5,6 @@
 <reference>Abrams_1994_47_1</reference>
 
 
-
 <biblioref>
 
   <authorgroup>
@@ -20,7 +19,6 @@
 </biblioref>
 
 
-
 <algorithm_description>
 
   <algorithm_type>earth digging</algorithm_type>
@@ -32,7 +30,6 @@
   <source_geography></source_geography>
 
 </algorithm_description>
-
 
 
 <algdata>
@@ -53,7 +50,6 @@
 </algdata>
 
 
-
 <algnotes>
 
   <general_notes></general_notes>
@@ -62,27 +58,23 @@
 </algnotes>
 
 
-
 <algauthors>
 
   <creation_author_group>
     <author>
-      <surname>Buccellati</surname>
-      <firstname>F.</firstname>
+      <surname>Buccellati</surname><firstname>F.</firstname>
       <creation_date>30.02.2018</creation_date>
     </author>
   </creation_author_group>
 
   <modification_author_group>
     <author>
-      <surname></surname>
-      <firstname></firstname>
+      <surname></surname><firstname></firstname>
       <modification_date></modification_date>
     </author>
   </modification_author_group>
 
 </algauthors>
-
 
 
 </algorithm>

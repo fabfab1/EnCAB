@@ -5,7 +5,6 @@
 <reference>Abrams_1994_47_3</reference>
 
 
-
 <biblioref>
 
   <authorgroup>
@@ -17,7 +16,6 @@
 <pagenums2>46</pagenums2>
 
 </biblioref>
-
 
 
 <algorithm_description>
@@ -33,14 +31,13 @@
 </algorithm_description>
 
 
-
 <algdata>
 
   <algorithm_statement>Transportation</algorithm_statement>
   <algorithm_math>Simplified formula based on ENCAFE_1957_22. Output = Q x (L/v+ L/V') x H.</algorithm_math>
   <variables>
     <var1>
-        <unit></unit><description>Q</description>
+      <unit></unit><description>Q</description>
     </var1>
     <var2>
       <unit></unit><description>L</description>
@@ -60,9 +57,8 @@
       <unit></unit><description>Output</description>
       <op>var1 * (var2 / var3 + var2 / var4) * var5</op>
     </result1>
-</results>
+  </results>
 </algdata>
-
 
 
 <algnotes>
@@ -73,21 +69,23 @@
 </algnotes>
 
 
-
 <algauthors>
 
   <creation_author_group>
-    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
-    <creation_date>30.04.2018</creation_date>
+    <author>
+      <surname>Buccellati</surname><firstname>F.</firstname>
+      <creation_date>30.04.2018</creation_date>
+    </author>
   </creation_author_group>
 
   <modification_author_group>
-    <author><firstname></firstname><surname></surname></author>
-    <creation_date></creation_date>
+    <author>
+      <firstname></firstname><surname></surname>
+      <creation_date></creation_date>
+    </author>
   </modification_author_group>
 
 </algauthors>
-
 
 
 </algorithm>

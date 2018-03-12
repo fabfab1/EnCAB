@@ -5,7 +5,6 @@
 <reference>Garner_1984_5</reference>
 
 
-
 <biblioref>
 
   <authorgroup>
@@ -17,23 +16,16 @@
 </biblioref>
 
 
-
-
 <algorithm_description>
 
-  <algorithm_type>building wall
-</algorithm_type>
-  
+  <algorithm_type>building wall</algorithm_type>
   <position_in_process>construction</position_in_process>
-  
-<material>stone</material>
-  
-<source_type>ethnographic</source_type>  
-<source_chronology>modern</source_chronology>
+  <material>stone</material>
+  <source_type>ethnographic</source_type>
+  <source_chronology>modern</source_chronology>
   <source_geographical_location>europe</source_geographical_location>
 
 </algorithm_description>
-
 
 
 <algdata>
@@ -41,18 +33,17 @@
   <algorithm_statement>A single worker constructing a stone wall will average 4.9-5.5 meters a day.</algorithm_statement>
   <algorithm_math>8 p-h to construct 5.2 m of free-standing wall with a height of 1.5m.</algorithm_math>
   <variables>
-  <var1>
-    <value>8</value><description></description>
-    <unit>p-h</unit>
-  </var1>
-  <var2>
-    <value>5.2</value><description></description>
-    <unit>m</unit>
-  </var2>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 8 * 5.2</op>
+    </var1>
+    <var2>
+      <unit>m</unit><description></description>
+      <op>var1 * 8 / 5.2</op>
+    </var2>
   </variables>
 
 </algdata>
-
 
 
 <algnotes>
@@ -63,27 +54,23 @@
 </algnotes>
 
 
-
 <algauthors>
 
   <creation_author_group>
     <author>
-      <surname>Buccellati</surname>
-      <firstname>F.</firstname>
+      <surname>Buccellati</surname><firstname>F.</firstname>
       <creation_date>30.02.2018</creation_date>
     </author>
   </creation_author_group>
 
   <modification_author_group>
     <author>
-      <surname></surname>
-      <firstname></firstname>
+      <surname></surname><firstname></firstname>
       <modification_date></modification_date>
     </author>
   </modification_author_group>
 
 </algauthors>
-
 
 
 </algorithm>

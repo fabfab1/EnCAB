@@ -5,7 +5,6 @@
 <reference>Abrams_1994_49_3</reference>
 
 
-
 <biblioref>
 
   <authorgroup>
@@ -19,7 +18,6 @@
 </biblioref>
 
 
-
 <algorithm_description>
 
   <algorithm_type>plaster production</algorithm_type>
@@ -31,7 +29,6 @@
   <source_geography>Mesoamerica</source_geography>
 
 </algorithm_description>
-
 
 
 <algdata>
@@ -52,7 +49,6 @@
 </algdata>
 
 
-
 <algnotes>
 
   <general_notes>This algorithm is relatively problematic; it relates to the preparation of the plaster for use in a structure, and as such involves not only the collection of the raw material, but also the burning of that raw material as well as the collection of the material needed for the fire. Abrams states: "The manufacture of plaster involved several interrelated activities: cutting, transporting, and stacking trees as well as excavating, preparing, and transporting stone" (Abrams 1994 49). It assumes the open-air method of lime burning. Abrams states that the "figure is clearly incorrect for the Late Classic Copan since data indicate that the calcining of limestone for plaster was likely conducted within tenclosed kilns" (Abrams 1994 49-50).</general_notes>
@@ -61,27 +57,23 @@
 </algnotes>
 
 
-
 <algauthors>
 
   <creation_author_group>
     <author>
-      <surname>Buccellati</surname>
-      <firstname>F.</firstname>
+      <surname>Buccellati</surname><firstname>F.</firstname>
       <creation_date>30.02.2018</creation_date>
     </author>
   </creation_author_group>
 
   <modification_author_group>
     <author>
-      <surname></surname>
-      <firstname></firstname>
+      <surname></surname><firstname></firstname>
       <modification_date></modification_date>
     </author>
   </modification_author_group>
 
 </algauthors>
-
 
 
 </algorithm>

@@ -26,7 +26,7 @@ KNOWN_TAGS = ["reference", "biblioref", "authorgroup"]
 SORT_STRINGS = {'algorithm_types': 'algorithm_description/algorithm_types',
                 'position_in_process': 'algorithm_description/position_in_process',
                 'material': 'algorithm_description/material',
-                'abbrev': 'biblioref/abbrev'}
+                'abbrev': 'reference'}
 
 # INDEXES = [..,..] folders
 # IGNORE_IF_CONTAIN = "_index"  #_files to ignore in index

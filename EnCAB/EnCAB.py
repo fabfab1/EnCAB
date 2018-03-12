@@ -78,7 +78,7 @@ def parse(filename, index):
 
     for elem in root.iter():
         # Remove blank lines from all text
-        if (elem.text):
+        if elem.text:
             elem.text = elem.text.strip()
         # Check if all the tags are know
         if elem.tag not in KNOWN_TAGS:
@@ -99,7 +99,43 @@ def parse(filename, index):
         else:
             if d_type.text and d_type.text.replace(' ','_').lower() not in index[d_type.tag]:
                 # errors.append()
-                print('[Err] "{}" from "{}" not found in website files.'.format(d_type.tag+'/'+d_type.text.replace(' ','_'), os.path.basename(filename)))
+                print('[Err] "{}" from "{}" not found in website files.'
+                      .format(d_type.tag+'/'+d_type.text.replace(' ','_'), os.path.basename(filename)))
+
+    # Check operations
+    op = False
+    if root.find('algdata/results'):
+        for var in root.find('algdata/results'):
+            # Check <unit> in results
+            if not var.find('unit').text:
+                print(f'[Err] Missing <unit> in "{os.path.basename(filename)}"')
+            else:
+                unit = var.find('unit').text.lower()
+                if unit not in index['units']:
+                    print('[Err] "{}"  from "{}" not found in website files.'
+                          .format('units/'+unit.replace(' ', '_'), os.path.basename(filename)))
+            # Check <op> in results
+            if not var.find('op').text:
+                print(f'[Err] Missing <op> in "{os.path.basename(filename)}"')
+            else:
+                op = True
+    if root.find('algdata/variables'):
+        for var in root.find('algdata/variables'):
+            # Check <unit> in variables
+            if not var.find('unit').text:
+                print(f'[Err] Missing <unit> in "{os.path.basename(filename)}"')
+            else:
+                unit = var.find('unit').text.lower()
+                if unit not in index['units']:
+                    print('[Err] "{}"  from "{}" not found in website files.'
+                          .format('units/'+unit.replace(' ', '_'), os.path.basename(filename)))
+            # Check <op> in variables
+            if not op:
+                if var.find('op').text:
+                    op = True
+    if not op:
+        print(f'[Err] Missing <op> in "{os.path.basename(filename)}"')
+
     # TODO: all errors trap (check codes and info) [NOT everything must be present]
 
     if errors:

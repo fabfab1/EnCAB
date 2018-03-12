@@ -2,14 +2,14 @@ List of things still to do in EnCAB Program:
 
 PRIORITY 1
 ----------
-Created by/on field is missing the 'on' portion, which should be taken from <creation_date>. I assume same needs to be done for Modified by/on.
+Created by/on field is missing the 'on' portion, which should be taken from <creation_date>. I assume same needs to be done for Modified by/on. Only the author's name would be linked, as you have it now.
 
 
 PRIORITY 2
 ----------
-in the algorithm table, it would be good if the "Al Statement" and "Al Math:" as well as their inputs could be different in the style.css, so that they can be made bold or italics or slightly larger font so as to make them stand out.
+in the algorithm table, it would be good if the "Al Statement" and "Al Math:" as well as their inputs could be different in the style.css (so a total of 4 styles), so that they can individually be made bold or italics or slightly larger font so as to make them stand out.
 
-The HTML files where the algorithms are placed should have links to anchors for the different categories; example, at the top of 'Algorithms by Material' instead of links to the individual algorithms (Abrans 1994_47_1 etc) there should be links to the materials, so 'earth', 'mudbrick', 'pise'', 'plaster' etc. The same for the algorithm_type.html and the algorithm_position_in_process.html (the algorithm_bibliography.html would instead be by author_year, so Abrams 1994).
+The HTML files where the algorithms are placed should have links to anchors for the different categories; example, at the top of 'Algorithms by Material' instead of links to the individual algorithms (Abrans 1994_47_1 etc) there should be links to the materials, so 'earth', 'mudbrick', 'pise'', 'plaster' etc. The same for the algorithm_type.html and the algorithm_position_in_process.html. The algorithm_bibliography.html would instead be by author_year, so Abrams 1994.
 
 
 PRIORITY 3

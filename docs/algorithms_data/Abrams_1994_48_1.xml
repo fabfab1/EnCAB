@@ -20,7 +20,7 @@
 
 <algorithm_description>
 
-  <algorithm_type>tool</algorithm_type>
+  <algorithm_type>tools</algorithm_type>
 
   <position_in_process>tools</position_in_process>
   <material>stone</material>

@@ -37,24 +37,24 @@
   <algorithm_math>Simplified formula based on ENCAFE_1957_22. Output = Q x (L/v+ L/V') x H.</algorithm_math>
   <variables>
     <var1>
-      <unit></unit><description>Q</description>
+      <unit>kg</unit><description>Q</description>
     </var1>
     <var2>
-      <unit></unit><description>L</description>
+      <unit>m</unit><description>L</description>
     </var2>
     <var3>
-      <unit></unit><description>v</description>
+      <unit></unit><description>V</description>
     </var3>
     <var4>
       <unit></unit><description>V'</description>
     </var4>
     <var5>
-      <unit></unit><description>H</description>
+      <unit>hr</unit><description>H</description>
     </var5>
   </variables>
   <results>
     <result1>
-      <unit></unit><description>Output</description>
+      <unit>m3</unit><description>Output</description>
       <op>var1 * (var2 / var3 + var2 / var4) * var5</op>
     </result1>
   </results>

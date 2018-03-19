@@ -38,12 +38,13 @@
 
   <variables>
     <var1>
-      <unit>Calcius</unit><description></description>
-      <op>var2 / 900</op>
+      <unit>Celcius</unit><description></description>
+      <op></op>
+<!-- *** Bernardo, qui non c'e un operatione, e solo un fatto -->
     </var1>
     <var2>
-      <unit>piece</unit><description>Lime</description>
-      <op>var1 * 900</op>
+      <unit>kg</unit><description>Lime</description>
+      <op></op>
     </var2>
   </variables>
 

@@ -24,15 +24,15 @@
   <position_in_process>materials</position_in_process>
   <material>mudbrick</material>
   <source_type>ethnographic</source_type>  
-  <source_chronology></source_chronology>
-  <source_geographical_location></source_geographical_location>
+  <source_chronology>Bronze Age</source_chronology>
+  <source_geographical_location>ANE</source_geographical_location>
 
 </algorithm_description>
 
 
 <algdata>
 
-  <algorithm_statement>1 cubic meter of new mudbrick weighs 1392 kg.</algorithm_statement>
+  <algorithm_statement>1 cubic meter of mudbrick from excavations weighs 1392 kg.</algorithm_statement>
   <algorithm_math>1 m3 weighs 1392 kg.</algorithm_math>
   <variables>
     <var1>
@@ -50,7 +50,7 @@
 
 <algnotes>
 
-  <general_notes></general_notes>
+  <general_notes>While the chronology here is given as Bronze Age, the fact that the bricks weigh less (see Buccellati_2016_132 for a comparison with new bricks) may be due to the fact that they have been removed (thus excavated) from an archaeological context.</general_notes>
   <biblio_notes></biblio_notes>
 
 </algnotes>

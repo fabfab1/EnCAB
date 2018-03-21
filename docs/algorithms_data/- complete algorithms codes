@@ -5,11 +5,11 @@
 
   <biblioref>
     <authorgroup>
-      <author><firstname>name1</firstname><surname>name1S</surname></author>
-      <author><firstname>name2</firstname><surname>name2S</surname></author>
-      <author><firstname>name3</firstname><surname>name3S</surname></author>
-      <author2><firstname>name2.1</firstname><surname>name2.1S</surname></author2>
-      <author2><firstname>name2.2</firstname><surname>name2.2S</surname></author2>
+      <author><surname>name1S</surname><firstname>name1</firstname></author>
+      <author><surname>name2S</surname><firstname>name2</firstname></author>
+      <author><surname>name3S</surname><firstname>name3</firstname></author>
+      <author2><surname>name2.1S</surname><firstname>name2.1</firstname></author2>
+      <author2><surname>name2.2S</surname><firstname>name2.2</firstname></author2>
     </authorgroup>
 
     <abbrev>bibliographical reference "Author_Date" [link to bibliography #author/firstname+author/surname (bibliography page: ../biblio/biblio.html).]</abbrev>
@@ -53,11 +53,11 @@
     <results><!-- OUTPUT results (no user edit), each result MUST have a different name -->
       <result1>
         <value></value><unit>m3</unit><description>wall from mortar</description>
-        <op>var2*6</op><!-- <op>..</op> in result is MANDATORY -->
+        <op>var2 * 6</op><!-- <op>..</op> in result is MANDATORY -->
       </result1>
       <result2>
         <value></value><unit>m3</unit><description>mortar in wall</description>
-        <op>var1*(1/6)</op>
+        <op>var1 * (1/6)</op>
       </result2>
     </results>
 
@@ -79,18 +79,18 @@
 
     <creation_author_group>
       <author>
-        <firstname>name1</firstname><surname>name1S</surname><!-- from set of possibilities, each linked to a static HTML page. Only one creation author allowed per algorithm. -->
+        <surname>name1S</surname><firstname>name1</firstname><!-- from set of possibilities, each linked to a static HTML page. Only one creation author allowed per algorithm. -->
         <creation_date> only in dd.mm.yyyy format. Only one allowed per algorithm. </creation_date>
       </author>
     </creation_author_group>
 
     <modification_author_group>
       <author>
-        <firstname>name1</firstname><surname>name1S</surname><!-- from set of possibilities, each linked to a static HTML page. Multiple modification authors allowed per algorithm. -->
+        <surname>name1S</surname><firstname>name1</firstname><!-- from set of possibilities, each linked to a static HTML page. Multiple modification authors allowed per algorithm. -->
         <modification_date> only in dd.mm.yyyy format. Only one allowed per algorithm. </modification_date>
       </author>
       <author>
-        <firstname>name2</firstname><surname>name2S</surname>
+        <surname>name2S</surname><firstname>name2</firstname>
         <modification_date> only in dd.mm.yyyy format. Only one allowed per algorithm. </modification_date>
       </author>
     </modification_author_group>

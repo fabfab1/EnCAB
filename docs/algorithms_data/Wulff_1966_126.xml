@@ -25,7 +25,7 @@
   <material>plaster</material>
   <source_type>ethnographic</source_type>  
   <source_chronology></source_chronology>
-  <source_geographical_location></source_geographical_location>
+  <source_geography></source_geography>
 
 </algorithm_description>
 
@@ -34,18 +34,6 @@
 
   <algorithm_statement>Production of gypsum requires a heat source of 100-200 Celcius.</algorithm_statement>
   <algorithm_math>Gypsum requires heat of 100-200 Celcius</algorithm_math>
-
-  <variables>
-    <var1>
-      <unit>Celcius</unit><description></description>
-      <op></op>
-<!-- *** Bernardo, qui non c'e un operatione, e solo un fatto -->
-    </var1>
-    <var2>
-      <unit>kg</unit><description>gypsum</description>
-      <op></op>
-    </var2>
-  </variables>
 
 </algdata>
 

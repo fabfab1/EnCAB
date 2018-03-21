@@ -25,7 +25,7 @@
   <material>mudbrick</material>
   <source_type>experimental archaeology</source_type>  
   <source_chronology>modern</source_chronology>
-  <source_geographical_location>ANE</source_geographical_location>
+  <source_geography>ANE</source_geography>
 
 </algorithm_description>
 
@@ -37,22 +37,16 @@
   <variables>
   <var1>
     <unit>hr</unit><description>hours</description>
-<!--    <op>Math.log(var2 / 100) / Math.log(1/12)</op> -->
-    <op></op>
   </var1>
   <var2>
-    <unit>Celcius</unit><description>Thermic difference in C</description>
-    <op></op>
-<!--     <op>Math.pow(1/12, var1) * 100</op> -->
+    <unit>Celcius</unit><description>Thermic difference</description>
   </var2>
   </variables>
 
   <results>
     <result1>
-      <value>Celcius</value><description>Remaining thermic difference in C</description>
-      <op></op>
-<!-- ***Bernardo - mi sai aiutare con la operatione qui? -->
-      <unit></unit>
+      <unit>Celcius</unit><description>Remaining thermic difference</description>
+      <op>var2 - (1/12)*var2 * var1</op>S
     </result1>
   </results>
 

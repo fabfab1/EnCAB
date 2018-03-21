@@ -52,6 +52,18 @@ table.data > tr:nth-child(odd), table.data > tbody > tr:nth-child(odd) {
 td.col-1, td.col-3 { width: 15%; }
 td.col-2, td.col-4 { width: 35%; }
 
-table.algo {
-    /*table-layout: fixed;*/
+
+.AI-Statement {
+    /* font-size: 18px; */
+    /* font-weight: bold;*/
+    /* font-style: italic; */
+}
+.AI-Statement-input {
+
+}
+.AI-Math {
+
+}
+.AI-Math-input {
+
 }

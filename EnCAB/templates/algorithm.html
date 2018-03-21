@@ -10,8 +10,8 @@
 <b>{{ b.find('reference').text|replace('_','&nbsp;') }}</b>
 <table class="data">
     <tr>
-        <td class="col-1">Al Statement:</td><td class="col-2">{{ b.find('algdata/algorithm_statement').text or '' }}</td>
-        <td class="col-3">Al Math:</td><td class="col-4">{{ b.find('algdata/algorithm_math').text or '' }}</td>
+        <td class="col-1 AI-Statement">Al Statement:</td><td class="col-2 AI-Statement-input">{{ b.find('algdata/algorithm_statement').text or '' }}</td>
+        <td class="col-3 AI-Math">Al Math:</td><td class="col-4 AI-Math-input">{{ b.find('algdata/algorithm_math').text or '' }}</td>
     </tr>
     <tr>
         <td colspan="4">{%- if b.find('algdata/variables') %}
@@ -68,14 +68,14 @@
     <tr>
         <td>How to cite:</td><td>EnCAB alg. - {{ b.find('reference').text }}</td>
         <td>Created by/on:</td><td>{% if b.find('algauthors/creation_author_group/author') %}<a href="../bibliography/bibliography.html#{{(b.find('algauthors/creation_author_group/author/surname').text or '').strip('.,')|replace(' ','')}}{{(b.find('algauthors/creation_author_group/author/firstname').text or '').strip('.,')|replace(' ','')}}">{{(b.find('algauthors/creation_author_group/author/surname').text or '')}} {{(b.find('algauthors/creation_author_group/author/firstname').text or '')}}</a>{% endif %}
-        {%- if b.find('algauthors/creation_author_group/creation_date').text %}, {{ b.find('algauthors/creation_author_group/creation_date').text }}{% endif %}</td>
+        {%- if b.find('algauthors/creation_author_group/author/creation_date').text %}, {{ b.find('algauthors/creation_author_group/author/creation_date').text }}{% endif %}</td>
     </tr>
     <tr>
         <td>Input data:</td><td><a href="../algorithms_data/{{filename}}">{{ filename }}</a></td>
         <td>Modified by/on:</td><td>
         {%- for modification_author in b.find('algauthors/modification_author_group') %}
             <a href="../bibliography/bibliography.html#{{(modification_author.find('surname').text or '').strip('.,')|replace(' ','')}}{{(modification_author.find('firstname').text or '').strip('.,')|replace(' ','')}}">{{(modification_author.find('surname').text or '')}} {{(modification_author.find('firstname').text or '')}}</a>
-            {%- if modification_author.find('creation_date').text %}, {{ modification_author_group.find('creation_date').text }}{% endif %}
+            {%- if modification_author.find('modification_date').text %}, {{ modification_author.find('modification_date').text }}{% endif %}
         {%- if not loop.last %}; {% endif %}{% endfor %}</td>
     </tr>
 </table>

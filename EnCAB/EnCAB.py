@@ -19,6 +19,24 @@ __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file
 os.chdir(__location__)
 
 
+class Logger(object):
+    def __init__(self):
+        self.terminal = sys.stdout
+        self.log = open('log.txt', 'w')
+
+    def write(self, message):
+        self.terminal.write(message)
+        self.log.write(message)
+
+    def flush(self):
+        pass
+
+# save text to log.txt
+logger = Logger()
+sys.stdout = logger
+sys.stderr = logger
+
+
 def files_index(website_dir):
     """ Generate dict of file names from first subdirectories """
 
@@ -59,7 +77,6 @@ def parse(filename, index):
         tree = ET.parse(filename)
     except ET.ParseError as err:
         print(f'[Err] "{os.path.basename(filename)}" {err}.')
-        input()
         sys.exit()
 
     """
@@ -103,7 +120,7 @@ def parse(filename, index):
                       .format(d_type.tag+'/'+d_type.text.replace(' ','_'), os.path.basename(filename)))
 
     # Check operations
-    op = False
+    op_result = False
     if root.find('algdata/results'):
         for var in root.find('algdata/results'):
             # Check <unit> in results
@@ -116,9 +133,8 @@ def parse(filename, index):
                           .format('units/'+unit.replace(' ', '_'), os.path.basename(filename)))
             # Check <op> in results
             if not var.find('op').text:
-                print(f'[Err] Missing <op> in "{os.path.basename(filename)}"')
-            else:
-                op = True
+                print(f'[Err] Missing <op> in <results> in "{os.path.basename(filename)}"')
+            op_result = True
     if root.find('algdata/variables'):
         for var in root.find('algdata/variables'):
             # Check <unit> in variables
@@ -130,11 +146,8 @@ def parse(filename, index):
                     print('[Err] "{}"  from "{}" not found in website files.'
                           .format('units/'+unit.replace(' ', '_'), os.path.basename(filename)))
             # Check <op> in variables
-            if not op:
-                if var.find('op').text:
-                    op = True
-    if not op:
-        print(f'[Err] Missing <op> in "{os.path.basename(filename)}"')
+            if not op_result and (var.find('op') is None or not var.find('op').text):
+                print(f'[Err] Missing <op> in "{os.path.basename(filename)}"')
 
     # TODO: all errors trap (check codes and info) [NOT everything must be present]
 
@@ -235,14 +248,6 @@ def generate_html(template, blocks_data):
     path, filename = os.path.split(template)
     return jinja2.Environment(loader=jinja2.FileSystemLoader(path or '.'))\
         .get_template(filename).render(blocks_data=blocks_data)
-
-
-def perror(text):
-    """ Print the error and write it to log """
-
-    print(text)  # TODO
-
-    return
 
 
 def check_config():

@@ -2,7 +2,7 @@
 {#- --- INDEX --- #}
 {%- set ns = namespace(new_sort = '') %}
 {% for b, filename in blocks_data -%}{% if b.find(sort).text.lower() != ns.new_sort.lower() %}{% set ns.new_sort = b.find(sort).text %}
-{% if ns.new_sort %}{% if not loop.first %} - {% endif %}<a href="#{{ ns.new_sort.lower() }}">{{ ns.new_sort|replace('_','&nbsp;') }}</a>{% endif %}
+{% if ns.new_sort %}{% if not loop.first %} - {% endif %}<a href="#{{ ns.new_sort.lower() }}">{{ ns.new_sort|replace('_','&nbsp;')|capfirst }}</a>{% endif %}
 {%- endif %}{% endfor %}
 {% set ns.new_sort = '' %}
 
@@ -52,16 +52,16 @@
         {%- if b.find('biblioref/pagenums2').text %}, {{ b.find('biblioref/pagenums').text }}{% endif %}</td>
     </tr>
     <tr>
-        <td>Algorithm type:</td><td>{% if b.find('algorithm_description/algorithm_type').text %}<a href="../algorithm_type/{{b.find('algorithm_description/algorithm_type').text|replace(' ','_')|lower}}.html">{{ b.find('algorithm_description/algorithm_type').text|title }}</a>{% endif %}</td>
-        <td>Position in process:</td><td>{% if b.find('algorithm_description/position_in_process').text %}<a href="../position_in_process/{{b.find('algorithm_description/position_in_process').text|replace(' ','_')|lower}}.html">{{ b.find('algorithm_description/position_in_process').text|title }}</a>{% endif %}</td>
+        <td>Algorithm type:</td><td>{% if b.find('algorithm_description/algorithm_type').text %}<a href="../algorithm_type/{{b.find('algorithm_description/algorithm_type').text|replace(' ','_')|lower}}.html">{{ b.find('algorithm_description/algorithm_type').text|capfirst }}</a>{% endif %}</td>
+        <td>Position in process:</td><td>{% if b.find('algorithm_description/position_in_process').text %}<a href="../position_in_process/{{b.find('algorithm_description/position_in_process').text|replace(' ','_')|lower}}.html">{{ b.find('algorithm_description/position_in_process').text|capfirst }}</a>{% endif %}</td>
     </tr>
     <tr>
-        <td>Material:</td><td>{% if b.find('algorithm_description/material').text %}<a href="../material/{{b.find('algorithm_description/material').text|replace(' ','_')|lower}}.html">{{ b.find('algorithm_description/material').text|title }}</a>{% endif %}</td>
-        <td>Source type:</td><td>{% if b.find('algorithm_description/source_type').text %}<a href="../source_type/{{b.find('algorithm_description/source_type').text|replace(' ','_')|lower}}.html">{{ b.find('algorithm_description/source_type').text|title }}</a>{% endif %}</td>
+        <td>Material:</td><td>{% if b.find('algorithm_description/material').text %}<a href="../material/{{b.find('algorithm_description/material').text|replace(' ','_')|lower}}.html">{{ b.find('algorithm_description/material').text|capfirst }}</a>{% endif %}</td>
+        <td>Source type:</td><td>{% if b.find('algorithm_description/source_type').text %}<a href="../source_type/{{b.find('algorithm_description/source_type').text|replace(' ','_')|lower}}.html">{{ b.find('algorithm_description/source_type').text|capfirst }}</a>{% endif %}</td>
     </tr>
     <tr>
-        <td>Source chronology:</td><td>{% if b.find('algorithm_description/source_chronology').text %}<a href="../source_chronology/{{b.find('algorithm_description/source_chronology').text|replace(' ','_')|lower}}.html">{{ b.find('algorithm_description/source_chronology').text }}</a>{% endif %}</td>
-        <td>Source geography:</td><td>{% if b.find('algorithm_description/source_geography').text %}<a href="../source_geography/{{b.find('algorithm_description/source_geography').text|replace(' ','_')|lower}}.html">{{ b.find('algorithm_description/source_geography').text }}</a>{% endif %}</td>
+        <td>Source chronology:</td><td>{% if b.find('algorithm_description/source_chronology').text %}<a href="../source_chronology/{{b.find('algorithm_description/source_chronology').text|replace(' ','_')|lower}}.html">{{ b.find('algorithm_description/source_chronology').text|capfirst }}</a>{% endif %}</td>
+        <td>Source geography:</td><td>{% if b.find('algorithm_description/source_geography').text %}<a href="../source_geography/{{b.find('algorithm_description/source_geography').text|replace(' ','_')|lower}}.html">{{ b.find('algorithm_description/source_geography').text|capfirst }}</a>{% endif %}</td>
     </tr>
     <tr>
         <td>Notes:</td><td colspan="3">{{ b.find('algnotes/general_notes').text or '' }}</td>

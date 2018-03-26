@@ -298,8 +298,13 @@ def generate_html(template, blocks_data, sort):
     """ Sort and render the data with templates """
 
     path, filename = os.path.split(template)
-    return jinja2.Environment(loader=jinja2.FileSystemLoader(path or '.'))\
-        .get_template(filename).render(blocks_data=blocks_data, sort=sort)#{% set old_sort = '' %}
+    env = jinja2.Environment(loader=jinja2.FileSystemLoader(path or '.'))
+
+    def capfirst(text):
+        return ' '.join(s[:1].upper() + s[1:] for s in text.split(' '))
+    env.filters['capfirst'] = capfirst
+
+    return env.get_template(filename).render(blocks_data=blocks_data, sort=sort)
 
 
 def check_config():

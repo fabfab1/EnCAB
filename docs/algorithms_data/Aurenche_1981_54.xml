@@ -10,7 +10,7 @@
   <authorgroup>
     <author><surname>Aurenche</surname><firstname>O.</firstname></author>
   </authorgroup>
-  <abbrev>Aurenche 1981</abbrev>
+  <abbrev>Aurenche_1981</abbrev>
   <pagenums>54</pagenums>
   <abbrev2></abbrev2>
   <pagenums2></pagenums2>
@@ -37,11 +37,11 @@
   <variables>
     <var1>
       <unit>cm</unit><description>section height</description>
-      <op>var1 * 40 / 4</op>
+      <op>var2 * 40 / 4</op>
     </var1>
     <var2>
       <unit>day</unit><description></description>
-      <op>var2 / 40 * 4</op>
+      <op>var1 / 40 * 4</op>
     </var2>
   </variables>
 

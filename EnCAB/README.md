@@ -32,16 +32,20 @@ Python 3, with Jinja2 (for templating), ElementTree (for parsing XML) and Beauti
 Edit config file "config.py" to change directories and other preferences.
 
 The program will read the HTML files and the algorithms data.
-It will write the HTML data in *.html files inside <section block="algorithm/index" sort="(name)"></section>.
-block="algorithm" sort="(name)" --> write algorithms data, insert in (name) a SORT_STRINGS (from "config.py") or XML XPath of desired item to sort
-block="index" sort="(name)"     --> write files index, insert in (name) the folder name of desired files to use for the sorted index
+It will write the HTML data in *.html files inside ```<section block="algorithm/index" sort="(name)"></section>```.
 
-Templates are written in Jinja2 templating language. The XML ElementTree is passed as argument.
+```block="algorithm" sort="(name)"``` write algorithms data, insert in (name) a SORT_STRINGS (from "config.py") or XML XPath of desired item to sort
+
+```block="index" sort="(name)"``` write files index, insert in (name) the folder name of desired files to use for the sorted index
 
 ### Data
 
 Each algorithms must have its own XML file stored in ALGORITHMS_DIR with .xml or .txt extension.
 See "- algorithms codes format" for mandatory format of the codes.
+
+### HTML Templates
+
+Templates are written in Jinja2 templating language. The XML ElementTree is passed as argument.
 
 ### Errors
 

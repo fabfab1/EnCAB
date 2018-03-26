@@ -49,7 +49,7 @@ Templates are written in Jinja2 templating language. The XML ElementTree is pass
 
 ### Errors
 
-The log containing the errors found by the program are stored in the file "log.txt".
+The log with the errors found are stored in the file "log.txt".
 
 
 ## Licensing

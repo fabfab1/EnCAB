@@ -27,7 +27,7 @@ function calc(obj) {
         if ( ! inputs[i].isSameNode(obj) ) {
             if ( inputs[i].dataset.op ) {
                 var total = Number( eval( inputs[i].getAttribute('data-op') ) );
-                if ( total ) {
+                if ( total == 0 || total ) {
                     inputs[i].value = round(total);
                 } else {
                     inputs[i].value = '';

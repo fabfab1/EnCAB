@@ -22,7 +22,7 @@ os.chdir(__location__)
 class Logger(object):
     def __init__(self):
         self.terminal = sys.stdout
-        self.log = open('log.txt', 'w')
+        self.log = open('log.txt', 'w', encoding="utf-8")
 
     def write(self, message):
         self.terminal.write(message)
@@ -31,7 +31,7 @@ class Logger(object):
     def flush(self):
         pass
 
-# save text to log.txt
+# Save text to log.txt
 logger = Logger()
 sys.stdout = logger
 sys.stderr = logger
@@ -40,76 +40,126 @@ sys.stderr = logger
 def files_index(website_dir):
     """ Generate dict of file names from first subdirectories """
 
-    # TODO: move to single folder or get list from config
-    #       better: get folders from section name
-
+    # Get files index
     index = dict()
-
     for subdir in os.listdir(website_dir):
         if os.path.isdir(os.path.join(website_dir,subdir)):
             for filename in os.listdir(os.path.join(website_dir,subdir)):
                 if os.path.isfile(os.path.join(website_dir,subdir,filename)) and filename.endswith('.html'):
-                    if '_index' not in filename:  # exclude index files
-                        # for each subdir make a list of filenames
-                        # {'subdir1': ['file1','file2'], 'subdir2': ['file3'], ..}
-                        index.setdefault(subdir, []).append(filename[:-5])  # append file without .html extension
+                    if IGNORE_IF_CONTAIN and IGNORE_IF_CONTAIN in filename:
+                        continue  # exclude index files themselves
+                    # for each subdir make a list of filenames
+                    # {'subdir1': ['file1','file2'], 'subdir2': ['file3'], ..}
+                    index.setdefault(subdir, []).append(filename[:-5])  # append file without .html extension
 
-    return index
+    # Get author index
+    author_index = set()
+    bibliography = os.path.join(WEBSITE_DIR, "bibliography/bibliography.html")
+    if os.path.isfile(bibliography):
+        try:
+            soup = BeautifulSoup(open(bibliography, 'r', encoding="utf-8"), "html.parser")
+        except IOError as err1:
+            print(f'[Err] {str(err1)}')
+            sys.exit()
+
+        for item in soup.find_all('a', attrs={'name': True}):
+            if item['name']:
+                author_index.add(item['name'])
+        for item in soup.find_all(attrs={'id': True}):
+            if item['id']:
+                author_index.add(item['id'])
+    else:
+        print(f'[Err] Bibliography file "{bibliography}" not found')
+
+    return index, author_index
 
 
-def get_algo_data(algo_dir, index):
+def get_algo_data(algo_dir, index, author_index):
 
     algo_data = []
     for file in os.listdir(algo_dir):
         filename = os.path.join(algo_dir, file)
         if os.path.isfile(filename) and filename.endswith(('.xml', '.txt')):
-            algo_data += [(parse(filename, index), os.path.basename(filename))]
+            algo_data += [(parse(filename, index, author_index), os.path.basename(filename))]
 
     return algo_data
 
 
-def parse(filename, index):
+def parse(filename, index, author_index):
     """ Read XML algorithms data and check for errors """
-
-    errors = []  # list of all errors encountered
 
     try:
         tree = ET.parse(filename)
     except ET.ParseError as err:
         print(f'[Err] "{os.path.basename(filename)}" {err}.')
         sys.exit()
-
-    """
     except IOError as err1:
-        input('\n[-] {}\n'.format(str(err1)))
+        print(f'[Err] {str(err1)}')
         sys.exit()
-    except UnicodeError:
-       input('\n[Err] "{0}".\n --> Check for bad characters or convert file encoding to UTF-8.\n'.format(filename))
-       sys.exit()
-    """
+    except UnicodeError as err2:
+        print(f'[Err] Check for bad characters (encoding: UTF-8) in "{os.path.basename(filename)}"')
+        print(f'\n- Full error: \n{str(err2)}')
+        sys.exit()
 
     root = tree.getroot()
-    # (.attrib), .text, .tag, .find('item'), .findall
-    # for atype in e.findall('type'):
-    #     print(atype.get('foobar'))
 
     for elem in root.iter():
         # Remove blank lines from all text
         if elem.text:
             elem.text = elem.text.strip()
-        # Check if all the tags are know
-        if elem.tag not in KNOWN_TAGS:
-            pass  # print('[-] Unknown input: "{}"'.format(elem.tag))
+
+    # Check text correctness
+    def check_code(code, t_regex=None, mandatory=True):
+        if root.find(code) is None or not root.find(code).text:
+            if mandatory:
+                errors.append(code)
+            return
+        if t_regex and not re.match(t_regex, root.find(code).text, flags=re.I):
+            errors.append(code)
+        return
+
+    def check_biblio(author):
+        if author_index:
+            author_name = ''
+            if author.find('surname') is not None:
+                author_name += (author.find('surname').text or '').strip(',.').replace(' ', '')
+            if author.find('firstname') is not None:
+                author_name += (author.find('firstname').text or '').strip(',.').replace(' ', '')
+            if author_name and author_name not in author_index:
+                print(f'[Err] Author "{author_name}" in "{os.path.basename(filename)}" not found in bibliography')
+        return
+
+    errors = []
 
     # reference: authors_date_pagenumber(_sequential)
-    if not root.find('reference').text or not re.match(r"^\w+_\d{4}_\d+(|_\d+)$", root.find('reference').text, flags=re.I):
-        errors.append('reference')
-    # ecc: ...
-    if not True:
-        errors.append('ecc...')
+    check_code('reference', r"^\w+_\d{4}_\d+(|_\d+)$", mandatory=True)
+    # biblioref/authorgroup/author/surname
+    check_code('biblioref/authorgroup/author/surname', mandatory=True)
+    # biblioref/authorgroup/author/*name: in Bibliography
+    for author in root.find('biblioref/authorgroup'):
+        check_biblio(author)
+    # biblioref/abbrev: author_date
+    check_code('biblioref/abbrev', r"^\w+_\d{4}$", mandatory=True)
+    check_code('biblioref/abbrev2', r"^\w+_\d{4}$", mandatory=False)
+    # biblioref/pagenums: numbers separated by - or ,
+    check_code('biblioref/pagenums', r"^\d+( ?[-,] ?\d+)*$", mandatory=True)
+    check_code('biblioref/pagenums2', r"^\d+( ?[-,] ?\d+)*$", mandatory=False)
+    # algdata/algorithm_statement
+    check_code('algdata/algorithm_statement', mandatory=True)
+    # algauthors/*_author_group/author/*_date: dd.mm.yyyy
+    # algauthors/*_author_group/author/*name: in Bibliography
+    creation = 'algauthors/creation_author_group'
+    modification = 'algauthors/modification_author_group'
+    if root.find(creation) is not None and len(root.find(creation)) > 1:  # Check only 1 creation author
+        print(f'[Err] Only 1 author allowed in {creation} in "{os.path.basename(filename)}"')
+    check_code(creation+'/author/creation_date', r"^\d{2}\.\d{2}\.\d{4}$", mandatory=False)
+    check_biblio(root.find(creation+'/author'))
+    if root.find(modification) is not None:
+        for i in range(len(root.find(modification))):
+            check_code(modification+'/author['+str(i+1)+']/modification_date', r"^\d{2}\.\d{2}\.\d{4}$", mandatory=False)
+            check_biblio(root.find(modification+'/author['+str(i+1)+']'))
 
     # algorithm_description: check if file exist for each description type
-    # ! CHANGE with config or sub-folder
     for d_type in root.find('algorithm_description'):
         if d_type.tag not in index.keys():
             print('[Err] "{}" from "{}" not found in website folders.'.format(d_type.tag+'/', os.path.basename(filename)))
@@ -136,6 +186,7 @@ def parse(filename, index):
                 print(f'[Err] Missing <op> in <results> in "{os.path.basename(filename)}"')
             op_result = True
     if root.find('algdata/variables'):
+        var_names = set()
         for var in root.find('algdata/variables'):
             # Check <unit> in variables
             if not var.find('unit').text:
@@ -148,13 +199,14 @@ def parse(filename, index):
             # Check <op> in variables
             if not op_result and (var.find('op') is None or not var.find('op').text):
                 print(f'[Err] Missing <op> in "{os.path.basename(filename)}"')
-
-    # TODO: all errors trap (check codes and info) [NOT everything must be present]
+            # Check different names
+            if var.tag in var_names:
+                print(f'[Err] Same names of variables in "{os.path.basename(filename)}"')
+            else:
+                var_names.add(var.tag)
 
     if errors:
         print(f'[Err] In "{os.path.basename(filename)}", the data in following tags is wrong: {errors}')
-
-    # ? beautify XML files
 
     return root
 
@@ -163,7 +215,7 @@ def write_data(website_dir, algo_data, index):
     """ Update <section>s with HTML rendered data """
 
     # Regex parser for <section> tags [html parsers don't keep formatting]
-    regex_section = re.compile(r"(.*?)((<section.*?>).*?(<\/section>))(.*)", flags=re.DOTALL|re.I)
+    regex_section = re.compile(r"((.*?)(<section.*?>).*?(<\/section>.*?(?=(?:<section|$))))", flags=re.DOTALL|re.I)
 
     # Search each HTML file
     for root, dirs, files in os.walk(website_dir):
@@ -171,64 +223,64 @@ def write_data(website_dir, algo_data, index):
             if file.endswith(('.html','.htm')):
 
                 filename = os.path.join(root, file)
+
                 # open file
                 try:
                     with open(filename, 'r', encoding='utf-8') as html:
                         html_file = html.read()
 
                 except IOError as err1:
-                    input('\n[-] {}\n'.format(str(err1)))
+                    print(f'[Err] {str(err1)}')
                     sys.exit()
 
-                # search for <section>
-                sections = regex_section.fullmatch(html_file)
+                # search for <section>s
+                sections = regex_section.findall(html_file)
                 if not sections:
                     continue
 
-                # check attributes
-                soup = BeautifulSoup(sections.group(2), "html.parser").find('section')
-                if not soup.has_attr('block'):
-                    print('[Err] Found <section> without "block" attribute in "{}".'.format(filename))
-                    continue
+                html_file_updated = ''
 
-                sort = soup.get('sort')
+                for unchanged, start, section, end in sections:
 
-                # Based on block and sort, choose template and sort/trim the data
-                if soup['block'] == "algorithm":  # ? use file names / if type in TEMPLATES
-
-                    template = TEMPLATE_ALGORITHM
-
-                    if sort in SORT_STRINGS.keys():
-                        blocks_data = sorted(algo_data, key=lambda x: x[0].find(SORT_STRINGS[sort]).text
-                                             if x[0].find(SORT_STRINGS[sort]) is not None else 'zzz')
-                    # elif sort:  # TODO: custom sort
-                    else:
-                        blocks_data = algo_data[:]  # just copy the data if no sort found for algorithm
-
-                elif soup['block'] == "index":
-
-                    template = TEMPLATE_INDEX
-
-                    if not sort:
-                        print('[Err] Missing sort attribute in <section> for index in file "{}".'.format(filename))
+                    # check attributes
+                    soup = BeautifulSoup(section, "html.parser").find('section')
+                    sort = soup.get('sort')
+                    if not soup.has_attr('block'):
+                        print(f'[Err] Missing attribute block in <section> in "{os.path.basename(filename)}".')
+                        html_file_updated += unchanged
                         continue
-                    if sort in index.keys():
-
-                        blocks_data = sorted(index[sort])
-
-                    else:
-                        print('[Err] Sort attribute in file "{}" NOT valid.'.format(filename))
+                    elif not sort:
+                        print(f'[Err] Missing attribute sort in <section> in file "{os.path.basename(filename)}".')
+                        html_file_updated += unchanged
                         continue
 
-                else:
-                    print('[Err] <section> block value "{}" in file "{}" NOT valid.'.format(block, filename))
-                    continue
+                    # Based on block and sort, choose template and sort/trim the data
+                    if soup['block'] == "algorithm":
+                        template = TEMPLATE_ALGORITHM
+                        sort = SORT_STRINGS[sort] if sort in SORT_STRINGS.keys() else sort
+                        blocks_data = sorted(algo_data, key=lambda x:
+                                (x[0].find(sort).text if x[0].find(sort) is not None and x[0].find(sort).text else 'zzz',
+                                 x[0].find('reference').text))
 
-                html_data = generate_html(os.path.relpath(template), blocks_data)
+                    elif soup['block'] == "index":
+                        template = TEMPLATE_INDEX
+                        if sort in index.keys():
+                            blocks_data = sorted(index[sort])
+                        else:
+                            print(f'[Err] Attribute sort="{sort}" in <section> in file "{os.path.basename(filename)}" NOT valid.')
+                            html_file_updated += unchanged
+                            continue
 
-                # reconstruct html with updated <section>
-                html_file_updated = sections.group(1)+sections.group(3)+ html_data +\
-                                    '    '+sections.group(4)+sections.group(5)
+                    else:
+                        block = soup['block']
+                        print(f'[Err] Attribute block="{block}" in <section> in file "{os.path.basename(filename)}" NOT valid.')
+                        html_file_updated += unchanged
+                        continue
+
+                    html_data = generate_html(os.path.relpath(template), blocks_data, sort)
+
+                    # reconstruct html with updated <section>
+                    html_file_updated += start + section + html_data + end
 
                 # write HTML to file
                 try:
@@ -242,12 +294,12 @@ def write_data(website_dir, algo_data, index):
     return
 
 
-def generate_html(template, blocks_data):
+def generate_html(template, blocks_data, sort):
     """ Sort and render the data with templates """
 
     path, filename = os.path.split(template)
     return jinja2.Environment(loader=jinja2.FileSystemLoader(path or '.'))\
-        .get_template(filename).render(blocks_data=blocks_data)
+        .get_template(filename).render(blocks_data=blocks_data, sort=sort)#{% set old_sort = '' %}
 
 
 def check_config():
@@ -258,17 +310,17 @@ def check_config():
         if not conf in globals():
             missing.append(conf)
     if missing:
-        input('[Err] Wrong config, {} not found.'.format(str(missing).strip('[]').replace('\'', '\"')))
+        print('[Err] Wrong config, {} not found.'.format(str(missing).strip('[]').replace('\'', '\"')))
         sys.exit()
 
     for config_dir in [WEBSITE_DIR, ALGORITHMS_DIR]:
         if not os.path.isdir(os.path.relpath(config_dir)):
-            input('[Err] Wrong config, "{}" directory not found.'.format(config_dir))
+            print(f'[Err] Wrong config, "{config_dir}" directory not found.')
             sys.exit()
-
-    for config_template in [TEMPLATE_ALGORITHM, TEMPLATE_INDEX]:
-        if not os.path.isfile(os.path.relpath(config_template)):
-            print('[Err] Wrong config, template "{}" not found.'.format(config_template))
+    for config_file in [TEMPLATE_ALGORITHM, TEMPLATE_INDEX]:
+        if not os.path.isfile(os.path.relpath(config_file)):
+            print(f'[Err] Wrong config, file "{config_file}" not found.')
+            sys.exit()
 
     return
 
@@ -277,20 +329,20 @@ if __name__ == '__main__':
     # app.run()
     check_config()
 
-    print('''
+    print(f'''
  EnCAB: Energetic Calculator for Ancient Buildings
 ------------------------------------------------------
 
  This program will update website <section> with indexes and algorithms.
  Edit config file to change directories and preference.
 
- Config file: "{}".
- Website directory: "{}".
- Algorithms directory: "{}".
- Algorithm template: "{}".
- Index template: "{}".
+ Config file: "{'config.py'}".
+ Website directory: "{WEBSITE_DIR}".
+ Algorithms directory: "{ALGORITHMS_DIR}".
+ Algorithm template: "{TEMPLATE_ALGORITHM}".
+ Index template: "{TEMPLATE_INDEX}".
 
-'''.format('config.py', WEBSITE_DIR, ALGORITHMS_DIR, TEMPLATE_ALGORITHM, TEMPLATE_INDEX))
+''')
 
     try:
         print('Press ENTER to Continue, Ctrl-C to Abort.\n')  # input()
@@ -298,12 +350,10 @@ if __name__ == '__main__':
         sys.exit()
 
     print('[*] Generating indexes...')
-    index = files_index(os.path.relpath(WEBSITE_DIR))
+    index, author_index = files_index(os.path.relpath(WEBSITE_DIR))
 
     print('[*] Importing algorithms data...')
-    algo_data = get_algo_data(os.path.relpath(ALGORITHMS_DIR), index)
-
-    # print(index)  ###
+    algo_data = get_algo_data(os.path.relpath(ALGORITHMS_DIR), index, author_index)
 
     print('[*] Writing data...')
     write_data(os.path.relpath(WEBSITE_DIR), algo_data, index)

@@ -10,7 +10,7 @@
   <authorgroup>
     <author><surname>Minke</surname><firstname>G.</firstname></author>
   </authorgroup>
-  <abbrev>MinkeG</abbrev>
+  <abbrev>MinkeG_1994</abbrev>
   <pagenums>55</pagenums>
   <abbrev2></abbrev2>
   <pagenums2></pagenums2>
@@ -18,7 +18,6 @@
 </biblioref>
 
 
-<!-- *** Check type, chrono-->
 <algorithm_description>
 
   <algorithm_type>mudbrick</algorithm_type>

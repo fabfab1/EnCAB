@@ -1,20 +1,13 @@
 List of things still to do in EnCAB Program:
+--------------------------------------------
 
-
-
-- check Aurence <op>
-
-
-The HTML files where the algorithms are placed should have links to anchors for the different categories; example, at the top of 'Algorithms by Material' instead of links to the individual algorithms (Abrans 1994_47_1 etc) there should be links to the materials, so 'earth', 'mudbrick', 'pise'', 'plaster' etc. The same for the algorithm_type.html and the algorithm_position_in_process.html. The algorithm_bibliography.html would instead be by author_year, so Abrams 1994.
-
-update Readme file
 
 write programming page
 
 write Bernardo bio page
 
+favicon.ico ?
 
-----------
 
-create a CSV data dump from all the input files used (also the ones with errors) with the XML tags as headers. Filename should be "EnCAB_input_xyz.csv" where xyz is the date (year month day format) and time. the seperator should be a tab character (the error trapping should give an error if there is a tab used in the input, and should replace that character with 5 spaces when sending to the CSV file)
-
+CSV data dump from all the input files used (also the ones with errors) with the XML tags as headers. Filename should be "EnCAB_input_xyz.csv" where xyz is the date (year month day format) and time.
+ the separator should be a tab character (the error trapping should give an error if there is a tab used in the input, and should replace that character with 4 spaces when sending to the CSV file)

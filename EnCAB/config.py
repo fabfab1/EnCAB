@@ -17,16 +17,11 @@ TEMPLATE_ALGORITHM = "templates/algorithm.html"  # default: "templates/algorithm
 TEMPLATE_INDEX = "templates/index.html"  # default: "templates/index.html"
 
 
-# Extra options
-
-# List of used tags to check for unknown tags in XML input
-KNOWN_TAGS = ["reference", "biblioref", "authorgroup"]
-
 # List of possible sort attributes for <section> with relative XML tag
-SORT_STRINGS = {'algorithm_types': 'algorithm_description/algorithm_types',
+SORT_STRINGS = {'algorithm_type': 'algorithm_description/algorithm_type',
                 'position_in_process': 'algorithm_description/position_in_process',
                 'material': 'algorithm_description/material',
-                'abbrev': 'reference'}
+                'abbrev': 'biblioref/abbrev'}
 
-# INDEXES = [..,..] folders
-# IGNORE_IF_CONTAIN = "_index"  #_files to ignore in index
+# String to select files containing it in their filename, those files will be ignored for the index
+IGNORE_IF_CONTAIN = "_index"  # default: "_index"

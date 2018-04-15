@@ -6,9 +6,11 @@ EnCAB: Energetic Calculator for Ancient Buildings
 import sys
 import os   # files
 import re   # regex
+import datetime
 import xml.etree.ElementTree as ET  # XML file reading
 from bs4 import BeautifulSoup  # HTML tag parsing
 import jinja2   # HTML template
+import zipfile
 # from pyuca import Collator			# UTF sorting
 
 from config import *  # File "config.py" stores program settings
@@ -76,12 +78,18 @@ def files_index(website_dir):
 
 def get_algo_data(algo_dir, index, author_index):
 
+    # Archive the data
+    zip_name = 'EnCAB_input_' + datetime.date.today().strftime('%Y%m%d') + '.zip'
+    zip_file = zipfile.ZipFile(os.path.join(algo_dir, 'archives', zip_name), mode='w', compression=zipfile.ZIP_DEFLATED)
+
     algo_data = []
     for file in os.listdir(algo_dir):
         filename = os.path.join(algo_dir, file)
         if os.path.isfile(filename) and filename.endswith(('.xml', '.txt')):
             algo_data += [(parse(filename, index, author_index), os.path.basename(filename))]
+            zip_file.write(filename, arcname=os.path.basename(filename))
 
+    zip_file.close()
     return algo_data
 
 

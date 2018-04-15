@@ -358,7 +358,7 @@ if __name__ == '__main__':
 ''')
 
     try:
-        print('Press ENTER to Continue, Ctrl-C to Abort.\n')  # input()
+        input('Press ENTER to Continue, Ctrl-C to Abort.\n')
     except KeyboardInterrupt:  # Do not send error for Ctrl-C
         sys.exit()
 
@@ -373,5 +373,5 @@ if __name__ == '__main__':
 
     print('\n[+] Done!')
 
-    # input()
+    input()
     sys.exit()

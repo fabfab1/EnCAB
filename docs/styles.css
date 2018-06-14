@@ -34,6 +34,9 @@ img {
     max-width: 100%;
 }
 
+p{
+     padding:0% 2%;
+     }
 
 table.data {
     text-align: justify;

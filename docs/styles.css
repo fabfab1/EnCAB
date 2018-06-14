@@ -35,7 +35,9 @@ img {
 }
 
 p{
-     padding:0% 2%;
+    padding:0% 10%;
+    text-align: justify;
+    text-justify: inter-word;
      }
 
 table.data {

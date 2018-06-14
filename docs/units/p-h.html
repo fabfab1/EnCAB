@@ -7,45 +7,48 @@
     <meta name="author" content="F. Buccellati">
     <link rel="stylesheet" href="../styles.css?v=1.0">
     <script async="" src="../scripts.js"></script>
-  </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+}
+</script> </head>
   <body>
     <header>
-      <h1 align="center">Energetic Calculator for Ancient Buildings - EnCAB</h1>
+      <h1 align="center">Energetic Calculator for Ancient Buildings
+        - EnCAB</h1>
       <h2 align="center"><span style="color: #6633ff;">Unit: Person Hour</span></h2>
-      <p>Back to <a href="units_index.html" target="_top">Index of Units</a></p>
     </header>
-    <h4><a name="unit_ph">Unit: Person Hour -- Links<br>
-      </a></h4>
-    <p> Getty AAT: NA (closest match: <a href="http://vocab.getty.edu/page/aat/300025886"
-
-        target="_blank">Workers</a>)</p>
-    <p>Merriam-Webster: <a href="https://www.merriam-webster.com/dictionary/person-hour"
-
-        target="_blank">Person-hour</a><br>
-    </p>
-    <p> See also <a href="../bibliography/bibliography.html#MastersT" target="_blank">Masters
-        2018</a> for modern calculations. (<a href="http://smallbusiness.chron.com/calculate-man-hours-2933.html"
-
-        target="_blank">link</a>)</p>
-    <h4>Unit: Person Hour -- Description</h4>
-    <p>Person-hours (also man-hour or effort-hour, abbraviated 'p-h') measure
-      the time a task takes in terms of both time and individuals involved. As
-      an example, a task which takes 50 p-h means that 10 people can complete
-      the task in 5 hours or 5 people can complete the task in 10 hours.</p>
-    <p>For the sake of simplicity the algorithms used here assume a linear
-      progression: that 50 p-h means that 2 people need 25 hours and 25 people
-      need 2 hours to complete a task. In reality, the low and high ranges are
-      not exactly linear, as one or two people are not as efficient as an
-      'ideal' group, and an overly large number also tends to be less efficient
-      due to space limitations. None of the authors used in this study have
-      investigated the efficiency for diverse numbers of workers, so the loss in
-      terms of time for the high and low ranges of workers is unclear. The
-      algorithms presented here assume the most efficient number of people for a
-      given task.</p>
-    <p>I have chosen the term person-hour over the more common man-hour since
-      some of the detailed records for pre-industrial labor show that some
-      workforces were made up of a majority of women (e.g. <a href="../bibliography/bibliography.html#HeimpelW">Heimpel
-        2009</a>).<br>
-    </p>
+    <h4><a href="p-h.html">Person Hour</a></h4>
+    <div w3-include-html="p-h_data.html"></div>
+    <br>
+    <p>Back to <a href="units_index.html" target="_top">Index of Units</a></p>
+    <script>
+includeHTML();
+</script>
   </body>
 </html>

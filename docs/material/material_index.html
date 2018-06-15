@@ -6,23 +6,75 @@
     <meta name="description" content="Index of Material - EnCAB">
     <meta name="author" content="F. Buccellati">
     <link rel="stylesheet" href="../styles.css?v=1.0">
-    <script async src="../scripts.js"></script>
-  </head>
+    <script async="" src="../scripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+}
+</script> </head>
   <body>
     <header>
-      <h1 align="center">Energetic Calculator for Ancient Buildings - EnCAB</h1>
+      <h1 align="center">Energetic Calculator for Ancient Buildings
+        - EnCAB</h1>
       <h2 align="center"><span style="color: #6633ff;">Index of Material</span></h2>
     </header>
     <h4> Index: </h4>
     <section block="index" sort="material">
-<a href="earth.html">earth</a> &nbsp;
-<a href="mortar.html">mortar</a> &nbsp;
-<a href="mudbrick.html">mudbrick</a> &nbsp;
-<a href="pise'.html">pise'</a> &nbsp;
-<a href="plaster.html">plaster</a> &nbsp;
-<a href="stone.html">stone</a> &nbsp;
-</section>
-    <h4><a name="material">Material</a></h4>
-    <p>Material</p>
+      <a href="earth.html">earth</a>
+      <a href="mortar.html">mortar</a>
+      <a href="mudbrick.html">mudbrick</a>
+      <a href="pise%27.html">pise'</a>
+      <a href="plaster.html">plaster</a>
+      <a href="stone.html">stone</a>
+    </section>
+    <h4> List of Units: </h4>
+    <br>
+    <h4><a href="earth.html">earth</a></h4>
+    <div w3-include-html="earth_data.html"></div>
+    <br>
+    <h4><a href="mortar.html">mortar</a></h4>
+    <div w3-include-html="mortar_data.html"></div>
+    <br>
+    <h4><a href="mudbrick.html">mudbrick</a></h4>
+    <div w3-include-html="mudbrick_data.html"></div>
+    <br>
+    <h4><a href="pise%27.html">pise'</a></h4>
+    <div w3-include-html="pise'_data.html"></div>
+    <br>
+    <h4><a href="plaster.html">plaster</a></h4>
+    <div w3-include-html="plaster_data.html"></div>
+    <br>
+    <h4><a href="stone.html">stone</a></h4>
+    <div w3-include-html="stone_data.html"></div>
+    <br>
+    <p>Back to <a href="../index.html" target="_top">Home</a></p>
+    <script>
+includeHTML();
+</script>
   </body>
 </html>

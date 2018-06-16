@@ -5,7 +5,7 @@
 
 
 html {
-    font-family: serif;
+    font-family: "Verdana", verdana, Sans-serif;
     height: 100%;
     width: 100%;
     overflow-y: scroll;
@@ -22,7 +22,12 @@ body {
 }
 
 h1,h2,h3{
-    line-height:1.2
+        font-family: "Verdana", verdana, Sans-serif;
+	line-height:1.2
+}
+
+h4,h5,h6{
+        font-family: "Verdana", verdana, Sans-serif;
 }
 
 a:link    { color: #00e; }
@@ -35,6 +40,7 @@ img {
 }
 
 p{
+    font-family: "Verdana", verdana, Sans-serif;
     padding:0% 7%;
     text-align: justify;
     text-justify: inter-word;

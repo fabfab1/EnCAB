@@ -6,16 +6,50 @@
     <meta name="description" content="Source Geography: Mesoamerica - EnCAB">
     <meta name="author" content="F. Buccellati">
     <link rel="stylesheet" href="../styles.css?v=1.0">
-    <script async src="../scripts.js"></script>
-  </head>
+    <script async="" src="../scripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+}
+</script> </head>
   <body>
     <header>
-      <h1 align="center">Energetic Calculator for Ancient Buildings - EnCAB</h1>
+      <h1 align="center">Energetic Calculator for Ancient Buildings
+        - EnCAB</h1>
       <h2 align="center"><span style="color: #6633ff;">Source Geography:
           Mesoamerica</span></h2>
     </header>
-    <h4><a name="source_geography_meso">Source Geography: Mesoamerica</a></h4>
-    <p>Source Geography: Mesoamerica</p>
-    
+    <h4><a href="mesoamerica.html">Mesoamerica</a></h4>
+    <div w3-include-html="mesoamerica_data.html"></div>
+    <br>
+    <p>Back to <a href="source_geography_index.html" target="_top">Index of Geography</a></p>
+    <script>
+includeHTML();
+</script>
   </body>
 </html>

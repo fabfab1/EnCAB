@@ -1,8 +1,7 @@
 List of things still to do in EnCAB Program:
 --------------------------------------------
 
-
-? where to put programming page or link to README.rd
+? add JSON as input possiblity (for files with .json extension)
 
 ? favicon.ico
 

@@ -6,10 +6,19 @@
     <meta name="description" content="Bibliography - EnCAB">
     <meta name="author" content="F. Buccellati">
     <link rel="stylesheet" href="../styles.css?v=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        alert($("span").length);
+    });
+});
+</script>
   </head>
   <body>
     <header>
-      <h1 align="center">Energetic Calculator for Ancient Buildings - EnCAB</h1>
+      <h1 align="center">Energetic Calculator for Ancient Buildings
+        - EnCAB</h1>
       <h2 align="center"><span style="color: #6633ff;">Bibliography</span></h2>
     </header>
     <!--#
@@ -189,5 +198,8 @@ V W X Y Z  -->
     </div>
     <div style="line-height: 1.35; padding-left: 2em; text-indent:-2em;" class="csl-bib-body"><br>
     </div>
+    <br>
+  <button>Count number of items in Bibliography</button>
+    <br>
   </body>
 </html>

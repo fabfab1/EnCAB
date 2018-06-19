@@ -10,31 +10,69 @@
   </head>
   <body>
     <header>
-      <h1 align="center">Energetic Calculator for Ancient Buildings
-        - EnCAB</h1>
+      <h1 align="center">Energetic Calculator for Ancient Buildings - EnCAB</h1>
       <h2 align="center"><span style="color: #6633ff;">Notes on Program</span></h2>
     </header>
     <h4><a>Program -- Concept<br>
       </a></h4>
-    <p>Concept</p>
+    <p>EnCAB is composed of two parts: an executable program and a website. The
+      executable program takes input files, containing the data needed to create
+      and format the algorithms, and uses that data to create interactive fields
+      and links. Those algorithms are then grouped on several static HTML pages
+      according to attributes, such as the '<a href="../algorithms/algorithm_position_in_process.html">position
+        in process</a>' of the individual algorithm, or the <a href="../material/material_index.html">material</a>
+      used. These HTML files form part of a website which contains an array of
+      HTML pages giving descriptions for the elements used to describe the
+      algorithms, such as the <a href="../units/units_index.html">units</a>
+      used or the <a href="../source_chronology/source_chronology_index.html">source
+        chronology</a>.</p>
     <h4><a>Program -- Input<br>
       </a></h4>
-    <p>Input</p>
+    <p>For each algorithm there is one input file containing the information
+      needed to create and describe the algorithm to be placed in the HTML
+      files. The input format used is XML, and there are plans to include JSON
+      as an input format as well (see <a href="fut_plans">Future Plans</a>
+      below). A <a href="../algorithms_data/-%20algorithms%20codes%20format.txt">template</a>
+      for the XML input can be found in the documentation.</p>
     <h4><a>Program -- Programming Language and Distribution<br>
       </a></h4>
-    <p>Programming Language and Distribution</p>
-    <h4><a>Program -- HTML Pages<br>
-      </a></h4>
-    <p>HTML Pages</p>
+    <p>The executable portion of EnCAB has been written in Python 3.6 using:<br>
+      * <a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a> as the
+      templating engine<br>
+      * <a href="http://docs.python.org/3/library/xml.etree.elementtree.html" target="_blank">ElementTree</a>
+      to parse XML<br>
+      * <a href="http://www.crummy.com/software/BeautifulSoup/bs4/doc/" target="_blank">BeautifulSoup</a>
+      to parse HTML</p>
+    <p>Details on how to run EnCAB can be found in the <a href="../../EnCAB/README.md"
+        target="_blank">readme.md</a> file in the GitHub repository.</p>
+    <p>EnCAB is Open Source available under the GNU-GPL 3.0 license (with the
+      exception of the images), and is available as a <a href="http://github.com/fabfab1/EnCAB"
+        target="_blank">GitHub repository</a>. EnCAB versions are saved in
+      Zenodo <a href="http://zenodo.org/badge/doi/10.5281/zenodo.1243274.svg" target="_blank">here</a>.</p>
     <h4><a>Program -- Error Trapping<br>
       </a></h4>
-    <p>Error Trapping</p>
+    <p>The executable program creates a <a href="../../EnCAB/log.txt" target="_blank">log
+        file</a> of errors it finds when compiling the algorithms, checking, for
+      example, that the descriptive HTML files referred to are present in the
+      website.</p>
+    <h4><a>Program -- Website<br>
+      </a></h4>
+    <p>The website is hosted on GitHub, while the domain name has been purchased
+      through DirectNIC. One of the limitations of GitHub hosting is that
+      dynamic pages are not allowed, resulting in the use of static pages as
+      described above.</p>
     <h4><a>Program -- Adding to EnCAB<br>
       </a></h4>
-    <p>Adding to EnCAB</p>
-    <h4><a>Program -- Future Plans<br>
-      </a></h4>
-    <p>Future Plans</p>
+    <p>Contributions to EnCAB are more than welcome, for more information see
+      the <a href="file:///C:/Users/fAB/Google%20Drive/%5EEnCAB%20Project/GitHub%20Repo/EnCAB/docs/contribute/contribute.html">contribute
+        page</a>.</p>
+    <h4><a id="fut_plans">Program -- Future Plans</a></h4>
+    <p>EnCAB is an ongoing project, and several ideas have yet to be
+      implemented. For the moment the primary <i>desiderata</i> is the
+      inclusion of JSON as possible input type, along with the XML already
+      implemented. For a complete list of <i>desiderata</i>, to add something
+      or to help improve the program, see the <a href="../../EnCAB/to-do_programming.txt"
+        target="_blank">to-do file</a>.</p>
     <br>
     <br>
     Back to <a href="../index.html" target="_top">Home</a><br>

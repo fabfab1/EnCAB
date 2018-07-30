@@ -40,8 +40,7 @@
                 data-bind="text: apa"><strong><em><span data-bind="text: chicago"><span
                         data-bind="text: mla"><span data-bind="text: apa"><strong><em>ACCESSED
                               </em></strong></span></span></span>HERE</em></strong></span>.
-              Web.
-            </span></td>
+              Web. </span></td>
         </tr>
         <tr>
           <td><em>Chicago</em></td>
@@ -51,8 +50,7 @@
               Open Science Framework. </span><span data-bind="text: chicago"><span
                 data-bind="text: mla"><span data-bind="text: apa"><strong><em>INSERT
                       MONTH AND DAY ACCESSED HERE</em></strong></span></span>.
-              doi:10.17605/OSF.IO/NMZXT.
-            </span></td>
+              doi:10.17605/OSF.IO/NMZXT. </span></td>
         </tr>
       </tbody>
     </table>
@@ -61,6 +59,17 @@
           used only to cite specific versions of the project; this would
           primarily be useful when comparing two different versions of the EnCAB
           project.<br>
+        </span></span></p>
+    <p><span data-bind="if: hasDoi()" class="scripted" style="display: inline;"><span
+          data-bind="text: doi">v0.2 (<a href="https://doi.org/10.5281/zenodo.1243274"
+            target="_blank">https://doi.org/10.5281/zenodo.1243274</a>)<br>
+        </span></span></p>
+    <p><span data-bind="if: hasDoi()" class="scripted" style="display: inline;"><span
+          data-bind="text: doi">v0.9 </span></span><span data-bind="if: hasDoi()"
+        class="scripted" style="display: inline;"><span data-bind="text: doi">(<a
+            href="https://doi.org/10.5281/zenodo.1323829" target="_blank">https://doi.org/10.5281/zenodo.1323829</a>)</span></span></p>
+    <p><span data-bind="if: hasDoi()" class="scripted" style="display: inline;"><span
+          data-bind="text: doi"><br>
         </span></span></p>
     <p><span data-bind="if: hasDoi()" class="scripted" style="display: inline;"><span
           data-bind="text: doi"><br>

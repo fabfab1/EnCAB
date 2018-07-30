@@ -14,6 +14,59 @@
       <h2 align="center"><span style="color: #6633ff;">How to Cite</span></h2>
     </header>
     <h4>How to Cite</h4>
-    <p> How to Cite - Open Science Framework</p>
+    <p> Citing the project can be done in two ways: through an Open Science
+      Framework DOI (<span data-bind="if: hasDoi()" class="scripted" style="display: inline;">DOI
+        <span data-bind="text: doi"><a href="https://dx.doi.org/10.17605/OSF.IO/NMZXT"
+            target="_blank">10.17605/OSF.IO/NMZXT</a>) or through Zenodo DOIs
+          linked to specific versions. The bibliographical entries for the Open
+          Science Framework project in the most common formats are as follows:</span></span></p>
+    <p><span data-bind="if: hasDoi()" class="scripted" style="display: inline;"><span
+          data-bind="text: doi"></span></span></p>
+    <table style="width: 100%" border="1">
+      <tbody>
+        <tr>
+          <td><em>APA</em></td>
+          <td><span data-bind="text: apa">Buccellati, F. (<strong><em>INSERT
+                  DATE </em></strong></span><span data-bind="text: apa"><strong><em><span
+                    data-bind="text: chicago"><span data-bind="text: mla"><span
+                        data-bind="text: apa"><strong><em>ACCESSED </em></strong></span></span></span>HERE</em></strong>).
+              EnCAB. https://doi.org/10.17605/OSF.IO/NMZXT</span></td>
+        </tr>
+        <tr>
+          <td><em>MLA</em></td>
+          <td><span data-bind="text: mla">Buccellati, Federico. “EnCAB.” Open
+              Science Framework, </span><span data-bind="text: mla"><span data-bind="text: apa"><strong><em>INSERT
+                    DATE </em></strong></span></span><span data-bind="text: mla"><span
+                data-bind="text: apa"><strong><em><span data-bind="text: chicago"><span
+                        data-bind="text: mla"><span data-bind="text: apa"><strong><em>ACCESSED
+                              </em></strong></span></span></span>HERE</em></strong></span>.
+              Web.
+            </span></td>
+        </tr>
+        <tr>
+          <td><em>Chicago</em></td>
+          <td><span data-bind="text: chicago">Buccellati, Federico. </span><span
+              data-bind="text: chicago"><span data-bind="text: mla"><span data-bind="text: apa"><strong><em>INSERT
+                      YEAR ACCESSED HERE</em></strong></span></span>. “EnCAB.”
+              Open Science Framework. </span><span data-bind="text: chicago"><span
+                data-bind="text: mla"><span data-bind="text: apa"><strong><em>INSERT
+                      MONTH AND DAY ACCESSED HERE</em></strong></span></span>.
+              doi:10.17605/OSF.IO/NMZXT.
+            </span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p><span data-bind="if: hasDoi()" class="scripted" style="display: inline;"><span
+          data-bind="text: doi">The Zenodo DOIs, on the other hand, should be
+          used only to cite specific versions of the project; this would
+          primarily be useful when comparing two different versions of the EnCAB
+          project.<br>
+        </span></span></p>
+    <p><span data-bind="if: hasDoi()" class="scripted" style="display: inline;"><span
+          data-bind="text: doi"><br>
+        </span></span></p>
+    <p><span data-bind="if: hasDoi()" class="scripted" style="display: inline;"><span
+          data-bind="text: doi"><br>
+        </span></span></p>
   </body>
 </html>

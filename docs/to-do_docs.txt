@@ -1,0 +1,24 @@
+EnCAB notes from gB ZD206
+
+"    I had already made a note to myself about the need to have an explanatory video, and the content of the one you have uploaded is very good, but I would suggest the following.
+
+(1) It is not very effective to just have you talk: there should be a visual support with images of what you are talking about, especially for a 7 minutes segment. You could use a PowerPoint presentation; and/or have a screen capture (I prefer this, like the one I did for urkesh.org, under OVERVIEW, at the top of the sidebar).
+
+(2) I think you should add a second video to explain how to use the program. It would be very useful to take a viewer step by step through the process: why would one use this program? what is the specific question to ask? how do I go about getting an answer?  I looked carefully, but could not figure it all out for myself.
+
+(3) I would stream directly from the server; as it is now, there are some unrelated ads that come up at the end, which make it look less professional. If you need to, we now have a system that Bernardo set in place that works well, and I can refer you to it.
+
+(4) Finally, I would not have the post so large at the beginning: instead I would place a link, possibly with a thumbnail, especially if you have two videos, adding the one on how to use the system.
+
+
+    Internal explanatory notes.
+
+It would be good to explain some codes more explicitly. For example, under Algorithms by material > Abrams 1994 47 3, you explain that V and V` are two kinds of velocity: but what does it mean? how do I measure it?
+
+    The home page: the section "Quick Links to the Algorithms" should, in my view, be more prominent. It is the meat of the project, and it seems secondary being relegated at the bottom and being qualified as "Quick". I would place in a frame as you have for the top entries. In fact you could have three such frames. The top one as is; the second with links to the introductory videos; the third with the links to the algorithms.
+
+    Check all links: for instance, Algorithm Type > cut masonry blocks (repeats title many times, without contents), > Material quality is empty; check for error 404 (I had it come up a couple of days ago, now I do not find it, perhaps you fixed it?) In general, it seems to me that it would be a good idea to remove the link to a non-existing page, and mark it with a color that indicates that it is under construction, without clicking and then finding out it does not exist.
+
+    Back home. You have this occasionally (e.g., under How to Contribute), but I find it useful if it were repeated more frequently; it might also be useful to have a Back to top with each page (Bernardo can do it automatically for you).
+
+    Small points. Scientific committee: two question marks need to be removed. -- Under Algorithms, it would be better to have left alignment:  when the screen is narrow, entries like "Position in process" or "Notes on bibliography" don't look very nice."

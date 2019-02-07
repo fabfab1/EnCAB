@@ -33,8 +33,8 @@
 
 <algdata>
 
-  <algorithm_statement>Production of lime requires a heat source of 900 Celcius for 36 hours.</algorithm_statement>
-  <algorithm_math>Lime requires heat of 900 Celcius</algorithm_math>
+  <algorithm_statement>Production of lime requires a heat source of 900 Celsius for 36 hours.</algorithm_statement>
+  <algorithm_math>Lime requires heat of 900 Celsius</algorithm_math>
 
 
 

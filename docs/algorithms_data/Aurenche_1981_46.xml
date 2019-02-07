@@ -36,7 +36,7 @@
   <algorithm_math>Thermic difference is reduced by 1/12 every hour for a 40cm thick mudbrick wall.</algorithm_math>
   <variables>
   <var1>
-    <unit>Celcius</unit><description>Thermic difference</description>
+    <unit>Celsius</unit><description>Thermic difference</description>
   </var1>
   <var2>
     <unit>hr</unit><description>hours</description>
@@ -45,7 +45,7 @@
 
   <results>
     <result1>
-      <unit>Celcius</unit><description>Remaining thermic difference</description>
+      <unit>Celsius</unit><description>Remaining thermic difference</description>
       <op>(var2 &gt; 12) ? 0 : var1 * (1 - (1/12) * var2)</op><!-- if var2 > 12 stop decreasing, else linear decrease (real: negative exponential) -->
     </result1>
   </results>

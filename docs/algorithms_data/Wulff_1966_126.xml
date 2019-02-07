@@ -32,8 +32,8 @@
 
 <algdata>
 
-  <algorithm_statement>Production of gypsum requires a heat source of 100-200 Celcius.</algorithm_statement>
-  <algorithm_math>Gypsum requires heat of 100-200 Celcius</algorithm_math>
+  <algorithm_statement>Production of gypsum requires a heat source of 100-200 Celsius.</algorithm_statement>
+  <algorithm_math>Gypsum requires heat of 100-200 Celsius</algorithm_math>
 
 </algdata>
 

@@ -11,3 +11,5 @@ List of things still to do in EnCAB Program:
 ? python check js <op>
 
 ? ZIP file in archives/ instead of CSV (more accessible)
+
+? Create BibTex entry for each algorithm

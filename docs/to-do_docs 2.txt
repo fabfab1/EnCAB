@@ -30,3 +30,6 @@ It would be good to explain some codes more explicitly. For example, under Algor
 Add:
 Wasteland TS Eliot
 “What we call the beginning is often the end / And to make an end is to make a beginning.”
+
+TS Eliot
+"We shall not cease from exploration / And the end of all our exploring / Will be to arrive where we started / And know the place for the first time"

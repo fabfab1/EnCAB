@@ -3,7 +3,7 @@ List of things still to do in EnCAB Program:
 
 ? add JSON as input possiblity (for files with .json extension)
 
-? favicon.ico
+? favicon.ico 
 
 ? everything in *_index.html files
 

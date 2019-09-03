@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<algorithm>
+
+<reference>Coles_1973_73</reference>
+
+
+
+<biblioref>
+
+  <authorgroup>
+    <author>
+      <surname>Coles</surname>
+      <firstname>J.</firstname>
+    </author>
+  </authorgroup>
+  <abbrev>Coles_1973</abbrev>
+  <pagenums>73</pagenums>
+  <abbrev2></abbrev2>
+  <pagenums2></pagenums2>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>material loading</algorithm_type>
+  <position_in_process>loading</position_in_process>
+  <material>chalk</material>
+  <source_type>experimental archaeology</source_type>
+  <source_chronology></source_chronology>
+  <source_geographical_location></source_geographical_location>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>loading chalk in p-h</algorithm_statement>
+  <algorithm_math>250 kg of chalk in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <value>1</value><description></description>
+      <unit>p-h</unit>
+      <op>var2 / 250kg</op>
+    </var1>
+    <var2>
+      <value>250</value><description></description>
+      <unit>kg</unit>
+      <op>var1 * 250</op>
+    </var2>
+  </variables>
+
+<!-- comment  and so on for as many variables as needed, up to 9, always seperated by an _op_  -->
+
+  <results>
+    <result1>
+      <value></value><description></description>
+      <op></op>
+      <unit></unit>
+    </result1>
+    <result2>
+      <value></value><description></description>
+      <op></op>
+      <unit></unit>
+    </result2>
+  </results>
+  
+<!-- comment   and so on for as many results as needed, up to 9 -->
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes>The author refers to use of ancient tools and baskets with an average load of 13,5 kg.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation_author_group>
+    <author><surname>Marko</surname><firstname>J.</firstname></author>
+    <creation_date>22.6.2019</creation_date>
+  </creation_author_group>
+
+  <modification_author_group>
+    <author><firstname></firstname><surname></surname></author>
+    <creation_date></creation_date>
+  </modification_author_group>
+
+</algauthors>
+
+
+
+</algorithm>

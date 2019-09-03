@@ -1,0 +1,1 @@
+"Architectural energetics is a method wherein buildings are translated into cost estimates (in labor-time units) based on combining the cost of construction tasks per material, derived from timed experiments or observations of building activities, with the measured or reconstructed volume of those materials in buildings." Abrams and Bolland 1999

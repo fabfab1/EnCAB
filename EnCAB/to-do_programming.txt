@@ -3,7 +3,7 @@ List of things still to do in EnCAB Program:
 
 ? add JSON as input possiblity (for files with .json extension)
 
-? favicon.ico
+? favicon.ico 
 
 ? everything in *_index.html files
 
@@ -13,3 +13,7 @@ List of things still to do in EnCAB Program:
 ? ZIP file in archives/ instead of CSV (more accessible)
 
 ? Create BibTex entry for each algorithm, link on algorithm, also make one with all algorithms and (perhaps) all bibliography
+
+? USE GitHub Actions CI/CD to make running EnCAB possible from within GitHub directly
+
+THIS IS AN OLD FILE, PLEASE USE GitHub WIKI PAGE FOR MORE TO-DO in PROGRAMMING

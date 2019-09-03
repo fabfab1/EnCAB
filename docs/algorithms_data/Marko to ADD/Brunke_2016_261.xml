@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<algorithm>
+
+<reference>Brunke_2016_261</reference>
+
+
+
+<biblioref>
+
+  <authorgroup>
+    <author>
+      <surname>Brunke</surname>
+      <firstname>H.</firstname>
+    </author>
+  </authorgroup>
+  <abbrev>Brunke_2016</abbrev>
+  <pagenums>261</pagenums>
+  <abbrev2></abbrev2>
+  <pagenums2></pagenums2>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>mudbrick</algorithm_type>
+  <position_in_process>manufacture</position_in_process>
+  <material>mudbrick</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geographical_location>Ancient Near East</source_geographical_location>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>mudbrick production in 1 person-day</algorithm_statement>
+  <algorithm_math>1,5 m3 of mudbrick produced in 1 p-d</algorithm_math>
+  <variables>
+    <var1>
+      <value>1</value><description></description>
+      <unit>p-d</unit>
+      <op>var2 / 1,5</op>
+    </var1>
+    <var2>
+      <value>1,5</value><description></description>
+      <unit>m3</unit>
+      <op>var1 * 1,5</op>
+    </var2>
+  </variables>
+
+<!-- comment  and so on for as many variables as needed, up to 9, always seperated by an _op_  -->
+
+  <results>
+    <result1>
+      <value></value><description></description>
+      <op></op>
+      <unit></unit>
+    </result1>
+    <result2>
+      <value></value><description></description>
+      <op></op>
+      <unit></unit>
+    </result2>
+  </results>
+  
+<!-- comment   and so on for as many results as needed, up to 9 -->
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>The author refers to the weight of 5 kg of one mudbirck used for building ziggurat of Uruk.</general_notes>
+  <biblio_notes>The author does not mention how many person-hours were included in one person-day.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation_author_group>
+    <author><surname>Marko</surname><firstname>J.</firstname></author>
+    <creation_date>15.6.2019</creation_date>
+  </creation_author_group>
+
+  <modification_author_group>
+    <author><firstname></firstname><surname></surname></author>
+    <creation_date></creation_date>
+  </modification_author_group>
+
+</algauthors>
+
+
+
+</algorithm>

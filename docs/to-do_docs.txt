@@ -22,21 +22,3 @@ It would be good to explain some codes more explicitly. For example, under Algor
     Back home. You have this occasionally (e.g., under How to Contribute), but I find it useful if it were repeated more frequently; it might also be useful to have a Back to top with each page (Bernardo can do it automatically for you).
 
     Small points. Scientific committee: two question marks need to be removed. -- Under Algorithms, it would be better to have left alignment:  when the screen is narrow, entries like "Position in process" or "Notes on bibliography" don't look very nice."
-
-
-
-
-
-Add:
-Wasteland TS Eliot
-“What we call the beginning is often the end / And to make an end is to make a beginning.”
-
-TS Eliot
-"We shall not cease from exploration / And the end of all our exploring / Will be to arrive where we started / And know the place for the first time"
-
-
-
-
-
-Add:
-counter for author contributions / and another counter for modifications

@@ -1,0 +1,12 @@
+"Area
+
+There were a wide variety of traditional measurements of land used into the seventeenth century. The following measurements were based on how much could be produced or worked from a particular piece of land, and therefore varied widely according to the quality of the soil and the climate. They do not have absolute quantities, but can be measured against each other:
+Measure 	Equivalent
+1 acre 	The area that could be ploughed by a team of eight oxen in one day
+1 hide 	The area deemed to be able to support a typical peasant family, ploughed in a year by a team of eight oxen. Nominally 120 acres, although the actual area varied. Also called (among other names) a carucate or a ploughland
+A hide was made up of 8 oxgangs or bovates, or 4 virgates
+
+In this 1642 rental from the parish of Cromwell, meadow ground is given in acres, but arable land (which had to be ploughed) in oxgangs."
+
+from:
+https://www.nottingham.ac.uk/manuscriptsandspecialcollections/researchguidance/weightsandmeasures/measurements.aspx

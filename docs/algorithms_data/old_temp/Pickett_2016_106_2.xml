@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<algorithm>
+
+<reference>Pickett_2016_106</reference>
+
+
+
+<biblioref>
+
+  <authorgroup>
+    <author>
+      <surname>Pickett</surname>
+      <firstname>J.</firstname>
+    </author>
+  </authorgroup>
+  <abbrev>Pickett_2016</abbrev>
+  <pagenums>106</pagenums>
+  <abbrev2>US Commission of Fish and Fisheries_1886</abbrev2>
+  <pagenums2>497</pagenums2>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>earth digging</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>earth</material>
+  <source_type></source_type>  
+  <source_chronology>modern</source_chronology>
+  <source_geographical_location>Eurasia</source_geographical_location>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>1 p-h  to cut out sod in m3 </algorithm_statement>
+  <algorithm_math>1,254 m3 of sod in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <value>1</value><description></description>
+      <unit>p-h</unit>
+      <op>var2 / 1,776</op>
+    </var1>
+    <var2>
+      <value>1,776</value><description></description>
+      <unit>m3</unit>
+      <op>var1 * 1,776</op>
+    </var2>
+  </variables>
+
+<!-- comment  and so on for as many variables as needed, up to 9, always seperated by an _op_  -->
+
+  <results>
+    <result1>
+      <value></value><description></description>
+      <op></op>
+      <unit></unit>
+    </result1>
+    <result2>
+      <value></value><description></description>
+      <op></op>
+      <unit></unit>
+    </result2>
+  </results>
+  
+<!-- comment   and so on for as many results as needed, up to 9 -->
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 10 hour work days.</general_notes>
+  <biblio_notes>A knife was used for cutting out 15cm deep blocks.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation_author_group>
+    <author><surname>Marko</surname><firstname>J.</firstname></author>
+    <creation_date>27.4.2019</creation_date>
+  </creation_author_group>
+
+  <modification_author_group>
+    <author><firstname></firstname><surname></surname></author>
+    <creation_date></creation_date>
+  </modification_author_group>
+
+</algauthors>
+
+
+
+</algorithm>

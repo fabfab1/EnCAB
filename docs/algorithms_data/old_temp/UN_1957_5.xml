@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>                                                                                                                                                              
+
+<algorithm>
+
+<reference>UN_1957_7</reference>
+
+
+
+<biblioref>
+
+  <authorgroup>
+    <author>
+      <surname>United Nations</surname>
+      <firstname></firstname>
+    </author>
+  </authorgroup>
+  <abbrev>UN_1957</abbrev>
+  <pagenums>7</pagenums>
+  <abbrev2>Taniguchi</abbrev2>
+  <pagenums2>55</pagenums2>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>earth digging</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>earth</material>
+  <source_type>ethnographic</source_type>  
+  <source_chronology>modern</source_chronology>
+  <source_geographical_location>Japan</source_geographical_location>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>0,42 m3 dry hard clay can be excavated per person per hour</algorithm_statement>
+  <algorithm_math>0,42 m3 dry hard clay in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <value>1</value><description></description>
+      <unit>p-h</unit>
+      <op>var2 / 0,42</op>
+    </var1>
+    <var2>
+      <value>0,42</value><description></description>
+      <unit>m3</unit>
+      <op>var1 * 0,42</op>
+    </var2>
+  </variables>
+
+<!-- comment  and so on for as many variables as needed, up to 9, always seperated by an _op_  -->
+
+  <results>
+    <result1>
+      <value></value><description></description>
+      <op></op>
+      <unit></unit>
+    </result1>
+    <result2>
+      <value></value><description></description>
+      <op></op>
+      <unit></unit>
+    </result2>
+  </results>
+  
+<!-- comment   and so on for as many results as needed, up to 9 -->
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from  work days to person-hours. Author refers to 7 hour work day</general_notes>
+  <biblio_notes>In the UN article is discussed different hardness of the soil. For further types see UN_1957_1-5</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation_author_group>
+    <author><surname>Marko</surname><firstname>J.</firstname></author>
+    <creation_date>10.3.2019</creation_date>
+  </creation_author_group>
+
+  <modification_author_group>
+    <author><firstname></firstname><surname></surname></author>
+    <creation_date></creation_date>
+  </modification_author_group>
+
+</algauthors>
+
+
+
+</algorithm>

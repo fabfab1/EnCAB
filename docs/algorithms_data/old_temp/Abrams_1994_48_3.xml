@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<algorithm>
+
+<reference>Abrams_1994_48_3</reference>
+
+
+<biblioref>
+
+  <authorgroup>
+    <author><surname>Abrams</surname><firstname>E.</firstname></author>
+  </authorgroup>
+  <abbrev>Abrams_1994</abbrev>
+  <pagenums>48</pagenums>
+  <abbrev2></abbrev2>
+  <pagenums2></pagenums2>
+
+</biblioref>
+
+
+<algorithm_description>
+
+  <algorithm_type>cut masonry blocks</algorithm_type>
+
+  <position_in_process>procurement</position_in_process>
+  <material>stone</material>
+  <source_type>ethnographic</source_type>
+  <source_chronology></source_chronology>
+  <source_geography>Mesoamerica</source_geography>
+
+</algorithm_description>
+
+
+<algdata>
+
+  <algorithm_statement>Facing cobbles</algorithm_statement>
+  <algorithm_math>Facing cobbles: 1 m3 in 1.16 p-d</algorithm_math>
+  <variables>
+    <var1>
+      <unit>m3</unit><description></description>
+      <op>var1 / 5.8</op>
+    </var1>
+    <var2>
+      <unit>p-h</unit><description></description>
+      <op>var1 * 5.8</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+<algnotes>
+
+  <general_notes>Based on experimentation in Copan River area, using stone tools. Algorithm is given as taking 1.16 p-d, I assume 5 p-h = 1 p-d as per other examples in the same chapter.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+<algauthors>
+
+  <creation_author_group>
+    <author>
+      <surname>Buccellati</surname><firstname>F.</firstname>
+      <creation_date>30.02.2018</creation_date>
+    </author>
+  </creation_author_group>
+
+  <modification_author_group>
+    <author>
+      <surname></surname><firstname></firstname>
+      <modification_date></modification_date>
+    </author>
+  </modification_author_group>
+
+</algauthors>
+
+
+</algorithm>

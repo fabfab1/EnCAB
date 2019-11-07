@@ -1,0 +1,28 @@
+
+ EnCAB: Energetic Calculator for Ancient Buildings
+------------------------------------------------------
+
+ This program will update website <section> with indexes and algorithms.
+ Edit config file to change directories and preference.
+
+ Config file: "config.py".
+ Website directory: "../docs".
+ Algorithms directory: "../docs/algorithms_data".
+ Algorithm template: "templates/algorithm.html".
+ Index template: "templates/index.html".
+
+
+Press ENTER to Continue, Ctrl-C to Abort.
+[*] Generating indexes...
+[*] Importing algorithms data...
+[Err] Only 1 author allowed in algauthors/creation_author_group in "Abrams_1989_70_999.xml"
+Traceback (most recent call last):
+  File "encab.py", line 370, in <module>
+    algo_data = get_algo_data(os.path.relpath(ALGORITHMS_DIR), index, author_index)
+  File "encab.py", line 90, in get_algo_data
+    algo_data += [(parse(filename, index, author_index), os.path.basename(filename))]
+  File "encab.py", line 169, in parse
+    check_biblio(root.find(modification+'/author['+str(i+1)+']'))
+  File "encab.py", line 133, in check_biblio
+    if author.find('surname') is not None:
+AttributeError: 'NoneType' object has no attribute 'find'

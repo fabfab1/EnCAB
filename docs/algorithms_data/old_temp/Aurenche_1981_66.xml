@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<algorithm>
+
+<reference>Aurenche_1981_66</reference>
+
+
+<biblioref>
+
+  <authorgroup>
+    <author><surname>Aurenche</surname><firstname>O.</firstname></author>
+  </authorgroup>
+  <abbrev>Aurenche_1981</abbrev>
+  <pagenums>66</pagenums>
+  <abbrev2></abbrev2>
+  <pagenums2></pagenums2>
+
+</biblioref>
+
+
+<algorithm_description>
+
+  <algorithm_type>mudbrick</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>mudbrick</material>
+  <source_type>ethnographic</source_type>  
+  <source_chronology></source_chronology>
+  <source_geography>ANE</source_geography>
+
+</algorithm_description>
+
+
+<algdata>
+
+  <algorithm_statement>350 mudbricks can be made per person per day.</algorithm_statement>
+  <algorithm_math>350 bricks in 1 day</algorithm_math>
+  <variables>
+    <var1>
+      <unit>day</unit><description></description>
+      <op>var2 / 350</op>
+    </var1>
+    <var2>
+      <unit>brick</unit><description></description>
+      <op>var1 * 350</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+<algauthors>
+
+  <creation_author_group>
+    <author>
+      <surname>Buccellati</surname><firstname>F.</firstname>
+      <creation_date>30.02.2018</creation_date>
+    </author>
+  </creation_author_group>
+
+  <modification_author_group>
+    <author>
+      <surname></surname><firstname></firstname>
+      <modification_date></modification_date>
+    </author>
+  </modification_author_group>
+
+</algauthors>
+
+
+</algorithm>

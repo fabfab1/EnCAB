@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<algorithm>
+
+<reference>Robson_1999_67</reference>
+
+
+<biblioref>
+
+  <authorgroup>
+    <author><surname>Robson</surname><firstname>E.</firstname></author>
+  </authorgroup>
+  <abbrev>Robson_1999</abbrev>
+  <pagenums>67-69</pagenums>
+  <abbrev2>Heimpel_2009</abbrev2>
+  <pagenums2>124</pagenums2>
+
+</biblioref>
+
+
+<algorithm_description>
+
+  <algorithm_type>mudbrick</algorithm_type>
+  <position_in_process>construction</position_in_process>
+  <material>mortar</material>
+  <source_type>text</source_type>  
+  <source_chronology>bronze age</source_chronology>
+  <source_geography>ANE</source_geography>
+
+</algorithm_description>
+
+
+<algdata>
+
+  <algorithm_statement>1/6 of the volume of a mudbrick wall consists of mortar</algorithm_statement>
+  <algorithm_math>m3 * 5/6 = volume of mudbricks</algorithm_math>
+  <equation_direction></equation_direction>
+  <variables>
+    <var1>
+      <unit>m3</unit><description>wall volume</description>
+      <op>var2 * 6</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description>mortar</description>
+      <op>var1 * 1/6</op>
+    </var2>
+  </variables>
+
+  <results>
+    <result1>
+      <unit>m3</unit><description>mudbricks in wall volume</description>
+      <op>var1 * (5/6)</op>
+    </result1>
+  </results>
+
+</algdata>
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+<algauthors>
+
+  <creation_author_group>
+    <author>
+      <surname>Buccellati</surname><firstname>F.</firstname>
+      <creation_date>30.02.2018</creation_date>
+    </author>
+  </creation_author_group>
+
+  <modification_author_group>
+    <author>
+      <surname></surname><firstname></firstname>
+      <modification_date></modification_date>
+    </author>
+  </modification_author_group>
+
+</algauthors>
+
+
+</algorithm>

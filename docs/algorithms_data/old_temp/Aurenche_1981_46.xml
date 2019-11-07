@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<algorithm>
+
+<reference>Aurenche_1981_46</reference>
+
+
+<biblioref>
+
+  <authorgroup>
+    <author><surname>Aurenche</surname><firstname>O.</firstname></author>
+  </authorgroup>
+  <abbrev>Aurenche_1981</abbrev>
+  <pagenums>46</pagenums>
+  <abbrev2>Doat_1979</abbrev2>
+  <pagenums2></pagenums2>
+
+</biblioref>
+
+
+<algorithm_description>
+
+  <algorithm_type>material qualities</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>mudbrick</material>
+  <source_type>experimental archaeology</source_type>
+  <source_chronology>modern</source_chronology>
+  <source_geography>ANE</source_geography>
+
+</algorithm_description>
+
+
+<algdata>
+
+  <algorithm_statement>a 40cm thick mudbrick wall holds a thermic difference for 12 hours (after which temperature on both sides are equal).</algorithm_statement>
+  <algorithm_math>Thermic difference is reduced by 1/12 every hour for a 40cm thick mudbrick wall.</algorithm_math>
+  <variables>
+  <var1>
+    <unit>Celsius</unit><description>Thermic difference</description>
+  </var1>
+  <var2>
+    <unit>hr</unit><description>hours</description>
+  </var2>
+  </variables>
+
+  <results>
+    <result1>
+      <unit>Celsius</unit><description>Remaining thermic difference</description>
+      <op>(var2 &gt; 12) ? 0 : var1 * (1 - (1/12) * var2)</op><!-- if var2 > 12 stop decreasing, else linear decrease (real: negative exponential) -->
+    </result1>
+  </results>
+
+</algdata>
+
+
+<algnotes>
+
+  <general_notes>The values provided are for a set wall thickness; double or half thicknesses would not necessarily double or halve the thermic property of the material. The usefulness of this algorithm is limited, as the presence of windows, doors or the type of roofing would affect temperature to a much larger degree than the walls themselves. It is included here to show the quality of mudbricks as a building material, and may be useful in comparison with the thermic properties of other building materials.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+<algauthors>
+
+  <creation_author_group>
+    <author>
+      <surname>Buccellati</surname><firstname>F.</firstname>
+      <creation_date>30.02.2018</creation_date>
+    </author>
+  </creation_author_group>
+
+  <modification_author_group>
+    <author>
+      <surname></surname><firstname></firstname>
+      <modification_date></modification_date>
+    </author>
+  </modification_author_group>
+
+</algauthors>
+
+
+</algorithm>

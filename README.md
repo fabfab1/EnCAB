@@ -10,4 +10,4 @@ Published with fixed DOI on Open Science Framework
 
 For details on the program, see the readme.md file in the program folder (EnCAB).
 
-For _To-Do_, see Wiki.
+For _To-Do_, see Project Wiki, https://github.com/fabfab1/EnCAB/wiki

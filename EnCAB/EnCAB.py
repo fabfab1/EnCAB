@@ -3,6 +3,8 @@
 EnCAB: Energetic Calculator for Ancient Buildings
 '''
 
+# Python 3.6 -- Necessary modules: BeautifulSoup4, jinja2
+
 import sys
 import os   # files
 import re   # regex
@@ -14,7 +16,6 @@ import zipfile
 # from pyuca import Collator			# UTF sorting
 
 from config import *  # File "config.py" stores program settings
-
 
 # move to program directory for relative links
 __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))

@@ -11,3 +11,8 @@ Published with fixed DOI on Open Science Framework
 For details on the program, see the readme.md file in the program folder (EnCAB).
 
 For _To-Do_, see Wiki.
+
+Python code (config.py and EnCAB.py) are published under the GNU license; the individual
+HTML pages and the individual algorithms are published under:
+Creative Commons BY-SA 4.0 (see https://creativecommons.org/licenses/by-sa/4.0)
+

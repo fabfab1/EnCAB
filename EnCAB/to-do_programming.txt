@@ -1,6 +1,8 @@
 List of things still to do in EnCAB Program:
 --------------------------------------------
 
+******THIS IS AN OLD FILE, PLEASE USE GitHub WIKI PAGE FOR MORE TO-DO in PROGRAMMING *******
+
 ? add JSON as input possiblity (for files with .json extension)
 
 ? favicon.ico 

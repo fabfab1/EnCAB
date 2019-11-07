@@ -15,7 +15,8 @@
 Press ENTER to Continue, Ctrl-C to Abort.
 [*] Generating indexes...
 [*] Importing algorithms data...
-[Err] Only 1 author allowed in algauthors/creation_author_group in "Abrams_1989_70_999.xml"
+[Err] Only 1 author allowed in algauthors/creation_author_group in "Abrams_1989_70_1.xml"
+[Err] Author "MarkoJ" in "Abrams_1989_70_1.xml" not found in bibliography
 Traceback (most recent call last):
   File "encab.py", line 370, in <module>
     algo_data = get_algo_data(os.path.relpath(ALGORITHMS_DIR), index, author_index)

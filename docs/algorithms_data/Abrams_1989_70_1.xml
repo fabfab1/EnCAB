@@ -2,7 +2,7 @@
 
 <algorithm>
 
-<reference>Abrams_1989_70_999</reference>
+<reference>Abrams_1989_70_1</reference>
 
 
 
@@ -14,10 +14,10 @@
       <firstname>E.</firstname>
     </author>
   </authorgroup>
-  <abbrev>Abrams_1994</abbrev>
+  <abbrev>Abrams_1989</abbrev>
   <pagenums>70</pagenums>
-  <abbrev2></abbrev2>
-  <pagenums2></pagenums2>
+  <abbrev2>Abrams_1984b</abbrev2>
+  <pagenums2>190</pagenums2>
 
 </biblioref>
 
@@ -86,8 +86,8 @@
 <algauthors>
 
   <creation_author_group>
-    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
-    <creation_date>07.11.19</creation_date>
+    <author><surname>Marko</surname><firstname>J.</firstname></author>
+    <creation_date>22.2.2019</creation_date>
   </creation_author_group>
 
   <modification_author_group>

@@ -5,7 +5,6 @@
 
 
 html {
-    font-family: "Verdana", verdana, Sans-serif;
     height: 100%;
     width: 100%;
     overflow-y: scroll;
@@ -16,18 +15,17 @@ body {
     background-color: #add8e6; /* LightBlue: #add8e6 rgb(173, 216, 230) */
     margin: 20px 0;
     padding: 0 10px;
+    font-family: "Verdana", Verdana, sans-serif;
     line-height: 1.3;
     font-size: 16px;
     color: black; /* #222; */
 }
 
-h1,h2,h3{
-        font-family: "Verdana", verdana, Sans-serif;
+h1,h2,h3 {
 	line-height:1.2
 }
 
-h4,h5,h6{
-        font-family: "Verdana", verdana, Sans-serif;
+h4,h5,h6 {
 }
 
 a:link    { color: #00e; }
@@ -39,16 +37,16 @@ img {
     max-width: 100%;
 }
 
-p{
-    font-family: "Verdana", verdana, Sans-serif;
-    padding:0% 7%;
+p {
+    padding: 0% 7%;
     text-align: justify;
     text-justify: inter-word;
-     }
+}
 
 table.data {
+    margin: 0% 7%;
+    /* width: 100%; */
     text-align: justify;
-    width: 100%;
     border-collapse: collapse;
     background-color: #c4e3ed; /* or #add8e6 */
 }
@@ -60,21 +58,18 @@ table.data > tr:nth-child(odd), table.data > tbody > tr:nth-child(odd) {
     background-color: #8ac7db;
 }
 
-td.col-1, td.col-3 { width: 15%; }
-td.col-2, td.col-4 { width: 35%; }
+td.col-1, td.col-3 { width: 13%; }
+td.col-2, td.col-4 { width: 30%; }
 
 
-.AI-Statement {
+.Alg-Statement {
     /* font-size: 18px; */
     /* font-weight: bold;*/
     /* font-style: italic; */
 }
-.AI-Statement-input {
-
+.Alg-Statement-input {
 }
-.AI-Math {
-
+.Alg-Math {
 }
-.AI-Math-input {
-
+.Alg-Math-input {
 }

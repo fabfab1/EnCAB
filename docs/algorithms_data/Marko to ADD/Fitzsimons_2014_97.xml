@@ -30,7 +30,7 @@
   <material>stone</material>
   <source_type>experimental archaeology</source_type>
   <source_chronology>modern</source_chronology>
-  <source_geographical_location></source_geographical_location>
+  <source_geography></source_geography>
 
 </algorithm_description>
 

@@ -1,19 +1,21 @@
 #!/usr/bin/env python3
 '''
 EnCAB: Energetic Calculator for Ancient Buildings
+
+Required at least Python 3.6, MUST install modules (BeautifulSoup4, jinja2) with
+> python -m pip -r requirements.txt
 '''
 
-# Python 3.6 -- Necessary modules: BeautifulSoup4, jinja2
 
 import sys
-import os   # files
-import re   # regex
+import os  # files
+import re  # regex
 import datetime
 import xml.etree.ElementTree as ET  # XML file reading
 from bs4 import BeautifulSoup  # HTML tag parsing
-import jinja2   # HTML template
+import jinja2  # HTML template
 import zipfile
-# from pyuca import Collator			# UTF sorting
+# from pyuca import Collator  # UTF sorting
 
 from config import *  # File "config.py" stores program settings
 
@@ -148,8 +150,8 @@ def parse(filename, index, author_index):
     for author in root.find('biblioref/authorgroup'):
         check_biblio(author)
     # biblioref/abbrev: author_date
-    check_code('biblioref/abbrev', r"^\w+_\d{4}$", mandatory=True)
-    check_code('biblioref/abbrev2', r"^\w+_\d{4}$", mandatory=False)
+    check_code('biblioref/abbrev', r"^\w+_\d{4}[a-z]?$", mandatory=True)
+    check_code('biblioref/abbrev2', r"^\w+_\d{4}[a-z]?$", mandatory=False)
     # biblioref/pagenums: numbers separated by - or ,
     check_code('biblioref/pagenums', r"^\d+( ?[-,] ?\d+)*$", mandatory=True)
     check_code('biblioref/pagenums2', r"^\d+( ?[-,] ?\d+)*$", mandatory=False)
@@ -340,9 +342,9 @@ def check_config():
 
 
 if __name__ == '__main__':
-    # app.run()
+    
     check_config()
-
+    
     print(f'''
  EnCAB: Energetic Calculator for Ancient Buildings
 ------------------------------------------------------
@@ -360,7 +362,7 @@ if __name__ == '__main__':
 
     try:
         input('Press ENTER to Continue, Ctrl-C to Abort.\n')
-    except KeyboardInterrupt:  # Do not send error for Ctrl-C
+    except KeyboardInterrupt:  # do not send error for Ctrl-C
         sys.exit()
 
     print('[*] Generating indexes...')

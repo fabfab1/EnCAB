@@ -1,12 +1,14 @@
 
 {#- --- INDEX --- #}
+<p>
 {%- set ns = namespace(new_sort = '') %}
 {% for b, filename in blocks_data -%}{% if b.find(sort).text.lower() != ns.new_sort.lower() %}{% set ns.new_sort = b.find(sort).text %}
 {% if ns.new_sort %}{% if not loop.first %} - {% endif %}<a href="#{{ ns.new_sort.lower() }}">{{ ns.new_sort|replace('_','&nbsp;')|capfirst }}</a>{% endif %}
 {%- endif %}{% endfor %}
 {% set ns.new_sort = '' %}
+</p>
 
-<br><br><br>
+<br><br>
 
 {% for b, filename in blocks_data %}
 {% if b.find(sort).text.lower() != ns.new_sort.lower() %}{% set ns.new_sort = b.find(sort).text %}<a name="{{ ns.new_sort.lower() }}"></a>{% endif %}
@@ -14,8 +16,8 @@
 <b>{{ b.find('reference').text|replace('_','&nbsp;') }}</b>
 <table class="data">
     <tr>
-        <td class="col-1 AI-Statement">Al Statement:</td><td class="col-2 AI-Statement-input">{{ b.find('algdata/algorithm_statement').text or '' }}</td>
-        <td class="col-3 AI-Math">Al Math:</td><td class="col-4 AI-Math-input">{{ b.find('algdata/algorithm_math').text or '' }}</td>
+        <td class="col-1 Alg-Statement">Alg Statement:</td><td class="col-2 Alg-Statement-input">{{ b.find('algdata/algorithm_statement').text or '' }}</td>
+        <td class="col-3 Alg-Math">Alg Math:</td><td class="col-4 Alg-Math-input">{{ b.find('algdata/algorithm_math').text or '' }}</td>
     </tr>
     <tr>
         <td colspan="4">{%- if b.find('algdata/variables') %}
@@ -46,9 +48,9 @@
         {% endif %}</td>
     </tr>
     <tr>
-        <td>Source info:</td><td>{% if b.find('biblioref/authorgroup/author').text %}<a href="../bibliography/bibliography.html#{{(b.find('biblioref/authorgroup/author/surname').text or '').strip('.,')|replace(' ','')}}{{(b.find('biblioref/authorgroup/author/firstname').text or '').strip('.,')|replace(' ','')}}">{{ b.find('biblioref/abbrev').text|replace('_',' ') }}</a>{% else %}{{ (b.find('biblioref/abbrev').text or '')|replace('_',' ') }}{% endif %}
+        <td>Source info:</td><td>{% if b.find('biblioref/authorgroup/author') %}<a href="../bibliography/bibliography.html#{{(b.find('biblioref/authorgroup/author/surname').text or '').strip('.,')|replace(' ','')}}{{(b.find('biblioref/authorgroup/author/firstname').text or '').strip('.,')|replace(' ','')}}">{{ b.find('biblioref/abbrev').text|replace('_',' ') }}</a>{% else %}{{ (b.find('biblioref/abbrev').text or '')|replace('_',' ') }}{% endif %}
         {%- if b.find('biblioref/pagenums').text %}, {{ b.find('biblioref/pagenums').text }}{% endif %}</td>
-        <td>Also cited in:</td><td>{% if b.find('biblioref/authorgroup/author2').text %}<a href="../bibliography/bibliography.html#{{(b.find('biblioref/authorgroup/author2/surname').text or '').strip('.,')|replace(' ','')}}{{(b.find('biblioref/authorgroup/author2/firstname').text or '').strip('.,')|replace(' ','')}}">{{ b.find('biblioref/abbrev2').text|replace('_',' ') }}</a>{% else %}{{ (b.find('biblioref/abbrev2').text or '')|replace('_',' ') }}{% endif %}
+        <td>Also cited in:</td><td>{% if b.find('biblioref/authorgroup/author2') %}<a href="../bibliography/bibliography.html#{{(b.find('biblioref/authorgroup/author2/surname').text or '').strip('.,')|replace(' ','')}}{{(b.find('biblioref/authorgroup/author2/firstname').text or '').strip('.,')|replace(' ','')}}">{{ b.find('biblioref/abbrev2').text|replace('_',' ') }}</a>{% else %}{{ (b.find('biblioref/abbrev2').text or '')|replace('_',' ') }}{% endif %}
         {%- if b.find('biblioref/pagenums2').text %}, {{ b.find('biblioref/pagenums').text }}{% endif %}</td>
     </tr>
     <tr>

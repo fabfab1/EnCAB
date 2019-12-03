@@ -79,7 +79,7 @@
 
     <creation_author_group>
       <author>
-        <surname>name1S</surname><firstname>name1</firstname><!-- ONLY one creation author allowed per algorithm. {link to bibliography #author/firstname+author/surname } -->
+        <surname>name1S</surname><firstname>name1</firstname><!-- ONLY one creation author allowed per algorithm. {link to bibliography #firstname+surname } -->
         <creation_date>date [dd.mm.yyyy]</creation_date>
       </author>
     </creation_author_group>

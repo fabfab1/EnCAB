@@ -9,10 +9,8 @@
 <biblioref>
 
   <authorgroup>
-    <author>
-      <surname></surname>
-      <firstname></firstname>
-    </author>
+    <author><surname></surname><firstname></firstname></author>
+    <author2><surname></surname><firstname></firstname></author2>
   </authorgroup>
   <abbrev></abbrev>
   <pagenums></pagenums>
@@ -28,7 +26,7 @@
   <algorithm_type></algorithm_type>
   <position_in_process></position_in_process>
   <material></material>
-  <source_type></source_type>  
+  <source_type></source_type>
   <source_chronology></source_chronology>
   <source_geography></source_geography>
 
@@ -40,35 +38,28 @@
 
   <algorithm_statement></algorithm_statement>
   <algorithm_math></algorithm_math>
-  <variables>
+  
+  <variables> <!-- INPUT variables (user editable), each MUST have a different name, as many as needed -->
     <var1>
-      <value></value><description></description>
-      <unit></unit>
-      <op></op>
+      <unit></unit><description></description>
+      <op></op><!-- use <op> to make field auto updating based on other vars (e.g. <op>var2 * 6</op>) -->
     </var1>
     <var2>
-      <value></value><description></description>
-      <unit></unit>
+      <unit></unit><description></description>
       <op></op>
     </var2>
   </variables>
 
-<!-- comment  and so on for as many variables as needed, up to 9, always seperated by an _op_  -->
-
-  <results>
+  <results><!-- OUTPUT variables (NOT user editable), each MUST have a different name, as many as needed -->
     <result1>
-      <value></value><description></description>
-      <op></op>
-      <unit></unit>
+      <unit></unit><description></description>
+      <op></op><!-- <op> is mandatory in results -->
     </result1>
     <result2>
-      <value></value><description></description>
+      <unit></unit><description></description>
       <op></op>
-      <unit></unit>
     </result2>
   </results>
-  
-<!-- comment   and so on for as many results as needed, up to 9 -->
 
 </algdata>
 
@@ -85,14 +76,18 @@
 
 <algauthors>
 
-  <creation_author_group>
-    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
-    <creation_date>30.06.2018</creation_date>
+  <creation_author_group><!-- only one creation author allowed -->
+    <author>
+      <surname>Buccellati</surname><firstname>F.</firstname>
+      <creation_date>30.02.2018</creation_date>
+    </author>
   </creation_author_group>
 
-  <modification_author_group>
-    <author><firstname></firstname><surname></surname></author>
-    <creation_date></creation_date>
+  <modification_author_group><!-- multiple modification authors allowed -->
+    <author>
+      <surname></surname><firstname></firstname>
+      <modification_date></modification_date>
+    </author>
   </modification_author_group>
 
 </algauthors>

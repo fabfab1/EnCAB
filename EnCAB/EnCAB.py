@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-'''
-EnCAB: Energetic Calculator for Ancient Buildings
-
-Required at least Python 3.6, MUST install modules (BeautifulSoup4, jinja2) with
-> python -m pip -r requirements.txt
-'''
+#
+# EnCAB: Energetic Calculator for Ancient Buildings
+#
+# Required at least Python 3.6 with modules "BeautifulSoup4" and "jinja2"
+# Install modules: python -m pip -r requirements.txt
+# Usage: ./EnCAB.py
+#
 
 
 import sys
@@ -18,6 +19,7 @@ import zipfile
 # from pyuca import Collator  # UTF sorting
 
 from config import *  # File "config.py" stores program settings
+
 
 # move to program directory for relative links
 __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
@@ -36,10 +38,34 @@ class Logger(object):
     def flush(self):
         pass
 
+
 # Save text to log.txt
 logger = Logger()
 sys.stdout = logger
 sys.stderr = logger
+
+
+def check_config():
+    """ Base check to assert existence of files and directories """
+
+    missing = []
+    for conf in ['WEBSITE_DIR', 'ALGORITHMS_DIR', 'TEMPLATE_ALGORITHM', 'TEMPLATE_INDEX']:
+        if conf not in globals():
+            missing.append(conf)
+    if missing:
+        print('[Err] Wrong config, {} not found.'.format(str(missing).strip('[]').replace('\'', '\"')))
+        sys.exit()
+
+    for config_dir in [WEBSITE_DIR, ALGORITHMS_DIR]:
+        if not os.path.isdir(os.path.relpath(config_dir)):
+            print(f'[Err] Wrong config, "{config_dir}" directory not found.')
+            sys.exit()
+    for config_file in [TEMPLATE_ALGORITHM, TEMPLATE_INDEX]:
+        if not os.path.isfile(os.path.relpath(config_file)):
+            print(f'[Err] Wrong config, file "{config_file}" not found.')
+            sys.exit()
+
+    return
 
 
 def files_index(website_dir):
@@ -48,16 +74,16 @@ def files_index(website_dir):
     # Get files index
     index = dict()
     for subdir in os.listdir(website_dir):
-        if os.path.isdir(os.path.join(website_dir,subdir)):
-            for filename in os.listdir(os.path.join(website_dir,subdir)):
-                if os.path.isfile(os.path.join(website_dir,subdir,filename)) and filename.endswith('.html'):
+        if os.path.isdir(os.path.join(website_dir, subdir)):
+            for filename in os.listdir(os.path.join(website_dir, subdir)):
+                if os.path.isfile(os.path.join(website_dir, subdir, filename)) and filename.endswith('.html'):
                     if IGNORE_IF_CONTAIN and IGNORE_IF_CONTAIN in filename:
                         continue  # exclude index files themselves
                     # for each subdir make a list of filenames
                     # {'subdir1': ['file1','file2'], 'subdir2': ['file3'], ..}
-                    index.setdefault(subdir, []).append(filename[:-5])  # append file without .html extension
+                    index.setdefault(subdir, []).append(filename[:-5])  # append filename without .html extension
 
-    # Get author index
+    # Get authors index
     author_index = set()
     bibliography = os.path.join(WEBSITE_DIR, "bibliography/bibliography.html")
     if os.path.isfile(bibliography):
@@ -70,7 +96,7 @@ def files_index(website_dir):
         for item in soup.find_all('a', attrs={'name': True}):
             if item['name']:
                 author_index.add(item['name'])
-        for item in soup.find_all(attrs={'id': True}):
+        for item in soup.find_all('a', attrs={'id': True}):
             if item['id']:
                 author_index.add(item['id'])
     else:
@@ -79,21 +105,23 @@ def files_index(website_dir):
     return index, author_index
 
 
-def get_algo_data(algo_dir, index, author_index):
+def get_alg_data(alg_dir, index, author_index):
+    """ Get algorithms data from the XML files and archive a copy of it """
 
-    # Archive the data
-    zip_name = 'EnCAB_input_' + datetime.date.today().strftime('%Y%m%d') + '.zip'
-    zip_file = zipfile.ZipFile(os.path.join(algo_dir, 'archives', zip_name), mode='w', compression=zipfile.ZIP_DEFLATED)
-
-    algo_data = []
-    for file in os.listdir(algo_dir):
-        filename = os.path.join(algo_dir, file)
+    # Prepare archive for the data
+    zip_name = 'EnCAB_input_' + datetime.datetime.now().strftime('%Y%m%d-%H%M%S') + '.zip'
+    zip_file = zipfile.ZipFile(os.path.join(alg_dir, 'archives', zip_name), mode='w', compression=zipfile.ZIP_DEFLATED)
+    
+    # Get the data
+    alg_data = []
+    for file in os.listdir(alg_dir):
+        filename = os.path.join(alg_dir, file)
         if os.path.isfile(filename) and filename.endswith(('.xml', '.txt')):
-            algo_data += [(parse(filename, index, author_index), os.path.basename(filename))]
             zip_file.write(filename, arcname=os.path.basename(filename))
+            alg_data += [(parse(filename, index, author_index), os.path.basename(filename))]
 
     zip_file.close()
-    return algo_data
+    return alg_data
 
 
 def parse(filename, index, author_index):
@@ -114,18 +142,17 @@ def parse(filename, index, author_index):
 
     root = tree.getroot()
 
+    # Remove blank lines from all text
     for elem in root.iter():
-        # Remove blank lines from all text
         if elem.text:
             elem.text = elem.text.strip()
 
     # Check text correctness
-    def check_code(code, t_regex=None, mandatory=True):
-        if root.find(code) is None or not root.find(code).text:
-            if mandatory:
-                errors.append(code)
+    def check_code(code, test_regex=None, mandatory=True):
+        if mandatory and not root.findtext(code):
+            errors.append(code)
             return
-        if t_regex and not re.match(t_regex, root.find(code).text, flags=re.I):
+        if test_regex and not re.match(test_regex, root.findtext(code), flags=re.I):
             errors.append(code)
         return
 
@@ -137,92 +164,80 @@ def parse(filename, index, author_index):
             if author.find('firstname') is not None:
                 author_name += (author.find('firstname').text or '').strip(',.').replace(' ', '')
             if author_name and author_name not in author_index:
-                print(f'[Err] Author "{author_name}" in "{os.path.basename(filename)}" not found in bibliography')
+                print(f'[Err] In "{os.path.basename(filename)}", author "{author_name}" not found in bibliography.')
         return
 
     errors = []
 
-    # reference: authors_date_pagenumber(_sequential)
+    # reference: authors_date_pagenumber(_sequentialnumber)
     check_code('reference', r"^\w+_\d{4}_\d+(|_\d+)$", mandatory=True)
-    # biblioref/authorgroup/author/surname
-    check_code('biblioref/authorgroup/author/surname', mandatory=True)
-    # biblioref/authorgroup/author/*name: in Bibliography
-    for author in root.find('biblioref/authorgroup'):
+    
+    # biblioref/author/*name: in Bibliography
+    for i, author in enumerate(root.findall('biblioref/author'), start=1):
+        check_code(f'biblioref/author[{i}]/surname', mandatory=True)
         check_biblio(author)
-    # biblioref/abbrev: author_date
-    check_code('biblioref/abbrev', r"^\w+_\d{4}[a-z]?$", mandatory=True)
-    check_code('biblioref/abbrev2', r"^\w+_\d{4}[a-z]?$", mandatory=False)
-    # biblioref/pagenums: numbers separated by - or ,
-    check_code('biblioref/pagenums', r"^\d+( ?[-,] ?\d+)*$", mandatory=True)
-    check_code('biblioref/pagenums2', r"^\d+( ?[-,] ?\d+)*$", mandatory=False)
-    # algdata/algorithm_statement
-    check_code('algdata/algorithm_statement', mandatory=True)
-    # algauthors/*_author_group/author/*_date: dd.mm.yyyy
-    # algauthors/*_author_group/author/*name: in Bibliography
-    creation = 'algauthors/creation_author_group'
-    modification = 'algauthors/modification_author_group'
-    if root.find(creation) is not None and len(root.find(creation)) > 1:  # Check only 1 creation author
-        print(f'[Err] Only 1 author allowed in {creation} in "{os.path.basename(filename)}"')
-    check_code(creation+'/author/creation_date', r"^\d{2}\.\d{2}\.\d{4}$", mandatory=False)
-    check_biblio(root.find(creation+'/author'))
-    if root.find(modification) is not None:
-        for i in range(len(root.find(modification))):
-            check_code(modification+'/author['+str(i+1)+']/modification_date', r"^\d{2}\.\d{2}\.\d{4}$", mandatory=False)
-            check_biblio(root.find(modification+'/author['+str(i+1)+']'))
+        
+        # biblioref/author/abbrev: author_date
+        check_code(f'biblioref/author[{i}]/abbrev', r"^\w+_\d{4}$", mandatory=True)
+        
+        # biblioref/author/pagenums: numbers separated by - or ,
+        check_code(f'biblioref/author[{i}]/pagenums', r"^\d+(-\d+)?(, ?\d+(-\d+)?)*$", mandatory=True)
 
     # algorithm_description: check if file exist for each description type
     for d_type in root.find('algorithm_description'):
         if d_type.tag not in index.keys():
-            print('[Err] "{}" from "{}" not found in website folders.'.format(d_type.tag+'/', os.path.basename(filename)))
+            print(f'[Err] In "{os.path.basename(filename)}", algorithm description "{d_type.tag}" not found in website directories.')
         else:
-            if d_type.text and d_type.text.replace(' ','_').lower() not in index[d_type.tag]:
-                # errors.append()
-                print('[Err] "{}" from "{}" not found in website files.'
-                      .format(d_type.tag+'/'+d_type.text.replace(' ','_'), os.path.basename(filename)))
+            if d_type.text:
+                txt = d_type.text.replace(' ', '_').lower()
+                if txt not in index[d_type.tag]:
+                    print(f'[Err] In "{os.path.basename(filename)}", {d_type.tag} "{txt}" not found in website files.')
+
+    # algdata/algorithm_statement
+    check_code('algdata/algorithm_statement', mandatory=True)
 
     # Check operations
-    op_result = False
-    if root.find('algdata/results'):
-        for var in root.find('algdata/results'):
-            # Check <unit> in results
-            if not var.find('unit').text:
-                print(f'[Err] Missing <unit> in "{os.path.basename(filename)}"')
-            else:
-                unit = var.find('unit').text.lower()
-                if unit not in index['units']:
-                    print('[Err] "{}"  from "{}" not found in website files.'
-                          .format('units/'+unit.replace(' ', '_'), os.path.basename(filename)))
-            # Check <op> in results
-            if not var.find('op').text:
-                print(f'[Err] Missing <op> in <results> in "{os.path.basename(filename)}"')
-            op_result = True
-    if root.find('algdata/variables'):
-        var_names = set()
-        for var in root.find('algdata/variables'):
-            # Check <unit> in variables
-            if not var.find('unit').text:
-                print(f'[Err] Missing <unit> in "{os.path.basename(filename)}"')
-            else:
-                unit = var.find('unit').text.lower()
-                if unit not in index['units']:
-                    print('[Err] "{}"  from "{}" not found in website files.'
-                          .format('units/'+unit.replace(' ', '_'), os.path.basename(filename)))
-            # Check <op> in variables
-            if not op_result and (var.find('op') is None or not var.find('op').text):
-                print(f'[Err] Missing <op> in "{os.path.basename(filename)}"')
-            # Check different names
-            if var.tag in var_names:
-                print(f'[Err] Same names of variables in "{os.path.basename(filename)}"')
-            else:
-                var_names.add(var.tag)
-
+    var_names = set()
+    op_in_results = False
+    for algdata in ['results', 'variables']:
+        if root.find('algdata/' + algdata):
+            for var in root.find('algdata/' + algdata):
+                # algdata/{algdata}/*/unit
+                check_code(f'algdata/{algdata}/{var.tag}/unit', mandatory=True)
+                if var.findtext('unit'):
+                    unit = var.findtext('unit').replace(' ', '_').lower()
+                    if unit not in index['units']:
+                        print('[Err] In "{os.path.basename(filename)}", unit "{unit}" not found in website files.')
+                # algdata/{algdata}/*/op
+                if algdata == 'results' or not op_in_results:
+                    check_code(f'algdata/{algdata}/{var.tag}/op', mandatory=True)
+                    op_in_results = True
+                # algdata/{algdata}/* different names
+                if var.tag in var_names:
+                    print(f'[Err] In "{os.path.basename(filename)}", more than one <{var.tag}> in <algdata>.')
+                else:
+                    var_names.add(var.tag)
+    
+    # algauthors/author_creation: only 1 allowed
+    if root.find('algauthors/author_creation') is not None and len(root.findall('algauthors/author_creation')) > 1:
+        print(f'[Err] In "{os.path.basename(filename)}", only 1 author_creation allowed in {creation}.')
+    # algauthors/author_*/*name: in Bibliography
+    check_biblio(root.find('algauthors/author_creation'))
+    # algauthors/author_*/date: dd.mm.yyyy
+    check_code(f'algauthor/author_creation/date', r"^\d{1,2}\.\d{1,2}\.\d{4}$")
+    # same for algauthors/author_modification
+    for i, algauthor_m in enumerate(root.findall('algauthors/author_modification'), start=1):
+        check_biblio(algauthor_m)
+        check_code(f'algauthor/{algauthor_m}[{i}]/date', r"^\d{1,2}\.\d{1,2}\.\d{4}$")
+    
+    # Print errors
     if errors:
-        print(f'[Err] In "{os.path.basename(filename)}", the data in following tags is wrong: {errors}')
+        print(f'[Err] In "{os.path.basename(filename)}", data in following tags is wrong or missing: {errors}')
 
     return root
 
 
-def write_data(website_dir, algo_data, index):
+def write_data(website_dir, alg_data, index):
     """ Update <section>s with HTML rendered data """
 
     # Regex parser for <section> tags [html parsers don't keep formatting]
@@ -269,7 +284,7 @@ def write_data(website_dir, algo_data, index):
                     if soup['block'] == "algorithm":
                         template = TEMPLATE_ALGORITHM
                         sort = SORT_STRINGS[sort] if sort in SORT_STRINGS.keys() else sort
-                        blocks_data = sorted(algo_data, key=lambda x:
+                        blocks_data = sorted(alg_data, key=lambda x:
                                 (x[0].find(sort).text if x[0].find(sort) is not None and x[0].find(sort).text else 'zzz',
                                  x[0].find('reference').text))
 
@@ -315,30 +330,9 @@ def generate_html(template, blocks_data, sort):
         return ' '.join(s[:1].upper() + s[1:] for s in text.split(' '))
     env.filters['capfirst'] = capfirst
 
-    return env.get_template(filename).render(blocks_data=blocks_data, sort=sort)
+    time_now = round(datetime.datetime.now().timestamp() * 1000)
 
-
-def check_config():
-    """ Base check to assert existence of files and directories """
-
-    missing = []
-    for conf in ['WEBSITE_DIR', 'ALGORITHMS_DIR', 'TEMPLATE_ALGORITHM', 'TEMPLATE_INDEX']:
-        if not conf in globals():
-            missing.append(conf)
-    if missing:
-        print('[Err] Wrong config, {} not found.'.format(str(missing).strip('[]').replace('\'', '\"')))
-        sys.exit()
-
-    for config_dir in [WEBSITE_DIR, ALGORITHMS_DIR]:
-        if not os.path.isdir(os.path.relpath(config_dir)):
-            print(f'[Err] Wrong config, "{config_dir}" directory not found.')
-            sys.exit()
-    for config_file in [TEMPLATE_ALGORITHM, TEMPLATE_INDEX]:
-        if not os.path.isfile(os.path.relpath(config_file)):
-            print(f'[Err] Wrong config, file "{config_file}" not found.')
-            sys.exit()
-
-    return
+    return env.get_template(filename).render(blocks_data=blocks_data, sort=sort, time_now=time_now)
 
 
 if __name__ == '__main__':
@@ -369,10 +363,10 @@ if __name__ == '__main__':
     index, author_index = files_index(os.path.relpath(WEBSITE_DIR))
 
     print('[*] Importing algorithms data...')
-    algo_data = get_algo_data(os.path.relpath(ALGORITHMS_DIR), index, author_index)
+    alg_data = get_alg_data(os.path.relpath(ALGORITHMS_DIR), index, author_index)
 
     print('[*] Writing data...')
-    write_data(os.path.relpath(WEBSITE_DIR), algo_data, index)
+    write_data(os.path.relpath(WEBSITE_DIR), alg_data, index)
 
     print('\n[+] Done!')
 

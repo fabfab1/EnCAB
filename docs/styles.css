@@ -37,16 +37,15 @@ img {
     max-width: 100%;
 }
 
-p {
-    padding: 0% 7%;
+p, div.data {
+    padding: 0 6%;
     text-align: justify;
     text-justify: inter-word;
 }
 
 table.data {
-    margin: 0% 7%;
-    /* width: 100%; */
-    text-align: justify;
+    width: 100%;
+    /*text-align: justify;*/
     border-collapse: collapse;
     background-color: #c4e3ed; /* or #add8e6 */
 }
@@ -58,8 +57,8 @@ table.data > tr:nth-child(odd), table.data > tbody > tr:nth-child(odd) {
     background-color: #8ac7db;
 }
 
-td.col-1, td.col-3 { width: 13%; }
-td.col-2, td.col-4 { width: 30%; }
+td.col-1, td.col-3 { width: 15%; }
+td.col-2, td.col-4 { width: 35%; }
 
 
 .Alg-Statement {

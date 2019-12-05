@@ -9,14 +9,12 @@
 <biblioref>
 
   <authorgroup>
-    <author>
-      <surname>Abrams</surname>
-      <firstname>E.</firstname>
-    </author>
+    <author><surname>Abrams</surname><firstname>E.</firstname></author>
+    <author2><surname>Abrams</surname><firstname>E.</firstname></author2>
   </authorgroup>
   <abbrev>Abrams_1989</abbrev>
   <pagenums>70</pagenums>
-  <abbrev2>Abrams_1984b</abbrev2>
+  <abbrev2>Abrams_1984</abbrev2>
   <pagenums2>190</pagenums2>
 
 </biblioref>

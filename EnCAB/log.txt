@@ -15,6 +15,11 @@
 Press ENTER to Continue, Ctrl-C to Abort.
 [*] Generating indexes...
 [*] Importing algorithms data...
-[*] Writing data...
-
-[+] Done!
+Traceback (most recent call last):
+  File "C:/Users/bF/Dropbox/Buccellati/Programs/EnCAB/EnCAB/EnCAB.py", line 379, in <module>
+    alg_data = get_alg_data(os.path.relpath(ALGORITHMS_DIR), index, author_index)
+  File "C:/Users/bF/Dropbox/Buccellati/Programs/EnCAB/EnCAB/EnCAB.py", line 120, in get_alg_data
+    alg_data += [(parse(filename, index, author_index), os.path.basename(filename))]
+  File "C:/Users/bF/Dropbox/Buccellati/Programs/EnCAB/EnCAB/EnCAB.py", line 213, in parse
+    for var in root.find('algdata/results'):
+TypeError: 'NoneType' object is not iterable

@@ -1,15 +1,15 @@
 
 {#- - - - INDEX - - - #}
-{% for b, filename in blocks_data -%}{% if b.findtext(sort) and b.findtext(sort).lower() != loop.previtem %}
-{% if not loop.first %} - {% endif %}<a href="#{{ b.findtext(sort).lower() }}">{{ b.findtext(sort)|replace('_','&nbsp;')|capfirst }}</a>
+{% for b, filename in blocks_data -%}{% if b.findtext(sort) and loop.changed(b.findtext(sort).lower()) %}
+{% if not loop.first %} - {% endif %}<a href="#{{ b.findtext(sort).lower() }}">{{b.findtext(sort)|replace('_','&nbsp;')|capfirst}}</a>
 {%- endif %}{% endfor %}
 
 <br><br><br>
 
-{#- - - - DATA - - - #}
+{# - - - DATA - - - #}
 <div class="data">
-{% for b, filename in blocks_data %}
-{% if b.findtext(sort) and b.findtext(sort).lower() != loop.previtem %}<a name="{{ b.findtext(sort).lower() }}"></a>{% endif %}
+{%- for b, filename in blocks_data %}
+{% if b.findtext(sort) and b.findtext(sort) and loop.changed(b.findtext(sort).lower()) %}<a name="{{ b.findtext(sort).lower() }}"></a>{% endif %}
 <a name="{{ b.findtext('reference','') }}"></a>
 <b>{{ b.findtext('reference','')|replace('_','&nbsp;') }}</b>
 <table class="data">
@@ -47,13 +47,13 @@
     </tr>
     <tr>
         <td>Source info:</td><td>
-            {%- for source in b.findall('biblioref/source')[1:] %}
-            <a href="../bibliography/bibliography.html#{{source.findtext('abbrev','')}}">{{source.findtext('abbrev','')|replace('_',' ')}}{% if source.findtext('year') %}}_{{source.findtext('year')}}{% endif %}</a>{%- if source.findtext('pagenums') %}, p. {{source.findtext('pagenums')}}{% endif %}
+            {%- for source in b.findall('biblioref/source')[:1] %}
+            <a href="../bibliography/bibliography.html#{{source.findtext('abbrev','').rsplit('_',1)[0]}}">{{source.findtext('abbrev','')|replace('_',' ')}}</a>{%- if source.findtext('pagenums') %}, p. {{source.findtext('pagenums')}}{% endif %}
             {%- endfor %}
         </td>
         <td>Also cited in:</td><td>
             {%- for cited in b.findall('biblioref/cited') %}
-            <a href="../bibliography/bibliography.html#{{cited.findtext('abbrev','')}}">{{cited.findtext('abbrev','')|replace('_',' ')}}{% if cited.findtext('year') %}}_{{cited.findtext('year')}}{% endif %}</a>{%- if cited.findtext('pagenums') %}, p. {{cited.findtext('pagenums')}}{% endif %}{% if not loop.last %}; {% endif %}
+            <a href="../bibliography/bibliography.html#{{cited.findtext('abbrev','').rsplit('_',1)[0]}}">{{cited.findtext('abbrev','')|replace('_',' ')}}</a>{%- if cited.findtext('pagenums') %}, p. {{cited.findtext('pagenums')}}{% endif %}{% if not loop.last %}; {% endif %}
             {%- endfor %}
         </td>
     </tr>
@@ -79,7 +79,7 @@
         <td>How to cite:</td><td>EnCAB alg. - {{ b.findtext('reference','') }}</td>
         <td>Created by/on:</td><td>{%- if b.find('algauthors/creation') %}
             {%- for author in b.find('algauthors/creation') %}
-            <a href="../authors/{{author.findtext('surname','').strip('.,')|replace(' ','')}}.html{{author.findtext('firstname','').strip('.,')|replace(' ','')}}">{{author.findtext('surname','')}} {{author.findtext('firstname','')}}</a>{%- if author.findtext('date') %} ({{ author.findtext('date') }}){% endif %}{% if not loop.last %}, {% endif %}
+            <a href="../authors/{{author.findtext('surname','').strip('.,')|replace(' ','')}}{{author.findtext('firstname','').strip('.,')|replace(' ','')}}.html">{{author.findtext('surname','')}} {{author.findtext('firstname','')}}</a>{%- if author.findtext('date') %} ({{ author.findtext('date') }}){% endif %}{% if not loop.last %}, {% endif %}
             {%- endfor %}
         {% endif %}</td>
     </tr>
@@ -87,7 +87,7 @@
         <td>Input data:</td><td><a href="../algorithms_data/{{filename}}">{{filename}}</a></td>
         <td>Modified by/on:</td><td>{%- if b.find('algauthors/modification') %}
             {%- for author in b.find('algauthors/modification') %}
-            <a href="../authors/{{author.findtext('surname','').strip('.,')|replace(' ','')}}.html{{author.findtext('firstname','').strip('.,')|replace(' ','')}}">{{author.findtext('surname','')}} {{author.findtext('firstname','')}}</a>{%- if author.findtext('date') %} ({{ author.findtext('date') }}){% endif %}{% if not loop.last %}, {% endif %}
+            <a href="../authors/{{author.findtext('surname','').strip('.,')|replace(' ','')}}{{author.findtext('firstname','').strip('.,')|replace(' ','')}}.html">{{author.findtext('surname','')}} {{author.findtext('firstname','')}}</a>{%- if author.findtext('date') %} ({{ author.findtext('date') }}){% endif %}{% if not loop.last %}, {% endif %}
             {%- endfor %}
         {% endif %}</td>
     </tr>

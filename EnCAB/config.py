@@ -24,7 +24,7 @@ TEMPLATE_INDEX = "templates/index.html"  # default: "templates/index.html"
 SORT_STRINGS = {'algorithm_type': 'algorithm_description/algorithm_type',
                 'position_in_process': 'algorithm_description/position_in_process',
                 'material': 'algorithm_description/material',
-                'abbrev': 'biblioref/abbrev'}
+                'abbrev': 'biblioref/source/abbrev'}
 
 # Files to ignore for the index if they contain the string in the filename
 IGNORE_IF_CONTAIN = "_index"  # default: "_index"

@@ -165,11 +165,13 @@ def parse(file, file_index: dict, author_index: set):
                     abbrev = author_abbrev(authors[0]) + '_' + author_abbrev(authors[1])
                 else:
                     abbrev = author_abbrev(authors[0]) + '_Etal'
+                if biblioref.findtext('year'):
+                    abbrev += '_' + biblioref.findtext('year')
                 biblioref.find('abbrev').text = abbrev
             
             if abbrev:
                 # check if in Bibliography
-                if abbrev not in author_index:
+                if abbrev.rsplit('_', 1)[0] not in author_index:
                     errors.append(f'author "{abbrev}" not found in bibliography')
 
                 # biblioref/*/author/year: yyyy

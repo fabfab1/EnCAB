@@ -9,7 +9,6 @@ Usage: python EnCAB.py
 """
 
 import sys
-import os  # files I/O
 import re  # regex
 import datetime
 import logging
@@ -18,17 +17,20 @@ from xml.etree import ElementTree  # XML file reading
 from bs4 import BeautifulSoup  # HTML tag parsing
 import jinja2  # HTML template
 import zipfile
-# from pyuca import Collator  # UTF sorting
+import locale  # UTF sorting
+locale.setlocale(locale.LC_ALL, "")
 
 from config import *  # import configuration from file "config.py"
 
+
+__location__ = Path(__file__).parent
 
 # setup logging, save console output to "EnCAB/log.txt"
 logging.basicConfig(
     level=logging.INFO,
     format='%(levelname)s%(message)s',
     handlers=[
-        logging.FileHandler(os.path.join(os.path.dirname(__file__), 'log.txt'), mode='w', encoding='utf-8'),
+        logging.FileHandler(__location__/'log.txt', mode='w', encoding='utf-8'),
         logging.StreamHandler(sys.stdout)
     ])
 logging.addLevelName(logging.INFO, '')
@@ -94,8 +96,8 @@ def get_alg_data(alg_dir: Path, file_index: dict, author_index: set):
     
     # Get the data
     alg_data = []
-    for file in alg_dir.iterdir():
-        if file.is_file() and file.suffix in ('.xml', '.txt'):
+    for file in alg_dir.glob('*.xml'):
+        if file.is_file():
             # archive a copy of the file
             zip_file.write(file.resolve(), arcname=file.name)
             
@@ -202,7 +204,7 @@ def parse(file, file_index: dict, author_index: set):
             check_code(f'algdata/{algdata.tag}/{var.tag}/unit', mandatory=True)
             unit = var.findtext('unit', '').replace(' ', '_').lower()
             if unit and unit not in file_index['units']:
-                errors.append(f'unit "{unit}" not found in website files')
+                errors.append(f'units "{unit}" not found in website files')
             
             # algdata/{algdata}/*/op: op in all results or in all variables
             if algdata.tag == 'results' or not op_in_results:
@@ -279,13 +281,13 @@ def write_data(website_dir: Path, alg_data: list, file_index: dict, templates: d
         if block == "algorithm":
             sort = SORT_STRINGS[sort] if sort in SORT_STRINGS.keys() else sort
             block_data = sorted(alg_data, key=lambda xml: (xml[0].findtext(sort, '') == '',
-                                                           xml[0].findtext(sort, ''),
-                                                           xml[0].findtext('reference', '')))
+                                                           locale.strxfrm(xml[0].findtext(sort, '')),
+                                                           locale.strxfrm(xml[0].findtext('reference', ''))))
         elif block == "index":
             if sort not in file_index.keys():
                 log.error(f'In "{file.name}", attribute sort="{sort}" in <section> NOT valid.')
                 return matchobj.group()
-            block_data = sorted(file_index[sort])
+            block_data = sorted(file_index[sort], key=locale.strxfrm)
 
         # generate the HTML
         html_data = template.render(blocks_data=block_data, sort=sort)
@@ -324,21 +326,21 @@ Algorithms directory: "{ALGORITHMS_DIR}"
 Algorithm template: "{TEMPLATE_ALGORITHM}"
 Index template: "{TEMPLATE_INDEX}"
 ''')
-        location = Path(__file__).resolve().parent
-        check_config(location)
         
-        log.info('Press ENTER to confirm.')
-        #input()
+        check_config(__location__)
+        
+        # log.info('Press ENTER to confirm.')
+        # input()
     
         log.info('[*] Generating indexes...')
-        file_index, author_index = files_index(location/WEBSITE_DIR, location/BIBLIOGRAPHY_FILE)
+        file_index, author_index = files_index(__location__/WEBSITE_DIR, __location__/BIBLIOGRAPHY_FILE)
     
         log.info('[*] Importing algorithms data...')
-        alg_data = get_alg_data(location/ALGORITHMS_DIR, file_index, author_index)
+        alg_data = get_alg_data(__location__/ALGORITHMS_DIR, file_index, author_index)
     
         log.info('[*] Writing data...')
-        write_data(location/WEBSITE_DIR, alg_data, file_index,
-                   {'algorithm': location/TEMPLATE_ALGORITHM, 'index': location/TEMPLATE_INDEX})
+        write_data(__location__/WEBSITE_DIR, alg_data, file_index,
+                   {'algorithm': __location__/TEMPLATE_ALGORITHM, 'index': __location__/TEMPLATE_INDEX})
                    
         log.info('\n[+] Done!')
     

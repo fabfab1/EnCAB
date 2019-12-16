@@ -9,7 +9,7 @@
 # the program  will scan all *.html files in directory and subdirectories
 WEBSITE_DIR = "../docs/"  # default: "../docs/"
 
-# Path to directory where algorithms data are located (*.xml or *.txt files)
+# Path to directory where algorithms data are located (*.xml files)
 ALGORITHMS_DIR = WEBSITE_DIR + "algorithms_data/"  # default:  WEBSITE_DIR + "algorithms_data/"
 
 # Path to file where HTML author bibliography is located

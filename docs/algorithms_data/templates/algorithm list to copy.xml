@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <algorithm>
 
+
 <reference></reference>
+
 
 <biblioref>
 
@@ -21,7 +22,6 @@
 </biblioref>
 
 
-
 <algorithm_description>
 
   <algorithm_type></algorithm_type>
@@ -32,7 +32,6 @@
   <source_geography></source_geography>
 
 </algorithm_description>
-
 
 
 <algdata>
@@ -51,9 +50,7 @@
     </var2>
   </variables>
 
-
 </algdata>
-
 
 
 <algnotes>
@@ -62,7 +59,6 @@
   <biblio_notes></biblio_notes>
 
 </algnotes>
-
 
 
 <algauthors>

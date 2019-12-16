@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <algorithm>
+
 
 <reference>Harper_2016_525</reference>
 
 
-
 <biblioref>
 
-  <authorgroup>
-    <author>
-      <surname>Harper</surname>
-      <firstname>Ch.</firstname>
-    </author>
-  </authorgroup>
-  <abbrev>Harper_2016</abbrev>
-  <pagenums>525</pagenums>
-  <abbrev2>Murakami_2010</abbrev2>
-  <pagenums2>205</pagenums2>
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>525</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Murakami</surname><firstname></firstname></author>
+    <year>2010</year>
+    <pagenums>205</pagenums>
+  </cited>
 
 </biblioref>
 
@@ -42,33 +42,14 @@
   <algorithm_math>0,220 m3 made in 1 p-h</algorithm_math>
   <variables>
     <var1>
-      <value>1</value><description></description>
-      <unit>p-h</unit>
+      <unit>p-h</unit><description></description>
       <op>var2 / 0,220</op>
     </var1>
     <var2>
-      <value>0,220</value><description></description>
-      <unit>m3</unit>
+      <unit>m3</unit><description></description>
       <op>var1 * 0,220</op>
     </var2>
   </variables>
-
-<!-- comment  and so on for as many variables as needed, up to 9, always seperated by an _op_  -->
-
-  <results>
-    <result1>
-      <value></value><description></description>
-      <op></op>
-      <unit></unit>
-    </result1>
-    <result2>
-      <value></value><description></description>
-      <op></op>
-      <unit></unit>
-    </result2>
-  </results>
-  
-<!-- comment   and so on for as many results as needed, up to 9 -->
 
 </algdata>
 
@@ -85,16 +66,14 @@
 
 <algauthors>
 
-  <creation_author_group>
+  <creation>
     <author><surname>Buccellati</surname><firstname>F.</firstname></author>
-    <author><surname>Marko</surname><firstname>J.</firstname></author>
-    <creation_date>22.5.2019</creation_date>
-  </creation_author_group>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.5.2019</date></author>
+  </creation>
 
-  <modification_author_group>
-    <author><firstname></firstname><surname></surname></author>
-    <creation_date></creation_date>
-  </modification_author_group>
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
 
 </algauthors>
 

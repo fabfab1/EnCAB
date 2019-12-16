@@ -1,4 +1,4 @@
-----------------------------------------------2019-12-16T04:11:24+01:00
+----------------------------------------------2019-12-17T00:27:08+01:00
  EnCAB: Energetic Calculator for Ancient Buildings
 -----------------------------------------------------------------------
 
@@ -11,7 +11,6 @@ Algorithms directory: "../docs/algorithms_data/"
 Algorithm template: "templates/algorithm.html"
 Index template: "templates/index.html"
 
-Press ENTER to confirm.
 [*] Generating indexes...
 [*] Importing algorithms data...
 [*] Writing data...

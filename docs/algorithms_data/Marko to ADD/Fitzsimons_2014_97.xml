@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <algorithm>
+
 
 <reference>Fitzsimons_2014_97</reference>
 
 
-
 <biblioref>
 
-  <authorgroup>
-    <author>
-      <surname>Fitzsimons</surname>
-      <firstname>R.</firstname>
-    </author>
-  </authorgroup>
-  <abbrev>Fitzsimons_2014</abbrev>
-  <pagenums>97</pagenums>
-  <abbrev2>Cavanagh_1999</abbrev2>
-  <pagenums2>96</pagenums2>
+  <source>
+    <author><surname>Fitzsimons</surname><firstname>R.</firstname></author>
+    <year>2014</year>
+    <pagenums>97</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Cavanagh</surname><firstname></firstname></author>
+    <year>1999</year>
+    <pagenums>96</pagenums>
+  </cited>
 
 </biblioref>
 
@@ -42,38 +42,15 @@
   <algorithm_math></algorithm_math>
   <variables>
     <var1>
-      <value></value><description></description>
-      <unit></unit>
+      <unit></unit><description></description>
       <op></op>
     </var1>
     <var2>
-      <value></value><description></description>
-      <unit></unit>
+      <unit></unit><description></description>
       <op></op>
     </var2>
-    <var3>
-      <value></value><description></description>
-      <unit></unit>
-      <op></op>
-    </var3>
+
   </variables>
-
-<!-- comment  and so on for as many variables as needed, up to 9, always seperated by an _op_  -->
-
-  <results>
-    <result1>
-      <value></value><description></description>
-      <op></op>
-      <unit></unit>
-    </result1>
-    <result2>
-      <value></value><description></description>
-      <op></op>
-      <unit></unit>
-    </result2>
-  </results>
-  
-<!-- comment   and so on for as many results as needed, up to 9 -->
 
 </algdata>
 
@@ -90,16 +67,14 @@
 
 <algauthors>
 
-  <creation_author_group>
+  <creation>
     <author><surname>Buccellati</surname><firstname>F.</firstname></author>
-    <author><surname>Marko</surname><firstname>J.</firstname></author>
-    <creation_date>12.6.2019</creation_date>
-  </creation_author_group>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>12.6.2019</date></author>
+  </creation>
 
-  <modification_author_group>
-    <author><firstname></firstname><surname></surname></author>
-    <creation_date></creation_date>
-  </modification_author_group>
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
 
 </algauthors>
 

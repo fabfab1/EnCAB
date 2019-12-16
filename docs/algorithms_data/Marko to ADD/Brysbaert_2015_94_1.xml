@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <algorithm>
+
 
 <reference>Brysbaert_2015_94</reference>
 
 
-
 <biblioref>
 
-  <authorgroup>
-    <author>
-      <surname>Brysbaert</surname>
-      <firstname>A.</firstname>
-    </author>
-  </authorgroup>
-  <abbrev>Brysbaert_2015</abbrev>
-  <pagenums>94</pagenums>
-  <abbrev2>De Haan_2009</abbrev2>
-  <pagenums2>3</pagenums2>
+  <source>
+    <author><surname>Brysbaert</surname><firstname>A.</firstname></author>
+    <year>2015</year>
+    <pagenums>94</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>De Haan</surname><firstname></firstname></author>
+    <year>2009</year>
+    <pagenums>3</pagenums>
+  </cited>
 
 </biblioref>
 
@@ -42,33 +42,14 @@
   <algorithm_math>0,11 m3 made in 1 p-h</algorithm_math>
   <variables>
     <var1>
-      <value>1</value><description></description>
-      <unit>p-h</unit>
+      <unit>p-h</unit><description></description>
       <op>var2 / 0,11</op>
     </var1>
     <var2>
-      <value>0,11</value><description></description>
-      <unit>m3</unit>
+      <unit>m3</unit><description></description>
       <op>var1 * 0,11</op>
     </var2>
   </variables>
-
-<!-- comment  and so on for as many variables as needed, up to 9, always seperated by an _op_  -->
-
-  <results>
-    <result1>
-      <value></value><description></description>
-      <op></op>
-      <unit></unit>
-    </result1>
-    <result2>
-      <value></value><description></description>
-      <op></op>
-      <unit></unit>
-    </result2>
-  </results>
-  
-<!-- comment   and so on for as many results as needed, up to 9 -->
 
 </algdata>
 
@@ -85,16 +66,14 @@
 
 <algauthors>
 
-  <creation_author_group>
+  <creation>
     <author><surname>Buccellati</surname><firstname>F.</firstname></author>
-    <author><surname>Marko</surname><firstname>J.</firstname></author>
-    <creation_date>14.6.2019</creation_date>
-  </creation_author_group>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>14.6.2019</date></author>
+  </creation>
 
-  <modification_author_group>
-    <author><firstname></firstname><surname></surname></author>
-    <creation_date></creation_date>
-  </modification_author_group>
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
 
 </algauthors>
 

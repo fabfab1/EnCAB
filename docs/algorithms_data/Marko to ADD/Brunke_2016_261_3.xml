@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <algorithm>
+
 
 <reference>Brunke_2016_261</reference>
 
 
-
 <biblioref>
 
-  <authorgroup>
-    <author>
-      <surname>Brunke</surname>
-      <firstname>H.</firstname>
-    </author>
-  </authorgroup>
-  <abbrev>Brunke_2016</abbrev>
-  <pagenums>261</pagenums>
-  <abbrev2>Heimpel_2009</abbrev2>
-  <pagenums2>223</pagenums2>
+  <source>
+    <author><surname>Brunke</surname><firstname>H.</firstname></author>
+    <year>2016</year>
+    <pagenums>261</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Heimpel</surname><firstname>W.</firstname></author>
+    <year>2009</year>
+    <pagenums>223</pagenums>
+  </cited>
 
 </biblioref>
 
@@ -28,9 +28,9 @@
   <algorithm_type>mudbrick</algorithm_type>
   <position_in_process>manufacture</position_in_process>
   <material>mudbrick</material>
-  <source_type>textual material</source_type>
+  <source_type>text</source_type>
   <source_chronology></source_chronology>
-  <source_geography>Ancient Near East</source_geography>
+  <source_geography>ane</source_geography>
 
 </algorithm_description>
 
@@ -42,33 +42,14 @@
   <algorithm_math>3 l of barley per 1 p-d</algorithm_math>
   <variables>
     <var1>
-      <value>1</value><description></description>
-      <unit>p-d</unit>
+      <unit>p-d</unit><description></description>
       <op>var2 / 3</op>
     </var1>
     <var2>
-      <value>3</value><description></description>
-      <unit>l</unit>
+      <unit>l</unit><description></description>
       <op>var1 * 3</op>
     </var2>
   </variables>
-
-<!-- comment  and so on for as many variables as needed, up to 9, always seperated by an _op_  -->
-
-  <results>
-    <result1>
-      <value></value><description></description>
-      <op></op>
-      <unit></unit>
-    </result1>
-    <result2>
-      <value></value><description></description>
-      <op></op>
-      <unit></unit>
-    </result2>
-  </results>
-  
-<!-- comment   and so on for as many results as needed, up to 9 -->
 
 </algdata>
 
@@ -85,16 +66,14 @@
 
 <algauthors>
 
-  <creation_author_group>
+  <creation>
     <author><surname>Buccellati</surname><firstname>F.</firstname></author>
-    <author><surname>Marko</surname><firstname>J.</firstname></author>
-    <creation_date>15.6.2019</creation_date>
-  </creation_author_group>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>15.6.2019</date></author>
+  </creation>
 
-  <modification_author_group>
-    <author><firstname></firstname><surname></surname></author>
-    <creation_date></creation_date>
-  </modification_author_group>
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
 
 </algauthors>
 

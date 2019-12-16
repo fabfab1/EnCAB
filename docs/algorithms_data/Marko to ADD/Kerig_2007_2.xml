@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <algorithm>
+
 
 <reference>Kerig_2007_2</reference>
 
 
-
 <biblioref>
 
-  <authorgroup>
-    <author>
-      <surname>Kerig</surname>
-      <firstname>T.</firstname>
-    </author>
-  </authorgroup>
-  <abbrev>Kerig_2007</abbrev>
-  <pagenums>2</pagenums>
-  <abbrev2>Luley_1990</abbrev2>
-  <pagenums2></pagenums2>
+  <source>
+    <author><surname>Kerig</surname><firstname>T.</firstname></author>
+    <year>2007</year>
+    <pagenums>2</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Luley</surname><firstname></firstname></author>
+    <year>1990</year>
+    <pagenums></pagenums>
+  </cited>
 
 </biblioref>
 
@@ -28,7 +28,7 @@
   <algorithm_type>house building</algorithm_type>
   <position_in_process>construction</position_in_process>
   <material></material>
-  <source_type></source_type>  
+  <source_type></source_type>
   <source_chronology>Neolithic</source_chronology>
   <source_geography>Europe</source_geography>
 
@@ -42,33 +42,14 @@
   <algorithm_math>1 house built in 2900 p-h</algorithm_math>
   <variables>
     <var1>
-      <value>2900</value><description></description>
-      <unit>p-h</unit>
+      <unit>p-h</unit><description></description>
       <op>var2 * 2900</op>
     </var1>
     <var2>
-      <value>1</value><description></description>
-      <unit>house</unit>
-      <op></op>
+      <unit>house</unit><description></description>
+      <op>var1 / 2900</op>
     </var2>
   </variables>
-
-<!-- comment  and so on for as many variables as needed, up to 9, always seperated by an _op_  -->
-
-  <results>
-    <result1>
-      <value></value><description></description>
-      <op></op>
-      <unit></unit>
-    </result1>
-    <result2>
-      <value></value><description></description>
-      <op></op>
-      <unit></unit>
-    </result2>
-  </results>
-  
-<!-- comment   and so on for as many results as needed, up to 9 -->
 
 </algdata>
 
@@ -85,16 +66,14 @@
 
 <algauthors>
 
-  <creation_author_group>
+  <creation>
     <author><surname>Buccellati</surname><firstname>F.</firstname></author>
-    <author><surname>Marko</surname><firstname>J.</firstname></author>
-    <creation_date>29.4.2019</creation_date>
-  </creation_author_group>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>29.4.2019</date></author>
+  </creation>
 
-  <modification_author_group>
-    <author><firstname></firstname><surname></surname></author>
-    <creation_date></creation_date>
-  </modification_author_group>
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
 
 </algauthors>
 

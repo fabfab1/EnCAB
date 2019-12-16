@@ -7,13 +7,17 @@
 
 <biblioref>
 
-  <authorgroup>
+  <source>
     <author><surname>Aurenche</surname><firstname>O.</firstname></author>
-  </authorgroup>
-  <abbrev>Aurenche_1981</abbrev>
-  <pagenums>66</pagenums>
-  <abbrev2></abbrev2>
-  <pagenums2></pagenums2>
+    <year>1981</year>
+    <pagenums>66</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
 
 </biblioref>
 
@@ -58,19 +62,13 @@
 
 <algauthors>
 
-  <creation_author_group>
-    <author>
-      <surname>Buccellati</surname><firstname>F.</firstname>
-      <creation_date>30.02.2018</creation_date>
-    </author>
-  </creation_author_group>
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname><date>30.02.2018</date></author>
+  </creation>
 
-  <modification_author_group>
-    <author>
-      <surname></surname><firstname></firstname>
-      <modification_date></modification_date>
-    </author>
-  </modification_author_group>
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
 
 </algauthors>
 

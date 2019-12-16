@@ -1,23 +1,23 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <algorithm>
+
 
 <reference>Fitzsimons_2014_96</reference>
 
 
-
 <biblioref>
 
-  <authorgroup>
-    <author>
-      <surname>Fitzsimons</surname>
-      <firstname>R.</firstname>
-    </author>
-  </authorgroup>
-  <abbrev>Fitzsimons_2014</abbrev>
-  <pagenums>96</pagenums>
-  <abbrev2>Time-Life Books_1993</abbrev2>
-  <pagenums2>47-48</pagenums2>
+  <source>
+    <author><surname>Fitzsimons</surname><firstname>R.</firstname></author>
+    <year>2014</year>
+    <pagenums>96</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Time-Life Books</surname><firstname></firstname></author>
+    <year>1993</year>
+    <pagenums>47-48</pagenums>
+  </cited>
 
 </biblioref>
 
@@ -30,7 +30,7 @@
   <material>stone</material>
   <source_type>experimental archaeology</source_type>
   <source_chronology>modern</source_chronology>
-  <source_geographical_location>Egypt</source_geographical_location>
+  <source_geography>Egypt</source_geography>
 
 </algorithm_description>
 
@@ -42,23 +42,15 @@
   <algorithm_math>Number of p-d = (kg -weight- / 1000) * (m -distance- / 3,1578)</algorithm_math>
   <variables>
     <var1>
-      <value></value><description>weight</description>
-      <unit>kg</unit>
+      <unit>kg</unit><description>weight</description>
       <op></op>
     </var1>
     <var2>
-      <value></value><description>distance</description>
-      <unit>m</unit>
+      <unit>m</unit><description>distance</description>
       <op></op>
     </var2>
-    <var3>
-      <value></value><description></description>
-      <unit></unit>
-      <op></op>
-    </var3>
   </variables>
 
-<!-- comment  and so on for as many variables as needed, up to 9, always seperated by an _op_  -->
 
   <results>
     <result1>
@@ -66,14 +58,7 @@
       <op>(var1 / 1000) * (var2 / 3,1578)</op>
       <unit>p-d</unit>
     </result1>
-    <result2>
-      <value></value><description></description>
-      <op></op>
-      <unit></unit>
-    </result2>
   </results>
-  
-<!-- comment   and so on for as many results as needed, up to 9 -->
 
 </algdata>
 
@@ -90,15 +75,14 @@
 
 <algauthors>
 
-  <creation_author_group>
-    <author><surname>Marko</surname><firstname>J.</firstname></author>
-    <creation_date>11.6.2019</creation_date>
-  </creation_author_group>
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>11.6.2019</date></author>
+  </creation>
 
-  <modification_author_group>
-    <author><firstname></firstname><surname></surname></author>
-    <creation_date></creation_date>
-  </modification_author_group>
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
 
 </algauthors>
 

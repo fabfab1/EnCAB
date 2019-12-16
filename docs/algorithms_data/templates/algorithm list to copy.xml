@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference></reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+<algorithm_description>
+
+  <algorithm_type></algorithm_type>
+  <position_in_process></position_in_process>
+  <material></material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+<algdata>
+
+  <algorithm_statement></algorithm_statement>
+  <algorithm_math></algorithm_math>
+
+  <variables>
+    <var1>
+      <unit></unit><description></description>
+      <op></op>
+    </var1>
+    <var2>
+      <unit></unit><description></description>
+      <op></op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+<algauthors>
+
+  <creation>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+</algorithm>

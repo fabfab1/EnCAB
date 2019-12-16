@@ -17,7 +17,7 @@ function calc(obj) {
     for (i = 0; i < inputs.length; i++) {
         var name = inputs[i].getAttribute('name'),
             value = inputs[i].value;
-        if (value == '') { value = '0'; }
+        if (value === '') { value = '0'; }
 
         this[name] = Number( value.replace(',','.') );
     }
@@ -27,7 +27,7 @@ function calc(obj) {
         if ( ! inputs[i].isSameNode(obj) ) {
             if ( inputs[i].dataset.op ) {
                 var total = Number( eval( inputs[i].getAttribute('data-op') ) );
-                if ( total == 0 || total ) {
+                if ( total === 0 || total ) {
                     inputs[i].value = round(total);
                 } else {
                     inputs[i].value = '';

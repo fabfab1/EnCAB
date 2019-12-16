@@ -7,13 +7,17 @@
 
 <biblioref>
 
-  <authorgroup>
+  <source>
     <author><surname>Abrams</surname><firstname>E.</firstname></author>
-  </authorgroup>
-  <abbrev>Abrams_1994</abbrev>
-  <pagenums>47</pagenums>
-<abbrev2>AabergBonsignore_1975</abbrev2>
-<pagenums2>46</pagenums2>
+    <year>1994</year>
+    <pagenums>47</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Aaberg</surname><firstname>S.</firstname></author>
+    <year>1975</year>
+    <pagenums>46</pagenums>
+  </cited>
 
 </biblioref>
 
@@ -21,7 +25,6 @@
 <algorithm_description>
 
   <algorithm_type>transport</algorithm_type>
-
   <position_in_process>transport</position_in_process>
   <material>earth</material>
   <source_type></source_type>
@@ -43,10 +46,10 @@
       <unit>m</unit><description>L</description>
     </var2>
     <var3>
-      <unit></unit><description>V</description>
+      <unit>mxm</unit><description>V</description>
     </var3>
     <var4>
-      <unit></unit><description>V'</description>
+      <unit>mxm</unit><description>V'</description>
     </var4>
     <var5>
       <unit>hr</unit><description>H</description>
@@ -63,7 +66,7 @@
 
 <algnotes>
 
-  <general_notes>Output = Q x (L/v+ L/V') x H. Q=quantity of earth per load (in kg), L=transport distance(in m), V=velocity loaded, V'=velocity unloaded, H=hours, Output expressed in m3.</general_notes>
+  <general_notes>Output = Q x (L/v+ L/V') x H. Q=quantity of earth per load (in kg), L=transport distance(in m), V=velocity loaded (given here in meters per minute), V'=velocity unloaded (given here in meters per minute), H=hours, Output expressed in m3.</general_notes>
   <biblio_notes></biblio_notes>
 
 </algnotes>
@@ -71,19 +74,14 @@
 
 <algauthors>
 
-  <creation_author_group>
-    <author>
-      <surname>Buccellati</surname><firstname>F.</firstname>
-      <creation_date>30.04.2018</creation_date>
-    </author>
-  </creation_author_group>
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname><date>30.04.2018</date></author>
+  </creation>
 
-  <modification_author_group>
-    <author>
-      <firstname></firstname><surname></surname>
-      <creation_date></creation_date>
-    </author>
-  </modification_author_group>
+  <modification>
+    <author><firstname></firstname><surname></surname>
+      <date></date></author>
+  </modification>
 
 </algauthors>
 

@@ -7,14 +7,17 @@
 
 <biblioref>
 
-  <authorgroup>
+  <source>
     <author><surname>Abrams</surname><firstname>E.</firstname></author>
-  </authorgroup>
-  <abbrev>Abrams_1994</abbrev>
-  <pagenums>47</pagenums>
-  <abbrev2>Erasmus_1965</abbrev2>
-  <pagenums2>285</pagenums2>
-<pagenums2></pagenums2>
+    <year>1994</year>
+    <pagenums>47</pagenums>
+  </source>
+  
+  <cited>
+    <author><surname>Erasmus</surname><firstname>C.</firstname></author>
+    <year>1965</year>
+    <pagenums>285</pagenums>
+  </cited>
 
 </biblioref>
 
@@ -22,7 +25,6 @@
 <algorithm_description>
 
   <algorithm_type>earth digging</algorithm_type>
-
   <position_in_process>procurement</position_in_process>
   <material>earth</material>
   <source_type>ethnographic</source_type>
@@ -60,19 +62,13 @@
 
 <algauthors>
 
-  <creation_author_group>
-    <author>
-      <surname>Buccellati</surname><firstname>F.</firstname>
-      <creation_date>30.02.2018</creation_date>
-    </author>
-  </creation_author_group>
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname><date>30.02.2018</date></author>
+  </creation>
 
-  <modification_author_group>
-    <author>
-      <surname></surname><firstname></firstname>
-      <modification_date></modification_date>
-    </author>
-  </modification_author_group>
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
 
 </algauthors>
 

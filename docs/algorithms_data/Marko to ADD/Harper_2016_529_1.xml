@@ -1,23 +1,23 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <algorithm>
+
 
 <reference>Harper_2016_529</reference>
 
 
-
 <biblioref>
 
-  <authorgroup>
-    <author>
-      <surname>Harper</surname>
-      <firstname>Ch.</firstname>
-    </author>
-  </authorgroup>
-  <abbrev>Harper_2016</abbrev>
-  <pagenums>529</pagenums>
-  <abbrev2>Murakami_2015</abbrev2>
-  <pagenums2>273</pagenums2>
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>529</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Murakami</surname><firstname></firstname></author>
+    <year>2015</year>
+    <pagenums>273</pagenums>
+  </cited>
 
 </biblioref>
 
@@ -30,7 +30,7 @@
   <material>clay</material>
   <source_type>experimental archaeology</source_type>
   <source_chronology></source_chronology>
-  <source_geographical_location></source_geographical_location>
+  <source_geography></source_geography>
 
 </algorithm_description>
 
@@ -42,33 +42,14 @@
   <algorithm_math>0,8 m2 dressed in 1 p-h</algorithm_math>
   <variables>
     <var1>
-      <value>1</value><description></description>
-      <unit>p-h</unit>
+      <unit>p-h</unit><description></description>
       <op>var2 / 0,8</op>
     </var1>
     <var2>
-      <value>0,8</value><description></description>
-      <unit>m2</unit>
+      <unit>m2</unit><description></description>
       <op>var1 * 0,8</op>
     </var2>
   </variables>
-
-<!-- comment  and so on for as many variables as needed, up to 9, always seperated by an _op_  -->
-
-  <results>
-    <result1>
-      <value></value><description></description>
-      <op></op>
-      <unit></unit>
-    </result1>
-    <result2>
-      <value></value><description></description>
-      <op></op>
-      <unit></unit>
-    </result2>
-  </results>
-  
-<!-- comment   and so on for as many results as needed, up to 9 -->
 
 </algdata>
 
@@ -85,15 +66,14 @@
 
 <algauthors>
 
-  <creation_author_group>
-    <author><surname>Marko</surname><firstname>J.</firstname></author>
-    <creation_date>23.5.2019</creation_date>
-  </creation_author_group>
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>23.5.2019</date></author>
+  </creation>
 
-  <modification_author_group>
-    <author><firstname></firstname><surname></surname></author>
-    <creation_date></creation_date>
-  </modification_author_group>
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
 
 </algauthors>
 

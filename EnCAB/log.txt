@@ -1,23 +1,18 @@
-
+----------------------------------------------2019-12-17T00:27:08+01:00
  EnCAB: Energetic Calculator for Ancient Buildings
-------------------------------------------------------
+-----------------------------------------------------------------------
 
- This program will update website <section> with indexes and algorithms.
- Edit config file to change directories and preference.
+This program will update website <section> with indexes and algorithms.
+Edit config file to change directories and preference.
 
- Config file: "config.py".
- Website directory: "../docs".
- Algorithms directory: "../docs/algorithms_data".
- Algorithm template: "templates/algorithm.html".
- Index template: "templates/index.html".
-
-
-Press ENTER to Continue, Ctrl-C to Abort.
+Config file: "config.py"
+Website directory: "../docs/"
+Algorithms directory: "../docs/algorithms_data/"
+Algorithm template: "templates/algorithm.html"
+Index template: "templates/index.html"
 
 [*] Generating indexes...
 [*] Importing algorithms data...
-[Err] Missing <unit> in "Abrams_1994_47_3.xml"
-[Err] Missing <unit> in "Abrams_1994_47_3.xml"
 [*] Writing data...
 
 [+] Done!

@@ -4,18 +4,19 @@
 
 <reference></reference>
 
-
-
 <biblioref>
 
-  <authorgroup>
+  <source>
     <author><surname></surname><firstname></firstname></author>
-    <author2><surname></surname><firstname></firstname></author2>
-  </authorgroup>
-  <abbrev></abbrev>
-  <pagenums></pagenums>
-  <abbrev2></abbrev2>
-  <pagenums2></pagenums2>
+    <year></year>
+    <pagenums></pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
 
 </biblioref>
 
@@ -38,11 +39,11 @@
 
   <algorithm_statement></algorithm_statement>
   <algorithm_math></algorithm_math>
-  
-  <variables> <!-- INPUT variables (user editable), each MUST have a different name, as many as needed -->
+
+  <variables>
     <var1>
       <unit></unit><description></description>
-      <op></op><!-- use <op> to make field auto updating based on other vars (e.g. <op>var2 * 6</op>) -->
+      <op></op>
     </var1>
     <var2>
       <unit></unit><description></description>
@@ -50,16 +51,6 @@
     </var2>
   </variables>
 
-  <results><!-- OUTPUT variables (NOT user editable), each MUST have a different name, as many as needed -->
-    <result1>
-      <unit></unit><description></description>
-      <op></op><!-- <op> is mandatory in results -->
-    </result1>
-    <result2>
-      <unit></unit><description></description>
-      <op></op>
-    </result2>
-  </results>
 
 </algdata>
 
@@ -76,22 +67,15 @@
 
 <algauthors>
 
-  <creation_author_group><!-- only one creation author allowed -->
-    <author>
-      <surname>Buccellati</surname><firstname>F.</firstname>
-      <creation_date>30.02.2018</creation_date>
-    </author>
-  </creation_author_group>
+  <creation>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </creation>
 
-  <modification_author_group><!-- multiple modification authors allowed -->
-    <author>
-      <surname></surname><firstname></firstname>
-      <modification_date></modification_date>
-    </author>
-  </modification_author_group>
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
 
 </algauthors>
-
 
 
 </algorithm>

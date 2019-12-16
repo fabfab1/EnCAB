@@ -4,16 +4,20 @@
 
 <reference>Aurenche_1981_46</reference>
 
-
 <biblioref>
 
-  <authorgroup>
+  <source>
     <author><surname>Aurenche</surname><firstname>O.</firstname></author>
-  </authorgroup>
-  <abbrev>Aurenche_1981</abbrev>
-  <pagenums>46</pagenums>
-  <abbrev2>Doat_1979</abbrev2>
-  <pagenums2></pagenums2>
+    <year>1981</year>
+    <pagenums>46</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Doat</surname><firstname></firstname></author>
+    <abbrev>DoatP_Etal</abbrev>
+    <year></year>
+    <pagenums>1979</pagenums>
+  </cited>
 
 </biblioref>
 
@@ -63,19 +67,13 @@
 
 <algauthors>
 
-  <creation_author_group>
-    <author>
-      <surname>Buccellati</surname><firstname>F.</firstname>
-      <creation_date>30.02.2018</creation_date>
-    </author>
-  </creation_author_group>
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname><date>30.02.2018</date></author>
+  </creation>
 
-  <modification_author_group>
-    <author>
-      <surname></surname><firstname></firstname>
-      <modification_date></modification_date>
-    </author>
-  </modification_author_group>
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
 
 </algauthors>
 

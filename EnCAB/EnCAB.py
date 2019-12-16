@@ -128,11 +128,10 @@ def parse(file, file_index: dict, author_index: set):
     # Check text correctness
     errors = []
     
-    def check_code(code, test_regex=None, mandatory=True):
+    def check_code(code, test_regex=r"", mandatory=False):
         if mandatory and not root.findtext(code):
             errors.append('missing <'+code+'>')
-            return
-        if test_regex and not re.match(test_regex, root.findtext(code), flags=re.I):
+        elif root.findtext(code) and not re.match(test_regex, root.findtext(code), flags=re.I):
             errors.append('wrong format for <'+code+'>')
         return
 
@@ -143,21 +142,18 @@ def parse(file, file_index: dict, author_index: set):
     # reference: authors_date_pagenumber(_sequentialnumber)
     check_code('reference', r"^\w+_\d{4}_\d+(|_\d+)$", mandatory=True)
 
-    # biblioref/source: only 1 allowed
-    if len(root.findall('biblioref/source')) >= 1:
+    # biblioref/source: 1 and only 1 allowed
+    check_code(f'biblioref/source/author/surname', mandatory=True)
+    if len(root.findall('biblioref/source')) > 1:
         errors.append('more than 1 <biblioref/source>')
     
     # biblioref/*/author: in Bibliography
     for biblioref_tag in ('source', 'cited'):
         for i, biblioref in enumerate(root.findall(f'biblioref/{biblioref_tag}'), start=1):
 
-            # biblioref/*/author/surname
-            for j, author in enumerate(biblioref.findall('author'), start=1):
-                check_code(f'biblioref/{biblioref.tag}[{i}]/author[{j}]/surname', mandatory=True)
-            
-            # biblioref/*/author/abbrev: generate abbrev from authors and check if in bibliography
-            if biblioref.find('abbrev'):
-                abbrev = biblioref.find('abbrev').text
+            # biblioref/*/author/abbrev: generate abbrev from authors
+            if biblioref.findtext('abbrev'):
+                abbrev = biblioref.findtext('abbrev')
             else:
                 ElementTree.SubElement(biblioref, 'abbrev')
                 authors = biblioref.findall('author')
@@ -170,14 +166,17 @@ def parse(file, file_index: dict, author_index: set):
                 else:
                     abbrev = author_abbrev(authors[0]) + '_Etal'
                 biblioref.find('abbrev').text = abbrev
-            if abbrev not in author_index:
-                errors.append(f'author "{abbrev}" not found in bibliography')
-
-            # biblioref/*/author/year: yyyy
-            check_code(f'biblioref/{biblioref.tag}[{i}]/year', r"^\d{4}$", mandatory=True)
             
-            # biblioref/*/author/pagenums: numbers separated by - or ,
-            check_code(f'biblioref/{biblioref.tag}[{i}]/pagenums', r"^\d+(-\d+)?(, ?\d+(-\d+)?)*$", mandatory=True)
+            if abbrev:
+                # check if in Bibliography
+                if abbrev not in author_index:
+                    errors.append(f'author "{abbrev}" not found in bibliography')
+
+                # biblioref/*/author/year: yyyy
+                check_code(f'biblioref/{biblioref.tag}[{i}]/year', r"^\d{4}$")
+                
+                # biblioref/*/author/pagenums: numbers separated by - or ,
+                check_code(f'biblioref/{biblioref.tag}[{i}]/pagenums', r"^\d+(-\d+)?(, ?\d+(-\d+)?)*$")
     
     # algorithm_description: check if file exist for each description type
     for d_type in root.find('algorithm_description'):
@@ -222,7 +221,8 @@ def parse(file, file_index: dict, author_index: set):
                 
                 # algauthors/*/author: HTLM page in authors/
                 abbrev = author_abbrev(author)
-                if abbrev not in file_index.get('authors', []):
+                
+                if abbrev and abbrev not in file_index.get('authors', []):
                     errors.append(f'author "{abbrev}" does not have HTML page in authors/')
 
                 # algauthors/author_*/date: dd.mm.yyyy
@@ -321,7 +321,6 @@ Website directory: "{WEBSITE_DIR}"
 Algorithms directory: "{ALGORITHMS_DIR}"
 Algorithm template: "{TEMPLATE_ALGORITHM}"
 Index template: "{TEMPLATE_INDEX}"
-
 ''')
         location = Path(__file__).resolve().parent
         check_config(location)

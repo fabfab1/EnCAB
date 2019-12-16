@@ -1,4 +1,4 @@
-----------------------------------------------2019-12-16T02:25:03+01:00
+----------------------------------------------2019-12-16T03:37:14+01:00
  EnCAB: Energetic Calculator for Ancient Buildings
 -----------------------------------------------------------------------
 
@@ -7,12 +7,13 @@ Edit config file to change directories and preference.
 
 Config file: "config.py"
 Website directory: "../docs/"
-Algorithms directory: "../docs/algorithms_data/templates/"
+Algorithms directory: "../docs/algorithms_data/"
 Algorithm template: "templates/algorithm.html"
 Index template: "templates/index.html"
-
 
 Press ENTER to confirm.
 [*] Generating indexes...
 [*] Importing algorithms data...
+[*] Writing data...
 
+[+] Done!

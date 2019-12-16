@@ -4,18 +4,19 @@
 
 <reference>Abrams_1989_70_1</reference>
 
-
-
 <biblioref>
 
-  <authorgroup>
+  <source>
     <author><surname>Abrams</surname><firstname>E.</firstname></author>
-    <author2><surname>Abrams</surname><firstname>E.</firstname></author2>
-  </authorgroup>
-  <abbrev>Abrams_1989</abbrev>
-  <pagenums>70</pagenums>
-  <abbrev2>Abrams_1984</abbrev2>
-  <pagenums2>190</pagenums2>
+    <year>1989</year>
+    <pagenums>70</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Abrams</surname><firstname>E.</firstname></author>
+    <year>1984</year>
+    <pagenums>190</pagenums>
+  </cited>
 
 </biblioref>
 
@@ -66,22 +67,15 @@
 
 <algauthors>
 
-  <creation_author_group>
-    <author>
-      <surname>Marko</surname><firstname>J.</firstname>
-      <creation_date>22.02.2019</creation_date>
-    </author>
-  </creation_author_group>
+  <creation>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.02.2019</date></author>
+  </creation>
 
-  <modification_author_group>
-    <author>
-      <surname></surname><firstname></firstname>
-      <modification_date></modification_date>
-    </author>
-  </modification_author_group>
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
 
 </algauthors>
-
 
 
 </algorithm>

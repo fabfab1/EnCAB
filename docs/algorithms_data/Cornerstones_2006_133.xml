@@ -2,19 +2,22 @@
 
 <algorithm>
 
-
 <reference>Cornerstones_2006_133</reference>
 
 
 <biblioref>
 
-  <authorgroup>
+  <source>
     <author><surname>Cornerstones Community Partnerships Staff</surname><firstname></firstname></author>
-  </authorgroup>
-  <abbrev>Cornerstones_Community_Partnerships_Staff_2006</abbrev>
-  <pagenums>133</pagenums>
-  <abbrev2></abbrev2>
-  <pagenums2></pagenums2>
+    <year>2006</year>
+    <pagenums>133</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
 
 </biblioref>
 
@@ -51,19 +54,13 @@
 
 <algauthors>
 
-  <creation_author_group>
-    <author>
-      <surname>Buccellati</surname><firstname>F.</firstname>
-      <creation_date>30.02.2018</creation_date>
-    </author>
-  </creation_author_group>
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname><date>30.02.2018</date></author>
+  </creation>
 
-  <modification_author_group>
-    <author>
-      <surname></surname><firstname></firstname>
-      <modification_date></modification_date>
-    </author>
-  </modification_author_group>
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
 
 </algauthors>
 

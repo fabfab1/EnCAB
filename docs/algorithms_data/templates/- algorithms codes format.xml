@@ -6,17 +6,24 @@
 
 <biblioref>
   
-  <source>
+  <source><!-- only 1 <source> allowed -->
     <author><surname>surname</surname><firstname>firstname</firstname></author>
-    <author><surname>surname2</surname><firstname>firstname2</firstname><author>
-    <abbrev>bibliographical abbreviation [Author_year]</abbrev>
+    <author><surname>surname2</surname><firstname>firstname2</firstname></author>
+    <year>yyyy</year>
+    <!-- custom abbreviation: <abbrev>bibliographical abbreviation (bibligraphy link)</abbrev> -->
     <pagenums>page numbers [numbers separated by dash or comma (e.g.: 45 or 45-46 or 45-46,48,55)]</pagenums>
   </source>
   
   <cited>
     <author><surname>surname</surname><firstname>firstname</firstname></author>
-    <author><surname>surname2</surname><firstname>firstname2</firstname><author>
-    <abbrev>bibliographical abbreviation to secondary publication [Author_year]</abbrev>
+    <author><surname>surname2</surname><firstname>firstname2</firstname></author>
+    <year>yyyy</year>
+    <pagenums>page numbers for secondary reference</pagenums>
+  </cited>
+  
+  <cited>
+    <author><surname>surname</surname><firstname>firstname</firstname></author>
+    <year>yyyy</year>
     <pagenums>page numbers for secondary reference</pagenums>
   </cited>
   
@@ -42,7 +49,7 @@
   <algorithm_statement>algorithm in statement format</algorithm_statement>
   <algorithm_math>algorithm in mathematical format</algorithm_math>
 
-  <variables> <!-- each variable and result MUST have a different name, as many as needed -->
+  <variables><!-- each variable and result MUST have a different name, as many as needed -->
     <var1>
       <unit>unit type [filenames within "unit/"]</unit><description>description of unit</description>
       <op>var2 * 6 [operation (in javascript) to calcolate var1 if possible]</op>
@@ -76,15 +83,14 @@
 <algauthors>
 
   <creation>
-    <author><surname>surname</surname><firstname>firstname</firstname></author>
-    <author><surname>surname2</surname><firstname>firstname2</firstname></author>
-    <date>date [dd.mm.yyyy]</date>
+    <author><surname>surname</surname><firstname>firstname</firstname><date>date [dd.mm.yyyy]</date></author>
+    <author><surname>surname2</surname><firstname>firstname2</firstname><date>date2 [dd.mm.yyyy]</date></author>
   </creation>
 
   <modification>
-    <author><surname>surname</surname><firstname>firstname</firstname></author>
-    <author><surname>surname2</surname><firstname>firstname2</firstname></author>
-    <date>date [dd.mm.yyyy]</date>
+    <author><surname>surname</surname><firstname>firstname</firstname><date>date [dd.mm.yyyy]</date></author>
+    <author><surname>surname2</surname><firstname>firstname2</firstname><date>date2 [dd.mm.yyyy]</date></author>
+    <author><surname>surname3</surname><firstname>firstname3</firstname><date>date3 [dd.mm.yyyy]</date></author>
   </modification>
 
 </algauthors>

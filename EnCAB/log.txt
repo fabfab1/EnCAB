@@ -1,25 +1,18 @@
-
+----------------------------------------------2019-12-16T02:25:03+01:00
  EnCAB: Energetic Calculator for Ancient Buildings
-------------------------------------------------------
+-----------------------------------------------------------------------
 
- This program will update website <section> with indexes and algorithms.
- Edit config file to change directories and preference.
+This program will update website <section> with indexes and algorithms.
+Edit config file to change directories and preference.
 
- Config file: "config.py".
- Website directory: "../docs".
- Algorithms directory: "../docs/algorithms_data".
- Algorithm template: "templates/algorithm.html".
- Index template: "templates/index.html".
+Config file: "config.py"
+Website directory: "../docs/"
+Algorithms directory: "../docs/algorithms_data/templates/"
+Algorithm template: "templates/algorithm.html"
+Index template: "templates/index.html"
 
 
-Press ENTER to Continue, Ctrl-C to Abort.
+Press ENTER to confirm.
 [*] Generating indexes...
 [*] Importing algorithms data...
-Traceback (most recent call last):
-  File "C:/Users/bF/Dropbox/Buccellati/Programs/EnCAB/EnCAB/EnCAB.py", line 379, in <module>
-    alg_data = get_alg_data(os.path.relpath(ALGORITHMS_DIR), index, author_index)
-  File "C:/Users/bF/Dropbox/Buccellati/Programs/EnCAB/EnCAB/EnCAB.py", line 120, in get_alg_data
-    alg_data += [(parse(filename, index, author_index), os.path.basename(filename))]
-  File "C:/Users/bF/Dropbox/Buccellati/Programs/EnCAB/EnCAB/EnCAB.py", line 213, in parse
-    for var in root.find('algdata/results'):
-TypeError: 'NoneType' object is not iterable
+

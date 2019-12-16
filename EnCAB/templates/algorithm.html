@@ -1,45 +1,44 @@
 
-{#- --- INDEX --- #}
-{%- set ns = namespace(new_sort = '') %}
-{% for b, filename in blocks_data -%}{% if b.find(sort).text.lower() != ns.new_sort.lower() %}{% set ns.new_sort = b.find(sort).text %}
-{% if ns.new_sort %}{% if not loop.first %} - {% endif %}<a href="#{{ ns.new_sort.lower() }}">{{ ns.new_sort|replace('_','&nbsp;')|capfirst }}</a>{% endif %}
+{#- - - - INDEX - - - #}
+{% for b, filename in blocks_data -%}{% if b.findtext(sort) and b.findtext(sort).lower() != loop.previtem %}
+{% if not loop.first %} - {% endif %}<a href="#{{ b.findtext(sort).lower() }}">{{ b.findtext(sort)|replace('_','&nbsp;')|capfirst }}</a>
 {%- endif %}{% endfor %}
-{% set ns.new_sort = '' %}
 
 <br><br><br>
 
+{#- - - - DATA - - - #}
 <div class="data">
 {% for b, filename in blocks_data %}
-{% if b.find(sort).text.lower() != ns.new_sort.lower() %}{% set ns.new_sort = b.find(sort).text %}<a name="{{ ns.new_sort.lower() }}"></a>{% endif %}
-<a name="{{ b.find('reference').text }}"></a>
-<b>{{ b.find('reference').text|replace('_','&nbsp;') }}</b>
+{% if b.findtext(sort) and b.findtext(sort).lower() != loop.previtem %}<a name="{{ b.findtext(sort).lower() }}"></a>{% endif %}
+<a name="{{ b.findtext('reference','') }}"></a>
+<b>{{ b.findtext('reference','')|replace('_','&nbsp;') }}</b>
 <table class="data">
     <tr>
-        <td class="col-1 Alg-Statement">Alg Statement:</td><td class="col-2 Alg-Statement-input">{{ b.find('algdata/algorithm_statement').text or '' }}</td>
-        <td class="col-3 Alg-Math">Alg Math:</td><td class="col-4 Alg-Math-input">{{ b.find('algdata/algorithm_math').text or '' }}</td>
+        <td class="col-1 Alg-Statement">Alg Statement:</td><td class="col-2 Alg-Statement-input">{{ b.findtext('algdata/algorithm_statement','') }}</td>
+        <td class="col-3 Alg-Math">Alg Math:</td><td class="col-4 Alg-Math-input">{{ b.findtext('algdata/algorithm_math','') }}</td>
     </tr>
     <tr>
         <td colspan="4">{%- if b.find('algdata/variables') %}
             <table class="algo">
                 <tr>
                     {%- for var in b.find('algdata/variables') %}
-                    <td>{% if var.find('description').text %}{{ var.find('description').text }} in {% endif %}<a href="../units/{{var.find('unit').text|lower}}.html">{{ var.find('unit').text or '' }}</a></td>
+                    <td>{% if var.findtext('description') %}{{ var.findtext('description') }} in {% endif %}<a href="../units/{{var.findtext('unit','')|lower}}.html">{{ var.findtext('unit','') }}</a></td>
                     {%- endfor %}
                 </tr>
                 <tr>
                     {%- for var in b.find('algdata/variables') %}
-                    <td><input type="text" name="{{var.tag}}" oninput="calc(this)" onkeyup="calc(this)"{% if var.find('op').text %} data-op="{{var.find('op').text}}"{% endif %}></td>
+                    <td><input type="text" name="{{var.tag}}" oninput="calc(this)" onkeyup="calc(this)"{% if var.findtext('op') %} data-op="{{var.findtext('op')}}"{% endif %}></td>
                     {%- endfor %}
                 </tr>
-                {%- if b.find('algdata/results/*') %}
+                {%- if b.find('algdata/results') %}
                 <tr>
                     {%- for var in b.find('algdata/results') %}
-                    <td>{% if var.find('description').text %}{{ var.find('description').text }} in {% endif %}<a href="../units/{{var.find('unit').text|lower}}.html">{{ var.find('unit').text or '' }}</a></td>
+                    <td>{% if var.findtext('description') %}{{ var.findtext('description') }} in {% endif %}<a href="../units/{{var.findtext('unit','')|lower}}.html">{{ var.findtext('unit','') }}</a></td>
                     {%- endfor %}
                 </tr>
                 <tr>
                     {%- for var in b.find('algdata/results') %}
-                    <td><input type="text" name="{{var.tag}}" disabled="" data-op="{{var.find('op').text}}"></td>
+                    <td><input type="text" name="{{var.tag}}" disabled="" data-op="{{var.findtext('op','')}}"></td>
                     {%- endfor %}
                 </tr>
                 {%- endif %}
@@ -48,46 +47,49 @@
     </tr>
     <tr>
         <td>Source info:</td><td>
-            {%- for author in b.findall('biblioref/author')[1:] %}{% if loop.index > 1 %}; {% endif %}
-            <a href="../bibliography/bibliography.html#{{(author.findtext('surname').text or '').strip('.,')|replace(' ','')}}{{(author.findtext('firstname') or '').strip('.,')|replace(' ','')}}">{{ author.findtext('abbrev')|replace('_',' ') }}</a>{%- if author.findtext('pagenums') %}, p. {{ author.findtext('pagenums') }}{% endif %}
+            {%- for source in b.findall('biblioref/source')[1:] %}
+            <a href="../bibliography/bibliography.html#{{source.findtext('abbrev','')}}">{{source.findtext('abbrev','')|replace('_',' ')}}_{{source.findtext('year','')}}</a>{%- if source.findtext('pagenums') %}, p. {{source.findtext('pagenums')}}{% endif %}
             {%- endfor %}
         </td>
         <td>Also cited in:</td><td>
-            {%- for author in b.findall('biblioref/author')[1:] %}{% if loop.index > 1 %}; {% endif %}
-            <a href="../bibliography/bibliography.html#{{(author.findtext('surname').text or '').strip('.,')|replace(' ','')}}{{(author.findtext('firstname') or '').strip('.,')|replace(' ','')}}">{{ author.findtext('abbrev')|replace('_',' ') }}</a>{%- if author.findtext('pagenums') %}, p. {{ author.findtext('pagenums') }}{% endif %}
+            {%- for cited in b.findall('biblioref/cited') %}{% if not loop.first %}; {% endif %}
+            <a href="../bibliography/bibliography.html#{{cited.findtext('abbrev','')}}">{{cited.findtext('abbrev','')|replace('_',' ')}}_{{cited.findtext('year','')}}</a>{%- if cited.findtext('pagenums') %}, p. {{cited.findtext('pagenums')}}{% endif %}
             {%- endfor %}
         </td>
     </tr>
     <tr>
-        <td>Algorithm type:</td><td>{% if b.find('algorithm_description/algorithm_type').text %}<a href="../algorithm_type/{{b.find('algorithm_description/algorithm_type').text|replace(' ','_')|lower}}.html">{{ b.find('algorithm_description/algorithm_type').text|capfirst }}</a>{% endif %}</td>
-        <td>Position in process:</td><td>{% if b.find('algorithm_description/position_in_process').text %}<a href="../position_in_process/{{b.find('algorithm_description/position_in_process').text|replace(' ','_')|lower}}.html">{{ b.find('algorithm_description/position_in_process').text|capfirst }}</a>{% endif %}</td>
+        <td>Algorithm type:</td><td>{% if b.findtext('algorithm_description/algorithm_type') %}<a href="../algorithm_type/{{b.findtext('algorithm_description/algorithm_type')|replace(' ','_')|lower}}.html">{{ b.findtext('algorithm_description/algorithm_type')|capfirst }}</a>{% endif %}</td>
+        <td>Position in process:</td><td>{% if b.findtext('algorithm_description/position_in_process') %}<a href="../position_in_process/{{b.findtext('algorithm_description/position_in_process')|replace(' ','_')|lower}}.html">{{ b.findtext('algorithm_description/position_in_process')|capfirst }}</a>{% endif %}</td>
     </tr>
     <tr>
-        <td>Material:</td><td>{% if b.find('algorithm_description/material').text %}<a href="../material/{{b.find('algorithm_description/material').text|replace(' ','_')|lower}}.html">{{ b.find('algorithm_description/material').text|capfirst }}</a>{% endif %}</td>
-        <td>Source type:</td><td>{% if b.find('algorithm_description/source_type').text %}<a href="../source_type/{{b.find('algorithm_description/source_type').text|replace(' ','_')|lower}}.html">{{ b.find('algorithm_description/source_type').text|capfirst }}</a>{% endif %}</td>
+        <td>Material:</td><td>{% if b.findtext('algorithm_description/material') %}<a href="../material/{{b.findtext('algorithm_description/material').text|replace(' ','_')|lower}}.html">{{ b.findtext('algorithm_description/material')|capfirst }}</a>{% endif %}</td>
+        <td>Source type:</td><td>{% if b.findtext('algorithm_description/source_type') %}<a href="../source_type/{{b.findtext('algorithm_description/source_type').text|replace(' ','_')|lower}}.html">{{ b.findtext('algorithm_description/source_type')|capfirst }}</a>{% endif %}</td>
     </tr>
     <tr>
-        <td>Source chronology:</td><td>{% if b.find('algorithm_description/source_chronology').text %}<a href="../source_chronology/{{b.find('algorithm_description/source_chronology').text|replace(' ','_')|lower}}.html">{{ b.find('algorithm_description/source_chronology').text|capfirst }}</a>{% endif %}</td>
-        <td>Source geography:</td><td>{% if b.find('algorithm_description/source_geography').text %}<a href="../source_geography/{{b.find('algorithm_description/source_geography').text|replace(' ','_')|lower}}.html">{{ b.find('algorithm_description/source_geography').text|capfirst }}</a>{% endif %}</td>
+        <td>Source chronology:</td><td>{% if b.findtext('algorithm_description/source_chronology') %}<a href="../source_chronology/{{b.findtext('algorithm_description/source_chronology')|replace(' ','_')|lower}}.html">{{ b.findtext('algorithm_description/source_chronology')|capfirst }}</a>{% endif %}</td>
+        <td>Source geography:</td><td>{% if b.findtext('algorithm_description/source_geography') %}<a href="../source_geography/{{b.findtext('algorithm_description/source_geography')|replace(' ','_')|lower}}.html">{{ b.findtext('algorithm_description/source_geography')|capfirst }}</a>{% endif %}</td>
     </tr>
     <tr>
-        <td>Notes:</td><td colspan="3">{{ b.find('algnotes/general_notes').text or '' }}</td>
+        <td>Notes:</td><td colspan="3">{{ b.findtext('algnotes/general_notes','') }}</td>
     </tr>
     <tr>
-        <td>Notes on bibliography:</td><td colspan="3">{{ b.find('algnotes/biblio_notes').text or '' }}</td>
+        <td>Notes on bibliography:</td><td colspan="3">{{ b.findtext('algnotes/biblio_notes','') }}</td>
     </tr>
     <tr>
-        <td>How to cite:</td><td>EnCAB alg. - {{ b.find('reference').text }}</td>
-        <td>Created by/on:</td><td>{% if b.find('algauthors/creation_author_group/author') %}<a href="../bibliography/bibliography.html#{{(b.find('algauthors/creation_author_group/author/surname').text or '').strip('.,')|replace(' ','')}}{{(b.find('algauthors/creation_author_group/author/firstname').text or '').strip('.,')|replace(' ','')}}">{{(b.find('algauthors/creation_author_group/author/surname').text or '')}} {{(b.find('algauthors/creation_author_group/author/firstname').text or '')}}</a>{% endif %}
-        {%- if b.find('algauthors/creation_author_group/author/creation_date').text %}, {{ b.find('algauthors/creation_author_group/author/creation_date').text }}{% endif %}</td>
+        <td>How to cite:</td><td>EnCAB alg. - {{ b.findtext('reference','') }}</td>
+        <td>Created by/on:</td><td>{%- if b.find('algauthors/creation') %}
+            {%- for author in b.find('algauthors/creation') %}{% if not loop.first %}, {% endif %}
+            <a href="../authors/{{author.findtext('surname','').strip('.,')|replace(' ','')}}{{author.findtext('firstname','').strip('.,')|replace(' ','')}}">{{author.findtext('surname','')}} {{author.findtext('firstname','')}}</a>{%- if author.findtext('date') %} ({{ author.findtext('date') }}){% endif %}{% if not loop.last %}, {% endif %}
+            {%- endfor %}
+        {% endif %}</td>
     </tr>
     <tr>
-        <td>Input data:</td><td><a href="../algorithms_data/{{filename}}">{{ filename }}</a></td>
-        <td>Modified by/on:</td><td>
-        {%- for modification_author in b.find('algauthors/modification_author_group') %}
-            <a href="../bibliography/bibliography.html#{{(modification_author.find('surname').text or '').strip('.,')|replace(' ','')}}{{(modification_author.find('firstname').text or '').strip('.,')|replace(' ','')}}">{{(modification_author.find('surname').text or '')}} {{(modification_author.find('firstname').text or '')}}</a>
-            {%- if modification_author.find('modification_date').text %}, {{ modification_author.find('modification_date').text }}{% endif %}
-        {%- if not loop.last %}; {% endif %}{% endfor %}</td>
+        <td>Input data:</td><td><a href="../algorithms_data/{{filename}}">{{filename}}</a></td>
+        <td>Modified by/on:</td><td>{%- if b.find('algauthors/modification') %}
+            {%- for author in b.find('algauthors/modification') %}
+            <a href="../authors/{{author.findtext('surname','').strip('.,')|replace(' ','')}}{{author.findtext('firstname','').strip('.,')|replace(' ','')}}">{{author.findtext('surname','')}} {{author.findtext('firstname','')}}</a>{%- if author.findtext('date') %} ({{ author.findtext('date') }}){% endif %}{% if not loop.last %}, {% endif %}
+            {%- endfor %}
+        {% endif %}</td>
     </tr>
 </table>
 <br><br>
@@ -98,7 +100,7 @@
 
 Generated on 
 <script>
-    var d = new Date({{time_now}});
+    var d = new Date({{TIME_NOW}});
     document.write(d.toLocaleDateString(undefined, { day:'2-digit',  month:'short', year:'numeric', hour:'2-digit', minute:'2-digit', timeZoneName:'short' }));
 </script>.
 

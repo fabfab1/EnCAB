@@ -1,27 +1,30 @@
 """ Configuration file for EnCAB.py """
 
 
-# All paths can be absolute or relative to the program file
-# Use ONLY the slash " / " as directory separator
+# All paths can be absolute or relative to the program file EnCAB.py
+# Use the slash "/" as directory separator (NO backslash "\")
 
 
 # Path to root directory where the website is located
-# the program  will scan all .html or .htm files in directory and subdirectories
-WEBSITE_DIR = "../docs"  # default: "../docs"
+# the program  will scan all *.html files in directory and subdirectories
+WEBSITE_DIR = "../docs/"  # default: "../docs/"
 
-# Path to directory where algorithm data are located (.xml or .txt files)
-ALGORITHMS_DIR = "../docs/algorithms_data"  # default: "algorithms_data"
+# Path to directory where algorithms data are located (*.xml or *.txt files)
+ALGORITHMS_DIR = WEBSITE_DIR + "algorithms_data/templates/"  # default:  WEBSITE_DIR + "algorithms_data/"
+
+# Path to file where HTML author bibliography is located
+BIBLIOGRAPHY_FILE = WEBSITE_DIR + "bibliography/bibliography.html"  # default: WEBSITE_DIR + "bibliography/bibliography.html"
 
 # Path to template files, used to generate the HTML <section>
 TEMPLATE_ALGORITHM = "templates/algorithm.html"  # default: "templates/algorithm.html"
 TEMPLATE_INDEX = "templates/index.html"  # default: "templates/index.html"
 
 
-# List of possible sort attributes for <section> with relative XML tag
+# Possible sort attributes of <section>, assign XML path to sort
 SORT_STRINGS = {'algorithm_type': 'algorithm_description/algorithm_type',
                 'position_in_process': 'algorithm_description/position_in_process',
                 'material': 'algorithm_description/material',
                 'abbrev': 'biblioref/abbrev'}
 
-# String to select files containing it in their filename, those files will be ignored for the index
+# Files to ignore for the index if they contain the string in the filename
 IGNORE_IF_CONTAIN = "_index"  # default: "_index"

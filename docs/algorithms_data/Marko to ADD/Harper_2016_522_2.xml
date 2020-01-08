@@ -1,25 +1,29 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <algorithm>
+
 
 <reference>Harper_2016_522</reference>
 
 
-
 <biblioref>
 
-  <authorgroup>
-    <author>
-      <surname>Harper</surname>
-      <firstname>Ch.</firstname>
-    </author>
-  </authorgroup>
-  <abbrev>Harper_2016</abbrev>
-  <pagenums>522</pagenums>
-  <abbrev2>Devolder_2013</abbrev2>
-  <pagenums2>24-7</pagenums2>
-  <abbrev3>Atkinson_1961</abbrev3>
-  <pagenums3>297</pagenums3>
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>522</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Devolder</surname><firstname></firstname></author>
+    <year>2013</year>
+    <pagenums>24-7</pagenums>
+  </cited>
+
+  <cited>
+    <author><surname>Atkinson</surname><firstname></firstname></author>
+    <year>1961</year>
+    <pagenums>297</pagenums>
+  </cited>
 
 </biblioref>
 
@@ -32,7 +36,7 @@
   <material></material>
   <source_type></source_type>
   <source_chronology></source_chronology>
-  <source_geographical_location></source_geographical_location>
+  <source_geography></source_geography>
 
 </algorithm_description>
 
@@ -44,23 +48,19 @@
   <algorithm_math>Certain number of p-h = (kg -weight- / 2100) * (2 * km -distance- / 1,67) * 450 percent</algorithm_math>
   <variables>
     <var1>
-      <value></value><description>weight</description>
-      <unit>kg</unit>
+      <unit>kg</unit><description>weight</description>
       <op></op>
     </var1>
     <var2>
-      <value></value><description>distance</description>
-      <unit>km</unit>
+      <unit>km</unit><description>distance</description>
       <op></op>
     </var2>
     <var3>
-      <value>4,5</value><description>labor</description>
-      <unit>percent</unit>
+      <unit>percent</unit><description>labor</description>
       <op></op>
     </var3>
   </variables>
 
-<!-- comment  and so on for as many variables as needed, up to 9, always seperated by an _op_  -->
 
   <results>
     <result1>
@@ -68,14 +68,7 @@
       <op>(var1 / 2100) * (2 * var2 / 1,67) * var3</op>
       <unit>p-h</unit>
     </result1>
-    <result2>
-      <value></value><description></description>
-      <op></op>
-      <unit></unit>
-    </result2>
   </results>
-  
-<!-- comment   and so on for as many results as needed, up to 9 -->
 
 </algdata>
 
@@ -92,15 +85,14 @@
 
 <algauthors>
 
-  <creation_author_group>
-    <author><surname>Marko</surname><firstname>J.</firstname></author>
-    <creation_date>22.5.2019</creation_date>
-  </creation_author_group>
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.5.2019</date></author>
+  </creation>
 
-  <modification_author_group>
-    <author><firstname></firstname><surname></surname></author>
-    <creation_date></creation_date>
-  </modification_author_group>
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
 
 </algauthors>
 

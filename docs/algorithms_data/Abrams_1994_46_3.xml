@@ -7,13 +7,17 @@
 
 <biblioref>
 
-  <authorgroup>
+  <source>
     <author><surname>Abrams</surname><firstname>E.</firstname></author>
-  </authorgroup>
-  <abbrev>Abrams_1994</abbrev>
-  <pagenums>46</pagenums>
-  <abbrev2></abbrev2>
-  <pagenums2></pagenums2>
+    <year>1994</year>
+    <pagenums>46</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
 
 </biblioref>
 
@@ -21,7 +25,6 @@
 <algorithm_description>
 
   <algorithm_type>material qualities</algorithm_type>
-
   <position_in_process>materials</position_in_process>
   <material>stone</material>
   <source_type>ethnographic</source_type>
@@ -59,19 +62,13 @@
 
 <algauthors>
 
-  <creation_author_group>
-    <author>
-      <surname>Buccellati</surname><firstname>F.</firstname>
-      <creation_date>30.02.2018</creation_date>
-    </author>
-  </creation_author_group>
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname><date>30.02.2018</date></author>
+  </creation>
 
-  <modification_author_group>
-    <author>
-      <surname></surname><firstname></firstname>
-      <modification_date></modification_date>
-    </author>
-  </modification_author_group>
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
 
 </algauthors>
 

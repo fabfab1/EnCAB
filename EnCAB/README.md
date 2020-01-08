@@ -5,31 +5,27 @@ Python program to update HTML website with algorithms calculation (with indexes)
 
 ## How It Works
 
-Upon launch, EnCAB.py does the following things:
-1. Makes a list of all file names in the website directory
-2. Parses XML data contained in the algoritms directory and checks for errors
-3. Reads HTML files and extract `<section>` attributes
-4. Generates HTML from templates with the data and attributes
-5. Updates the content of `<section>` with the new generated HTML
-
+Upon launch, `EnCAB.py` does the following things:
+1. Make a list of all file names in the website directory
+2. Parse XML data contained in the algoritms' directory and check for errors
+3. Generate HTML code from templates with the data
+4. Update website HTML files with `<section>` tags, writing inside the tags the generated HTML code
 
 ## Getting started
 
-Required at least Python 3.6
+Required at least Python 3.6.
+
 To install the program in the EnCAB directory:
 ```shell
 git clone https://github.com/fabfab1/EnCAB.git
 cd EnCAB/EnCAB
-pythom -m pip -r requirements.txt
-
+python -m pip -r requirements.txt
 ```
 
 To run the program:
 ```shell
 ./EnCAB.py
 ```
-
-Press ENTER to confirm configuration and update HTML files.
 
 
 ### Built With
@@ -42,37 +38,38 @@ Press ENTER to confirm configuration and update HTML files.
 
 ## Configuration
 
-Edit config file "config.py" to change directories and other preferences.
+Edit config file `config.py` to change file and directory names and other preferences.
 
 The program will access in read mode the HTML files and the algorithms data.
-It will access in read-write mode the HTML files containing ```<section block="algorithm/index" sort="(name)"></section>``` and write the data inside it, keeping the formatting of the file.
+It will access in read-write mode the HTML files containing ```<section block="[algorithm/index]" sort="[name]">...</section>``` and substitute all the data inside it.
 
-```block="algorithm" sort="(name)"```  
-write algorithms data, insert in `(name)` a SORT_STRINGS (from `config.py`) or XML XPath of desired item to sort.
+Possible attributes:
+- `block="algorithm" sort="[name]"` for algorithms data, insert in `[name]` a *SORT_STRINGS* (from `config.py`) or XML path of desired item to sort.
+- `block="index" sort="[name]"` for files index, insert in `[name]` the directory name for the files to list.
 
-```block="index" sort="(name)"```  
-write files index, insert in `(name)` the folder name of desired files to use for the sorted index.
 
 ### Data
 
-Each algorithms must have its own XML file stored in ALGORITHMS_DIR with `.xml` or `.txt` extensions.  
-See file `- algorithms codes format` for mandatory format of the codes.
+Each algorithms must have its own XML file stored in *ALGORITHMS_DIR* (from `config.py`) with `.xml` extension.  
+See in `templates/` for algorithms format codes.
+
 
 ### HTML Templates
 
-Templates are written in Jinja2 templating language.  
+Templates are written in Jinja2 templating language.
+  
 The XML ElementTree is passed as argument for the algorithms.  
 The index of files is passed as argument fot the indexes.
 
 
-### Dinamic calculations
+### Dynamic calculations
 
-Dinamic algorithms calculation on the HTML page can be made with javascript, as in `script.js`.
+Dynamic algorithms calculation on the HTML page are made with javascript, as in `script.js`.
 
 
 ### Errors
 
-The log with the errors found are stored in the file `log.txt`.
+The log with the errors found is stored in the `log.txt`.
 
 
 ## Authors

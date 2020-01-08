@@ -7,13 +7,18 @@
 
 <biblioref>
 
-  <authorgroup>
+  <source>
     <author><surname>Robson</surname><firstname>E.</firstname></author>
-  </authorgroup>
-  <abbrev>Robson_1999</abbrev>
-  <pagenums>67-69</pagenums>
-  <abbrev2>Heimpel_2009</abbrev2>
-  <pagenums2>124</pagenums2>
+    <year>1999</year>
+    <pagenums>67-69</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Heimpel</surname><firstname>W.</firstname></author>
+    <year>2009</year>
+    <pagenums>124</pagenums>
+  </cited>
+
 
 </biblioref>
 
@@ -66,19 +71,13 @@
 
 <algauthors>
 
-  <creation_author_group>
-    <author>
-      <surname>Buccellati</surname><firstname>F.</firstname>
-      <creation_date>30.02.2018</creation_date>
-    </author>
-  </creation_author_group>
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname><date>30.02.2018</date></author>
+  </creation>
 
-  <modification_author_group>
-    <author>
-      <surname></surname><firstname></firstname>
-      <modification_date></modification_date>
-    </author>
-  </modification_author_group>
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
 
 </algauthors>
 

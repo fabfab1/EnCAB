@@ -25,7 +25,7 @@
 
 <algorithm_description>
 
-  <algorithm_type>quarrying tuff</algorithm_type>
+  <algorithm_type>quarrying stone</algorithm_type>
   <position_in_process>procurement</position_in_process>
   <material>stone</material>
   <source_type>text</source_type>

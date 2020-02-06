@@ -30,7 +30,7 @@
   <material>earth</material>
   <source_type>experimental archaeology</source_type>
   <source_chronology>modern</source_chronology>
-  <source_geography>classical - greek</source_geography>
+  <source_geography>Greece</source_geography>
 
 </algorithm_description>
 
@@ -38,7 +38,7 @@
 
 <algdata>
 
-  <algorithm_statement>Digging one m3 of soil in one person hour</algorithm_statement>
+  <algorithm_statement>Digging one m3 of soil in one person day</algorithm_statement>
   <algorithm_math>1 m3 dug in 1 p-d</algorithm_math>
   <variables>
     <var1>

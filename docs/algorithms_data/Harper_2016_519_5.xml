@@ -8,7 +8,7 @@
 <biblioref>
 
   <source>
-    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <author><surname>Harper</surname><firstname>C.</firstname></author>
     <year>2016</year>
     <pagenums>519</pagenums>
   </source>
@@ -27,7 +27,7 @@
 
   <algorithm_type>material qualities</algorithm_type>
   <position_in_process>materials</position_in_process>
-  <material>limestone</material>
+  <material>stone</material>
   <source_type></source_type>
   <source_chronology></source_chronology>
   <source_geography></source_geography>

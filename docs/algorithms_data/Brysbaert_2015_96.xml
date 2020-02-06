@@ -29,8 +29,8 @@
   <position_in_process>transport</position_in_process>
   <material>stone</material>
   <source_type>text</source_type>
-  <source_chronology></source_chronology>
-  <source_geography>classical - Greek</source_geography>
+  <source_chronology>Classical Greece</source_chronology>
+  <source_geography>Greece</source_geography>
 
 </algorithm_description>
 

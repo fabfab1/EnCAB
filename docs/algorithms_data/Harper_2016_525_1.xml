@@ -8,7 +8,7 @@
 <biblioref>
 
   <source>
-    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <author><surname>Harper</surname><firstname>C.</firstname></author>
     <year>2016</year>
     <pagenums>525</pagenums>
   </source>
@@ -27,7 +27,7 @@
 
   <algorithm_type>lime production</algorithm_type>
   <position_in_process>manufacture</position_in_process>
-  <material>limestone</material>
+  <material>lime</material>
   <source_type>experimental archaeology</source_type>
   <source_chronology>modern</source_chronology>
   <source_geography>Mesoamerica</source_geography>

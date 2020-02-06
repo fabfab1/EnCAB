@@ -25,11 +25,11 @@
 
 <algorithm_description>
 
-  <algorithm_type>labor measuring</algorithm_type>
-  <position_in_process>production</position_in_process>
-  <material>Maize</material>
+  <algorithm_type>labor</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>food</material>
   <source_type></source_type>
-  <source_chronology>Classic Maya</source_chronology>
+  <source_chronology>Classical Maya</source_chronology>
   <source_geography>Mesoamerica</source_geography>
 
 </algorithm_description>

@@ -8,7 +8,7 @@
 <biblioref>
 
   <source>
-    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <author><surname>Harper</surname><firstname>C.</firstname></author>
     <year>2016</year>
     <pagenums>206</pagenums>
   </source>
@@ -27,7 +27,7 @@
 
   <algorithm_type>plaster production</algorithm_type>
   <position_in_process>procurement</position_in_process>
-  <material>limestone</material>
+  <material>lime</material>
   <source_type>ethnographic</source_type>
   <source_chronology>modern</source_chronology>
   <source_geography></source_geography>
@@ -42,7 +42,7 @@
   <algorithm_math>time to burn limestone in one kiln</algorithm_math>
   <variables>
     <var1>
-      <unit>kiln</unit><description></description>
+      <unit>container</unit><description>one kiln</description>
       <op>var2 / 6</op>
     </var1>
     <var2>
@@ -57,7 +57,7 @@
 
 <algnotes>
 
-  <general_notes></general_notes>
+  <general_notes>***check algorithm material and algorithm</general_notes>
   <biblio_notes></biblio_notes>
 
 </algnotes>

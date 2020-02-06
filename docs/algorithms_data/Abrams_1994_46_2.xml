@@ -24,7 +24,7 @@
 
 <algorithm_description>
 
-  <algorithm_type>quarrying cobbles</algorithm_type>
+  <algorithm_type>gathering cobbles</algorithm_type>
   <position_in_process>procurement</position_in_process>
   <material>stone</material>
   <source_type>ethnographic</source_type>

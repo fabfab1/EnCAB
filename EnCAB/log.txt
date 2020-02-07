@@ -1,4 +1,4 @@
-----------------------------------------------2020-02-06T15:49:17+01:00
+----------------------------------------------2020-02-07T09:40:11+01:00
  EnCAB: Energetic Calculator for Ancient Buildings
 -----------------------------------------------------------------------
 
@@ -67,7 +67,6 @@ Index template: "templates/index.html"
 [ERROR] In "Harper_2016_529_2.xml", incorrect data: author "Murakami_2015" not found in bibliography, algorithm_type "plaster_applying" not found in website files.
 [ERROR] In "Harper_2016_529_3.xml", incorrect data: author "Murakami_2015" not found in bibliography, algorithm_type "plaster_applying" not found in website files.
 [ERROR] In "Harper_2016_530.xml", incorrect data: author "Murakami_2015" not found in bibliography, algorithm_type "plaster_applying" not found in website files.
-[ERROR] In "Heimpel_2009_223.xml", incorrect data: source_geography "ane" not found in website files.
 [ERROR] In "Kerig_2007_2.xml", incorrect data: author "Luley_1990" not found in bibliography, algorithm_type "house_building" not found in website files, source_chronology "neolithic" not found in website files, missing <algdata/algorithm_statement>, units "house" not found in website files.
 [ERROR] In "Milner_2009_108.xml", incorrect data: author "MilnerG_2009" not found in bibliography.
 [ERROR] In "Pickett_2016_106_1.xml", incorrect data: author "Gillette_1907" not found in bibliography.
@@ -79,10 +78,6 @@ Index template: "templates/index.html"
 [ERROR] In "Pickett_2017_16_17.xml", incorrect data: algorithm_type "mortar_production" not found in website files.
 [ERROR] In "Pickett_2017_16_18.xml", incorrect data: algorithm_type "sawing_wood" not found in website files.
 [ERROR] In "Pickett_2017_16_19.xml", incorrect data: algorithm_type "material_loading" not found in website files.
-[ERROR] In "Pickett_2017_17_24.xml", incorrect data: material "stone_bricks" not found in website files.
-[ERROR] In "Pickett_2017_17_25.xml", incorrect data: material "stone_bricks" not found in website files.
-[ERROR] In "Pickett_2017_17_26.xml", incorrect data: material "stone_bricks" not found in website files.
-[ERROR] In "Pickett_2017_17_27.xml", incorrect data: material "stone_bricks" not found in website files.
 [ERROR] In "Robson_1999_67.xml", incorrect data: author "RobsonE_1999" not found in bibliography.
 [ERROR] In "UN_1957_1.xml", incorrect data: author "UN_1957" not found in bibliography, author "Taniguchi" not found in bibliography.
 [ERROR] In "UN_1957_2.xml", incorrect data: author "UN_1957" not found in bibliography, author "Taniguchi" not found in bibliography.

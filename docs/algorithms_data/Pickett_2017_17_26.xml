@@ -25,9 +25,9 @@
 
 <algorithm_description>
 
-  <algorithm_type>wall building </algorithm_type>
+  <algorithm_type>wall building</algorithm_type>
   <position_in_process>construction</position_in_process>
-  <material>stone bricks</material>
+  <material>stone</material>
   <source_type>text</source_type>
   <source_chronology>Middle Ages</source_chronology>
   <source_geography>Near East</source_geography>

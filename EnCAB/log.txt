@@ -1,4 +1,4 @@
-----------------------------------------------2019-12-17T00:27:08+01:00
+----------------------------------------------2020-02-07T12:34:12+01:00
  EnCAB: Energetic Calculator for Ancient Buildings
 -----------------------------------------------------------------------
 
@@ -13,6 +13,65 @@ Index template: "templates/index.html"
 
 [*] Generating indexes...
 [*] Importing algorithms data...
+[ERROR] In "Abrams_1995_197.xml", incorrect data: author "FoustanddeSouza_1978" not found in bibliography.
+[ERROR] In "Brysbaert_2015_94.xml", incorrect data: author "Bessac_2007" not found in bibliography.
+[ERROR] In "Brysbaert_2015_94_1.xml", incorrect data: author "DeHaan_2009" not found in bibliography.
+[ERROR] In "Brysbaert_2015_94_2.xml", incorrect data: author "Pakkanen_2013" not found in bibliography.
+[ERROR] In "Brysbaert_2015_94_3.xml", incorrect data: author "Pakkanen_2013" not found in bibliography.
+[ERROR] In "Brysbaert_2015_96.xml", incorrect data: author "Pakkanen_2013" not found in bibliography.
+[ERROR] In "Brysbaert_2015_96_1.xml", incorrect data: author "DeHann_2009" not found in bibliography.
+[ERROR] In "Brysbaert_2015_96_2.xml", incorrect data: author "DeHann_2009" not found in bibliography.
+[ERROR] In "Burke_2012_149.xml", incorrect data: author "Powell_1990" not found in bibliography.
+[ERROR] In "Burke_2012_150_1.xml", incorrect data: author "Fathy_1969" not found in bibliography.
+[ERROR] In "Burke_2012_150_2.xml", incorrect data: author "Dalokay_1969" not found in bibliography.
+[ERROR] In "Burke_2012_150_3.xml", incorrect data: author "Hall_1973" not found in bibliography.
+[ERROR] In "Burke_2012_150_4.xml", incorrect data: author "Mallowan_1966" not found in bibliography.
+[ERROR] In "Burke_2012_150_5.xml", incorrect data: author "Damluji_1992" not found in bibliography.
+[ERROR] In "Burke_2012_150_6.xml", incorrect data: author "Reisner_1931" not found in bibliography.
+[ERROR] In "Fitzsimons_2006_83.xml", incorrect data: author "Wright_1987" not found in bibliography.
+[ERROR] In "Fitzsimons_2014_96.xml", incorrect data: author "Time-LifeBooks_1993" not found in bibliography.
+[ERROR] In "Fitzsimons_2014_97.xml", incorrect data: author "Cavanagh_1999" not found in bibliography.
+[ERROR] In "Harper_2016_206.xml", incorrect data: author "Searle_1935" not found in bibliography.
+[ERROR] In "Harper_2016_519_1.xml", incorrect data: author "Homsher_2012" not found in bibliography.
+[ERROR] In "Harper_2016_519_2.xml", incorrect data: author "Como_2005" not found in bibliography, material "conglomerate" not found in website files.
+[ERROR] In "Harper_2016_519_3.xml", incorrect data: author "Hurst_1865" not found in bibliography.
+[ERROR] In "Harper_2016_519_4.xml", incorrect data: author "Gillete_1920" not found in bibliography.
+[ERROR] In "Harper_2016_519_5.xml", incorrect data: author "Hurst_1899" not found in bibliography.
+[ERROR] In "Harper_2016_519_6.xml", incorrect data: author "Hornbostel_1991" not found in bibliography.
+[ERROR] In "Harper_2016_519_7.xml", incorrect data: author "Arthur_1913" not found in bibliography.
+[ERROR] In "Harper_2016_520_1.xml", incorrect data: author "Lehner_1997" not found in bibliography, algorithm_type "quarrying_conglomerate" not found in website files, material "conglomerate" not found in website files.
+[ERROR] In "Harper_2016_520_2.xml", incorrect data: author "Lehner_1997" not found in bibliography.
+[ERROR] In "Harper_2016_521_1.xml", incorrect data: author "Rea_1902" not found in bibliography.
+[ERROR] In "Harper_2016_521_2.xml", incorrect data: author "Rea_1902" not found in bibliography.
+[ERROR] In "Harper_2016_522_1.xml", incorrect data: author "Devolder_2013" not found in bibliography.
+[ERROR] In "Harper_2016_522_2.xml", incorrect data: author "Devolder_2013" not found in bibliography, author "Atkinson_1961" not found in bibliography.
+[ERROR] In "Harper_2016_524.xml", incorrect data: author "Murakami_2010" not found in bibliography.
+[ERROR] In "Harper_2016_525_1.xml", incorrect data: author "RusselandDahlin_2007" not found in bibliography.
+[ERROR] In "Harper_2016_525_2.xml", incorrect data: author "Murakami_2010" not found in bibliography.
+[ERROR] In "Harper_2016_525_3.xml", incorrect data: author "Smailes_2010" not found in bibliography.
+[ERROR] In "Harper_2016_526_1.xml", incorrect data: author "Hurst_1865" not found in bibliography.
+[ERROR] In "Harper_2016_526_2.xml", incorrect data: author "Hurst_1865" not found in bibliography.
+[ERROR] In "Harper_2016_526_3.xml", incorrect data: author "Mayes_1862" not found in bibliography.
+[ERROR] In "Harper_2016_527_1.xml", incorrect data: author "Mayes_1862" not found in bibliography.
+[ERROR] In "Harper_2016_527_2.xml", incorrect data: author "Mayes_1862" not found in bibliography.
+[ERROR] In "Harper_2016_527_3.xml", incorrect data: author "Lekson_1984" not found in bibliography.
+[ERROR] In "Harper_2016_527_4.xml", incorrect data: author "Lekson_1984" not found in bibliography.
+[ERROR] In "Harper_2016_528_1.xml", incorrect data: author "Hurst_1865" not found in bibliography.
+[ERROR] In "Harper_2016_528_2.xml", incorrect data: author "Hurst_1865" not found in bibliography.
+[ERROR] In "Harper_2016_529_1.xml", incorrect data: author "Murakami_2015" not found in bibliography.
+[ERROR] In "Harper_2016_529_2.xml", incorrect data: author "Murakami_2015" not found in bibliography.
+[ERROR] In "Harper_2016_529_3.xml", incorrect data: author "Murakami_2015" not found in bibliography.
+[ERROR] In "Harper_2016_530.xml", incorrect data: author "Murakami_2015" not found in bibliography.
+[ERROR] In "Kerig_2007_2.xml", incorrect data: author "Luley_1990" not found in bibliography.
+[ERROR] In "Pickett_2016_106_1.xml", incorrect data: author "Gillette_1907" not found in bibliography.
+[ERROR] In "Pickett_2016_106_2.xml", incorrect data: author "USCommissionofFishandFisheries_1886" not found in bibliography.
+[ERROR] In "Pickett_2016_106_3.xml", incorrect data: author "Radford_1913" not found in bibliography.
+[ERROR] In "Pickett_2016_106_4.xml", incorrect data: author "Gillette_1920" not found in bibliography.
+[ERROR] In "UN_1957_1.xml", incorrect data: author "Taniguchi" not found in bibliography.
+[ERROR] In "UN_1957_2.xml", incorrect data: author "Taniguchi" not found in bibliography.
+[ERROR] In "UN_1957_3.xml", incorrect data: author "Taniguchi" not found in bibliography.
+[ERROR] In "UN_1957_4.xml", incorrect data: author "Taniguchi" not found in bibliography.
+[ERROR] In "UN_1957_5.xml", incorrect data: author "Taniguchi" not found in bibliography.
 [*] Writing data...
 
 [+] Done!

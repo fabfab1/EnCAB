@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Brysbaert_2015_96</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Brysbaert</surname><firstname>A.</firstname></author>
+    <year>2015</year>
+    <pagenums>96</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Pakkanen</surname><firstname></firstname></author>
+    <year>2013</year>
+    <pagenums>45</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>transport</algorithm_type>
+  <position_in_process>transport</position_in_process>
+  <material>stone</material>
+  <source_type>text</source_type>
+  <source_chronology>Classical Greece</source_chronology>
+  <source_geography>Greece</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Transportation</algorithm_statement>
+  <algorithm_math>Certain number of p-h = (kg -weight- / 1000) * (m -distance- / 0,007)</algorithm_math>
+  <variables>
+    <var1>
+      <unit>kg</unit><description>weight</description>
+      <op></op>
+    </var1>
+    <var2>
+      <unit>m</unit><description>distance</description>
+      <op></op>
+    </var2>
+  </variables>
+
+
+  <results>
+    <result1>
+      <value></value><description></description>
+      <op>(var1 / 1000) * ( var2 / 0,007)</op>
+      <unit>p-h</unit>
+    </result1>
+  </results>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>The author refers to human labour costs needed to bring oxen yokes to a certain place one kilometer away.</general_notes>
+  <biblio_notes>Data were already calculated by author in this position: 0,7 p-d/1ton/1km. Data were converted to person-hours as the author previously refers to 10 hour work days.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>14.6.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>

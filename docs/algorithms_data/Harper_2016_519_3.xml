@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_519</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>C.</firstname></author>
+    <year>2016</year>
+    <pagenums>519</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Hurst</surname><firstname></firstname></author>
+    <year>1865</year>
+    <pagenums>106</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>material qualities</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>clay</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>1 cubic metre of clay weights 1800 kg</algorithm_statement>
+  <algorithm_math>1 m3 weights 1800 kg</algorithm_math>
+  <variables>
+    <var1>
+      <unit>m3</unit><description></description>
+      <op>var2 / 1800</op>
+    </var1>
+    <var2>
+      <unit>kg</unit><description></description>
+      <op>var1 * 1800</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>

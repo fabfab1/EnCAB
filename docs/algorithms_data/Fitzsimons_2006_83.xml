@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Fitzsimons_2006_83</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Fitzsimons</surname><firstname>R.</firstname></author>
+    <year>2006</year>
+    <pagenums>83</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Wright</surname><firstname></firstname></author>
+    <year>1987</year>
+    <pagenums>174</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>earth digging</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>earth</material>
+  <source_type>experimental archaeology</source_type>
+  <source_chronology>modern</source_chronology>
+  <source_geography>Greece</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Digging one m3 of soil in one person day</algorithm_statement>
+  <algorithm_math>1 m3 dug in 1 p-d</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-d</unit><description></description>
+      <op>var2 / 1</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 1</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>The author does not mention the number of hours worked in one person-day</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>24.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Coles_1973_73</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Coles</surname><firstname>J.</firstname></author>
+    <year>1973</year>
+    <pagenums>73</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>loading</algorithm_type>
+  <position_in_process>transport</position_in_process>
+  <material>chalk</material>
+  <source_type>experimental archaeology</source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>loading chalk in p-h</algorithm_statement>
+  <algorithm_math>250 kg of chalk in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 250kg</op>
+    </var1>
+    <var2>
+      <unit>kg</unit><description></description>
+      <op>var1 * 250</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>The author refers to use of ancient tools and baskets with an average load of 13,5 kg.</general_notes>
+  <biblio_notes>check material and algorithm calculation***</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.6.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Burke_2012_150</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Burke</surname><firstname>A.</firstname></author>
+    <year>2012</year>
+    <pagenums>150</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>mudbrick</algorithm_type>
+  <position_in_process>manufacture</position_in_process>
+  <material>mudbrick</material>
+  <source_type>ethnographic</source_type>
+  <source_chronology>Bronze Age</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>0,128 m3 of mudbricks was made in 1 p-h</algorithm_statement>
+  <algorithm_math>0,128 m3 made in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,128</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,128</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from 10 hours work days as author refers to. </general_notes>
+  <biblio_notes>Bricks are from the region of Iran. Brick dimensions are 20 x 20 x 4 cm and the number of made bricks per day was 800.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>13.6.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Brysbaert_2015_98</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Brysbaert</surname><firstname>A.</firstname></author>
+    <year>2015</year>
+    <pagenums>98</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Delaine</surname><firstname>J.</firstname></author>
+    <year>1997</year>
+    <pagenums>107, 268</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>earth digging</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>earth</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Excavating earth and throwing behind in p-h</algorithm_statement>
+  <algorithm_math>1 m3 of soil in 1,5 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>m3</unit><description></description>
+      <op>var2 * 1</op>
+    </var1>
+    <var2>
+      <unit>p-h</unit><description></description>
+      <op>var1 / 1</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes>The author mentiones p-d as an unit. Data was converted to p-h and I assume that she refers to 10 hour work days as in the whole article.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>15.6.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>

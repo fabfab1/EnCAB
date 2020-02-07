@@ -25,7 +25,7 @@
 
 <algorithm_description>
 
-  <algorithm_type>quarrying limestone</algorithm_type>
+  <algorithm_type>quarrying stone</algorithm_type>
   <position_in_process>procurement</position_in_process>
   <material>limestone</material>
   <source_type></source_type>
@@ -72,7 +72,7 @@
   </creation>
 
   <modification>
-    <author><surname></surname><firstname></firstname><date></date></author>
+    <author><surname>Buccellati</surname><firstname>F.</firstname><date>8.1.2020</date></author>
   </modification>
 
 </algauthors>

@@ -25,7 +25,7 @@
 
 <algorithm_description>
 
-  <algorithm_type>house building</algorithm_type>
+  <algorithm_type>construction</algorithm_type>
   <position_in_process>construction</position_in_process>
   <material></material>
   <source_type></source_type>
@@ -38,7 +38,7 @@
 
 <algdata>
 
-  <algorithm_statement></algorithm_statement>
+  <algorithm_statement>Construction of 22m long-house</algorithm_statement>
   <algorithm_math>1 house built in 2900 p-h</algorithm_math>
   <variables>
     <var1>
@@ -46,7 +46,7 @@
       <op>var2 * 2900</op>
     </var1>
     <var2>
-      <unit>house</unit><description></description>
+      <unit>container</unit><description>long-house</description>
       <op>var1 / 2900</op>
     </var2>
   </variables>

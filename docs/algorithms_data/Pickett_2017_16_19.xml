@@ -25,8 +25,8 @@
 
 <algorithm_description>
 
-  <algorithm_type>material loading </algorithm_type>
-  <position_in_process>procurement</position_in_process>
+  <algorithm_type>loading</algorithm_type>
+  <position_in_process>transport</position_in_process>
   <material>stone</material>
   <source_type>text</source_type>
   <source_chronology>Middle Ages</source_chronology>

@@ -27,7 +27,7 @@
 
   <algorithm_type>roof building</algorithm_type>
   <position_in_process>construction</position_in_process>
-  <material>earth, wood</material>
+  <material></material>
   <source_type></source_type>
   <source_chronology></source_chronology>
   <source_geography>North America</source_geography>
@@ -38,7 +38,7 @@
 
 <algdata>
 
-  <algorithm_statement>Building roof in one person-hour</algorithm_statement>
+  <algorithm_statement>Building roof (using earth, wood) in person-hours</algorithm_statement>
   <algorithm_math>0,4 m3 built in 1 p-h</algorithm_math>
   <variables>
     <var1>
@@ -57,7 +57,7 @@
 
 <algnotes>
 
-  <general_notes>It does not include any costs connected to acquiring and transporting material.</general_notes>
+  <general_notes>Algorithm does not include costs connected to acquiring and transporting material. Materials used are earth and wood.</general_notes>
   <biblio_notes>Author deals with costs for Anasazi roof constructions.</biblio_notes>
 
 </algnotes>

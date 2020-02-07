@@ -38,16 +38,16 @@
 
 <algdata>
 
-  <algorithm_statement>10 men are possible to transport 1 ton</algorithm_statement>
+  <algorithm_statement>10 men to transport 1 ton of stone</algorithm_statement>
   <algorithm_math></algorithm_math>
   <variables>
     <var1>
-      <unit></unit><description></description>
-      <op></op>
+      <unit>ton</unit><description>ton of stone</description>
+      <op>var2 / 10</op>
     </var1>
     <var2>
-      <unit></unit><description></description>
-      <op></op>
+      <unit>individual</unit><description>individuals needed to transport</description>
+      <op>var1 * 10</op>
     </var2>
 
   </variables>
@@ -58,7 +58,7 @@
 
 <algnotes>
 
-  <general_notes>Author refers to managable transportation of lintel blocks. One weights 1000kg and 10 men can manage it to transport.</general_notes>
+  <general_notes>Author refers to managable transportation of lintel blocks. One weights 1000kg and 10 men can transport it.</general_notes>
   <biblio_notes></biblio_notes>
 
 </algnotes>

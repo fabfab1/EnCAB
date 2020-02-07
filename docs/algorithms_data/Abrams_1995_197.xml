@@ -42,12 +42,12 @@
   <algorithm_math></algorithm_math>
   <variables>
     <var1>
-      <unit></unit><description></description>
-      <op></op>
+      <unit>individual</unit><description></description>
+      <op>var2 * 4</op>
     </var1>
     <var2>
-      <unit></unit><description></description>
-      <op></op>
+      <unit>group</unit><description>working teams</description>
+      <op>var1 / 4</op>
     </var2>
   </variables>
 

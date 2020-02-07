@@ -58,11 +58,6 @@
       <op>(var1 / 1000) * ( var2 / 0,007)</op>
       <unit>p-h</unit>
     </result1>
-    <result2>
-      <value></value><description></description>
-      <op></op>
-      <unit></unit>
-    </result2>
   </results>
 
 </algdata>

@@ -25,7 +25,7 @@
 
 <algorithm_description>
 
-  <algorithm_type>sawing wood</algorithm_type>
+  <algorithm_type>wood cutting</algorithm_type>
   <position_in_process>manufacture</position_in_process>
   <material>wood</material>
   <source_type>text</source_type>
@@ -38,7 +38,7 @@
 
 <algdata>
 
-  <algorithm_statement>sawing timber </algorithm_statement>
+  <algorithm_statement>sawing timber</algorithm_statement>
   <algorithm_math>0,625 m3 sawed in 1 p-h</algorithm_math>
   <variables>
     <var1>

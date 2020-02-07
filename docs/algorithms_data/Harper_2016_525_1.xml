@@ -25,7 +25,7 @@
 
 <algorithm_description>
 
-  <algorithm_type>lime production</algorithm_type>
+  <algorithm_type>plaster production</algorithm_type>
   <position_in_process>manufacture</position_in_process>
   <material>lime</material>
   <source_type>experimental archaeology</source_type>

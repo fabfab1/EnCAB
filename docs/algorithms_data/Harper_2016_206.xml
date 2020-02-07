@@ -46,7 +46,7 @@
       <op>var2 / 6</op>
     </var1>
     <var2>
-      <unit>days</unit><description></description>
+      <unit>day</unit><description></description>
       <op>var1 * 6</op>
     </var2>
   </variables>

@@ -2,14 +2,16 @@
 <algorithm>
 
 
-<reference>Milner_2009_108</reference>
+<reference>Milner_2010_108</reference>
 
 
 <biblioref>
 
   <source>
     <author><surname>Milner</surname><firstname>G.</firstname></author>
-    <year>2009</year>
+    <author><surname>Hammerstedt</surname><firstname>S.</firstname></author>
+    <author><surname>French</surname><firstname>K.</firstname></author>
+    <year>2010</year>
     <pagenums>108</pagenums>
   </source>
 
@@ -58,7 +60,7 @@
 <algnotes>
 
   <general_notes>Author refers to 5 hour work days. Stone hoes were used for excavating the soil.</general_notes>
-  <biblio_notes></biblio_notes>
+  <biblio_notes>***check bibliography, initially was 2009</biblio_notes>
 
 </algnotes>
 

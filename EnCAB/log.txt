@@ -1,4 +1,4 @@
-----------------------------------------------2020-02-07T09:40:11+01:00
+----------------------------------------------2020-02-07T10:05:13+01:00
  EnCAB: Energetic Calculator for Ancient Buildings
 -----------------------------------------------------------------------
 
@@ -30,11 +30,9 @@ Index template: "templates/index.html"
 [ERROR] In "Burke_2012_150_5.xml", incorrect data: author "Damluji_1992" not found in bibliography.
 [ERROR] In "Burke_2012_150_6.xml", incorrect data: author "Reisner_1931" not found in bibliography.
 [ERROR] In "Coles_1973_73.xml", incorrect data: material "chalk" not found in website files.
-[ERROR] In "Cornerstones_2006_132.xml", incorrect data: author "CornerstonesCommunityPartnershipsStaff_2006" not found in bibliography.
-[ERROR] In "Cornerstones_2006_133.xml", incorrect data: author "CornerstonesCommunityPartnershipsStaff_2006" not found in bibliography.
-[ERROR] In "Fitzsimons_2006_83.xml", incorrect data: author "FitzsimonsR_2006" not found in bibliography, author "Wright_1987" not found in bibliography.
-[ERROR] In "Fitzsimons_2014_96.xml", incorrect data: author "FitzsimonsR_2014" not found in bibliography, author "Time-LifeBooks_1993" not found in bibliography.
-[ERROR] In "Fitzsimons_2014_97.xml", incorrect data: author "FitzsimonsR_2014" not found in bibliography, author "Cavanagh_1999" not found in bibliography, missing <algdata/variables/var1/unit>, missing <algdata/variables/var1/op>, missing <algdata/variables/var2/unit>, missing <algdata/variables/var2/op>.
+[ERROR] In "Fitzsimons_2006_83.xml", incorrect data: author "Wright_1987" not found in bibliography.
+[ERROR] In "Fitzsimons_2014_96.xml", incorrect data: author "Time-LifeBooks_1993" not found in bibliography.
+[ERROR] In "Fitzsimons_2014_97.xml", incorrect data: author "Cavanagh_1999" not found in bibliography, missing <algdata/variables/var1/unit>, missing <algdata/variables/var1/op>, missing <algdata/variables/var2/unit>, missing <algdata/variables/var2/op>.
 [ERROR] In "Harper_2016_206.xml", incorrect data: author "Searle_1935" not found in bibliography, units "container" not found in website files, units "days" not found in website files.
 [ERROR] In "Harper_2016_519_1.xml", incorrect data: author "Homsher_2012" not found in bibliography.
 [ERROR] In "Harper_2016_519_2.xml", incorrect data: author "Como_2005" not found in bibliography, material "conglomerate" not found in website files.
@@ -68,7 +66,6 @@ Index template: "templates/index.html"
 [ERROR] In "Harper_2016_529_3.xml", incorrect data: author "Murakami_2015" not found in bibliography, algorithm_type "plaster_applying" not found in website files.
 [ERROR] In "Harper_2016_530.xml", incorrect data: author "Murakami_2015" not found in bibliography, algorithm_type "plaster_applying" not found in website files.
 [ERROR] In "Kerig_2007_2.xml", incorrect data: author "Luley_1990" not found in bibliography, algorithm_type "house_building" not found in website files, source_chronology "neolithic" not found in website files, missing <algdata/algorithm_statement>, units "house" not found in website files.
-[ERROR] In "Milner_2009_108.xml", incorrect data: author "MilnerG_2009" not found in bibliography.
 [ERROR] In "Pickett_2016_106_1.xml", incorrect data: author "Gillette_1907" not found in bibliography.
 [ERROR] In "Pickett_2016_106_2.xml", incorrect data: author "USCommissionofFishandFisheries_1886" not found in bibliography.
 [ERROR] In "Pickett_2016_106_3.xml", incorrect data: author "Radford_1913" not found in bibliography.
@@ -78,12 +75,11 @@ Index template: "templates/index.html"
 [ERROR] In "Pickett_2017_16_17.xml", incorrect data: algorithm_type "mortar_production" not found in website files.
 [ERROR] In "Pickett_2017_16_18.xml", incorrect data: algorithm_type "sawing_wood" not found in website files.
 [ERROR] In "Pickett_2017_16_19.xml", incorrect data: algorithm_type "material_loading" not found in website files.
-[ERROR] In "Robson_1999_67.xml", incorrect data: author "RobsonE_1999" not found in bibliography.
-[ERROR] In "UN_1957_1.xml", incorrect data: author "UN_1957" not found in bibliography, author "Taniguchi" not found in bibliography.
-[ERROR] In "UN_1957_2.xml", incorrect data: author "UN_1957" not found in bibliography, author "Taniguchi" not found in bibliography.
-[ERROR] In "UN_1957_3.xml", incorrect data: author "UN_1957" not found in bibliography, author "Taniguchi" not found in bibliography.
-[ERROR] In "UN_1957_4.xml", incorrect data: author "UN_1957" not found in bibliography, author "Taniguchi" not found in bibliography.
-[ERROR] In "UN_1957_5.xml", incorrect data: author "UN_1957" not found in bibliography, author "Taniguchi" not found in bibliography.
+[ERROR] In "UN_1957_1.xml", incorrect data: author "Taniguchi" not found in bibliography.
+[ERROR] In "UN_1957_2.xml", incorrect data: author "Taniguchi" not found in bibliography.
+[ERROR] In "UN_1957_3.xml", incorrect data: author "Taniguchi" not found in bibliography.
+[ERROR] In "UN_1957_4.xml", incorrect data: author "Taniguchi" not found in bibliography.
+[ERROR] In "UN_1957_5.xml", incorrect data: author "Taniguchi" not found in bibliography.
 [*] Writing data...
 
 [+] Done!

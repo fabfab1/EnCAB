@@ -9,3 +9,5 @@ Desktop.ini
 .idea/
 ._*
 
+
+!.idea/

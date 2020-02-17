@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1523aa94-b0c0-49f6-8c5c-0517be0a9658" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/EnCAB.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EnCAB.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,10 +23,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="reference.idesettings.debugger.python" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -48,6 +51,7 @@
       <workItem from="1580988757584" duration="6952000" />
       <workItem from="1581062389868" duration="9347000" />
       <workItem from="1581353347713" duration="4036000" />
+      <workItem from="1581927651964" duration="425000" />
     </task>
     <servers />
   </component>
@@ -83,15 +87,16 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581358652297" />
-    <state x="461" y="163" key="SettingsEditor" timestamp="1581357187941">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1581928078573">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581357187941" />
-    <state x="667" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1581353569740">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1581928078573" />
+    <state x="667" y="351" key="com.intellij.ide.util.TipDialog" timestamp="1581927655135">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="667" y="348" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581353569740" />
-    <state x="667" y="351" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1580988758440" />
+    <state x="667" y="351" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1581927655135" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/EnCAB$EnCAB.coverage" NAME="EnCAB Coverage Results" MODIFIED="1581357814951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />

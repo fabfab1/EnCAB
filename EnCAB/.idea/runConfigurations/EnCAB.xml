@@ -1,12 +1,12 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="EnCAB" type="PythonConfigurationType" factoryName="Python">
+  <configuration default="false" name="EnCAB" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
     <module name="EnCAB" />
     <option name="INTERPRETER_OPTIONS" value="" />
     <option name="PARENT_ENVS" value="true" />
     <envs>
       <env name="PYTHONUNBUFFERED" value="1" />
     </envs>
-    <option name="SDK_HOME" value="C:\GDrive\^EnCAB Project\GitHub Repo\EnCAB\EnCAB\venv\Scripts\python.exe" />
+    <option name="SDK_HOME" value="C:\python3\Anaconda3\envs\EnCAB\python.exe" />
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
     <option name="IS_MODULE_SDK" value="false" />
     <option name="ADD_CONTENT_ROOTS" value="true" />

@@ -27,4 +27,4 @@ SORT_STRINGS = {'algorithm_type': 'algorithm_description/algorithm_type',
                 'abbrev': 'biblioref/source/abbrev'}
 
 # Files to ignore for the index if they contain the string in the filename
-IGNORE_IF_CONTAIN = "_index"  # default: "_index"
+IGNORE_IF_IN_FILENAME = ("_index", "_data")  # default: ("_index", "_data")

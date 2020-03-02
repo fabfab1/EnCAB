@@ -42,7 +42,8 @@ log = logging.getLogger()
 def check_config(program_dir: Path):
     """Base check to assert existence of files and directories."""
 
-    for config_option in ['WEBSITE_DIR', 'ALGORITHMS_DIR', 'BIBLIOGRAPHY_FILE', 'TEMPLATE_ALGORITHM', 'TEMPLATE_INDEX']:
+    for config_option in ['WEBSITE_DIR', 'ALGORITHMS_DIR', 'BIBLIOGRAPHY_FILE', 'TEMPLATE_ALGORITHM', 'TEMPLATE_INDEX',
+                          'SORT_STRINGS']:
         if config_option not in globals():
             raise UserWarning(f'In config: configuration "{config_option}" not found.')
         
@@ -52,6 +53,13 @@ def check_config(program_dir: Path):
     for config_file in [BIBLIOGRAPHY_FILE, TEMPLATE_ALGORITHM, TEMPLATE_INDEX]:
         if not (program_dir/config_file).is_file():
             raise UserWarning(f'In config: file "{config_file}" not found.')
+
+    global IGNORE_IF_IN_FILENAME
+    if 'IGNORE_IF_IN_FILENAME' not in globals() or not IGNORE_IF_IN_FILENAME:
+        IGNORE_IF_IN_FILENAME = ()
+    elif not isinstance(IGNORE_IF_IN_FILENAME, set) and not all(isinstance(s, str) for s in IGNORE_IF_IN_FILENAME):
+        raise UserWarning(f'In config: configuration IGNORE_IF_IN_FILENAME is not a set of strings.')
+        
     return
 
 
@@ -63,11 +71,7 @@ def files_index(website_dir: Path, bibliography_file: Path):
     for subdir in website_dir.iterdir():
         if subdir.is_dir():
             for file in subdir.glob('*.html'):
-                if file.is_file():
-                    # exclude index files themselves
-                    if IGNORE_IF_CONTAIN and file.match(f'*{IGNORE_IF_CONTAIN}*'):
-                        continue
-                    
+                if file.is_file() and not any(ignore in file.stem for ignore in IGNORE_IF_IN_FILENAME):
                     # for each subdir make a list of filenames (without extension)
                     # {'subdir1': ['file1','file2'], 'subdir2': ['file3'], ...}
                     file_index.setdefault(subdir.name, []).append(file.stem)
@@ -94,17 +98,27 @@ def get_alg_data(alg_dir: Path, file_index: dict, author_index: set):
     zip_name = 'EnCAB_input_' + datetime.datetime.now().strftime('%Y%m%d-%H%M%S') + '.zip'
     zip_file = zipfile.ZipFile((alg_dir/'archives'/zip_name).resolve(), mode='w', compression=zipfile.ZIP_DEFLATED)
     
-    # Get the data
+    # Get the data and find errors
     alg_data = []
+    errors = {'bibliographical': [], 'missing_file': [], 'calculation': []}
     for file in alg_dir.glob('*.xml'):
         if file.is_file():
             # archive a copy of the file
             zip_file.write(file.resolve(), arcname=file.name)
             
-            # parse the file and save as [(XML_data, filename), ...]
-            alg_data += [(parse(file, file_index, author_index), file.name)]
+            # parse the file
+            xml_root, new_errors = parse(file, file_index, author_index)
+            for key, value in errors.items():
+                if new_errors[key]:
+                    value.append(f'    {file.name+":":30} ' + ', '.join(new_errors[key]) + '.')
+            alg_data += [(xml_root, file.name)]
     
     zip_file.close()
+
+    # Print errors
+    for key, value in errors.items():
+        if value:
+            log.error(f'{key.capitalize()} problems \n' + '\n'.join(value) + '\n')
     
     return alg_data
 
@@ -127,10 +141,10 @@ def parse(file, file_index: dict, author_index: set):
         if elem.text:
             elem.text = elem.text.strip()
     
-    # Check text correctness
-    errors = []
+    # Check for errors
+    errors_bibliographical, errors_missing_file, errors_calculation = [], [], []
     
-    def check_code(code, test_regex=r"", mandatory=False):
+    def check_code(code, test_regex=r"", mandatory=False, errors=errors_bibliographical):
         if mandatory and not root.findtext(code):
             errors.append('missing <'+code+'>')
         elif root.findtext(code) and not re.match(test_regex, root.findtext(code), flags=re.I):
@@ -138,16 +152,16 @@ def parse(file, file_index: dict, author_index: set):
         return
 
     def author_abbrev(author):
-        return author.findtext('surname', '').strip(',.').replace(' ', '') + \
-               author.findtext('firstname', '').strip(',.').replace(' ', '')
+        author_abbrev = author.findtext('surname', '') + author.findtext('firstname', '')
+        return re.sub(r'[,\. ]', '', author_abbrev)
     
     # reference: authors_date_pagenumber(_sequentialnumber)
-    check_code('reference', r"^\w+_\d{4}_\d+(|_\d+)$", mandatory=True)
+    check_code('reference', r"^[\w-]+_\d{4}_\d+(|_\d+)$", mandatory=True)
 
     # biblioref/source: 1 and only 1 allowed
     check_code(f'biblioref/source/author/surname', mandatory=True)
     if len(root.findall('biblioref/source')) > 1:
-        errors.append('more than 1 <biblioref/source>')
+        errors_bibliographical.append('more than 1 <biblioref/source>')
     
     # biblioref/*/author: in Bibliography
     for biblioref_tag in ('source', 'cited'):
@@ -166,15 +180,16 @@ def parse(file, file_index: dict, author_index: set):
                 elif len(authors) == 2:
                     abbrev = author_abbrev(authors[0]) + '_' + author_abbrev(authors[1])
                 else:
-                    abbrev = author_abbrev(authors[0]) + '_Etal'
+                    abbrev = author_abbrev(authors[0]) + '_etal'
                 if biblioref.findtext('year'):
                     abbrev += '_' + biblioref.findtext('year')
                 biblioref.find('abbrev').text = abbrev
             
             if abbrev:
                 # check if in Bibliography
-                if abbrev.rsplit('_', 1)[0] not in author_index:
-                    errors.append(f'author "{abbrev}" not found in bibliography')
+                abbrev_no_year = re.sub(r'_\d{4}', '', abbrev)
+                if abbrev_no_year not in author_index:
+                    errors_bibliographical.append(f'author "{abbrev_no_year}" not found')
 
                 # biblioref/*/author/year: yyyy
                 check_code(f'biblioref/{biblioref.tag}[{i}]/year', r"^\d{4}$")
@@ -185,14 +200,14 @@ def parse(file, file_index: dict, author_index: set):
     # algorithm_description: check if file exist for each description type
     for d_type in root.find('algorithm_description'):
         if d_type.tag not in file_index.keys():
-            errors.append(f'algorithm description <{d_type.tag}> not found in website directories')
+            errors_missing_file.append(f'algorithm description <{d_type.tag}> directory not found')
         elif d_type.text:
             txt = d_type.text.replace(' ', '_').lower()
             if txt not in file_index[d_type.tag]:
-                errors.append(f'{d_type.tag} "{txt}" not found in website files')
+                errors_missing_file.append(f'{d_type.tag} "{txt}" not found')
 
     # algdata/algorithm_statement
-    check_code('algdata/algorithm_statement', mandatory=True)
+    check_code('algdata/algorithm_statement', mandatory=True, errors=errors_calculation)
 
     # Check operations
     var_names = set()
@@ -201,14 +216,14 @@ def parse(file, file_index: dict, author_index: set):
         for var in algdata:
             
             # algdata/{algdata}/*/unit
-            check_code(f'algdata/{algdata.tag}/{var.tag}/unit', mandatory=True)
+            check_code(f'algdata/{algdata.tag}/{var.tag}/unit', mandatory=True, errors=errors_calculation)
             unit = var.findtext('unit', '').replace(' ', '_').lower()
             if unit and unit not in file_index['units']:
-                errors.append(f'units "{unit}" not found in website files')
+                errors_missing_file.append(f'units "{unit}" not found in website files')
             
             # algdata/{algdata}/*/op: op in all results or in all variables
             if algdata.tag == 'results' or not op_in_results:
-                check_code(f'algdata/{algdata.tag}/{var.tag}/op', mandatory=True)
+                check_code(f'algdata/{algdata.tag}/{var.tag}/op', mandatory=True, errors=errors_calculation)
                 if algdata.tag == 'results':
                     op_in_results = True
             
@@ -216,7 +231,7 @@ def parse(file, file_index: dict, author_index: set):
             if var.tag not in var_names:
                 var_names.add(var.tag)
             else:
-                errors.append(f'more than one <{var.tag}> in <algdata>')
+                errors_calculation.append(f'more than one <{var.tag}> in <algdata>')
 
     # algauthors/(creation|modification)
     for algauthors in (root.find('algauthors/creation'), root.find('algauthors/modification')):
@@ -227,18 +242,15 @@ def parse(file, file_index: dict, author_index: set):
                 abbrev = author_abbrev(author)
                 
                 if abbrev and abbrev not in file_index.get('authors', []):
-                    errors.append(f'author "{abbrev}" does not have HTML page in authors/')
+                    errors_missing_file.append(f'author "{abbrev}" does not have HTML page in authors/')
 
                 # algauthors/author_*/date: dd.mm.yyyy
                 check_code(f'algauthor/{algauthors.tag}/author[{i}]/date', r"^\d{1,2}\.\d{1,2}\.\d{4}$")
                 if author.find('date') and re.match(r"^\d{1,2}\.\d{1,2}\.\d{4}$", author.findtext('date'), flags=re.I):
                     author.find('date').text = '{:0>2}.{:0>2}.{:>4}'.format(*author.findtext('date').split('.'))
 
-    # Print errors
-    if errors:
-        log.error(f'In "{file.name}", incorrect data: ' + ', '.join(errors) + '.')
-    
-    return root
+    return root, {'bibliographical': errors_bibliographical, 'missing_file': errors_missing_file,
+                  'calculation': errors_calculation}
 
 
 def write_data(website_dir: Path, alg_data: list, file_index: dict, templates: dict):
@@ -250,10 +262,11 @@ def write_data(website_dir: Path, alg_data: list, file_index: dict, templates: d
     # set up environment with custom variables
     env = jinja2.Environment(loader=loader)
     env.filters['capfirst'] = lambda text: ' '.join(s[:1].upper() + s[1:] for s in text.split(' '))
+    env.filters['remove_year'] = lambda abbrev: re.sub(r'_\d{4}', '', abbrev)
     env.globals['TIME_NOW'] = round(datetime.datetime.now().timestamp() * 1000)
 
     # regex parser for <section> tags (html parsers change formatting)
-    regex_section = re.compile(r"(<section.*?>).*?(?=<\/section)", flags=re.DOTALL|re.I)
+    regex_section = re.compile(r"(<section.*?>).*?(?=</section)", flags=re.DOTALL | re.I)
 
     def replace_section(matchobj):
         """Parse <section> and generate the data."""

@@ -10,7 +10,7 @@
     <author><surname>surname</surname><firstname>firstname</firstname></author>
     <author><surname>surname2</surname><firstname>firstname2</firstname></author>
     <year>yyyy</year>
-    <!-- custom abbreviation: <abbrev>bibliographical abbreviation (bibligraphy link)</abbrev> -->
+    <!-- custom abbreviation: <abbrev>bibliographical abbreviation (for bibligraphy link)</abbrev> -->
     <pagenums>page numbers [numbers separated by dash or comma (e.g.: 45 or 45-46 or 45-46,48,55)]</pagenums>
   </source>
   

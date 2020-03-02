@@ -1,4 +1,4 @@
-----------------------------------------------2020-03-02T20:34:42+01:00
+----------------------------------------------2020-03-02T22:42:46+01:00
  EnCAB: Energetic Calculator for Ancient Buildings
 -----------------------------------------------------------------------
 
@@ -13,34 +13,28 @@ Index template: "templates/index.html"
 
 [*] Generating indexes...
 [*] Importing algorithms data...
-[ERROR] In "Aurenche_1981_46.xml", incorrect data: author "DoatP_etal_1979" not found in bibliography.
-[ERROR] In "Brunke_2016_261.xml", incorrect data: author "BrunkeH_etal_2016" not found in bibliography.
-[ERROR] In "Brunke_2016_261_1.xml", incorrect data: author "BrunkeH_etal_2016" not found in bibliography.
-[ERROR] In "Brunke_2016_261_2.xml", incorrect data: author "BrunkeH_etal_2016" not found in bibliography.
-[ERROR] In "Brunke_2016_261_3.xml", incorrect data: author "BrunkeH_etal_2016" not found in bibliography.
-[ERROR] In "Brysbaert_2015_94_1.xml", incorrect data: author "DeHaanHJ_2009" not found in bibliography.
-[ERROR] In "Brysbaert_2015_96_1.xml", incorrect data: author "DeHaanHJ_2009" not found in bibliography.
-[ERROR] In "Brysbaert_2015_96_2.xml", incorrect data: author "DeHaanHJ_2009" not found in bibliography.
-[ERROR] In "Fitzsimons_2006_83.xml", incorrect data: author "WrightJC_1987" not found in bibliography.
-[ERROR] In "Fitzsimons_2014_96.xml", incorrect data: author "Time-LifeBooks_1993" not found in bibliography.
-[ERROR] In "Fitzsimons_2014_97.xml", incorrect data: author "CavanaghWG_1999" not found in bibliography.
-[ERROR] In "Harper_2016_519_2.xml", incorrect data: material "conglomerate" not found in website files.
-[ERROR] In "Harper_2016_519_6.xml", incorrect data: author "Hornbostel_1991" not found in bibliography.
-[ERROR] In "Harper_2016_519_7.xml", incorrect data: author "Arthur_1913" not found in bibliography.
-[ERROR] In "Harper_2016_520_1.xml", incorrect data: algorithm_type "quarrying_conglomerate" not found in website files, material "conglomerate" not found in website files.
-[ERROR] In "Harper_2016_522_2.xml", incorrect data: author "Atkinson_1961" not found in bibliography.
-[ERROR] In "Harper_2016_525_1.xml", incorrect data: author "RusselandDahlin_2007" not found in bibliography.
-[ERROR] In "Harper_2016_527_3.xml", incorrect data: author "LeksonS_1984" not found in bibliography.
-[ERROR] In "Harper_2016_527_4.xml", incorrect data: author "LeksonS_1984" not found in bibliography.
-[ERROR] In "Kerig_2007_2.xml", incorrect data: author "Luley_1990" not found in bibliography.
-[ERROR] In "Milner_2010_108.xml", incorrect data: author "MilnerG_HammerstedtS_FrenchK_2010" not found in bibliography.
-[ERROR] In "Pickett_2016_106_2.xml", incorrect data: author "USCommissionofFishandFisheries_1886" not found in bibliography.
-[ERROR] In "Pickett_2016_106_3.xml", incorrect data: author "Radford_1913" not found in bibliography.
-[ERROR] In "UN_1957_1.xml", incorrect data: author "Taniguchi" not found in bibliography.
-[ERROR] In "UN_1957_2.xml", incorrect data: author "Taniguchi" not found in bibliography.
-[ERROR] In "UN_1957_3.xml", incorrect data: author "Taniguchi" not found in bibliography.
-[ERROR] In "UN_1957_4.xml", incorrect data: author "Taniguchi" not found in bibliography.
-[ERROR] In "UN_1957_5.xml", incorrect data: author "Taniguchi" not found in bibliography.
+[ERROR] Bibliographical problems 
+    Burke_2012_150_3.xml:          author "HallG_etal" not found.
+    Fitzsimons_2014_96.xml:        author "Time-LifeBooks" not found.
+    Harper_2016_519_6.xml:         author "Hornbostel" not found.
+    Harper_2016_519_7.xml:         author "Arthur" not found.
+    Harper_2016_522_2.xml:         author "Atkinson" not found.
+    Harper_2016_525_1.xml:         author "RusselandDahlin" not found.
+    Harper_2016_527_3.xml:         author "LeksonS" not found.
+    Harper_2016_527_4.xml:         author "LeksonS" not found.
+    Kerig_2007_2.xml:              author "Luley" not found.
+    Pickett_2016_106_2.xml:        author "USCommissionofFishandFisheries" not found.
+    Pickett_2016_106_3.xml:        author "Radford" not found.
+    UN_1957_1.xml:                 author "Taniguchi" not found.
+    UN_1957_2.xml:                 author "Taniguchi" not found.
+    UN_1957_3.xml:                 author "Taniguchi" not found.
+    UN_1957_4.xml:                 author "Taniguchi" not found.
+    UN_1957_5.xml:                 author "Taniguchi" not found.
+
+[ERROR] Missing_file problems 
+    Harper_2016_519_2.xml:         material "conglomerate" not found.
+    Harper_2016_520_1.xml:         algorithm_type "quarrying_conglomerate" not found, material "conglomerate" not found.
+
 [*] Writing data...
 
 [+] Done!

@@ -42,7 +42,8 @@ log = logging.getLogger()
 def check_config(program_dir: Path):
     """Base check to assert existence of files and directories."""
 
-    for config_option in ['WEBSITE_DIR', 'ALGORITHMS_DIR', 'BIBLIOGRAPHY_FILE', 'TEMPLATE_ALGORITHM', 'TEMPLATE_INDEX']:
+    for config_option in ['WEBSITE_DIR', 'ALGORITHMS_DIR', 'BIBLIOGRAPHY_FILE', 'TEMPLATE_ALGORITHM', 'TEMPLATE_INDEX',
+                          'SORT_STRINGS']:
         if config_option not in globals():
             raise UserWarning(f'In config: configuration "{config_option}" not found.')
         
@@ -52,6 +53,13 @@ def check_config(program_dir: Path):
     for config_file in [BIBLIOGRAPHY_FILE, TEMPLATE_ALGORITHM, TEMPLATE_INDEX]:
         if not (program_dir/config_file).is_file():
             raise UserWarning(f'In config: file "{config_file}" not found.')
+
+    global IGNORE_IF_IN_FILENAME
+    if 'IGNORE_IF_IN_FILENAME' not in globals() or not IGNORE_IF_IN_FILENAME:
+        IGNORE_IF_IN_FILENAME = ()
+    elif not isinstance(IGNORE_IF_IN_FILENAME, set) and not all(isinstance(s, str) for s in IGNORE_IF_IN_FILENAME):
+        raise UserWarning(f'In config: configuration IGNORE_IF_IN_FILENAME is not a set of strings.')
+        
     return
 
 
@@ -63,11 +71,7 @@ def files_index(website_dir: Path, bibliography_file: Path):
     for subdir in website_dir.iterdir():
         if subdir.is_dir():
             for file in subdir.glob('*.html'):
-                if file.is_file():
-                    # exclude index files themselves
-                    if IGNORE_IF_CONTAIN and file.match(f'*{IGNORE_IF_CONTAIN}*'):
-                        continue
-                    
+                if file.is_file() and not any(ignore in file.stem for ignore in IGNORE_IF_IN_FILENAME):
                     # for each subdir make a list of filenames (without extension)
                     # {'subdir1': ['file1','file2'], 'subdir2': ['file3'], ...}
                     file_index.setdefault(subdir.name, []).append(file.stem)
@@ -138,11 +142,11 @@ def parse(file, file_index: dict, author_index: set):
         return
 
     def author_abbrev(author):
-        return author.findtext('surname', '').strip(',.').replace(' ', '') + \
-               author.findtext('firstname', '').strip(',.').replace(' ', '')
+        author_abbrev = author.findtext('surname', '') + author.findtext('firstname', '')
+        return re.sub(r'[,\. ]', '', author_abbrev)
     
     # reference: authors_date_pagenumber(_sequentialnumber)
-    check_code('reference', r"^\w+_\d{4}_\d+(|_\d+)$", mandatory=True)
+    check_code('reference', r"^[\w-]+_\d{4}_\d+(|_\d+)$", mandatory=True)
 
     # biblioref/source: 1 and only 1 allowed
     check_code(f'biblioref/source/author/surname', mandatory=True)
@@ -165,6 +169,8 @@ def parse(file, file_index: dict, author_index: set):
                     abbrev = author_abbrev(authors[0])
                 elif len(authors) == 2:
                     abbrev = author_abbrev(authors[0]) + '_' + author_abbrev(authors[1])
+                elif len(authors) == 3:
+                    abbrev = author_abbrev(authors[0]) + '_' + author_abbrev(authors[1]) + '_' + author_abbrev(authors[2])
                 else:
                     abbrev = author_abbrev(authors[0]) + '_Etal'
                 if biblioref.findtext('year'):

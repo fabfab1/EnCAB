@@ -172,7 +172,7 @@ def parse(file, file_index: dict, author_index: set):
                 elif len(authors) == 3:
                     abbrev = author_abbrev(authors[0]) + '_' + author_abbrev(authors[1]) + '_' + author_abbrev(authors[2])
                 else:
-                    abbrev = author_abbrev(authors[0]) + '_Etal'
+                    abbrev = author_abbrev(authors[0]) + '_etal'
                 if biblioref.findtext('year'):
                     abbrev += '_' + biblioref.findtext('year')
                 biblioref.find('abbrev').text = abbrev
@@ -256,6 +256,7 @@ def write_data(website_dir: Path, alg_data: list, file_index: dict, templates: d
     # set up environment with custom variables
     env = jinja2.Environment(loader=loader)
     env.filters['capfirst'] = lambda text: ' '.join(s[:1].upper() + s[1:] for s in text.split(' '))
+    env.filters['remove_year'] = lambda abbrev: re.sub(r'_\d{4}', '', abbrev)
     env.globals['TIME_NOW'] = round(datetime.datetime.now().timestamp() * 1000)
 
     # regex parser for <section> tags (html parsers change formatting)

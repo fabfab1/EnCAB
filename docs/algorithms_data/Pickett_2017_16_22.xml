@@ -25,7 +25,7 @@
 
 <algorithm_description>
 
-  <algorithm_type>wall building </algorithm_type>
+  <algorithm_type>wall building</algorithm_type>
   <position_in_process>construction</position_in_process>
   <material>stone</material>
   <source_type>text</source_type>

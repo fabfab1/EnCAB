@@ -22,7 +22,7 @@ Index template: "templates/index.html"
     Harper_2016_525_1.xml:         author "RusselandDahlin" not found.    [present - Russell, B.W., and B.H. Dahlin. 2007. “Traditional Burnt-Lime Production at Mayapán, Mexico” JFA 32: 407–423]
 
     Harper_2016_527_3.xml:         author "LeksonS" not found.  [present - Lekson, S. 1984. Great Pueblo Architecture of Chaco Canyon. Albuquerque: University of New Mexico Press]
-    Harper_2016_527_4.xml:         author "LeksonS" not found.
+    Harper_2016_527_4.xml:         author "LeksonS" not found.   [see above]
     Kerig_2007_2.xml:              author "Luley" not found.
     Pickett_2016_106_2.xml:        author "USCommissionofFishandFisheries" not found.
     Pickett_2016_106_3.xml:        author "Radford" not found.

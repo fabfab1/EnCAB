@@ -38,8 +38,8 @@
 
 <algdata>
 
-  <algorithm_statement>1 cubic metre of dried brick weights 1440 kg</algorithm_statement>
-  <algorithm_math>1 m3 weights 1440 kg</algorithm_math>
+  <algorithm_statement>1 cubic metre of dried brick weighs 1440 kg</algorithm_statement>
+  <algorithm_math>1 m3 weighs 1440 kg</algorithm_math>
   <variables>
     <var1>
       <unit>m3</unit><description></description>

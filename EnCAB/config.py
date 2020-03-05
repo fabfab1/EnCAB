@@ -10,7 +10,7 @@
 WEBSITE_DIR = "../docs/"  # default: "../docs/"
 
 # Path to directory where algorithms data are located (*.xml files)
-ALGORITHMS_DIR = WEBSITE_DIR + "algorithms_data/"  # default:  WEBSITE_DIR + "algorithms_data/"
+ALGORITHMS_DIR = WEBSITE_DIR + "algorithms_xml/"  # default:  WEBSITE_DIR + "algorithms_data/"
 
 # Path to file where HTML author bibliography is located
 BIBLIOGRAPHY_FILE = WEBSITE_DIR + "bibliography/bibliography.html"  # default: WEBSITE_DIR + "bibliography/bibliography.html"

@@ -45,7 +45,7 @@
       <op>var1 * 3.5</op>
     </var1>
     <var2>
-      <unit>beam</unit><description>split palm log</description>
+      <unit>beam</unit><description>number of split palm logs</description>
       <op>var2 / 3.5 </op>
     </var2>
   </variables>

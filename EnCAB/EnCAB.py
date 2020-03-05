@@ -68,9 +68,9 @@ def files_index(website_dir: Path, bibliography_file: Path):
 
     # Get index of files in subdirectories
     file_index = dict()
-    for subdir in website_dir.iterdir():
+    for subdir in sorted(website_dir.iterdir()):
         if subdir.is_dir():
-            for file in subdir.glob('*.html'):
+            for file in sorted(subdir.glob('*.html')):
                 if file.is_file() and not any(ignore in file.stem for ignore in IGNORE_IF_IN_FILENAME):
                     # for each subdir make a list of filenames (without extension)
                     # {'subdir1': ['file1','file2'], 'subdir2': ['file3'], ...}
@@ -101,7 +101,7 @@ def get_alg_data(alg_dir: Path, file_index: dict, author_index: set):
     # Get the data and find errors
     alg_data = []
     errors = {'bibliographical': [], 'missing_file': [], 'calculation': []}
-    for file in alg_dir.glob('*.xml'):
+    for file in sorted(alg_dir.glob('*.xml')):
         if file.is_file():
             # archive a copy of the file
             zip_file.write(file.resolve(), arcname=file.name)
@@ -308,7 +308,7 @@ def write_data(website_dir: Path, alg_data: list, file_index: dict, templates: d
         return matchobj.group(1) + html_data
     
     # read and update each HTML file
-    for file in website_dir.glob('**/*.html'):
+    for file in sorted(website_dir.glob('**/*.html')):
         with file.open('r', encoding='utf-8') as html:
             html_file = html.read()
 

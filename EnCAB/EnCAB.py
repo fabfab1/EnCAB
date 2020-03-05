@@ -361,8 +361,9 @@ Index template: "{TEMPLATE_INDEX}"
         log.critical(err)
     except Exception:
         log.critical(f'Fatal error. Please report the log.', exc_info=True)
-
-    input()
+    
+    if not sys.argv[1:2] == ['run']:
+        input()
     sys.exit()
 
 

@@ -24,3 +24,8 @@ jobs:
         pip install -r EnCAB/requirements.txt
     - name: Run EnCAB
       run: python ./EnCAB/EnCAB.py run
+    - name: push changes
+      run: |
+        git add .
+        git commit -m "GitHub action program run"
+        git push origin pre-print

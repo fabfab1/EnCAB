@@ -41,12 +41,12 @@
   <algorithm_math>1 split palm log = 3.5m in legnth.</algorithm_math>
   <variables>
     <var1>
-      <unit>beam</unit><description>split palm log</description>
-      <op>var2 / 3.5 </op>
-    </var1>
-    <var2>
       <unit>m</unit><description>distance to be spanned in meters.</description>
       <op>var1 * 3.5</op>
+    </var1>
+    <var2>
+      <unit>beam</unit><description>split palm log</description>
+      <op>var2 / 3.5 </op>
     </var2>
   </variables>
 

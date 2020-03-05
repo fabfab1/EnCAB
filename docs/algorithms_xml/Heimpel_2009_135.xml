@@ -37,7 +37,7 @@
 <algdata>
 
   <algorithm_statement>Roofing beams are placed 40cm apart.</algorithm_statement>
-  <algorithm_math>Given room legnth, divides by 60, assuming a beam width of 20cm</algorithm_math>
+  <algorithm_math>Given room legnth, divides by 60, assuming a beam width of 20cm. Remove one 'beam' from result as final support is a wall, not another beam.</algorithm_math>
   
   <variables>
     <var1>
@@ -46,7 +46,7 @@
     </var1>
     <var2>
       <unit>beam</unit><description>Number of beams needed.</description>
-      <op>var1 / 60</op>
+      <op>(var1 / 60) - 1</op>
     </var2>
   </variables>
 

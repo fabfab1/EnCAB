@@ -8,7 +8,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest  # windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -24,3 +24,10 @@ jobs:
         pip install -r EnCAB/requirements.txt
     - name: Run EnCAB
       run: python ./EnCAB/EnCAB.py run
+    - name: push changes
+      run: |
+        git config user.email "actions@github.com"
+        git config user.name "GitHub Actions"
+        git add .
+        git commit -m "GitHub action program run"
+        git push origin pre-print

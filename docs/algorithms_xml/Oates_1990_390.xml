@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<algorithm>
+
+<reference>Oates_1990_390</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Oates</surname><firstname>D.</firstname></author>
+    <year>1990</year>
+    <pagenums>390</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+<algorithm_description>
+
+  <algorithm_type>mudbrick</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>mudbrick</material>
+  <source_type>ethnographic</source_type>  
+  <source_chronology>modern</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+<algdata>
+
+  <algorithm_statement>100 bricks require 1 1/2 sacks of straw, approx 60kg.</algorithm_statement>
+  <algorithm_math>1 brick requires 0.6kg straw.</algorithm_math>
+  <variables>
+    <var1>
+      <unit>brick</unit><description>number of mudbricks</description>
+      <op>var2 / 0.6 </op>
+    </var1>
+    <var2>
+      <unit>kg</unit><description>Kilos of straw</description>
+      <op>var1 * 0.6</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+<algnotes>
+
+  <general_notes>The brick size is unspecified.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname><date>09.10.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+</algorithm>

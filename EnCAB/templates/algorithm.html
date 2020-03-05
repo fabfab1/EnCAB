@@ -78,19 +78,30 @@
     <tr>
         <td>How to cite (<a href="../cite/cite.html">guidelines</a>):</td><td>{%- if b.find('algauthors/creation') %}
             {%- for author in b.find('algauthors/creation') %}
-            {{author.findtext('surname','')}} {{author.findtext('firstname','')}}{%- if author.findtext('date') %} {{author.findtext('date').rsplit('.',1)[-1]}}{% endif %}{% if not loop.last %}, {% endif %}
+            {%- if loop.first %}{{author.findtext('surname','')}} {{author.findtext('firstname','')}}
+            {%- else %}{{author.findtext('firstname','')}} {{author.findtext('surname','')}}{% endif %}
+            {%- if author.findtext('date') %} {{author.findtext('date').rsplit('.',1)[-1]}}{% endif %}
+            {%- if loop.revindex == 2 %} and {% elif not loop.last %}, {% endif %}
             {%- endfor %}, {% endif %}alg. {{ filename.rsplit('.',1)[0] }}</td>
         <td>Created by/on:</td><td>{%- if b.find('algauthors/creation') %}
-            {%- for author in b.find('algauthors/creation') %}
-            <a href="../authors/{{author.findtext('surname','').strip('.,')|replace(' ','')}}{{author.findtext('firstname','').strip('.,')|replace(' ','')}}.html">{{author.findtext('surname','')}} {{author.findtext('firstname','')}}</a>{%- if author.findtext('date') %} ({{author.findtext('date')}}){% endif %}{% if not loop.last %}, {% endif %}
+            {%- for author in b.find('algauthors/creation') -%}
+            <a href="../authors/{{author.findtext('surname','').strip('.,')|replace(' ','')}}{{author.findtext('firstname','').strip('.,')|replace(' ','')}}.html">
+            {%- if loop.first %}{{author.findtext('surname','')}} {{author.findtext('firstname','')}}
+            {%- else %}{{author.findtext('firstname','')}} {{author.findtext('surname','')}}{% endif %}</a>
+            {%- if author.findtext('date') %} {{author.findtext('date')}}{% endif %}
+            {%- if loop.revindex == 2 %} and {% elif not loop.last %}, {% endif %}
             {%- endfor %}
         {% endif %}</td>
     </tr>
     <tr>
-        <td>Input data:</td><td><a href="../algorithms_data/{{filename}}" onclick="window.open('../algorithms_data/{{filename}}', '_blank','width=800,height=600'); return false;">{{filename}}</a></td>
+        <td>Input data:</td><td><a href="../algorithms_xml/{{filename}}" onclick="window.open('../algorithms_xml/{{filename}}', '_blank','width=800,height=600'); return false;">{{filename}}</a></td>
         <td>Modified by/on:</td><td>{%- if b.find('algauthors/modification') %}
             {%- for author in b.find('algauthors/modification') %}
-            <a href="../authors/{{author.findtext('surname','').strip('.,')|replace(' ','')}}{{author.findtext('firstname','').strip('.,')|replace(' ','')}}.html">{{author.findtext('surname','')}} {{author.findtext('firstname','')}}</a>{%- if author.findtext('date') %} ({{author.findtext('date')}}){% endif %}{% if not loop.last %}, {% endif %}
+            <a href="../authors/{{author.findtext('surname','').strip('.,')|replace(' ','')}}{{author.findtext('firstname','').strip('.,')|replace(' ','')}}.html">
+            {%- if loop.first %}{{author.findtext('surname','')}} {{author.findtext('firstname','')}}
+            {%- else %}{{author.findtext('firstname','')}} {{author.findtext('surname','')}}{% endif %}</a>
+            {%- if author.findtext('date') %} {{author.findtext('date')}}{% endif %}
+            {%- if loop.revindex == 2 %} and {% elif not loop.last %}, {% endif %}
             {%- endfor %}
         {% endif %}</td>
     </tr>

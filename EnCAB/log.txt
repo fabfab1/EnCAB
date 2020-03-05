@@ -1,4 +1,4 @@
-----------------------------------------------2020-03-05T11:05:14+01:00
+----------------------------------------------2020-03-05T11:13:57+00:00
  EnCAB: Energetic Calculator for Ancient Buildings
 -----------------------------------------------------------------------
 
@@ -14,8 +14,8 @@ Index template: "templates/index.html"
 [*] Generating indexes...
 [*] Importing algorithms data...
 [ERROR] Missing_file problems 
-    Harper_2016_519_2.xml:         material "conglomerate" not found.
     Harper_2016_520_1.xml:         algorithm_type "quarrying_conglomerate" not found, material "conglomerate" not found.
+    Harper_2016_519_2.xml:         material "conglomerate" not found.
 
 [*] Writing data...
 

@@ -1,7 +1,7 @@
 /*
  * style.css for EnCAB
- * old background color: LightBlue: #add8e6 rgb(173, 216, 230) 
- * new background color: #7498A8 rgb (116, 152, 168)
+ * background color: LightBlue: #add8e6 rgb(173, 216, 230) 
+ * alterative background color: #7498A8 rgb (116, 152, 168)
  */
 
 
@@ -13,7 +13,7 @@ html {
 
 
 body {
-    background-color: #7498A8;
+    background-color: #add8e6;
     margin: 20px 0;
     padding: 0 10px;
     font-family: "Verdana", Verdana, sans-serif;

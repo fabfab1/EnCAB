@@ -2,13 +2,13 @@
 
 <algorithm>
 
-<reference>MacCownHaines_1967_37</reference>
+<reference>McCownHaines_1967_37</reference>
 
 
 <biblioref>
 
   <source>
-    <author><surname>MacCown</surname><firstname>D.</firstname></author>
+    <author><surname>McCown</surname><firstname>D.</firstname></author>
     <author><surname>Haines</surname><firstname>R.</firstname></author>
     <year>1967</year>
     <pagenums>37</pagenums>
@@ -68,7 +68,7 @@
   </creation>
 
   <modification>
-    <author><surname>Buccellati</surname><firstname>F.</firstname><date>22.01.2021</date></author>
+    <author><surname></surname><firstname></firstname><date></date></author>
   </modification>
 
 </algauthors>

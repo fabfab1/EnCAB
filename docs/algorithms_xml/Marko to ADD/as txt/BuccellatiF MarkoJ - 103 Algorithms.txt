@@ -1,0 +1,8741 @@
+Di seguito sono riportati i file di input dell'algoritmo scritto da Buccellati, F. e Marko, J. Si tratta solo di file di input, utilizzati per generare la pubblicazione digitale www.EnCAB.net. Sono qui riportati in formato testo, ma possono essere trovati anche su GitHub sotto https://github.com/fabfab1/EnCAB. La pubblicazione è disponibile su Open Science Network (OSF) con un DOI stabile: 10.17605/OSF.IO/NMZXT
+
+
+
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Abrams_1989_70_1</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Abrams</surname><firstname>E.</firstname></author>
+    <year>1989</year>
+    <pagenums>70</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Abrams</surname><firstname>E.</firstname></author>
+    <year>1984</year>
+    <pagenums>190</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>quarrying tuff</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>stone</material>
+  <source_type>experimental archaeology</source_type>
+  <source_chronology></source_chronology>
+  <source_geography>Mesoamerica</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Stone quarrying</algorithm_statement>
+  <algorithm_math>1 p-d to quarry 750kg unworked stone</algorithm_math>
+  <variables>
+    <var1>
+      <unit>day</unit><description></description>
+      <op>var2 / 750</op>
+    </var1>
+    <var2>
+      <unit>kg</unit><description></description>
+      <op>var1 * 750</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.2.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Abrams_1989_70_2</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Abrams</surname><firstname>E.</firstname></author>
+    <year>1989</year>
+    <pagenums>70</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Abrams</surname><firstname>E.</firstname></author>
+    <year>1984</year>
+    <pagenums>190</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>earth digging</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>earth</material>
+  <source_type>experimental archaeology</source_type>
+  <source_chronology></source_chronology>
+  <source_geography>Mesoamerica</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Earth quarrying</algorithm_statement>
+  <algorithm_math>1 p-d to quarry 2.6 square meters earth</algorithm_math>
+  <variables>
+    <var1>
+      <unit>day</unit><description></description>
+      <op>var2 / 2.6</op>
+    </var1>
+    <var2>
+      <unit>m2</unit><description></description>
+      <op>var1 * 2.6</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes>Text does not give hours worked per day.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.2.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Abrams_1989_70_3</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Abrams</surname><firstname>E.</firstname></author>
+    <year>1989</year>
+    <pagenums>70</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Abrams</surname><firstname>E.</firstname></author>
+    <year>1984</year>
+    <pagenums>190</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>collecting water</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>water</material>
+  <source_type>experimental archaeology</source_type>
+  <source_chronology></source_chronology>
+  <source_geography>Mesoamerica</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Water collecting</algorithm_statement>
+  <algorithm_math>1 person collected 3000 litres in one hour</algorithm_math>
+  <variables>
+    <var1>
+      <unit>hr</unit><description></description>
+      <op>var2 / 3000</op>
+    </var1>
+    <var2>
+      <unit>l</unit><description></description>
+      <op>var1 * 3000</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Water collecting was converted from seconds to an hour - 10 litres per 12 seconds</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.2.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Abrams_1989_70_4</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Abrams</surname><firstname>E.</firstname></author>
+    <year>1989</year>
+    <pagenums>70</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Abrams</surname><firstname>E.</firstname></author>
+    <year>1984</year>
+    <pagenums>190</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>collecting grass</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>grass</material>
+  <source_type>experimental archaeology</source_type>
+  <source_chronology></source_chronology>
+  <source_geography>Mesoamerica</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Grass collecting</algorithm_statement>
+  <algorithm_math>1 p-d to collect 150kg grass</algorithm_math>
+  <variables>
+    <var1>
+      <unit>day</unit><description></description>
+      <op>var2 /150</op>
+    </var1>
+    <var2>
+      <unit>kg</unit><description></description>
+      <op>var1 * 150</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>23.2.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Abrams_1989_70_5</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Abrams</surname><firstname>E.</firstname></author>
+    <year>1989</year>
+    <pagenums>70</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Abrams</surname><firstname>E.</firstname></author>
+    <year>1984</year>
+    <pagenums>190</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>quarrying cobbles</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>stone</material>
+  <source_type>experimental archaeology</source_type>
+  <source_chronology></source_chronology>
+  <source_geography>Mesoamerica</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Collecting cobbles</algorithm_statement>
+  <algorithm_math>1 p-d to collect 7200kg cobbles</algorithm_math>
+  <variables>
+    <var1>
+      <unit>day</unit><description></description>
+      <op>var2 / 7200</op>
+    </var1>
+    <var2>
+      <unit>kg</unit><description></description>
+      <op>var1 * 7200</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>23.2.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Abrams_1995_197</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Abrams</surname><firstname>E.</firstname></author>
+    <year>1995</year>
+    <pagenums>197</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Foust and deSouza</surname><firstname></firstname></author>
+    <year>1978</year>
+    <pagenums>25</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>labor measuring</algorithm_type>
+  <position_in_process>production</position_in_process>
+  <material>Maize</material>
+  <source_type></source_type>
+  <source_chronology>Classic Maya</source_chronology>
+  <source_geography>Mesoamerica</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Measuring labor productivity as factor of number of workers</algorithm_statement>
+  <algorithm_math></algorithm_math>
+  <variables>
+    <var1>
+      <unit></unit><description></description>
+      <op></op>
+    </var1>
+    <var2>
+      <unit></unit><description></description>
+      <op></op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes>Abrams discusses efficiency of maize collecting as factor relating to number of workers: highest yield per worker is found with 4 workers.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.2.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Brunke_2016_261</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Brunke</surname><firstname>H.</firstname></author>
+    <year>2016</year>
+    <pagenums>261</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>mudbrick</algorithm_type>
+  <position_in_process>manufacture</position_in_process>
+  <material>mudbrick</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography>ane</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>mudbrick production in 1 person-day</algorithm_statement>
+  <algorithm_math>1,5 m3 of mudbrick produced in 1 p-d</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-d</unit><description></description>
+      <op>var2 / 1,5</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 1,5</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>The author refers to the weight of 5 kg of one mudbirck used for building ziggurat of Uruk.</general_notes>
+  <biblio_notes>The author does not mention how many person-hours were included in one person-day.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>15.6.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Brunke_2016_261</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Brunke</surname><firstname>H.</firstname></author>
+    <year>2016</year>
+    <pagenums>261</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Heimpel</surname><firstname>W.</firstname></author>
+    <year>2009</year>
+    <pagenums>223</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>mudbrick</algorithm_type>
+  <position_in_process>manufacture</position_in_process>
+  <material>mudbrick</material>
+  <source_type>text</source_type>
+  <source_chronology></source_chronology>
+  <source_geography>ane</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>A wage of mudbrick production for labourers was 5 litres of barley per 1 male person per day</algorithm_statement>
+  <algorithm_math>5 l of barley per 1 p-d</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-d</unit><description></description>
+      <op>var2 / 5</op>
+    </var1>
+    <var2>
+      <unit>l</unit><description></description>
+      <op>var1 * 5</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>The wage of barley in  historical textual materials differs between male and female workers</general_notes>
+  <biblio_notes>The author does not mention how many person-hours were included in one person-day.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>15.6.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Brunke_2016_261</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Brunke</surname><firstname>H.</firstname></author>
+    <year>2016</year>
+    <pagenums>261</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Heimpel</surname><firstname>W.</firstname></author>
+    <year>2009</year>
+    <pagenums>226</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>transport</algorithm_type>
+  <position_in_process>transport</position_in_process>
+  <material>mudbrick</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography>ane</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>One worker could carry 100 bricks at 5 kg over a distance of 972m in one day.</algorithm_statement>
+  <algorithm_math>500 kg of mudbricks carried over 972 m in 1 p-d</algorithm_math>
+  <variables>
+    <var1>
+      <unit>kg</unit><description>weight</description>
+      <op></op>
+    </var1>
+    <var2>
+      <unit>m</unit><description>distance</description>
+      <op></op>
+    </var2>
+  </variables>
+
+
+  <results>
+    <result1>
+      <value></value><description></description>
+      <op>(var1 / 972) * (var2 / 500)</op>
+      <unit>p-d</unit>
+    </result1>
+    <result2>
+      <value></value><description></description>
+      <op></op>
+      <unit></unit>
+    </result2>
+  </results>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Author refers to a weight of one brick that was aproximatrely 5 kg.</general_notes>
+  <biblio_notes>The author does not mention how many person-hours were included in one person-day.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>15.6.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Brunke_2016_261</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Brunke</surname><firstname>H.</firstname></author>
+    <year>2016</year>
+    <pagenums>261</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Heimpel</surname><firstname>W.</firstname></author>
+    <year>2009</year>
+    <pagenums>223</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>mudbrick</algorithm_type>
+  <position_in_process>manufacture</position_in_process>
+  <material>mudbrick</material>
+  <source_type>text</source_type>
+  <source_chronology></source_chronology>
+  <source_geography>ane</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>A wage of mudbrick production for labourers was 3 litres of barley per 1 female person per day</algorithm_statement>
+  <algorithm_math>3 l of barley per 1 p-d</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-d</unit><description></description>
+      <op>var2 / 3</op>
+    </var1>
+    <var2>
+      <unit>l</unit><description></description>
+      <op>var1 * 3</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>The wage of barley in  historical textual materials differs between male and female workers.</general_notes>
+  <biblio_notes>The author does not mention how many person-hours were included in one person-day.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>15.6.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Brysbaert_2015_94</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Brysbaert</surname><firstname>A.</firstname></author>
+    <year>2015</year>
+    <pagenums>94</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Bessac</surname><firstname></firstname></author>
+    <year>2007</year>
+    <pagenums>136</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>quarrying stone</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>stone</material>
+  <source_type>experimental archaeology</source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>0,1 m3 of stone was quarried in 1 p-h</algorithm_statement>
+  <algorithm_math>0,1 m3 made in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,1</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,1</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Author refers to 10 hour work days.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>14.6.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname>Buccellati</surname><firstname>F.</firstname><date>8.1.2020</date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Brysbaert_2015_94</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Brysbaert</surname><firstname>A.</firstname></author>
+    <year>2015</year>
+    <pagenums>94</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>De Haan</surname><firstname></firstname></author>
+    <year>2009</year>
+    <pagenums>3</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>quarrying stone</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>stone</material>
+  <source_type>experimental archaeology</source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>0,11 m3 of stone was quarried in 1 p-h</algorithm_statement>
+  <algorithm_math>0,11 m3 made in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,11</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,11</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Author refers to 10 hour work days.</general_notes>
+  <biblio_notes>Author mentions that experiments were done with very experienced workers.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>14.6.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname>Buccellati</surname><firstname>F.</firstname><date>8.1.2020</date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Brysbaert_2015_94</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Brysbaert</surname><firstname>A.</firstname></author>
+    <year>2015</year>
+    <pagenums>94</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Pakkanen</surname><firstname></firstname></author>
+    <year>2013</year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>quarrying stone</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>stone</material>
+  <source_type>experimental archaeology</source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>0,11 m3 of stone was quarried in 1 p-h</algorithm_statement>
+  <algorithm_math>0,11 m3 made in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,11</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,11</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Author refers to 10 hour work days.</general_notes>
+  <biblio_notes>Author refers to the work of unskilled workers.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>14.6.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname>Buccellati</surname><firstname>F.</firstname><date>8.1.2020</date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Brysbaert_2015_94</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Brysbaert</surname><firstname>A.</firstname></author>
+    <year>2015</year>
+    <pagenums>94</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Pakkanen</surname><firstname></firstname></author>
+    <year>2013</year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>quarrying stone</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>stone</material>
+  <source_type>experimental archaeology</source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>0,22 m3 of stone was quarried in 1 p-h</algorithm_statement>
+  <algorithm_math>0,22 m3 made in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,22</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,22</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Author refers to 10 hour work days.</general_notes>
+  <biblio_notes>Author refers to the work of skilled workers under supervision.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>14.6.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname>Buccellati</surname><firstname>F.</firstname><date>8.1.2020</date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Brysbaert_2015_96</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Brysbaert</surname><firstname>A.</firstname></author>
+    <year>2015</year>
+    <pagenums>96</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Pakkanen</surname><firstname></firstname></author>
+    <year>2013</year>
+    <pagenums>45</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>transport</algorithm_type>
+  <position_in_process>transport</position_in_process>
+  <material>stone</material>
+  <source_type>text</source_type>
+  <source_chronology></source_chronology>
+  <source_geography>classical - Greek</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Transportation</algorithm_statement>
+  <algorithm_math>Certain number of p-h = (kg -weight- / 1000) * (m -distance- / 0,007)</algorithm_math>
+  <variables>
+    <var1>
+      <unit>kg</unit><description>weight</description>
+      <op></op>
+    </var1>
+    <var2>
+      <unit>m</unit><description>distance</description>
+      <op></op>
+    </var2>
+  </variables>
+
+
+  <results>
+    <result1>
+      <value></value><description></description>
+      <op>(var1 / 1000) * ( var2 / 0,007)</op>
+      <unit>p-h</unit>
+    </result1>
+    <result2>
+      <value></value><description></description>
+      <op></op>
+      <unit></unit>
+    </result2>
+  </results>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>The author refers to human labour costs needed to bring oxen yokes to a certain place one kilometer away.</general_notes>
+  <biblio_notes>Data were already calculated by author in this position: 0,7 p-d/1ton/1km. Data were converted to person-hours as the author previously refers to 10 hour work days.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>14.6.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Brysbaert_2015_96</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Brysbaert</surname><firstname>A.</firstname></author>
+    <year>2015</year>
+    <pagenums>96</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>De Hann</surname><firstname></firstname></author>
+    <year>2009</year>
+    <pagenums>7</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>transport</algorithm_type>
+  <position_in_process>loading</position_in_process>
+  <material>stone</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Loading medium limestone blocks in 20 minutes by 4 men</algorithm_statement>
+  <algorithm_math>Loading and unloading of maximum 2,5 tonne blocks can be done in 1,33333 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 1,33333</op>
+    </var1>
+    <var2>
+      <unit>kg</unit><description></description>
+      <op>var1 * 1,33333</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>15.6.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Brysbaert_2015_96</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Brysbaert</surname><firstname>A.</firstname></author>
+    <year>2015</year>
+    <pagenums>96</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>De Hann</surname><firstname></firstname></author>
+    <year>2009</year>
+    <pagenums>7</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>transport</algorithm_type>
+  <position_in_process>loading</position_in_process>
+  <material>stone</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Loading large limestone blocks in 20 minutes by 8 men</algorithm_statement>
+  <algorithm_math>Loading and unloading of maximum 2,5 - 3,5 tonne blocks can be done in 2,66666 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 2,66666</op>
+    </var1>
+    <var2>
+      <unit>kg</unit><description></description>
+      <op>var1 * 2,66666</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes>In the algorithm, the maximum of weight was taken into account, which is 3500 kg.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>15.6.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Brysbaert_2015_98</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Brysbaert</surname><firstname>A.</firstname></author>
+    <year>2015</year>
+    <pagenums>98</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Delaine</surname><firstname>J.</firstname></author>
+    <year>1997</year>
+    <pagenums>107, 268</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>earth digging</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>earth</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Excavating earth and throwing behind in p-h</algorithm_statement>
+  <algorithm_math>1 m3 of soil in 1,5 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>m3</unit><description></description>
+      <op>var2 * 1</op>
+    </var1>
+    <var2>
+      <unit>p-h</unit><description></description>
+      <op>var1 / 1</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes>The author mentiones p-d as an unit. Data was converted to p-h and I assume that she refers to 10 hour work days as in the whole article.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>15.6.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Brysbaert_2015_98</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Brysbaert</surname><firstname>A.</firstname></author>
+    <year>2015</year>
+    <pagenums>98</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Delaine</surname><firstname>J.</firstname></author>
+    <year>1997</year>
+    <pagenums>107, 268</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>transport</algorithm_type>
+  <position_in_process>loading</position_in_process>
+  <material>earth</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Loading earth into baskets in p-h</algorithm_statement>
+  <algorithm_math>1 m3 of earth in 0,6 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>m3</unit><description></description>
+      <op>var2 * 1</op>
+    </var1>
+    <var2>
+      <unit>p-h</unit><description></description>
+      <op>var1 / 1</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes>The author mentiones p-d as an unit. Data was converted to p-h and I assume that she refers to 10 hour work days as in the whole article.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>15.6.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Burke_2012_149</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Burke</surname><firstname>A.</firstname></author>
+    <year>2012</year>
+    <pagenums>149</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Powell</surname><firstname></firstname></author>
+    <year>1990</year>
+    <pagenums>490</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>earth digging</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>earth</material>
+  <source_type>text</source_type>
+  <source_chronology>bronze age</source_chronology>
+  <source_geography>ane</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>One labourer dag 0,3 m3 of soil in one hour</algorithm_statement>
+  <algorithm_math>0,3 m3 dag in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,3</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,3</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>The author mentions 10 hour work days. Data was converted from p-d to p-h,</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>12.6.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Burke_2012_150</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Burke</surname><firstname>A.</firstname></author>
+    <year>2012</year>
+    <pagenums>150</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>mudbrick</algorithm_type>
+  <position_in_process>manufacture</position_in_process>
+  <material>mudbrick</material>
+  <source_type>ethnographic</source_type>
+  <source_chronology>Bronze Age</source_chronology>
+  <source_geography>ane</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>0,128 m3 of mudbricks was made in 1 p-h</algorithm_statement>
+  <algorithm_math>0,128 m3 made in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,128</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,128</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from 10 hours work days as author refers to. </general_notes>
+  <biblio_notes>Bricks are from the region of Iran. Brick dimensions are 20 x 20 x 4 cm and the number of made bricks per day was 800.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>13.6.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Burke_2012_150</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Burke</surname><firstname>A.</firstname></author>
+    <year>2012</year>
+    <pagenums>150</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Fathy</surname><firstname></firstname></author>
+    <year>1969</year>
+    <pagenums>255</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>mudbrick</algorithm_type>
+  <position_in_process>manufacture</position_in_process>
+  <material>mudbrick</material>
+  <source_type>ethnographic</source_type>
+  <source_chronology>Bronze Age</source_chronology>
+  <source_geography>ane</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>0,133 m3 of mudbricks was made in 1 p-h</algorithm_statement>
+  <algorithm_math>0,133 m3 made in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,133</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,133</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from 10 hours work days as author refers to. </general_notes>
+  <biblio_notes>Bricks are from the region of Egypt. Brick dimensions are 23 x 11 x 7 cm and the number of made bricks per day was 750.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>13.6.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Burke_2012_150</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Burke</surname><firstname>A.</firstname></author>
+    <year>2012</year>
+    <pagenums>150</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Dalokay</surname><firstname></firstname></author>
+    <year>1969</year>
+    <pagenums>119</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>mudbrick</algorithm_type>
+  <position_in_process>manufacture</position_in_process>
+  <material>mudbrick</material>
+  <source_type>ethnographic</source_type>
+  <source_chronology>Bronze Age</source_chronology>
+  <source_geography>ane</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>0,137 m3 of mudbricks was made in 1 p-h</algorithm_statement>
+  <algorithm_math>0,137 m3 made in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,137</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,137</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from 10 hours work days as author refers to. </general_notes>
+  <biblio_notes>Bricks are from the region of Turkey. Brick dimensions are 38 x 25 x 12 cm and the number of made bricks per day was 120.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>13.6.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Burke_2012_150</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Burke</surname><firstname>A.</firstname></author>
+    <year>2012</year>
+    <pagenums>150</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Hall</surname><firstname></firstname></author>
+    <year>1973</year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>mudbrick</algorithm_type>
+  <position_in_process>manufacture</position_in_process>
+  <material>mudbrick</material>
+  <source_type>ethnographic</source_type>
+  <source_chronology>Bronze Age</source_chronology>
+  <source_geography>ane</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>0,18 m3 of mudbricks was made in 1 p-h</algorithm_statement>
+  <algorithm_math>0,18 m3 made in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,18</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,18</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from 10 hours work days as author refers to. </general_notes>
+  <biblio_notes>Bricks are from the region of Turkey. Brick dimensions are 30 x 30 x 15 cm or 30 x 15 x 10 cm. The number of different bricks in total is half on half and the number of made bricks per day was 265.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>13.6.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Burke_2012_150</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Burke</surname><firstname>A.</firstname></author>
+    <year>2012</year>
+    <pagenums>150</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Mallowan</surname><firstname></firstname></author>
+    <year>1966</year>
+    <pagenums>53</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>mudbrick</algorithm_type>
+  <position_in_process>manufacture</position_in_process>
+  <material>mudbrick</material>
+  <source_type>ethnographic</source_type>
+  <source_chronology>Bronze Age</source_chronology>
+  <source_geography>ane</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>0,239 m3 of mudbricks was made in 1 p-h</algorithm_statement>
+  <algorithm_math>0,239 m3 made in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,239</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,239</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from 10 hours work days as author refers to. </general_notes>
+  <biblio_notes>Bricks are from the region of Iraq. Brick dimensions are 35 x 35 x 13 cm and the number of made bricks per day was 150.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>13.6.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Burke_2012_150</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Burke</surname><firstname>A.</firstname></author>
+    <year>2012</year>
+    <pagenums>150</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Damluji</surname><firstname></firstname></author>
+    <year>1992</year>
+    <pagenums>130</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>mudbrick</algorithm_type>
+  <position_in_process>manufacture</position_in_process>
+  <material>mudbrick</material>
+  <source_type>ethnographic</source_type>
+  <source_chronology>Bronze Age</source_chronology>
+  <source_geography>ane</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>0,267 m3 of mudbricks was made in 1 p-h</algorithm_statement>
+  <algorithm_math>0,267 m3 made in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,267</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,267</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from 10 hours work days as author refers to. </general_notes>
+  <biblio_notes>Bricks are from the region of Yemen. Brick dimensions are 46 x 31 x 5 cm and the number of made bricks per day was 375.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>13.6.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Burke_2012_150</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Burke</surname><firstname>A.</firstname></author>
+    <year>2012</year>
+    <pagenums>150</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Reisner</surname><firstname></firstname></author>
+    <year>1931</year>
+    <pagenums>73</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>mudbrick</algorithm_type>
+  <position_in_process>manufacture</position_in_process>
+  <material>mudbrick</material>
+  <source_type>ethnographic</source_type>
+  <source_chronology>Bronze Age</source_chronology>
+  <source_geography>ane</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>0,768 m3 of mudbricks was made in 1 p-h</algorithm_statement>
+  <algorithm_math>0,768 m3 made in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,768</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,768</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from 10 hours work days as author refers to. </general_notes>
+  <biblio_notes>Bricks are from the region of Egypt. Brick dimensions are 40 x 20 x 12 cm and the number of made bricks per day was 800.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>13.6.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Coles_1973_73</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Coles</surname><firstname>J.</firstname></author>
+    <year>1973</year>
+    <pagenums>73</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>material loading</algorithm_type>
+  <position_in_process>loading</position_in_process>
+  <material>chalk</material>
+  <source_type>experimental archaeology</source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>loading chalk in p-h</algorithm_statement>
+  <algorithm_math>250 kg of chalk in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 250kg</op>
+    </var1>
+    <var2>
+      <unit>kg</unit><description></description>
+      <op>var1 * 250</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes>The author refers to use of ancient tools and baskets with an average load of 13,5 kg.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.6.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Fitzsimons_2006_83</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Fitzsimons</surname><firstname>R.</firstname></author>
+    <year>2006</year>
+    <pagenums>83</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Wright</surname><firstname></firstname></author>
+    <year>1987</year>
+    <pagenums>174</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>earth digging</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>earth</material>
+  <source_type>experimental archaeology</source_type>
+  <source_chronology>modern</source_chronology>
+  <source_geography>classical - greek</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Digging one m3 of soil in one person hour</algorithm_statement>
+  <algorithm_math>1 m3 dug in 1 p-d</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-d</unit><description></description>
+      <op>var2 / 1</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 1</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>The author does not mention the number of hours worked in one person-day</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>24.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Fitzsimons_2014_96</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Fitzsimons</surname><firstname>R.</firstname></author>
+    <year>2014</year>
+    <pagenums>96</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Time-Life Books</surname><firstname></firstname></author>
+    <year>1993</year>
+    <pagenums>47-48</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>transport</algorithm_type>
+  <position_in_process>transport</position_in_process>
+  <material>stone</material>
+  <source_type>experimental archaeology</source_type>
+  <source_chronology>modern</source_chronology>
+  <source_geography>Egypt</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Transporting a 7 ton stone statue by 130 men through a distance of 1 km in 17 days</algorithm_statement>
+  <algorithm_math>Number of p-d = (kg -weight- / 1000) * (m -distance- / 3,1578)</algorithm_math>
+  <variables>
+    <var1>
+      <unit>kg</unit><description>weight</description>
+      <op></op>
+    </var1>
+    <var2>
+      <unit>m</unit><description>distance</description>
+      <op></op>
+    </var2>
+  </variables>
+
+
+  <results>
+    <result1>
+      <value></value><description></description>
+      <op>(var1 / 1000) * (var2 / 3,1578)</op>
+      <unit>p-d</unit>
+    </result1>
+  </results>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>The author does not mention the number of hours worked in one person-day</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>11.6.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Fitzsimons_2014_97</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Fitzsimons</surname><firstname>R.</firstname></author>
+    <year>2014</year>
+    <pagenums>97</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Cavanagh</surname><firstname></firstname></author>
+    <year>1999</year>
+    <pagenums>96</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>transport</algorithm_type>
+  <position_in_process>transport</position_in_process>
+  <material>stone</material>
+  <source_type>experimental archaeology</source_type>
+  <source_chronology>modern</source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>10 men are possible to transport 1 ton</algorithm_statement>
+  <algorithm_math></algorithm_math>
+  <variables>
+    <var1>
+      <unit></unit><description></description>
+      <op></op>
+    </var1>
+    <var2>
+      <unit></unit><description></description>
+      <op></op>
+    </var2>
+
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Author refers to managable transportation of lintel blocks. One weights 1000kg and 10 men can manage it to transport.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>12.6.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_206</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>206</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Searle</surname><firstname></firstname></author>
+    <year>1935</year>
+    <pagenums>407</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>plaster production</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>limestone</material>
+  <source_type>ethnographic</source_type>
+  <source_chronology>modern</source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>burning limestone in a kiln</algorithm_statement>
+  <algorithm_math>time to burn limestone in one kiln</algorithm_math>
+  <variables>
+    <var1>
+      <unit>kiln</unit><description></description>
+      <op>var2 / 6</op>
+    </var1>
+    <var2>
+      <unit>days</unit><description></description>
+      <op>var1 * 6</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>21.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_519</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>519</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Homsher</surname><firstname></firstname></author>
+    <year>2012</year>
+    <pagenums>18</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>mudbrick</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>mudbrick</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>1 cubic metre of dried brick weights 1440 kg</algorithm_statement>
+  <algorithm_math>1 m3 weights 1440 kg</algorithm_math>
+  <variables>
+    <var1>
+      <unit>m3</unit><description></description>
+      <op>var2 / 1440</op>
+    </var1>
+    <var2>
+      <unit>kg</unit><description></description>
+      <op>var1 * 1440</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>21.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_519</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>519</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Como</surname><firstname></firstname></author>
+    <year>2005</year>
+    <pagenums>128</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>material qualities</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>conglomerate</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>1 cubic metre of conglomerate weights 2500 kg</algorithm_statement>
+  <algorithm_math>1 m3 weights 2500 kg</algorithm_math>
+  <variables>
+    <var1>
+      <unit>m3</unit><description></description>
+      <op>var2 / 2500</op>
+    </var1>
+    <var2>
+      <unit>kg</unit><description></description>
+      <op>var1 * 2500</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_519</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>519</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Hurst</surname><firstname></firstname></author>
+    <year>1865</year>
+    <pagenums>106</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>material qualities</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>clay</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>1 cubic metre of clay weights 1800 kg</algorithm_statement>
+  <algorithm_math>1 m3 weights 1800 kg</algorithm_math>
+  <variables>
+    <var1>
+      <unit>m3</unit><description></description>
+      <op>var2 / 1800</op>
+    </var1>
+    <var2>
+      <unit>kg</unit><description></description>
+      <op>var1 * 1800</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_519</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>519</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Gillete</surname><firstname></firstname></author>
+    <year>1920</year>
+    <pagenums>113</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>material qualities</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>earth</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>1 cubic metre of earth weights 1400 kg</algorithm_statement>
+  <algorithm_math>1 m3 weights 1400 kg</algorithm_math>
+  <variables>
+    <var1>
+      <unit>m3</unit><description></description>
+      <op>var2 / 1400</op>
+    </var1>
+    <var2>
+      <unit>kg</unit><description></description>
+      <op>var1 * 1400</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_519</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>519</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Hurst</surname><firstname></firstname></author>
+    <year>1899</year>
+    <pagenums>338</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>material qualities</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>limestone</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>1 cubic metre of limestone rubble weights 1400 kg</algorithm_statement>
+  <algorithm_math>1 m3 weights 1400 kg</algorithm_math>
+  <variables>
+    <var1>
+      <unit>m3</unit><description></description>
+      <op>var2 / 1400</op>
+    </var1>
+    <var2>
+      <unit>kg</unit><description></description>
+      <op>var1 * 1400</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_519</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>519</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Hornbostel</surname><firstname></firstname></author>
+    <year>1991</year>
+    <pagenums>83</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>material qualities</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>limestone</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>1 cubic metre of solid limestone weights 2400 kg</algorithm_statement>
+  <algorithm_math>1 m3 weights 2400 kg</algorithm_math>
+  <variables>
+    <var1>
+      <unit>m3</unit><description></description>
+      <op>var2 / 2400</op>
+    </var1>
+    <var2>
+      <unit>kg</unit><description></description>
+      <op>var1 * 2400</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_519</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>519</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Arthur</surname><firstname></firstname></author>
+    <year>1913</year>
+    <pagenums>407</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>material qualities</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>limestone</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>1 cubic metre of porous limestone weights 2400 kg</algorithm_statement>
+  <algorithm_math>1 m3 weights 2400 kg</algorithm_math>
+  <variables>
+    <var1>
+      <unit>m3</unit><description></description>
+      <op>var2 / 2400</op>
+    </var1>
+    <var2>
+      <unit>kg</unit><description></description>
+      <op>var1 * 2400</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_519</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>519</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>material qualities</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>limestone</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>1 cubic metre of hydrated limestone weights 1540 kg</algorithm_statement>
+  <algorithm_math>1 m3 weights 2400 kg</algorithm_math>
+  <variables>
+    <var1>
+      <unit>m3</unit><description></description>
+      <op>var2 / 1540</op>
+    </var1>
+    <var2>
+      <unit>kg</unit><description></description>
+      <op>var1 * 1540</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_519</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>519</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>material qualities</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>wood</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>1 cubic metre of pine wood weights 800 kg</algorithm_statement>
+  <algorithm_math>1 m3 weights 800 kg</algorithm_math>
+  <variables>
+    <var1>
+      <unit>m3</unit><description></description>
+      <op>var2 / 800</op>
+    </var1>
+    <var2>
+      <unit>kg</unit><description></description>
+      <op>var1 * 800</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_520</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>520</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Lehner</surname><firstname></firstname></author>
+    <year>1997</year>
+    <pagenums>206-7</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>quarrying conglomerate</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>conglomerate</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>conglomerate was quarried in one person-hour</algorithm_statement>
+  <algorithm_math>0,089 m3 quarried in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,089</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,089</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes>To quote Harper: "Lehner notes that the quarrymen were barefoot and used only hand tools".</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_520</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>520</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Lehner</surname><firstname></firstname></author>
+    <year>1997</year>
+    <pagenums>206-7</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>quarrying stone</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>limestone</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>limestone was quarried in one person-hour</algorithm_statement>
+  <algorithm_math>0,089 m3 quarried in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,089</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,089</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes>To quote Harper: "Lehner notes that the quarrymen were barefoot and used only hand tools".</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname>Buccellati</surname><firstname>F.</firstname><date>8.1.2020</date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_521</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>521</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Rea</surname><firstname></firstname></author>
+    <year>1902</year>
+    <pagenums>48</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>earth digging</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>earth</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>hard earth was dag in one person-hour</algorithm_statement>
+  <algorithm_math>0,3 m3 dag in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,3</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,3</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Hard packed, rocky soils and marls were excavating</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_521</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>521</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Rea</surname><firstname></firstname></author>
+    <year>1902</year>
+    <pagenums>48</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>earth digging</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>earth</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>earth was dag in one person-hour</algorithm_statement>
+  <algorithm_math>0,54 m3 dag in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,54</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,54</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Lighter packed soils for brick mortar or plaster were excavating</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_521</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>521</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>wood cutting</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>wood</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>wood was cut in one person-hour</algorithm_statement>
+  <algorithm_math>0,2 m3 cut in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,2</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,2</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>According to Harper, trees with 0,15 m in diameter and with 5,5 m height were cut. The action includes preparing the tree by removing bark, limbs, and top.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_522</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>522</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Devolder</surname><firstname></firstname></author>
+    <year>2013</year>
+    <pagenums>24-7</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>transport</algorithm_type>
+  <position_in_process>transport</position_in_process>
+  <material></material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Transportation</algorithm_statement>
+  <algorithm_math>Certain number of p-h = (kg -weight- / 2100) * (2 * km -distance- / 1,67)</algorithm_math>
+  <variables>
+    <var1>
+      <unit>kg</unit><description>weight</description>
+      <op></op>
+    </var1>
+    <var2>
+      <unit>km</unit><description>distance</description>
+      <op></op>
+    </var2>
+  </variables>
+
+
+  <results>
+    <result1>
+      <value></value><description></description>
+      <op>(var1 / 2100) * (2 * var2 / 1,67)</op>
+      <unit>p-h</unit>
+    </result1>
+  </results>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>The capacity of the Wagon is under 2100 kg and it is dragged by single ox over a flat surface. This rate includes the return trip and relies on a walking speed of 1,67 km/h.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_522</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>522</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Devolder</surname><firstname></firstname></author>
+    <year>2013</year>
+    <pagenums>24-7</pagenums>
+  </cited>
+
+  <cited>
+    <author><surname>Atkinson</surname><firstname></firstname></author>
+    <year>1961</year>
+    <pagenums>297</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>transport</algorithm_type>
+  <position_in_process>transport</position_in_process>
+  <material></material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Transportation</algorithm_statement>
+  <algorithm_math>Certain number of p-h = (kg -weight- / 2100) * (2 * km -distance- / 1,67) * 450 percent</algorithm_math>
+  <variables>
+    <var1>
+      <unit>kg</unit><description>weight</description>
+      <op></op>
+    </var1>
+    <var2>
+      <unit>km</unit><description>distance</description>
+      <op></op>
+    </var2>
+    <var3>
+      <unit>percent</unit><description>labor</description>
+      <op></op>
+    </var3>
+  </variables>
+
+
+  <results>
+    <result1>
+      <value></value><description></description>
+      <op>(var1 / 2100) * (2 * var2 / 1,67) * var3</op>
+      <unit>p-h</unit>
+    </result1>
+  </results>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>The capacity of the Wagon is under 2100 kg and it is dragged by single ox over a flat surface. This rate includes the return trip and relies on a walking speed of 1,67 km/h.</general_notes>
+  <biblio_notes>According to Atkinson, the transport labor is increased by 450% in a very steep terrain, slopes of 9Â°</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_524</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>524</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Murakami</surname><firstname></firstname></author>
+    <year>2010</year>
+    <pagenums>203</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>mudbrick</algorithm_type>
+  <position_in_process>manufacture</position_in_process>
+  <material>mudbrick</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>making mudbricks in one person-hour</algorithm_statement>
+  <algorithm_math>0,138 m3 made in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,138</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,138</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_525</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>525</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Russel and Dahlin</surname><firstname></firstname></author>
+    <year>2007</year>
+    <pagenums>417</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>lime production</algorithm_type>
+  <position_in_process>manufacture</position_in_process>
+  <material>limestone</material>
+  <source_type>experimental archaeology</source_type>
+  <source_chronology>modern</source_chronology>
+  <source_geography>Mesoamerica</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>making lime in one person-hour</algorithm_statement>
+  <algorithm_math>0,004 m3 made in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,004</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,004</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>According to the author, producing lime includes collecting and transporting all materials (firewood, limestone) and slakng of the lime. Materials are asumed to be close to the site of production.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_525</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>525</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Murakami</surname><firstname></firstname></author>
+    <year>2010</year>
+    <pagenums>205</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>plaster production</algorithm_type>
+  <position_in_process>manufacture</position_in_process>
+  <material>plaster</material>
+  <source_type>experimental archaeology</source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>making plaster in one person-hour</algorithm_statement>
+  <algorithm_math>0,220 m3 made in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,220</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,220</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_525</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>525</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Smailes</surname><firstname></firstname></author>
+    <year>2010</year>
+    <pagenums>43</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>wall building</algorithm_type>
+  <position_in_process>construction</position_in_process>
+  <material>mudbrick</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Building a brick wall in one person-hour</algorithm_statement>
+  <algorithm_math>0,1 m3 built in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,1</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,1</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>According to the author, building a wall includes mixing mortar as needed. The cost of water for the mortar is not included and can be added.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_526</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>526</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Hurst</surname><firstname></firstname></author>
+    <year>1865</year>
+    <pagenums>217</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>wall building</algorithm_type>
+  <position_in_process>construction</position_in_process>
+  <material>stone</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Building a dry rubble stone wall in one person-hour</algorithm_statement>
+  <algorithm_math>0,159 m3 built in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,159</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,159</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>No mortar was used for building a rubble stone wall.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_526</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>526</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Hurst</surname><firstname></firstname></author>
+    <year>1865</year>
+    <pagenums>217</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>wall building</algorithm_type>
+  <position_in_process>construction</position_in_process>
+  <material>stone</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Building a rubble stone wall in one person-hour</algorithm_statement>
+  <algorithm_math>0,159 m3 built in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,137</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,137</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>The mortar was used for building a stone rubble wall. The cost of gathering water for the mortar was not added.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_526</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>526</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Mayes</surname><firstname></firstname></author>
+    <year>1862</year>
+    <pagenums>24</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>wall building</algorithm_type>
+  <position_in_process>construction</position_in_process>
+  <material>stone</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Building an ashlar stone wall in one person-hour</algorithm_statement>
+  <algorithm_math>0,034 m3 built in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,034</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,034</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes>Building ashlar walls with small blocks approximately 0.1 - 0.2 m3</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>23.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_527</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>527</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Mayes</surname><firstname></firstname></author>
+    <year>1862</year>
+    <pagenums>24</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>wall building</algorithm_type>
+  <position_in_process>construction</position_in_process>
+  <material>stone</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Building an ashlar stone wall in one person-hour</algorithm_statement>
+  <algorithm_math>0,024 m3 built in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,024</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,024</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes>Building ashlar walls with medium blocks approximately 0.2 - 0.5 m3</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>23.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_527</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>527</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Mayes</surname><firstname></firstname></author>
+    <year>1862</year>
+    <pagenums>24</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>wall building</algorithm_type>
+  <position_in_process>construction</position_in_process>
+  <material>stone</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Building an ashlar stone wall in one person-hour</algorithm_statement>
+  <algorithm_math>0,019 m3 built in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,019</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,019</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes>Building ashlar walls with medium blocks approximately from 0.5 + m3</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>23.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_527</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>527</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Lekson</surname><firstname></firstname></author>
+    <year>1984</year>
+    <pagenums>280-1</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>floor building</algorithm_type>
+  <position_in_process>construction</position_in_process>
+  <material>earth</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography>North America</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Building floor in one person-hour</algorithm_statement>
+  <algorithm_math>0,4 m3 built in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,4</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,4</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>It does not include any costs connected to acquiring and transporting material.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>23.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_527</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>527</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Lekson</surname><firstname></firstname></author>
+    <year>1984</year>
+    <pagenums>280-1</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>roof building</algorithm_type>
+  <position_in_process>construction</position_in_process>
+  <material>earth, wood</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography>North America</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Building roof in one person-hour</algorithm_statement>
+  <algorithm_math>0,4 m3 built in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,4</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,4</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>It does not include any costs connected to acquiring and transporting material.</general_notes>
+  <biblio_notes>Author deals with costs for Anasazi roof constructions.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>23.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_528</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>528</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Hurst</surname><firstname></firstname></author>
+    <year>1865</year>
+    <pagenums>217</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>sculpturing</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>stone</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Dressing softer stones in one person hour</algorithm_statement>
+  <algorithm_math>0,929 m2 dressed in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,929</op>
+    </var1>
+    <var2>
+      <unit>m2</unit><description></description>
+      <op>var1 * 0,929</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>A chisel was used for dressing.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>23.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_528</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>528</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Hurst</surname><firstname></firstname></author>
+    <year>1865</year>
+    <pagenums>217</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>sculpturing</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>stone</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Dressing harder stones in one person hour</algorithm_statement>
+  <algorithm_math>0,232 m2 dressed in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,232</op>
+    </var1>
+    <var2>
+      <unit>m2</unit><description></description>
+      <op>var1 * 0,232</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>A hammer was used for dressing.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>23.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_529</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>529</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Murakami</surname><firstname></firstname></author>
+    <year>2015</year>
+    <pagenums>273</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>plaster applying</algorithm_type>
+  <position_in_process>construction</position_in_process>
+  <material>clay</material>
+  <source_type>experimental archaeology</source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Applying clay plaster to walls in one person hour</algorithm_statement>
+  <algorithm_math>0,8 m2 dressed in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,8</op>
+    </var1>
+    <var2>
+      <unit>m2</unit><description></description>
+      <op>var1 * 0,8</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>According to the author, clay plaster of  5 cm thickness was applied to walls including mixing and smoothing it.</general_notes>
+  <biblio_notes>The application was done to stone walls using a trowel.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>23.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_529</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>529</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Murakami</surname><firstname></firstname></author>
+    <year>2015</year>
+    <pagenums>273</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>plaster applying</algorithm_type>
+  <position_in_process>construction</position_in_process>
+  <material>clay</material>
+  <source_type>experimental archaeology</source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Applying clay plaster to floors in one person hour</algorithm_statement>
+  <algorithm_math>5,69 m2 dressed in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 5,69</op>
+    </var1>
+    <var2>
+      <unit>m2</unit><description></description>
+      <op>var1 * 5,69</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>According to the author, clay plaster of  5 cm thickness was applied to floors by dumping and leveling it. Costs include mixing and smoothing the plaster.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>23.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_529</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>529</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Murakami</surname><firstname></firstname></author>
+    <year>2015</year>
+    <pagenums>273</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>plaster applying</algorithm_type>
+  <position_in_process>construction</position_in_process>
+  <material>lime</material>
+  <source_type>experimental archaeology</source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Applying lime plaster to walls in one person hour</algorithm_statement>
+  <algorithm_math>1,3 m2 dressed in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 1,3</op>
+    </var1>
+    <var2>
+      <unit>m2</unit><description></description>
+      <op>var1 * 1,3</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>According to the author, a 2 millimeters thin layer of lime plaster was applied and smoothed to walls.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>23.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_530</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>530</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Murakami</surname><firstname></firstname></author>
+    <year>2015</year>
+    <pagenums>273</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>plaster applying</algorithm_type>
+  <position_in_process>construction</position_in_process>
+  <material>lime</material>
+  <source_type>experimental archaeology</source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Applying lime plaster to floors in one person hour</algorithm_statement>
+  <algorithm_math>4,31 m2 dressed in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 4,31</op>
+    </var1>
+    <var2>
+      <unit>m2</unit><description></description>
+      <op>var1 * 4,31</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>According to the author, a 2 millimeters thin layer of lime plaster was applied and smoothed to floors.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>23.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Kerig_2007_2</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Kerig</surname><firstname>T.</firstname></author>
+    <year>2007</year>
+    <pagenums>2</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Luley</surname><firstname></firstname></author>
+    <year>1990</year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>house building</algorithm_type>
+  <position_in_process>construction</position_in_process>
+  <material></material>
+  <source_type></source_type>
+  <source_chronology>Neolithic</source_chronology>
+  <source_geography>Europe</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement></algorithm_statement>
+  <algorithm_math>1 house built in 2900 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 * 2900</op>
+    </var1>
+    <var2>
+      <unit>house</unit><description></description>
+      <op>var1 / 2900</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Author refers to a 22m long-house of Western Germany. with an use of Neolithic tools.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>29.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Milner_2009_108</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Milner</surname><firstname>G.</firstname></author>
+    <year>2009</year>
+    <pagenums>108</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>earth digging</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>earth</material>
+  <source_type>experimental archaeology</source_type>
+  <source_chronology>modern</source_chronology>
+  <source_geography>Mesoamerica</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>1 p-h excavating average 1,64 m3 of soil</algorithm_statement>
+  <algorithm_math>1 p-h dig 1,64 m3</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 1,64</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 1,64</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Author refers to 5 hour work days. Stone hoes were used for excavating the soil.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>26.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2016_106</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2016</year>
+    <pagenums>106</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Gillette</surname><firstname></firstname></author>
+    <year>1907</year>
+    <pagenums>603-4</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>earth digging</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>earth</material>
+  <source_type></source_type>
+  <source_chronology>modern</source_chronology>
+  <source_geography>Eurasia</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>1 p-h  to cut out sod in m3 </algorithm_statement>
+  <algorithm_math>1,254 m3 of sod in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 1,254</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 1,254</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 10 hour work days.</general_notes>
+  <biblio_notes>A shovel with a blade of 10cm wide and 12cm long was used for the labor.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>27.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2016_106</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2016</year>
+    <pagenums>106</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>US Commission of Fish and Fisheries</surname><firstname></firstname></author>
+    <year>1886</year>
+    <pagenums>497</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>earth digging</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>earth</material>
+  <source_type></source_type>
+  <source_chronology>modern</source_chronology>
+  <source_geography>Eurasia</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>1 p-h  to cut out sod in m3 </algorithm_statement>
+  <algorithm_math>1,254 m3 of sod in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 1,776</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 1,776</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 10 hour work days.</general_notes>
+  <biblio_notes>A knife was used for cutting out 15cm deep blocks.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>27.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2016_106</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2016</year>
+    <pagenums>106</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Radford</surname><firstname></firstname></author>
+    <year>1913</year>
+    <pagenums>129</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>earth digging</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>earth</material>
+  <source_type></source_type>
+  <source_chronology>modern</source_chronology>
+  <source_geography>Eurasia</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>1 p-h  to shovel loam in m3 </algorithm_statement>
+  <algorithm_math>0,76 m3 of loam in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,76</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,76</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 10 hour work days.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>27.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2016_106</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2016</year>
+    <pagenums>106</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Gillette</surname><firstname></firstname></author>
+    <year>1920</year>
+    <pagenums>113</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>earth digging</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>earth</material>
+  <source_type></source_type>
+  <source_chronology>modern</source_chronology>
+  <source_geography>Eurasia</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>1 p-h  to shovel loam in m3 </algorithm_statement>
+  <algorithm_math>0,89 m3 of loam in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,89</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,89</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 10 hour work days.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>27.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2017_16</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2017</year>
+    <pagenums>16</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>earth digging</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>earth</material>
+  <source_type>text</source_type>
+  <source_chronology>Middle Ages</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>excavating soft soil in minimum low skill rate</algorithm_statement>
+  <algorithm_math>0,625 m3 soft soil in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,625</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,625</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 8 hour work days.</general_notes>
+  <biblio_notes>Author distinguised two skill rates, minimum and maximum low skill rate. He operates with addiontional +10% of labour as a high-skilled rate or labour under superviosion.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>20.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2017_16</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2017</year>
+    <pagenums>16</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>earth digging</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>earth</material>
+  <source_type>text</source_type>
+  <source_chronology>Middle Ages</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>excavating soft soil in maximum low skill rate</algorithm_statement>
+  <algorithm_math>1,19375 m3 soft soil in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 1,19375</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 1,19375</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 8 hour work days.</general_notes>
+  <biblio_notes>Author distinguised two skill rates, minimum and maximum low skill rate. He operates with addiontional +10% of labour as a high-skilled rate or labour under supervision.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>24.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2017_16</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2017</year>
+    <pagenums>16</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>earth digging</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>earth</material>
+  <source_type>text</source_type>
+  <source_chronology>Middle Ages</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>excavating medium-hard soil in minimum low skill rate</algorithm_statement>
+  <algorithm_math>0,4775 m3 medium-hard soil in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,4775</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,4775</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 8 hour work days.</general_notes>
+  <biblio_notes>Author distinguised two skill rates, minimum and maximum low skill rate. He operates with addiontional +10% of labour as a high-skilled rate or labour under supervision.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>24.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2017_16</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2017</year>
+    <pagenums>16</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>earth digging</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>earth</material>
+  <source_type>text</source_type>
+  <source_chronology>Middle Ages</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>excavating medium-hard soil in maximum low skill rate</algorithm_statement>
+  <algorithm_math>1,2225 m3 medium-hard soil in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 1,2225</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 1,12225</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 8 hour work days.</general_notes>
+  <biblio_notes>Author distinguised two skill rates, minimum and maximum low skill rate. He operates with addiontional +10% of labour as a high-skilled rate or labour under supervision.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>24.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2017_16</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2017</year>
+    <pagenums>16</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>earth digging</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>earth</material>
+  <source_type>text</source_type>
+  <source_chronology>Middle Ages</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>excavating hard soil in minimum low skill rate</algorithm_statement>
+  <algorithm_math>0,28625 m3 hard soil in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,28625</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,28625</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 8 hour work days.</general_notes>
+  <biblio_notes>Author distinguised two skill rates, minimum and maximum low skill rate. He operates with addiontional +10% of labour as a high-skilled rate or labour under supervision.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>24.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2017_16</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2017</year>
+    <pagenums>16</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>earth digging</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>earth</material>
+  <source_type>text</source_type>
+  <source_chronology>Middle Ages</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>excavating hard soil in maximum low skill rate</algorithm_statement>
+  <algorithm_math>0,85 m3 hard soil in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,85</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,85</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 8 hour work days.</general_notes>
+  <biblio_notes>Author distinguised two skill rates, minimum and maximum low skill rate. He operates with addiontional +10% of labour as a high-skilled rate or labour under supervision.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>24.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2017_16</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2017</year>
+    <pagenums>16</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>quarrying tuff</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>stone</material>
+  <source_type>text</source_type>
+  <source_chronology>Middle Ages</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>quarrying tuff in minimum low skill rate</algorithm_statement>
+  <algorithm_math>0,25 m3 tuff quarried in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,25</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,25</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 8 hour work days.</general_notes>
+  <biblio_notes>Author distinguised two skill rates, minimum and maximum low skill rate. He operates with addiontional +10% of labour as a high-skilled rate or labour under supervision.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>24.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2017_16</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2017</year>
+    <pagenums>16</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>quarrying tuff</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>stone</material>
+  <source_type>text</source_type>
+  <source_chronology>Middle Ages</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>quarrying tuff in maximum low skill rate</algorithm_statement>
+  <algorithm_math>0,5 m3 tuff quarried in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,5</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,5</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 8 hour work days.</general_notes>
+  <biblio_notes>Author distinguised two skill rates, minimum and maximum low skill rate. He operates with addiontional +10% of labour as a high-skilled rate or labour under supervision.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>24.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2017_16</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2017</year>
+    <pagenums>16</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>quarrying stone</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>stone</material>
+  <source_type>text</source_type>
+  <source_chronology>Middle Ages</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>quarrying limestone in minimum low skill rate</algorithm_statement>
+  <algorithm_math>0,125 m3 limestone quarried in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,125</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,125</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 8 hour work days.</general_notes>
+  <biblio_notes>Author distinguised two skill rates, minimum and maximum low skill rate. He operates with addiontional +10% of labour as a high-skilled rate or labour under supervision.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>24.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname>Buccellati</surname><firstname>F.</firstname><date>8.1.2020</date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2017_16</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2017</year>
+    <pagenums>16</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>quarrying stone</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>stone</material>
+  <source_type>text</source_type>
+  <source_chronology>Middle Ages</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>quarrying limestone in maximum low skill rate</algorithm_statement>
+  <algorithm_math>0,23875 m3 limestone quarried in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,23875</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,23875</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 8 hour work days.</general_notes>
+  <biblio_notes>Author distinguised two skill rates, minimum and maximum low skill rate. He operates with addiontional +10% of labour as a high-skilled rate or labour under supervision.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>24.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname>Buccellati</surname><firstname>F.</firstname><date>8.1.2020</date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2017_16</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2017</year>
+    <pagenums>16</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>quarrying granite</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>stone</material>
+  <source_type>text</source_type>
+  <source_chronology>Middle Ages</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>quarrying granite in minimum low skill rate</algorithm_statement>
+  <algorithm_math>0,0825 m3 granite quarried in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,0825</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,0825</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 8 hour work days.</general_notes>
+  <biblio_notes>Author distinguised two skill rates, minimum and maximum low skill rate. He operates with addiontional +10% of labour as a high-skilled rate or labour under supervision.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>24.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2017_16</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2017</year>
+    <pagenums>16</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>quarrying granite</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>stone</material>
+  <source_type>text</source_type>
+  <source_chronology>Middle Ages</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>quarrying granite in maximum low skill rate</algorithm_statement>
+  <algorithm_math>0,10375 m3 granite quarried in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,10375</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,10375</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 8 hour work days.</general_notes>
+  <biblio_notes>Author distinguised two skill rates, minimum and maximum low skill rate. He operates with addiontional +10% of labour as a high-skilled rate or labour under supervision.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>24.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2017_16</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2017</year>
+    <pagenums>16</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>cut masonry blocks</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>stone</material>
+  <source_type>text</source_type>
+  <source_chronology>Middle Ages</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>processing ashlar in minimum low skill rate</algorithm_statement>
+  <algorithm_math>0,055 m2 ashlar shaped in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,055</op>
+    </var1>
+    <var2>
+      <unit>m2</unit><description></description>
+      <op>var1 * 0,055</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 8 hour work days.</general_notes>
+  <biblio_notes>Author distinguised two skill rates, minimum and maximum low skill rate. He operates with addiontional +10% of labour as a high-skilled rate or labour under supervision.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>24.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2017_16</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2017</year>
+    <pagenums>16</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>cut masonry blocks</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>stone</material>
+  <source_type>text</source_type>
+  <source_chronology>Middle Ages</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>processing ashlar in maximum low skill rate</algorithm_statement>
+  <algorithm_math>0,07375 m2 ashlar shaped in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,07375</op>
+    </var1>
+    <var2>
+      <unit>m2</unit><description></description>
+      <op>var1 * 0,07375</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 8 hour work days.</general_notes>
+  <biblio_notes>Author distinguised two skill rates, minimum and maximum low skill rate. He operates with addiontional +10% of labour as a high-skilled rate or labour under supervision.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>24.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2017_16</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2017</year>
+    <pagenums>16</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>mortar production</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>limestone</material>
+  <source_type>text</source_type>
+  <source_chronology>Middle Ages</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>slaking of lime for mortar production</algorithm_statement>
+  <algorithm_math>certain volume of lime slaked in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,10416</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,10416</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 8 hour work days.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>24.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2017_16</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2017</year>
+    <pagenums>16</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>mortar production</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>mortar</material>
+  <source_type>text</source_type>
+  <source_chronology>Middle Ages</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>mixing mortar for foundations</algorithm_statement>
+  <algorithm_math>certain volume of mortar mixed in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,2272</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,2272</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 8 hour work days.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>24.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2017_16</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2017</year>
+    <pagenums>16</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>mortar production</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>mortar</material>
+  <source_type>text</source_type>
+  <source_chronology>Middle Ages</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>mixing mortar for walls</algorithm_statement>
+  <algorithm_math>certain volume of mortar mixed in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,1785714285</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,1785714285</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 8 hour work days.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>24.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2017_16</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2017</year>
+    <pagenums>16</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>sawing wood</algorithm_type>
+  <position_in_process>manufacture</position_in_process>
+  <material>wood</material>
+  <source_type>text</source_type>
+  <source_chronology>Middle Ages</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>sawing timber </algorithm_statement>
+  <algorithm_math>0,625 m3 sawed in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,625</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,625</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 8 hour work days.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>25.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2017_16</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2017</year>
+    <pagenums>16</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>material loading </algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>stone</material>
+  <source_type>text</source_type>
+  <source_chronology>Middle Ages</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>material loading into baskets</algorithm_statement>
+  <algorithm_math>1p-h loads certain amount in m3</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 2,083</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 2,083</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 8 hour work days.</general_notes>
+  <biblio_notes>Author does not metion the size of baskets</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>25.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2017_16</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2017</year>
+    <pagenums>16</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>wall building </algorithm_type>
+  <position_in_process>construction</position_in_process>
+  <material>mortar</material>
+  <source_type>text</source_type>
+  <source_chronology>Middle Ages</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>laying rough mortar</algorithm_statement>
+  <algorithm_math>0,24625 m3 rough mortar layed in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,24625</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,24625</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 8 hour work days.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>25.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2017_16</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2017</year>
+    <pagenums>16</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>wall building </algorithm_type>
+  <position_in_process>construction</position_in_process>
+  <material>mortar</material>
+  <source_type>text</source_type>
+  <source_chronology>Middle Ages</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>laying coursed mortar</algorithm_statement>
+  <algorithm_math>0,15875 m3 rough mortar layed in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,15875</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,15875</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 8 hour work days.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>25.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2017_16</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2017</year>
+    <pagenums>16</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>wall building </algorithm_type>
+  <position_in_process>construction</position_in_process>
+  <material>stone</material>
+  <source_type>text</source_type>
+  <source_chronology>Middle Ages</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>laying ashlar masonry walls in minimum low skill rate</algorithm_statement>
+  <algorithm_math>0,12125 m3 ashlar layed in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,12125</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,12125</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 8 hour work days.</general_notes>
+  <biblio_notes>Author distinguised two skill rates, minimum and maximum low skill rate. He operates with addiontional +10% of labour as a high-skilled rate or labour under supervision.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>26.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2017_16</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2017</year>
+    <pagenums>16</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>wall building </algorithm_type>
+  <position_in_process>construction</position_in_process>
+  <material>stone</material>
+  <source_type>text</source_type>
+  <source_chronology>Middle Ages</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>laying ashlar masonry walls in maximum low skill rate</algorithm_statement>
+  <algorithm_math>0,24125 m3 ashlar layed in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,24125</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,24125</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 8 hour work days.</general_notes>
+  <biblio_notes>Author distinguised two skill rates, minimum and maximum low skill rate. He operates with addiontional +10% of labour as a high-skilled rate or labour under supervision.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>26.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2017_17</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2017</year>
+    <pagenums>17</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>wall building </algorithm_type>
+  <position_in_process>construction</position_in_process>
+  <material>stone bricks</material>
+  <source_type>text</source_type>
+  <source_chronology>Middle Ages</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>laying unjointed stone bricks in minimum low skill rate</algorithm_statement>
+  <algorithm_math>162,5 bricks layed in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 162,5</op>
+    </var1>
+    <var2>
+      <unit>brick</unit><description></description>
+      <op>var1 * 162,5</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 8 hour work days.</general_notes>
+  <biblio_notes>Author distinguised two skill rates, minimum and maximum low skill rate. He operates with addiontional +10% of labour as a high-skilled rate or labour under supervision. Only the height of bricks is mentioned which is 0,4m</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>26.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2017_17</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2017</year>
+    <pagenums>17</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>wall building </algorithm_type>
+  <position_in_process>construction</position_in_process>
+  <material>stone bricks</material>
+  <source_type>text</source_type>
+  <source_chronology>Middle Ages</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>laying unjointed stone bricks in maximum low skill rate</algorithm_statement>
+  <algorithm_math>250 bricks layed in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 250</op>
+    </var1>
+    <var2>
+      <unit>brick</unit><description></description>
+      <op>var1 * 250</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 8 hour work days. Author distinguished two types of the bricklaying, unjointed and ordinary brickwork</general_notes>
+  <biblio_notes>Author distinguised two skill rates, minimum and maximum low skill rate. He operates with addiontional +10% of labour as a high-skilled rate or labour under supervision. Only the height of bricks is mentioned which is 0,4m</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>26.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2017_17</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2017</year>
+    <pagenums>17</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>wall building </algorithm_type>
+  <position_in_process>construction</position_in_process>
+  <material>stone bricks</material>
+  <source_type>text</source_type>
+  <source_chronology>Middle Ages</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>bricklaying in minimum low skill rate</algorithm_statement>
+  <algorithm_math>62,5 bricks layed in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 62,5</op>
+    </var1>
+    <var2>
+      <unit>brick</unit><description></description>
+      <op>var1 * 62,5</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 8 hour work days. Author distinguished two types of the bricklaying, unjointed and ordinary brickwork</general_notes>
+  <biblio_notes>Author distinguised two skill rates, minimum and maximum low skill rate. He operates with addiontional +10% of labour as a high-skilled rate or labour under supervision. Only the height of bricks is mentioned which is 0,4m</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>26.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2017_17</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2017</year>
+    <pagenums>17</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>wall building</algorithm_type>
+  <position_in_process>construction</position_in_process>
+  <material>stone bricks</material>
+  <source_type>text</source_type>
+  <source_chronology>Middle Ages</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>bricklaying in maximum low skill rate</algorithm_statement>
+  <algorithm_math>125 bricks 1 layed in p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 125</op>
+    </var1>
+    <var2>
+      <unit>brick</unit><description></description>
+      <op>var1 * 125</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 8 hour work days. Author distinguished two types of the bricklaying, unjointed and ordinary brickwork</general_notes>
+  <biblio_notes>Author distinguised two skill rates, minimum and maximum low skill rate. He operates with addiontional +10% of labour as a high-skilled rate or labour under supervision. Only the height of bricks is mentioned which is 0,4m</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>26.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>UN_1957_7</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>United Nations</surname><firstname></firstname></author>
+    <year>1957</year>
+    <abbrev>UN_1957</abbrev>
+    <pagenums>7</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Taniguchi</surname><firstname></firstname></author>
+    <year></year>
+    <pagenums>55</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>earth digging</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>earth</material>
+  <source_type>ethnographic</source_type>
+  <source_chronology>modern</source_chronology>
+  <source_geography>Japan</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>1,7 m3 soft soil can be excavated per person per hour</algorithm_statement>
+  <algorithm_math>1,7 m3 soft soil in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 1,7</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 1,7</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from  work days to person-hours. Author refers to 7 hour work day</general_notes>
+  <biblio_notes>In the UN article is discussed different hardness of the soil. For further types see UN_1957_1-5</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>10.3.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>UN_1957_7</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>United Nations</surname><firstname></firstname></author>
+    <year>1957</year>
+    <abbrev>UN_1957</abbrev>
+    <pagenums>7</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Taniguchi</surname><firstname></firstname></author>
+    <year></year>
+    <pagenums>55</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>earth digging</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>earth</material>
+  <source_type>ethnographic</source_type>
+  <source_chronology>modern</source_chronology>
+  <source_geography>Japan</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>1,42 m3 common soil can be excavated per person per hour</algorithm_statement>
+  <algorithm_math>1,42 m3 common soil in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 1,42</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 1,42</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from  work days to person-hours. Author refers to 7 hour work day</general_notes>
+  <biblio_notes>In the UN article is discussed different hardness of the soil. For further types see UN_1957_1-5</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>10.3.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>UN_1957_7</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>United Nations</surname><firstname></firstname></author>
+    <year>1957</year>
+    <abbrev>UN_1957</abbrev>
+    <pagenums>7</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Taniguchi</surname><firstname></firstname></author>
+    <year></year>
+    <pagenums>55</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>earth digging</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>earth</material>
+  <source_type>ethnographic</source_type>
+  <source_chronology>modern</source_chronology>
+  <source_geography>Japan</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>1,13 m3 clay can be excavated per person per hour</algorithm_statement>
+  <algorithm_math>1,13 m3 clay in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 1,13</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 1,13</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from  work days to person-hours. Author refers to 7 hour work day</general_notes>
+  <biblio_notes>In the UN article is discussed different hardness of the soil. For further types see UN_1957_1-5</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>10.3.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>UN_1957_7</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>United Nations</surname><firstname></firstname></author>
+    <year>1957</year>
+    <abbrev>UN_1957</abbrev>
+    <pagenums>7</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Taniguchi</surname><firstname></firstname></author>
+    <year></year>
+    <pagenums>55</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>earth digging</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>earth</material>
+  <source_type>ethnographic</source_type>
+  <source_chronology>modern</source_chronology>
+  <source_geography>Japan</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>0,86 m3 hard clay can be excavated per person per hour</algorithm_statement>
+  <algorithm_math>0,86 m3 hard clay in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,86</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,86</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from  work days to person-hours. Author refers to 7 hour work day</general_notes>
+  <biblio_notes>In the UN article is discussed different hardness of the soil. For further types see UN_1957_1-5</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>10.3.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>UN_1957_7</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>United Nations</surname><firstname></firstname></author>
+    <year>1957</year>
+    <abbrev>UN_1957</abbrev>
+    <pagenums>7</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Taniguchi</surname><firstname></firstname></author>
+    <year></year>
+    <pagenums>55</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>earth digging</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>earth</material>
+  <source_type>ethnographic</source_type>
+  <source_chronology>modern</source_chronology>
+  <source_geography>Japan</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>0,42 m3 dry hard clay can be excavated per person per hour</algorithm_statement>
+  <algorithm_math>0,42 m3 dry hard clay in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 0,42</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 0,42</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from  work days to person-hours. Author refers to 7 hour work day</general_notes>
+  <biblio_notes>In the UN article is discussed different hardness of the soil. For further types see UN_1957_1-5</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>10.3.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>
+
+

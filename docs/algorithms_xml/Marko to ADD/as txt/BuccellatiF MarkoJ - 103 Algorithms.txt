@@ -1,4 +1,4 @@
-Di seguito sono riportati i file di input dell'algoritmo scritto da Buccellati, F. e Marko, J. Si tratta solo di file di input, utilizzati per generare la pubblicazione digitale www.EnCAB.net. Sono qui riportati in formato testo, ma possono essere trovati anche su GitHub sotto https://github.com/fabfab1/EnCAB. La pubblicazione è disponibile su Open Science Network (OSF) con un DOI stabile: 10.17605/OSF.IO/NMZXT
+Di seguito sono riportati i file di input per gli algoritmi scritto da Buccellati, F. e Marko, J. Si tratta solo di file di input, utilizzati per generare la pubblicazione digitale www.EnCAB.net. Sono qui riportati in formato testo, ma possono essere trovati anche su GitHub sotto https://github.com/fabfab1/EnCAB. La pubblicazione è disponibile su Open Science Network (OSF) con un DOI stabile: 10.17605/OSF.IO/NMZXT
 
 
 

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_519</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>519</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Como</surname><firstname></firstname></author>
+    <year>2005</year>
+    <pagenums>128</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>material qualities</algorithm_type>
+  <position_in_process>materials</position_in_process>
+  <material>conglomerate</material>
+  <source_type></source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>1 cubic metre of conglomerate weights 2500 kg</algorithm_statement>
+  <algorithm_math>1 m3 weights 2500 kg</algorithm_math>
+  <variables>
+    <var1>
+      <unit>m3</unit><description></description>
+      <op>var2 / 2500</op>
+    </var1>
+    <var2>
+      <unit>kg</unit><description></description>
+      <op>var1 * 2500</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes></general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>22.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>

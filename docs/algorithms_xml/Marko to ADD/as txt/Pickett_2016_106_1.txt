@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2016_106</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2016</year>
+    <pagenums>106</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Gillette</surname><firstname></firstname></author>
+    <year>1907</year>
+    <pagenums>603-4</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>earth digging</algorithm_type>
+  <position_in_process>procurement</position_in_process>
+  <material>earth</material>
+  <source_type></source_type>
+  <source_chronology>modern</source_chronology>
+  <source_geography>Eurasia</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>1 p-h  to cut out sod in m3 </algorithm_statement>
+  <algorithm_math>1,254 m3 of sod in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 1,254</op>
+    </var1>
+    <var2>
+      <unit>m3</unit><description></description>
+      <op>var1 * 1,254</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 10 hour work days.</general_notes>
+  <biblio_notes>A shovel with a blade of 10cm wide and 12cm long was used for the labor.</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>27.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Pickett_2017_17</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Pickett</surname><firstname>J.</firstname></author>
+    <year>2017</year>
+    <pagenums>17</pagenums>
+  </source>
+
+  <cited>
+    <author><surname></surname><firstname></firstname></author>
+    <year></year>
+    <pagenums></pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>wall building </algorithm_type>
+  <position_in_process>construction</position_in_process>
+  <material>stone bricks</material>
+  <source_type>text</source_type>
+  <source_chronology>Middle Ages</source_chronology>
+  <source_geography>Near East</source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>bricklaying in minimum low skill rate</algorithm_statement>
+  <algorithm_math>62,5 bricks layed in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 62,5</op>
+    </var1>
+    <var2>
+      <unit>brick</unit><description></description>
+      <op>var1 * 62,5</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>Data was converted from work days to person-hours. Author refers to 8 hour work days. Author distinguished two types of the bricklaying, unjointed and ordinary brickwork</general_notes>
+  <biblio_notes>Author distinguised two skill rates, minimum and maximum low skill rate. He operates with addiontional +10% of labour as a high-skilled rate or labour under supervision. Only the height of bricks is mentioned which is 0,4m</biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>26.4.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>

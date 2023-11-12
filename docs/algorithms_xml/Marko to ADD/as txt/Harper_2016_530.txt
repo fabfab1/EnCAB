@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<algorithm>
+
+
+<reference>Harper_2016_530</reference>
+
+
+<biblioref>
+
+  <source>
+    <author><surname>Harper</surname><firstname>Ch.</firstname></author>
+    <year>2016</year>
+    <pagenums>530</pagenums>
+  </source>
+
+  <cited>
+    <author><surname>Murakami</surname><firstname></firstname></author>
+    <year>2015</year>
+    <pagenums>273</pagenums>
+  </cited>
+
+</biblioref>
+
+
+
+<algorithm_description>
+
+  <algorithm_type>plaster applying</algorithm_type>
+  <position_in_process>construction</position_in_process>
+  <material>lime</material>
+  <source_type>experimental archaeology</source_type>
+  <source_chronology></source_chronology>
+  <source_geography></source_geography>
+
+</algorithm_description>
+
+
+
+<algdata>
+
+  <algorithm_statement>Applying lime plaster to floors in one person hour</algorithm_statement>
+  <algorithm_math>4,31 m2 dressed in 1 p-h</algorithm_math>
+  <variables>
+    <var1>
+      <unit>p-h</unit><description></description>
+      <op>var2 / 4,31</op>
+    </var1>
+    <var2>
+      <unit>m2</unit><description></description>
+      <op>var1 * 4,31</op>
+    </var2>
+  </variables>
+
+</algdata>
+
+
+
+<algnotes>
+
+  <general_notes>According to the author, a 2 millimeters thin layer of lime plaster was applied and smoothed to floors.</general_notes>
+  <biblio_notes></biblio_notes>
+
+</algnotes>
+
+
+
+<algauthors>
+
+  <creation>
+    <author><surname>Buccellati</surname><firstname>F.</firstname></author>
+    <author><surname>Marko</surname><firstname>J.</firstname><date>23.5.2019</date></author>
+  </creation>
+
+  <modification>
+    <author><surname></surname><firstname></firstname><date></date></author>
+  </modification>
+
+</algauthors>
+
+
+
+</algorithm>

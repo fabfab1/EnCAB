@@ -1,0 +1,412 @@
+Di seguito sono riportati i due file di codice python, config.py e EnCAB.py. Sono riportati qui in formato testo, ma possono essere trovati anche su GitHub sotto https://github.com/fabfab1/EnCAB. Il codice è pubblicato su Open Science Network (OSF) con un DOI stabile: 10.17605/OSF.IO/NMZXT
+
+
+
+
+
+""" Configuration file for EnCAB.py """
+
+
+# All paths can be absolute or relative to the program file EnCAB.py
+# Use the slash "/" as directory separator (NO backslash "\")
+
+
+# Path to root directory where the website is located
+# the program  will scan all *.html files in directory and subdirectories
+WEBSITE_DIR = "../docs/"  # default: "../docs/"
+
+# Path to directory where algorithms data are located (*.xml files)
+ALGORITHMS_DIR = WEBSITE_DIR + "algorithms_xml/"  # default:  WEBSITE_DIR + "algorithms_data/"
+
+# Path to file where HTML author bibliography is located
+BIBLIOGRAPHY_FILE = WEBSITE_DIR + "bibliography/bibliography.html"  # default: WEBSITE_DIR + "bibliography/bibliography.html"
+
+# Path to template files, used to generate the HTML <section>
+TEMPLATE_ALGORITHM = "templates/algorithm.html"  # default: "templates/algorithm.html"
+TEMPLATE_INDEX = "templates/index.html"  # default: "templates/index.html"
+
+
+# Possible sort attributes of <section>, assign XML path to sort
+SORT_STRINGS = {'algorithm_type': 'algorithm_description/algorithm_type',
+                'position_in_process': 'algorithm_description/position_in_process',
+                'material': 'algorithm_description/material',
+                'abbrev': 'biblioref/source/abbrev'}
+
+# Files to ignore for the index if they contain the string in the filename
+IGNORE_IF_IN_FILENAME = ("_index", "_data")  # default: ("_index", "_data")
+
+
+
+
+# *** this is the EnCAB.py file ***
+#!/usr/bin/env python3
+"""EnCAB: Energetic Calculator for Ancient Buildings
+
+See README for documentation.
+Required at least Python 3.6 with modules "BeautifulSoup4" and "jinja2".
+Install modules: python -m pip -r requirements.txt
+Configuration file: "config.py"
+Usage: python EnCAB.py
+"""
+
+import sys
+import re  # regex
+import datetime
+import logging
+from pathlib import Path
+from xml.etree import ElementTree  # XML file reading
+from bs4 import BeautifulSoup  # HTML tag parsing
+import jinja2  # HTML template
+import zipfile
+import locale  # UTF sorting
+locale.setlocale(locale.LC_ALL, "")
+
+from config import *  # import configuration from file "config.py"
+
+
+__location__ = Path(__file__).parent
+
+# setup logging, save console output to "EnCAB/log.txt"
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(levelname)s%(message)s',
+    handlers=[
+        logging.FileHandler(__location__/'log.txt', mode='w', encoding='utf-8'),
+        logging.StreamHandler(sys.stdout)
+    ])
+logging.addLevelName(logging.INFO, '')
+logging.addLevelName(logging.ERROR, '[ERROR] ')
+logging.addLevelName(logging.CRITICAL, '[CRITICAL] ')
+log = logging.getLogger()
+
+
+def check_config(program_dir: Path):
+    """Base check to assert existence of files and directories."""
+
+    for config_option in ['WEBSITE_DIR', 'ALGORITHMS_DIR', 'BIBLIOGRAPHY_FILE', 'TEMPLATE_ALGORITHM', 'TEMPLATE_INDEX',
+                          'SORT_STRINGS']:
+        if config_option not in globals():
+            raise UserWarning(f'In config: configuration "{config_option}" not found.')
+        
+    for config_dir in [WEBSITE_DIR, ALGORITHMS_DIR]:
+        if not (program_dir/config_dir).is_dir():
+            raise UserWarning(f'In config: directory "{config_dir}" not found.')
+    for config_file in [BIBLIOGRAPHY_FILE, TEMPLATE_ALGORITHM, TEMPLATE_INDEX]:
+        if not (program_dir/config_file).is_file():
+            raise UserWarning(f'In config: file "{config_file}" not found.')
+
+    global IGNORE_IF_IN_FILENAME
+    if 'IGNORE_IF_IN_FILENAME' not in globals() or not IGNORE_IF_IN_FILENAME:
+        IGNORE_IF_IN_FILENAME = ()
+    elif not isinstance(IGNORE_IF_IN_FILENAME, set) and not all(isinstance(s, str) for s in IGNORE_IF_IN_FILENAME):
+        raise UserWarning(f'In config: configuration IGNORE_IF_IN_FILENAME is not a set of strings.')
+        
+    return
+
+
+def files_index(website_dir: Path, bibliography_file: Path):
+    """Generate a dict of filenames from child subdirectories and a set of all the authors in bibliography."""
+
+    # Get index of files in subdirectories
+    file_index = dict()
+    for subdir in sorted(website_dir.iterdir()):
+        if subdir.is_dir():
+            for file in sorted(subdir.glob('*.html')):
+                if file.is_file() and not any(ignore in file.stem for ignore in IGNORE_IF_IN_FILENAME):
+                    # for each subdir make a list of filenames (without extension)
+                    # {'subdir1': ['file1','file2'], 'subdir2': ['file3'], ...}
+                    file_index.setdefault(subdir.name, []).append(file.stem)
+
+    # Get authors in bibliography
+    author_index = set()
+
+    # open HTML of bibliography_file
+    soup = BeautifulSoup(bibliography_file.open('r', encoding='utf-8'), 'html.parser')
+
+    # find all the anchors <a name="..">, they contain authors abbreviation
+    for item in soup.find_all('a', attrs={'name': True}):
+        if item['name']:
+            author_index.add(item['name'])
+
+    return file_index, author_index
+
+
+def get_alg_data(alg_dir: Path, file_index: dict, author_index: set):
+    """Get algorithms data from the XML files and archive a copy of it."""
+
+    # Prepare archive for the data
+    (alg_dir/'archives').mkdir(exist_ok=True)
+    zip_name = 'EnCAB_input_' + datetime.datetime.now().strftime('%Y%m%d-%H%M%S') + '.zip'
+    zip_file = zipfile.ZipFile((alg_dir/'archives'/zip_name).resolve(), mode='w', compression=zipfile.ZIP_DEFLATED)
+    
+    # Get the data and find errors
+    alg_data = []
+    errors = {'bibliographical': [], 'missing_file': [], 'calculation': []}
+    for file in sorted(alg_dir.glob('*.xml')):
+        if file.is_file():
+            # archive a copy of the file
+            zip_file.write(file.resolve(), arcname=file.name)
+            
+            # parse the file
+            xml_root, new_errors = parse(file, file_index, author_index)
+            for key, value in errors.items():
+                if new_errors[key]:
+                    value.append(f'    {file.name+":":30} ' + ', '.join(new_errors[key]) + '.')
+            alg_data += [(xml_root, file.name)]
+    
+    zip_file.close()
+
+    # Print errors
+    for key, value in errors.items():
+        if value:
+            log.error(f'{key.capitalize()} problems \n' + '\n'.join(value) + '\n')
+    
+    return alg_data
+
+
+def parse(file, file_index: dict, author_index: set):
+    """Read XML algorithms data and check for errors."""
+
+    try:
+        tree = ElementTree.parse(file.resolve())
+    except ElementTree.ParseError as err:
+        raise UserWarning(f'In parsing "{file.name}": {err}.')
+    except UnicodeError:
+        log.critical(f'Check for bad characters (encoding: UTF-8) in "{file.name}".')
+        raise
+
+    root = tree.getroot()
+
+    # Remove blank lines from all text
+    for elem in root.iter():
+        if elem.text:
+            elem.text = elem.text.strip()
+    
+    # Check for errors
+    errors_bibliographical, errors_missing_file, errors_calculation = [], [], []
+    
+    def check_code(code, test_regex=r"", mandatory=False, errors=errors_bibliographical):
+        if mandatory and not root.findtext(code):
+            errors.append('missing <'+code+'>')
+        elif root.findtext(code) and not re.match(test_regex, root.findtext(code), flags=re.I):
+            errors.append('wrong format for <'+code+'>')
+        return
+
+    def author_abbrev(author):
+        author_abbrev = author.findtext('surname', '') + author.findtext('firstname', '')
+        return re.sub(r'[,\. ]', '', author_abbrev)
+    
+    # reference: authors_date_pagenumber(_sequentialnumber)
+    check_code('reference', r"^[\w-]+_\d{4}_\d+(|_\d+)$", mandatory=True)
+
+    # biblioref/source: 1 and only 1 allowed
+    check_code(f'biblioref/source/author/surname', mandatory=True)
+    if len(root.findall('biblioref/source')) > 1:
+        errors_bibliographical.append('more than 1 <biblioref/source>')
+    
+    # biblioref/*/author: in Bibliography
+    for biblioref_tag in ('source', 'cited'):
+        for i, biblioref in enumerate(root.findall(f'biblioref/{biblioref_tag}'), start=1):
+
+            # biblioref/*/author/abbrev: generate abbrev from authors
+            if biblioref.findtext('abbrev'):
+                abbrev = biblioref.findtext('abbrev')
+            else:
+                ElementTree.SubElement(biblioref, 'abbrev')
+                authors = biblioref.findall('author')
+                if len(authors) == 0:
+                    abbrev = ''
+                elif len(authors) == 1:
+                    abbrev = author_abbrev(authors[0])
+                elif len(authors) == 2:
+                    abbrev = author_abbrev(authors[0]) + '_' + author_abbrev(authors[1])
+                else:
+                    abbrev = author_abbrev(authors[0]) + '_etal'
+                if biblioref.findtext('year'):
+                    abbrev += '_' + biblioref.findtext('year')
+                biblioref.find('abbrev').text = abbrev
+            
+            if abbrev:
+                # check if in Bibliography
+                abbrev_no_year = re.sub(r'_\d{4}', '', abbrev)
+                if abbrev_no_year not in author_index:
+                    errors_bibliographical.append(f'author "{abbrev_no_year}" not found')
+
+                # biblioref/*/author/year: yyyy
+                check_code(f'biblioref/{biblioref.tag}[{i}]/year', r"^\d{4}$")
+                
+                # biblioref/*/author/pagenums: numbers separated by - or ,
+                check_code(f'biblioref/{biblioref.tag}[{i}]/pagenums', r"^\d+(-\d+)?(, ?\d+(-\d+)?)*$")
+    
+    # algorithm_description: check if file exist for each description type
+    for d_type in root.find('algorithm_description'):
+        if d_type.tag not in file_index.keys():
+            errors_missing_file.append(f'algorithm description <{d_type.tag}> directory not found')
+        elif d_type.text:
+            txt = d_type.text.replace(' ', '_').lower()
+            if txt not in file_index[d_type.tag]:
+                errors_missing_file.append(f'{d_type.tag} "{txt}" not found')
+
+    # algdata/algorithm_statement
+    check_code('algdata/algorithm_statement', mandatory=True, errors=errors_calculation)
+
+    # Check operations
+    var_names = set()
+    op_in_results = False
+    for algdata in root.findall(f'algdata/results') + root.findall(f'algdata/variables'):
+        for var in algdata:
+            
+            # algdata/{algdata}/*/unit
+            check_code(f'algdata/{algdata.tag}/{var.tag}/unit', mandatory=True, errors=errors_calculation)
+            unit = var.findtext('unit', '').replace(' ', '_').lower()
+            if unit and unit not in file_index['units']:
+                errors_missing_file.append(f'units "{unit}" not found in website files')
+            
+            # algdata/{algdata}/*/op: op in all results or in all variables
+            if algdata.tag == 'results' or not op_in_results:
+                check_code(f'algdata/{algdata.tag}/{var.tag}/op', mandatory=True, errors=errors_calculation)
+                if algdata.tag == 'results':
+                    op_in_results = True
+            
+            # algdata/{algdata}/*: different names
+            if var.tag not in var_names:
+                var_names.add(var.tag)
+            else:
+                errors_calculation.append(f'more than one <{var.tag}> in <algdata>')
+
+    # algauthors/(creation|modification)
+    for algauthors in (root.find('algauthors/creation'), root.find('algauthors/modification')):
+        if algauthors:
+            for i, author in enumerate(algauthors.findall('author'), start=1):
+                
+                # algauthors/*/author: HTLM page in authors/
+                abbrev = author_abbrev(author)
+                
+                if abbrev and abbrev not in file_index.get('authors', []):
+                    errors_missing_file.append(f'author "{abbrev}" does not have HTML page in authors/')
+
+                # algauthors/author_*/date: dd.mm.yyyy
+                check_code(f'algauthor/{algauthors.tag}/author[{i}]/date', r"^\d{1,2}\.\d{1,2}\.\d{4}$")
+                if author.find('date') and re.match(r"^\d{1,2}\.\d{1,2}\.\d{4}$", author.findtext('date'), flags=re.I):
+                    author.find('date').text = '{:0>2}.{:0>2}.{:>4}'.format(*author.findtext('date').split('.'))
+
+    return root, {'bibliographical': errors_bibliographical, 'missing_file': errors_missing_file,
+                  'calculation': errors_calculation}
+
+
+def write_data(website_dir: Path, alg_data: list, file_index: dict, templates: dict):
+    """Update <section>s with HTML rendered data."""
+
+    # load templates with jinja2
+    loader = jinja2.FileSystemLoader([template.parent.resolve() for template in templates.values()])
+
+    # set up environment with custom variables
+    env = jinja2.Environment(loader=loader)
+    env.filters['capfirst'] = lambda text: ' '.join(s[:1].upper() + s[1:] for s in text.split(' '))
+    env.filters['remove_year'] = lambda abbrev: re.sub(r'_\d{4}', '', abbrev)
+    env.globals['TIME_NOW'] = round(datetime.datetime.now().timestamp() * 1000)
+
+    # regex parser for <section> tags (html parsers change formatting)
+    regex_section = re.compile(r"(<section.*?>).*?(?=</section)", flags=re.DOTALL | re.I)
+
+    def replace_section(matchobj):
+        """Parse <section> and generate the data."""
+
+        # get attributes
+        section = BeautifulSoup(matchobj.group(1), 'html.parser').find('section')
+        sort = section.get('sort')
+        block = section.get('block')
+
+        if not block:
+            log.error(f'In "{file.name}", missing attribute "block" in <section>.')
+            return matchobj.group()
+        if not sort:
+            log.error(f'In "{file.name}", missing attribute "sort" in <section>.')
+            return matchobj.group()
+        if block not in templates:
+            log.error(f'In "{file.name}", attribute block="{block}" in <section> NOT valid.')
+            return matchobj.group()
+
+        # select template
+        template = env.get_template(templates[block].name)
+        
+        # sort/trim the data
+        block_data = ''
+        if block == "algorithm":
+            sort = SORT_STRINGS[sort] if sort in SORT_STRINGS.keys() else sort
+            block_data = sorted(alg_data, key=lambda xml: (xml[0].findtext(sort, '') == '',
+                                                           locale.strxfrm(xml[0].findtext(sort, '')),
+                                                           locale.strxfrm(xml[0].findtext('reference', ''))))
+        elif block == "index":
+            if sort not in file_index.keys():
+                log.error(f'In "{file.name}", attribute sort="{sort}" in <section> NOT valid.')
+                return matchobj.group()
+            block_data = sorted(file_index[sort], key=locale.strxfrm)
+
+        # generate the HTML
+        html_data = template.render(blocks_data=block_data, sort=sort)
+        
+        return matchobj.group(1) + html_data
+    
+    # read and update each HTML file
+    for file in sorted(website_dir.glob('**/*.html')):
+        with file.open('r', encoding='utf-8') as html:
+            html_file = html.read()
+
+        # search and substitute <section>
+        html_file_updated, num_sub = regex_section.subn(replace_section, html_file)
+        if num_sub == 0:
+            continue
+        
+        with file.open('w', encoding='utf-8') as html:
+            html.write(html_file_updated)
+    return
+
+
+def main():
+    
+    try:
+        log.info(f'''\
+----------------------------------------------{str(datetime.datetime.now().astimezone().isoformat(timespec='seconds'))}
+ EnCAB: Energetic Calculator for Ancient Buildings
+-----------------------------------------------------------------------
+
+This program will update website <section> with indexes and algorithms.
+Edit config file to change directories and preference.
+
+Config file: "config.py"
+Website directory: "{WEBSITE_DIR}"
+Algorithms directory: "{ALGORITHMS_DIR}"
+Algorithm template: "{TEMPLATE_ALGORITHM}"
+Index template: "{TEMPLATE_INDEX}"
+''')
+        
+        check_config(__location__)
+        
+        # log.info('Press ENTER to confirm.')
+        # input()
+    
+        log.info('[*] Generating indexes...')
+        file_index, author_index = files_index(__location__/WEBSITE_DIR, __location__/BIBLIOGRAPHY_FILE)
+    
+        log.info('[*] Importing algorithms data...')
+        alg_data = get_alg_data(__location__/ALGORITHMS_DIR, file_index, author_index)
+    
+        log.info('[*] Writing data...')
+        write_data(__location__/WEBSITE_DIR, alg_data, file_index,
+                   {'algorithm': __location__/TEMPLATE_ALGORITHM, 'index': __location__/TEMPLATE_INDEX})
+                   
+        log.info('\n[+] Done!')
+    
+    except UserWarning as err:
+        log.critical(err)
+    except Exception:
+        log.critical(f'Fatal error. Please report the log.', exc_info=True)
+    
+    if not sys.argv[1:2] == ['run']:
+        input()
+    sys.exit()
+
+
+if __name__ == '__main__':
+    main()
